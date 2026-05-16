@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0c0a0a" id="meta-theme-color">
-    <title>Ravenloft: Archivos de Pericias</title>
+    <title>Archivos de Ravenloft</title>
     <style>
         /* =========================================================
            Variables de Tema (Ravenloft Gothic vs Old Parchment)
@@ -59,6 +59,83 @@
             -webkit-tap-highlight-color: transparent;
         }
 
+        /* =========================================================
+           Pantalla de Inicio (Landing Page)
+           ========================================================= */
+        #landing-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 85vh;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .landing-title {
+            font-size: 2.8em;
+            color: var(--accent-main);
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px var(--shadow-color);
+            border-bottom: none;
+            letter-spacing: 3px;
+        }
+
+        .landing-subtitle {
+            font-size: 1.2em;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .landing-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .btn-large {
+            background-color: var(--bg-panel);
+            color: var(--text-main);
+            border: 2px solid var(--accent-main);
+            padding: 18px 30px;
+            font-size: 1.2em;
+            font-family: inherit;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .btn-large:hover:not(.disabled) {
+            background-color: var(--accent-hover);
+            color: #e6d8c3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px var(--shadow-color);
+        }
+
+        /* Contenedores de las Secciones (Ocultos por defecto) */
+        #nwp-app, #skills-app {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        /* =========================================================
+           Secciones de Tablas y Paneles de Control
+           ========================================================= */
         .header-container {
             display: flex;
             justify-content: space-between;
@@ -95,7 +172,6 @@
             color: #e6d8c3;
         }
 
-        /* Paneles de Control y Filtros */
         .controls-panel {
             background-color: var(--bg-panel);
             border: 1px solid var(--border-color);
@@ -124,30 +200,53 @@
 
         .filters-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
             margin-bottom: 15px;
         }
 
         .filter-group { display: flex; flex-direction: column; }
 
-        .filter-group label {
+        .filter-group label.group-title {
             font-size: 0.85em;
             color: var(--text-muted);
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .filter-group input, .filter-group select {
+        .checkbox-group-container {
             background-color: var(--bg-input);
-            color: var(--text-main);
             border: 1px solid var(--border-color);
             border-radius: 4px;
+            max-height: 120px;
+            overflow-y: auto;
             padding: 8px;
-            font-family: inherit;
-            font-size: 0.9em;
-            transition: background-color 0.4s, color 0.4s;
+            transition: border-color 0.3s;
         }
+
+        .checkbox-group-container:focus-within { border-color: var(--accent-main); }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+            color: var(--text-main);
+            cursor: pointer;
+            margin-bottom: 6px;
+            user-select: none;
+        }
+
+        .checkbox-option:last-child { margin-bottom: 0; }
+        .checkbox-option input { cursor: pointer; accent-color: var(--accent-main); margin: 0; }
+
+        /* Estilo Scroll */
+        .checkbox-group-container::-webkit-scrollbar { width: 6px; }
+        .checkbox-group-container::-webkit-scrollbar-track { background: var(--bg-body); }
+        .checkbox-group-container::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+        .checkbox-group-container::-webkit-scrollbar-thumb:hover { background: var(--accent-main); }
 
         .btn-reset {
             background-color: var(--bg-panel);
@@ -160,7 +259,7 @@
             font-weight: bold;
             transition: all 0.3s;
             width: 100%;
-            margin-bottom: 15px;
+            margin-top: 5px;
             font-size: 0.95em;
         }
 
@@ -170,20 +269,8 @@
             border-style: solid;
         }
 
-        .col-toggles {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            font-size: 0.85em;
-            padding-top: 12px;
-            border-top: 1px dashed var(--border-color);
-        }
-
-        .col-toggles strong { color: var(--accent-main); width: 100%; }
-        .col-toggles label { cursor: pointer; display: flex; align-items: center; gap: 4px; }
-
         /* =========================================================
-           Tabla Adaptable / Estilo Cartas Móvil
+           Tablas y Estructura Adaptable
            ========================================================= */
         table {
             width: 100%;
@@ -214,9 +301,7 @@
         tr.main-row { transition: background-color 0.2s; cursor: pointer; }
         tr.main-row:hover { background-color: var(--table-tr-hover); }
 
-        /* =========================================================
-           Efecto Collapse Estilizado (Descripciones Mejoradas)
-           ========================================================= */
+        /* Acordeón de Descripciones Optimizado */
         .desc-row td { padding: 0 !important; border: none !important; }
 
         .desc-content {
@@ -226,25 +311,23 @@
             background-color: var(--table-desc);
             color: var(--text-main);
             text-align: left;
-            /* Mejora de UX: Letra ligeramente más grande para óptima lectura */
             font-size: 1.08em; 
         }
 
         .desc-row.show .desc-content {
-            max-height: 1000px; 
-            /* Mejora de UX: Mayor margen interior arriba/abajo (20px) e izquierda/derecha (40px) */
+            max-height: 1200px; 
             padding: 20px 40px; 
             border-bottom: 1px solid var(--border-color);
             border-top: 1px dashed var(--accent-main);
         }
 
-        .desc-content p {
-            margin: 0;
-            text-indent: 10px;
-        }
+        .desc-content p { margin: 0; text-indent: 10px; }
 
-        /* Reglas de Responsividad (Vistas Mobile & PWA) */
+        /* =========================================================
+           Responsividad Estilo Cartas Móviles
+           ========================================================= */
         @media screen and (max-width: 768px) {
+            .landing-title { font-size: 2em; }
             .header-container { flex-direction: column; gap: 12px; text-align: center; }
             table, thead, tbody, th, td, tr { display: block; }
             thead tr { position: absolute; top: -9999px; left: -9999px; }
@@ -289,7 +372,6 @@
                 border-bottom-right-radius: 6px;
                 margin-bottom: 12px;
                 border: 1px solid var(--border-color);
-                /* Margen balanceado para pantallas móviles pequeñas */
                 padding: 18px 25px; 
             }
         }
@@ -297,256 +379,374 @@
 </head>
 <body>
 
-    <div class="header-container">
-        <h1>Archivos de Pericias</h1>
-        <button class="btn-theme" id="theme-toggle" onclick="toggleTheme()">Invocar Luz</button>
-    </div>
-
-    <div class="controls-panel">
-        <input type="text" id="global-search" class="search-bar" placeholder="Investigar archivos (Nombre, descripciones...)" oninput="applyFilters()">
+    <div id="landing-screen">
+        <h1 class="landing-title">Archivos de Ravenloft</h1>
+        <p class="landing-subtitle">Elige el conocimiento que deseas develar...</p>
         
-        <div class="filters-grid">
-            <div class="filter-group">
-                <label>Nombre</label>
-                <input type="text" id="filter-name" placeholder="Ej. Spellmaking" oninput="applyFilters()">
-            </div>
-            <div class="filter-group">
-                <label>Slots</label>
-                <select id="filter-slots" onchange="applyFilters()"></select>
-            </div>
-            <div class="filter-group">
-                <label>Habilidad</label>
-                <select id="filter-ability" onchange="applyFilters()"></select>
-            </div>
-            <div class="filter-group">
-                <label>Clase</label>
-                <select id="filter-class" onchange="applyFilters()"></select>
-            </div>
-            <div class="filter-group">
-                <label>Raza</label>
-                <select id="filter-race" onchange="applyFilters()"></select>
-            </div>
-            <div class="filter-group">
-                <label>Source</label>
-                <select id="filter-source" onchange="applyFilters()"></select>
-            </div>
-        </div>
-
-        <button class="btn-reset" onclick="resetFilters()">Purificar Filtros</button>
-
-        <div class="col-toggles">
-            <strong>Visibilidad de Atributos:</strong>
-            <label><input type="checkbox" checked onchange="toggleCol('name', this.checked)"> Nombre</label>
-            <label><input type="checkbox" checked onchange="toggleCol('slots', this.checked)"> Slots</label>
-            <label><input type="checkbox" checked onchange="toggleCol('ability', this.checked)"> Habilidad</label>
-            <label><input type="checkbox" checked onchange="toggleCol('modifier', this.checked)"> Mod</label>
-            <label><input type="checkbox" checked onchange="toggleCol('class', this.checked)"> Clase</label>
-            <label><input type="checkbox" checked onchange="toggleCol('race', this.checked)"> Raza</label>
-            <label><input type="checkbox" checked onchange="toggleCol('source', this.checked)"> Source</label>
+        <div class="landing-buttons">
+            <button class="btn-large" onclick="openApp('nwp')">Pericias en No Armas</button>
+            <button class="btn-large" onclick="openApp('skills')">Skills</button>
         </div>
     </div>
 
-    <table id="prof-table">
-        <thead>
-            <tr>
-                <th id="th-name">Nombre</th>
-                <th id="th-slots">Slots</th>
-                <th id="th-ability">Habilidad</th>
-                <th id="th-modifier">Mod</th>
-                <th id="th-class">Clase</th>
-                <th id="th-race">Raza</th>
-                <th id="th-source">Source</th>
-            </tr>
-        </thead>
-        <tbody id="table-body">
-            </tbody>
-    </table>
+    <div id="nwp-app">
+        <div class="header-container">
+            <h1>Pericias en No Armas</h1>
+            <div>
+                <button class="btn-theme" onclick="closeApp('nwp')" style="margin-right: 10px;">Volver</button>
+                <button class="btn-theme" onclick="toggleTheme()">Invocar Luz</button>
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <input type="text" id="nwp-global-search" class="search-bar" placeholder="Investigar pericias (Nombre, descripciones...)" oninput="applyNwpFilters()">
+            
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label class="group-title">Nombre</label>
+                    <input type="text" id="nwp-filter-name" placeholder="Ej. Spellmaking" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit; font-size: 0.9em;" oninput="applyNwpFilters()">
+                </div>
+                <div class="filter-group">
+                    <label class="group-title">Slots</label>
+                    <div id="nwp-filter-slots" class="checkbox-group-container"></div>
+                </div>
+                <div class="filter-group">
+                    <label class="group-title">Habilidad</label>
+                    <div id="nwp-filter-ability" class="checkbox-group-container"></div>
+                </div>
+                <div class="filter-group">
+                    <label class="group-title">Clase</label>
+                    <div id="nwp-filter-class" class="checkbox-group-container"></div>
+                </div>
+                <div class="filter-group">
+                    <label class="group-title">Raza</label>
+                    <div id="nwp-filter-race" class="checkbox-group-container"></div>
+                </div>
+                <div class="filter-group">
+                    <label class="group-title">Source</label>
+                    <div id="nwp-filter-source" class="checkbox-group-container"></div>
+                </div>
+            </div>
+
+            <button class="btn-reset" onclick="resetNwpFilters()">Purificar Filtros</button>
+        </div>
+
+        <table id="nwp-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Slots</th>
+                    <th>Habilidad</th>
+                    <th>Mod</th>
+                    <th>Clase</th>
+                    <th>Raza</th>
+                    <th>Source</th>
+                </tr>
+            </thead>
+            <tbody id="nwp-table-body"></tbody>
+        </table>
+    </div>
+
+    <div id="skills-app">
+        <div class="header-container">
+            <h1>Skills Especiales</h1>
+            <div>
+                <button class="btn-theme" onclick="closeApp('skills')" style="margin-right: 10px;">Volver</button>
+                <button class="btn-theme" onclick="toggleTheme()">Invocar Luz</button>
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <input type="text" id="sk-global-search" class="search-bar" placeholder="Investigar skills (Nombre, descripciones...)" oninput="applySkFilters()">
+            
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label class="group-title">Nombre</label>
+                    <input type="text" id="sk-filter-name" placeholder="Ej. Dureza" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit; font-size: 0.9em;" oninput="applySkFilters()">
+                </div>
+                <div class="filter-group">
+                    <label class="group-title">Nivel / Rango</label>
+                    <div id="sk-filter-level" class="checkbox-group-container"></div>
+                </div>
+                <div class="filter-group">
+                    <label class="group-title">Clase Vínculo</label>
+                    <div id="sk-filter-class" class="checkbox-group-container"></div>
+                </div>
+            </div>
+
+            <button class="btn-reset" onclick="resetSkFilters()">Purificar Filtros</button>
+        </div>
+
+        <table id="sk-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Nivel / Rango</th>
+                    <th>Clase Vínculo</th>
+                </tr>
+            </thead>
+            <tbody id="sk-table-body"></tbody>
+        </table>
+    </div>
 
     <script src="non-weapon-proficiencies.js"></script>
+    <script src="skills.js"></script>
 
     <script>
         // ==========================================
-        // Sistema de Control de Estética e Iluminación
+        // Enrutador y Conmutador de Pantallas
         // ==========================================
-        const themeToggleBtn = document.getElementById('theme-toggle');
+        function openApp(mode) {
+            document.getElementById('landing-screen').style.display = 'none';
+            if (mode === 'nwp') {
+                document.getElementById('nwp-app').style.display = 'block';
+                renderNwpTable();
+            } else if (mode === 'skills') {
+                document.getElementById('skills-app').style.display = 'block';
+                renderSkTable();
+            }
+        }
+
+        function closeApp(mode) {
+            if (mode === 'nwp') document.getElementById('nwp-app').style.display = 'none';
+            if (mode === 'skills') document.getElementById('skills-app').style.display = 'none';
+            document.getElementById('landing-screen').style.display = 'flex';
+        }
+
+        // ==========================================
+        // Control Cromático de Iluminación
+        // ==========================================
         const metaThemeColor = document.getElementById('meta-theme-color');
 
         function setTheme(themeName) {
             document.documentElement.setAttribute('data-theme', themeName);
             localStorage.setItem('ravenloftTheme', themeName);
             
-            if (themeName === 'light') {
-                themeToggleBtn.textContent = 'Invocar Penumbra';
-                metaThemeColor.setAttribute('content', '#f4ebd8');
-            } else {
-                themeToggleBtn.textContent = 'Invocar Luz';
-                metaThemeColor.setAttribute('content', '#0c0a0a');
-            }
+            const buttons = document.querySelectorAll('.btn-theme');
+            buttons.forEach(btn => {
+                if (btn.textContent.includes('Luz') || btn.textContent.includes('Penumbra')) {
+                    btn.textContent = (themeName === 'light') ? 'Invocar Penumbra' : 'Invocar Luz';
+                }
+            });
+            metaThemeColor.setAttribute('content', (themeName === 'light') ? '#f4ebd8' : '#0c0a0a');
         }
 
         function toggleTheme() {
-            if (localStorage.getItem('ravenloftTheme') === 'light') {
-                setTheme('dark');
-            } else {
-                setTheme('light');
-            }
+            const current = localStorage.getItem('ravenloftTheme') === 'light' ? 'dark' : 'light';
+            setTheme(current);
         }
 
         (function() {
-            if (localStorage.getItem('ravenloftTheme') === 'light') {
-                setTheme('light');
-            } else {
-                setTheme('dark');
-            }
+            setTheme(localStorage.getItem('ravenloftTheme') === 'light' ? 'light' : 'dark');
         })();
 
         // ==========================================
-        // Motor de Gestión y Despliegue de Datos
+        // Registro y Motores de Datos
         // ==========================================
-        let proficiencies = [];
-        let filteredData = [];
-        let expandedId = null; 
-
-        let colVis = {
-            name: true, slots: true, ability: true, modifier: true,
-            class: true, race: true, source: true
-        };
+        let nwpData = [], nwpFiltered = [], nwpExpandedId = null;
+        let skData = [], skFiltered = [], skExpandedId = null;
 
         document.addEventListener("DOMContentLoaded", () => {
             if (typeof periciasData !== 'undefined') {
-                initData(periciasData);
-            } else {
-                console.error("No se detectó la variable 'periciasData' en non-weapon-proficiencies.js");
+                nwpData = periciasData;
+                nwpFiltered = periciasData;
+                populateNwpCheckboxes();
+            }
+            if (typeof skillsData !== 'undefined') {
+                skData = skillsData;
+                skFiltered = skillsData;
+                populateSkCheckboxes();
             }
         });
 
-        function initData(data) {
-            proficiencies = data;
-            filteredData = data;
-            populateDropdowns();
-            renderTable();
+        // Inyección Generalizada de Cajas Checkbox
+        function fillCheckboxGroup(containerId, values, onChangeFunc) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            container.innerHTML = '';
+            
+            values.forEach(v => {
+                const label = document.createElement('label');
+                label.className = 'checkbox-option';
+                
+                const cb = document.createElement('input');
+                cb.type = 'checkbox';
+                cb.value = v;
+                cb.onchange = onChangeFunc;
+                
+                const span = document.createElement('span');
+                span.textContent = v;
+                
+                label.appendChild(cb);
+                label.appendChild(span);
+                container.appendChild(label);
+            });
         }
 
-        function populateDropdowns() {
-            const slots = new Set(), abilities = new Set(), classes = new Set(),
-                  races = new Set(), sources = new Set();
-            
-            proficiencies.forEach(p => {
+        function getSelectedValues(containerId) {
+            const checkboxes = document.querySelectorAll(`#${containerId} input:checked`);
+            return Array.from(checkboxes).map(cb => cb.value);
+        }
+
+        // ==========================================
+        // PROCEDIMIENTOS MÓDULO: NO ARMAS (NWP)
+        // ==========================================
+        function populateNwpCheckboxes() {
+            const slots = new Set(), abilities = new Set(), classes = new Set(), races = new Set(), sources = new Set();
+            nwpData.forEach(p => {
                 if (p.slots !== undefined) slots.add(p.slots);
                 if (p.ability) abilities.add(p.ability);
                 if (p.class) p.class.split(',').forEach(c => classes.add(c.trim()));
                 if (p.race) p.race.split(',').forEach(r => races.add(r.trim()));
                 if (p.source) sources.add(p.source);
             });
-            
-            fillSelect('filter-slots', Array.from(slots).sort((a, b) => a - b));
-            fillSelect('filter-ability', Array.from(abilities).sort());
-            fillSelect('filter-class', Array.from(classes).sort());
-            fillSelect('filter-race', Array.from(races).sort());
-            fillSelect('filter-source', Array.from(sources).sort());
+            fillCheckboxGroup('nwp-filter-slots', Array.from(slots).sort((a,b)=>a-b), applyNwpFilters);
+            fillCheckboxGroup('nwp-filter-ability', Array.from(abilities).sort(), applyNwpFilters);
+            fillCheckboxGroup('nwp-filter-class', Array.from(classes).sort(), applyNwpFilters);
+            fillCheckboxGroup('nwp-filter-race', Array.from(races).sort(), applyNwpFilters);
+            fillCheckboxGroup('nwp-filter-source', Array.from(sources).sort(), applyNwpFilters);
         }
 
-        function fillSelect(id, values) {
-            const select = document.getElementById(id);
-            select.innerHTML = '<option value="">Todos</option>';
-            values.forEach(v => {
-                const opt = document.createElement('option');
-                opt.value = v;
-                opt.textContent = v;
-                select.appendChild(opt);
-            });
-        }
-
-        function applyFilters() {
-            const globalSearch = document.getElementById('global-search').value.toLowerCase();
-            const fName = document.getElementById('filter-name').value.toLowerCase();
-            const fSlots = document.getElementById('filter-slots').value;
-            const fAbility = document.getElementById('filter-ability').value;
-            const fClass = document.getElementById('filter-class').value;
-            const fRace = document.getElementById('filter-race').value;
-            const fSource = document.getElementById('filter-source').value;
+        function applyNwpFilters() {
+            const gSearch = document.getElementById('nwp-global-search').value.toLowerCase();
+            const fName = document.getElementById('nwp-filter-name').value.toLowerCase();
             
-            filteredData = proficiencies.filter(p => {
-                const matchesGlobal = Object.values(p).join(' ').toLowerCase().includes(globalSearch);
+            const selSlots = getSelectedValues('nwp-filter-slots');
+            const selAbilities = getSelectedValues('nwp-filter-ability');
+            const selClasses = getSelectedValues('nwp-filter-class');
+            const selRaces = getSelectedValues('nwp-filter-race');
+            const selSources = getSelectedValues('nwp-filter-source');
+            
+            nwpFiltered = nwpData.filter(p => {
+                const matchesGlobal = Object.values(p).join(' ').toLowerCase().includes(gSearch);
                 const matchesName = p.name.toLowerCase().includes(fName);
-                const matchesSlots = fSlots === "" || p.slots.toString() === fSlots;
-                const matchesAbility = fAbility === "" || (p.ability && p.ability === fAbility);
-                const matchesClass = fClass === "" || (p.class && p.class.includes(fClass));
-                const matchesRace = fRace === "" || (p.race && p.race.includes(fRace));
-                const matchesSource = fSource === "" || (p.source && p.source === fSource);
+                const matchesSlots = selSlots.length === 0 || selSlots.includes(p.slots.toString());
+                const matchesAbility = selAbilities.length === 0 || (p.ability && selAbilities.includes(p.ability));
+                const matchesClass = selClasses.length === 0 || (p.class && selClasses.some(c => p.class.includes(c)));
+                const matchesRace = selRaces.length === 0 || (p.race && selRaces.some(r => p.race.includes(r)));
+                const matchesSource = selSources.length === 0 || (p.source && selSources.includes(p.source));
                 
-                return matchesGlobal && matchesName && matchesSlots && matchesAbility && 
-                       matchesClass && matchesRace && matchesSource;
+                return matchesGlobal && matchesName && matchesSlots && matchesAbility && matchesClass && matchesRace && matchesSource;
             });
-            
-            expandedId = null;
-            renderTable();
+            nwpExpandedId = null;
+            renderNwpTable();
         }
 
-        function resetFilters() {
-            document.getElementById('global-search').value = '';
-            document.getElementById('filter-name').value = '';
-            document.getElementById('filter-slots').value = '';
-            document.getElementById('filter-ability').value = '';
-            document.getElementById('filter-class').value = '';
-            document.getElementById('filter-race').value = '';
-            document.getElementById('filter-source').value = '';
-            applyFilters();
+        function resetNwpFilters() {
+            document.getElementById('nwp-global-search').value = '';
+            document.getElementById('nwp-filter-name').value = '';
+            document.querySelectorAll('#nwp-app .checkbox-group-container input').forEach(cb => cb.checked = false);
+            applyNwpFilters();
         }
 
-        function toggleCol(colName, isVisible) {
-            colVis[colName] = isVisible;
-            const th = document.getElementById(`th-${colName}`);
-            if (th) th.style.display = isVisible ? '' : 'none';
-            renderTable();
-        }
-
-        function renderTable() {
-            const tbody = document.getElementById('table-body');
+        function renderNwpTable() {
+            const tbody = document.getElementById('nwp-table-body');
             let html = '';
-            const visibleColsCount = Object.values(colVis).filter(v => v).length;
-            
-            filteredData.forEach(item => {
-                html += `<tr class="main-row" onclick="toggleRow(${item.id})">`;
-                if (colVis.name) html += `<td data-label="Nombre"><strong>${item.name}</strong></td>`;
-                if (colVis.slots) html += `<td data-label="Slots">${item.slots}</td>`;
-                if (colVis.ability) html += `<td data-label="Habilidad">${item.ability}</td>`;
-                if (colVis.modifier) html += `<td data-label="Mod">${item.modifier}</td>`;
-                if (colVis.class) html += `<td data-label="Clase">${item.class}</td>`;
-                if (colVis.race) html += `<td data-label="Raza">${item.race}</td>`;
-                if (colVis.source) html += `<td data-label="Source">${item.source}</td>`;
+            nwpFiltered.forEach(item => {
+                const itemId = item.id || Math.floor(Math.random() * 100000);
+                html += `<tr class="main-row" onclick="toggleRow('nwp', ${itemId})">`;
+                html += `<td data-label="Nombre"><strong>${item.name}</strong></td>`;
+                html += `<td data-label="Slots">${item.slots}</td>`;
+                html += `<td data-label="Habilidad">${item.ability || '-'}</td>`;
+                html += `<td data-label="Mod">${item.modifier !== undefined ? item.modifier : '-'}</td>`;
+                html += `<td data-label="Clase">${item.class || '-'}</td>`;
+                html += `<td data-label="Raza">${item.race || '-'}</td>`;
+                html += `<td data-label="Source">${item.source || '-'}</td>`;
                 html += `</tr>`;
-                
-                html += `<tr class="desc-row" id="desc-${item.id}">
-                    <td colspan="${visibleColsCount}">
-                        <div class="desc-content">
-                            <p><em>${item.description}</em></p>
-                        </div>
+                html += `<tr class="desc-row" id="nwp-desc-${itemId}">
+                    <td colspan="7">
+                        <div class="desc-content"><p><em>${item.description || 'Sin descripción.'}</em></p></div>
                     </td>
                 </tr>`;
             });
-            
             tbody.innerHTML = html;
-            
-            if (expandedId !== null) {
-                const row = document.getElementById(`desc-${expandedId}`);
-                if (row) row.classList.add('show');
+            if (nwpExpandedId !== null) {
+                const el = document.getElementById(`nwp-desc-${nwpExpandedId}`);
+                if (el) el.classList.add('show');
             }
         }
 
-        function toggleRow(id) {
-            if (expandedId === id) {
-                document.getElementById(`desc-${id}`).classList.remove('show');
-                expandedId = null;
+        // ==========================================
+        // PROCEDIMIENTOS MÓDULO: SKILLS ESPECIALES
+        // ==========================================
+        function populateSkCheckboxes() {
+            const levels = new Set(), classes = new Set();
+            skData.forEach(s => {
+                if (s.level !== undefined) levels.add(s.level);
+                if (s.class) s.class.split(',').forEach(c => classes.add(c.trim()));
+            });
+            const sortedLevels = Array.from(levels).sort((a,b) => String(a).localeCompare(String(b), undefined, {numeric: true}));
+            fillCheckboxGroup('sk-filter-level', sortedLevels, applySkFilters);
+            fillCheckboxGroup('sk-filter-class', Array.from(classes).sort(), applySkFilters);
+        }
+
+        function applySkFilters() {
+            const gSearch = document.getElementById('sk-global-search').value.toLowerCase();
+            const fName = document.getElementById('sk-filter-name').value.toLowerCase();
+            
+            const selLevels = getSelectedValues('sk-filter-level');
+            const selClasses = getSelectedValues('sk-filter-class');
+            
+            skFiltered = skData.filter(s => {
+                const matchesGlobal = Object.values(s).join(' ').toLowerCase().includes(gSearch);
+                const matchesName = s.name.toLowerCase().includes(fName);
+                const matchesLevel = selLevels.length === 0 || selLevels.includes(s.level.toString());
+                const matchesClass = selClasses.length === 0 || (s.class && selClasses.some(c => s.class.includes(c)));
+                
+                return matchesGlobal && matchesName && matchesLevel && matchesClass;
+            });
+            skExpandedId = null;
+            renderSkTable();
+        }
+
+        function resetSkFilters() {
+            document.getElementById('sk-global-search').value = '';
+            document.getElementById('sk-filter-name').value = '';
+            document.querySelectorAll('#skills-app .checkbox-group-container input').forEach(cb => cb.checked = false);
+            applySkFilters();
+        }
+
+        function renderSkTable() {
+            const tbody = document.getElementById('sk-table-body');
+            let html = '';
+            skFiltered.forEach((item, index) => {
+                html += `<tr class="main-row" onclick="toggleRow('sk', ${index})">`;
+                html += `<td data-label="Nombre"><strong>${item.name}</strong></td>`;
+                html += `<td data-label="Nivel / Rango">${item.level}</td>`;
+                html += `<td data-label="Clase Vínculo">${item.class || '-'}</td>`;
+                html += `</tr>`;
+                html += `<tr class="desc-row" id="sk-desc-${index}">
+                    <td colspan="3">
+                        <div class="desc-content"><p><em>${item.description || 'Sin descripción.'}</em></p></div>
+                    </td>
+                </tr>`;
+            });
+            tbody.innerHTML = html;
+            if (skExpandedId !== null) {
+                const el = document.getElementById(`sk-desc-${skExpandedId}`);
+                if (el) el.classList.add('show');
+            }
+        }
+
+        // ==========================================
+        // Controlador Único de Acordeones
+        // ==========================================
+        function toggleRow(prefix, id) {
+            let currentExpanded = (prefix === 'nwp') ? nwpExpandedId : skExpandedId;
+            
+            if (currentExpanded === id) {
+                const el = document.getElementById(`${prefix}-desc-${id}`);
+                if (el) el.classList.remove('show');
+                if (prefix === 'nwp') nwpExpandedId = null; else skExpandedId = null;
             } else {
-                if (expandedId !== null) {
-                    const oldRow = document.getElementById(`desc-${expandedId}`);
-                    if (oldRow) oldRow.classList.remove('show');
+                if (currentExpanded !== null) {
+                    const oldEl = document.getElementById(`${prefix}-desc-${currentExpanded}`);
+                    if (oldEl) oldEl.classList.remove('show');
                 }
-                const targetRow = document.getElementById(`desc-${id}`);
-                if (targetRow) {
-                    targetRow.classList.add('show');
-                    expandedId = id;
+                const targetEl = document.getElementById(`${prefix}-desc-${id}`);
+                if (targetEl) {
+                    targetEl.classList.add('show');
+                    if (prefix === 'nwp') nwpExpandedId = id; else skExpandedId = id;
                 }
             }
         }
