@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0c0a0a" id="meta-theme-color">
+    <title>Ravenloft: Archivos de Pericias</title>
+    <style>
+        /* =========================================================
+           Variables de Tema (Ravenloft Gothic vs Old Parchment)
+           ========================================================= */
+        :root {
+            /* Tema Oscuro (Gótico) */
+            --bg-body: #0c0a0a;
+            --bg-panel: #1a1515;
+            --bg-input: #0c0a0a;
+            --text-main: #d8cbb8;
+            --text-muted: #a89f91;
+            --accent-main: #8b0000;
+            --accent-hover: #5a1111;
+            --border-color: #3a1c1c;
+            
+            --table-th: #2b0c0c;
+            --table-tr: #141010;
+            --table-tr-hover: #2a1111;
+            --table-desc: #080606;
+            --shadow-color: rgba(0, 0, 0, 0.7);
+        }
+
+        [data-theme="light"] {
+            /* Tema Claro (Pergamino Antiguo) */
+            --bg-body: #f4ebd8;
+            --bg-panel: #e8dac3;
+            --bg-input: #fdf6ec;
+            --text-main: #2b1c15;
+            --text-muted: #5c4335;
+            --accent-main: #9e1b1b;
+            --accent-hover: #7a1515;
+            --border-color: #c4ab8f;
+            
+            --table-th: #d1b99e;
+            --table-tr: #f9f2e8;
+            --table-tr-hover: #ebdcc5;
+            --table-desc: #efe4d3;
+            --shadow-color: rgba(60, 40, 20, 0.15);
+        }
+
+        /* =========================================================
+           Estilos Base e Interfaz
+           ========================================================= */
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main); 
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            margin: 0;
+            padding: 15px;
+            transition: background-color 0.4s, color 0.4s;
+            line-height: 1.5;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-hover);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--accent-main); 
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.4em;
+            text-shadow: 1px 1px 2px var(--shadow-color);
+        }
+
+        .btn-theme {
+            background-color: var(--bg-panel);
+            color: var(--text-main);
+            border: 1px solid var(--accent-main);
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px var(--shadow-color);
+        }
+        
+        .btn-theme:hover {
+            background-color: var(--accent-hover);
+            color: #e6d8c3;
+        }
+
+        /* Paneles de Control y Filtros */
+        .controls-panel {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            transition: background-color 0.4s, border-color 0.4s;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1em;
+            background-color: var(--bg-input);
+            color: var(--text-main);
+            border: 1px solid var(--accent-main);
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            font-family: inherit;
+            transition: background-color 0.4s, color 0.4s;
+        }
+
+        .search-bar:focus { outline: none; border-color: var(--text-main); }
+
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .filter-group { display: flex; flex-direction: column; }
+
+        .filter-group label {
+            font-size: 0.85em;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        .filter-group input, .filter-group select {
+            background-color: var(--bg-input);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 8px;
+            font-family: inherit;
+            font-size: 0.9em;
+            transition: background-color 0.4s, color 0.4s;
+        }
+
+        .btn-reset {
+            background-color: var(--bg-panel);
+            color: var(--text-main);
+            border: 1px dashed var(--accent-main);
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            transition: all 0.3s;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .btn-reset:hover {
+            background-color: var(--accent-hover);
+            color: #e6d8c3;
+            border-style: solid;
+        }
+
+        .col-toggles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.85em;
+            padding-top: 12px;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .col-toggles strong { color: var(--accent-main); width: 100%; }
+        .col-toggles label { cursor: pointer; display: flex; align-items: center; gap: 4px; }
+
+        /* =========================================================
+           Tabla Adaptable / Estilo Cartas Móvil
+           ========================================================= */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--table-tr);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            transition: background-color 0.4s;
+        }
+
+        th {
+            background-color: var(--table-th);
+            color: var(--text-main);
+            padding: 14px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-main);
+        }
+
+        tr.main-row { transition: background-color 0.2s; cursor: pointer; }
+        tr.main-row:hover { background-color: var(--table-tr-hover); }
+
+        /* =========================================================
+           Efecto Collapse Estilizado (Descripciones Mejoradas)
+           ========================================================= */
+        .desc-row td { padding: 0 !important; border: none !important; }
+
+        .desc-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            background-color: var(--table-desc);
+            color: var(--text-main);
+            text-align: left;
+            /* Mejora de UX: Letra ligeramente más grande para óptima lectura */
+            font-size: 1.08em; 
+        }
+
+        .desc-row.show .desc-content {
+            max-height: 1000px; 
+            /* Mejora de UX: Mayor margen interior arriba/abajo (20px) e izquierda/derecha (40px) */
+            padding: 20px 40px; 
+            border-bottom: 1px solid var(--border-color);
+            border-top: 1px dashed var(--accent-main);
+        }
+
+        .desc-content p {
+            margin: 0;
+            text-indent: 10px;
+        }
+
+        /* Reglas de Responsividad (Vistas Mobile & PWA) */
+        @media screen and (max-width: 768px) {
+            .header-container { flex-direction: column; gap: 12px; text-align: center; }
+            table, thead, tbody, th, td, tr { display: block; }
+            thead tr { position: absolute; top: -9999px; left: -9999px; }
+            table { background-color: transparent; box-shadow: none; }
+
+            tr.main-row {
+                margin-bottom: 12px;
+                border: 1px solid var(--border-color);
+                border-radius: 6px;
+                background-color: var(--bg-panel);
+                box-shadow: 0 2px 5px var(--shadow-color);
+            }
+
+            td {
+                border: none;
+                border-bottom: 1px solid var(--border-color);
+                position: relative;
+                padding-left: 45%;
+                text-align: left;
+                min-height: 30px;
+                display: flex;
+                align-items: center;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 12px;
+                width: 40%;
+                white-space: nowrap;
+                font-weight: bold;
+                color: var(--accent-main);
+                text-align: left;
+            }
+
+            td:last-child { border-bottom: 0; }
+            .desc-row td::before { content: none; }
+            .desc-row td { padding-left: 0; border-bottom: none; display: block; }
+            
+            .desc-row.show .desc-content {
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                margin-bottom: 12px;
+                border: 1px solid var(--border-color);
+                /* Margen balanceado para pantallas móviles pequeñas */
+                padding: 18px 25px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <h1>Archivos de Pericias</h1>
+        <button class="btn-theme" id="theme-toggle" onclick="toggleTheme()">Invocar Luz</button>
+    </div>
+
+    <div class="controls-panel">
+        <input type="text" id="global-search" class="search-bar" placeholder="Investigar archivos (Nombre, descripciones...)" oninput="applyFilters()">
+        
+        <div class="filters-grid">
+            <div class="filter-group">
+                <label>Nombre</label>
+                <input type="text" id="filter-name" placeholder="Ej. Spellmaking" oninput="applyFilters()">
+            </div>
+            <div class="filter-group">
+                <label>Slots</label>
+                <select id="filter-slots" onchange="applyFilters()"></select>
+            </div>
+            <div class="filter-group">
+                <label>Habilidad</label>
+                <select id="filter-ability" onchange="applyFilters()"></select>
+            </div>
+            <div class="filter-group">
+                <label>Clase</label>
+                <select id="filter-class" onchange="applyFilters()"></select>
+            </div>
+            <div class="filter-group">
+                <label>Raza</label>
+                <select id="filter-race" onchange="applyFilters()"></select>
+            </div>
+            <div class="filter-group">
+                <label>Source</label>
+                <select id="filter-source" onchange="applyFilters()"></select>
+            </div>
+        </div>
+
+        <button class="btn-reset" onclick="resetFilters()">Purificar Filtros</button>
+
+        <div class="col-toggles">
+            <strong>Visibilidad de Atributos:</strong>
+            <label><input type="checkbox" checked onchange="toggleCol('name', this.checked)"> Nombre</label>
+            <label><input type="checkbox" checked onchange="toggleCol('slots', this.checked)"> Slots</label>
+            <label><input type="checkbox" checked onchange="toggleCol('ability', this.checked)"> Habilidad</label>
+            <label><input type="checkbox" checked onchange="toggleCol('modifier', this.checked)"> Mod</label>
+            <label><input type="checkbox" checked onchange="toggleCol('class', this.checked)"> Clase</label>
+            <label><input type="checkbox" checked onchange="toggleCol('race', this.checked)"> Raza</label>
+            <label><input type="checkbox" checked onchange="toggleCol('source', this.checked)"> Source</label>
+        </div>
+    </div>
+
+    <table id="prof-table">
+        <thead>
+            <tr>
+                <th id="th-name">Nombre</th>
+                <th id="th-slots">Slots</th>
+                <th id="th-ability">Habilidad</th>
+                <th id="th-modifier">Mod</th>
+                <th id="th-class">Clase</th>
+                <th id="th-race">Raza</th>
+                <th id="th-source">Source</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            </tbody>
+    </table>
+
+    <script src="non-weapon-proficiencies.js"></script>
+
+    <script>
+        // ==========================================
+        // Sistema de Control de Estética e Iluminación
+        // ==========================================
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const metaThemeColor = document.getElementById('meta-theme-color');
+
+        function setTheme(themeName) {
+            document.documentElement.setAttribute('data-theme', themeName);
+            localStorage.setItem('ravenloftTheme', themeName);
+            
+            if (themeName === 'light') {
+                themeToggleBtn.textContent = 'Invocar Penumbra';
+                metaThemeColor.setAttribute('content', '#f4ebd8');
+            } else {
+                themeToggleBtn.textContent = 'Invocar Luz';
+                metaThemeColor.setAttribute('content', '#0c0a0a');
+            }
+        }
+
+        function toggleTheme() {
+            if (localStorage.getItem('ravenloftTheme') === 'light') {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+        }
+
+        (function() {
+            if (localStorage.getItem('ravenloftTheme') === 'light') {
+                setTheme('light');
+            } else {
+                setTheme('dark');
+            }
+        })();
+
+        // ==========================================
+        // Motor de Gestión y Despliegue de Datos
+        // ==========================================
+        let proficiencies = [];
+        let filteredData = [];
+        let expandedId = null; 
+
+        let colVis = {
+            name: true, slots: true, ability: true, modifier: true,
+            class: true, race: true, source: true
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof periciasData !== 'undefined') {
+                initData(periciasData);
+            } else {
+                console.error("No se detectó la variable 'periciasData' en non-weapon-proficiencies.js");
+            }
+        });
+
+        function initData(data) {
+            proficiencies = data;
+            filteredData = data;
+            populateDropdowns();
+            renderTable();
+        }
+
+        function populateDropdowns() {
+            const slots = new Set(), abilities = new Set(), classes = new Set(),
+                  races = new Set(), sources = new Set();
+            
+            proficiencies.forEach(p => {
+                if (p.slots !== undefined) slots.add(p.slots);
+                if (p.ability) abilities.add(p.ability);
+                if (p.class) p.class.split(',').forEach(c => classes.add(c.trim()));
+                if (p.race) p.race.split(',').forEach(r => races.add(r.trim()));
+                if (p.source) sources.add(p.source);
+            });
+            
+            fillSelect('filter-slots', Array.from(slots).sort((a, b) => a - b));
+            fillSelect('filter-ability', Array.from(abilities).sort());
+            fillSelect('filter-class', Array.from(classes).sort());
+            fillSelect('filter-race', Array.from(races).sort());
+            fillSelect('filter-source', Array.from(sources).sort());
+        }
+
+        function fillSelect(id, values) {
+            const select = document.getElementById(id);
+            select.innerHTML = '<option value="">Todos</option>';
+            values.forEach(v => {
+                const opt = document.createElement('option');
+                opt.value = v;
+                opt.textContent = v;
+                select.appendChild(opt);
+            });
+        }
+
+        function applyFilters() {
+            const globalSearch = document.getElementById('global-search').value.toLowerCase();
+            const fName = document.getElementById('filter-name').value.toLowerCase();
+            const fSlots = document.getElementById('filter-slots').value;
+            const fAbility = document.getElementById('filter-ability').value;
+            const fClass = document.getElementById('filter-class').value;
+            const fRace = document.getElementById('filter-race').value;
+            const fSource = document.getElementById('filter-source').value;
+            
+            filteredData = proficiencies.filter(p => {
+                const matchesGlobal = Object.values(p).join(' ').toLowerCase().includes(globalSearch);
+                const matchesName = p.name.toLowerCase().includes(fName);
+                const matchesSlots = fSlots === "" || p.slots.toString() === fSlots;
+                const matchesAbility = fAbility === "" || (p.ability && p.ability === fAbility);
+                const matchesClass = fClass === "" || (p.class && p.class.includes(fClass));
+                const matchesRace = fRace === "" || (p.race && p.race.includes(fRace));
+                const matchesSource = fSource === "" || (p.source && p.source === fSource);
+                
+                return matchesGlobal && matchesName && matchesSlots && matchesAbility && 
+                       matchesClass && matchesRace && matchesSource;
+            });
+            
+            expandedId = null;
+            renderTable();
+        }
+
+        function resetFilters() {
+            document.getElementById('global-search').value = '';
+            document.getElementById('filter-name').value = '';
+            document.getElementById('filter-slots').value = '';
+            document.getElementById('filter-ability').value = '';
+            document.getElementById('filter-class').value = '';
+            document.getElementById('filter-race').value = '';
+            document.getElementById('filter-source').value = '';
+            applyFilters();
+        }
+
+        function toggleCol(colName, isVisible) {
+            colVis[colName] = isVisible;
+            const th = document.getElementById(`th-${colName}`);
+            if (th) th.style.display = isVisible ? '' : 'none';
+            renderTable();
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('table-body');
+            let html = '';
+            const visibleColsCount = Object.values(colVis).filter(v => v).length;
+            
+            filteredData.forEach(item => {
+                html += `<tr class="main-row" onclick="toggleRow(${item.id})">`;
+                if (colVis.name) html += `<td data-label="Nombre"><strong>${item.name}</strong></td>`;
+                if (colVis.slots) html += `<td data-label="Slots">${item.slots}</td>`;
+                if (colVis.ability) html += `<td data-label="Habilidad">${item.ability}</td>`;
+                if (colVis.modifier) html += `<td data-label="Mod">${item.modifier}</td>`;
+                if (colVis.class) html += `<td data-label="Clase">${item.class}</td>`;
+                if (colVis.race) html += `<td data-label="Raza">${item.race}</td>`;
+                if (colVis.source) html += `<td data-label="Source">${item.source}</td>`;
+                html += `</tr>`;
+                
+                html += `<tr class="desc-row" id="desc-${item.id}">
+                    <td colspan="${visibleColsCount}">
+                        <div class="desc-content">
+                            <p><em>${item.description}</em></p>
+                        </div>
+                    </td>
+                </tr>`;
+            });
+            
+            tbody.innerHTML = html;
+            
+            if (expandedId !== null) {
+                const row = document.getElementById(`desc-${expandedId}`);
+                if (row) row.classList.add('show');
+            }
+        }
+
+        function toggleRow(id) {
+            if (expandedId === id) {
+                document.getElementById(`desc-${id}`).classList.remove('show');
+                expandedId = null;
+            } else {
+                if (expandedId !== null) {
+                    const oldRow = document.getElementById(`desc-${expandedId}`);
+                    if (oldRow) oldRow.classList.remove('show');
+                }
+                const targetRow = document.getElementById(`desc-${id}`);
+                if (targetRow) {
+                    targetRow.classList.add('show');
+                    expandedId = id;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
