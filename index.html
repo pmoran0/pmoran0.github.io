@@ -99,7 +99,7 @@
             flex-wrap: wrap;
             justify-content: center;
             width: 100%;
-            max-width: 600px;
+            max-width: 850px;
         }
 
         .btn-large {
@@ -128,7 +128,7 @@
         }
 
         /* Contenedores de las Secciones (Ocultos por defecto) */
-        #nwp-app, #skills-app {
+        #nwp-app, #skills-app, #am-app {
             display: none;
             animation: fadeIn 0.8s ease-in-out;
         }
@@ -315,7 +315,7 @@
         }
 
         .desc-row.show .desc-content {
-            max-height: 1200px; 
+            max-height: 2000px; /* Incrementado para dar cabida a listas largas de maniobras */
             padding: 20px 40px; 
             border-bottom: 1px solid var(--border-color);
             border-top: 1px dashed var(--accent-main);
@@ -386,6 +386,7 @@
         <div class="landing-buttons">
             <button class="btn-large" onclick="openApp('nwp')">Pericias en No Armas</button>
             <button class="btn-large" onclick="openApp('skills')">Skills</button>
+            <button class="btn-large" onclick="openApp('am')">Artemarcialismos</button>
         </div>
     </div>
 
@@ -489,8 +490,59 @@
         </table>
     </div>
 
+    <div id="am-app">
+        <div class="header-container">
+            <h1>Estilos de Artes Marciales</h1>
+            <div>
+                <button class="btn-theme" onclick="closeApp('am')" style="margin-right: 10px;">Volver</button>
+                <button class="btn-theme" onclick="toggleTheme()">Invocar Luz</button>
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <input type="text" id="am-global-search" class="search-bar" placeholder="Investigar estilos (Nombre, armas, maniobras...)" oninput="applyAmFilters()">
+            
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label class="group-title">Nombre Estilo</label>
+                    <input type="text" id="am-filter-name" placeholder="Ej. Karate" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit; font-size: 0.9em;" oninput="applyAmFilters()">
+                </div>
+                <div class="filter-group">
+                    <label class="group-title">Ataque Principal</label>
+                    <div id="am-filter-attack" class="checkbox-group-container"></div>
+                </div>
+                <div class="filter-group">
+                    <label class="group-title">Nº Ataques</label>
+                    <div id="am-filter-num" class="checkbox-group-container"></div>
+                </div>
+                <div class="filter-group">
+                    <label class="group-title">Categorías Libres</label>
+                    <div id="am-filter-cats" class="checkbox-group-container"></div>
+                </div>
+            </div>
+
+            <button class="btn-reset" onclick="resetAmFilters()">Purificar Filtros</button>
+        </div>
+
+        <table id="am-table">
+            <thead>
+                <tr>
+                    <th>Estilo</th>
+                    <th>Nº Ataques</th>
+                    <th>Daño Base</th>
+                    <th>Mod. AC</th>
+                    <th>Ataque Principal</th>
+                    <th>Armas Disponibles</th>
+                </tr>
+            </thead>
+            <tbody id="am-table-body"></tbody>
+        </table>
+    </div>
+
     <script src="non-weapon-proficiencies.js"></script>
     <script src="skills.js"></script>
+    <script src="artemarcialismos-lista.js"></script>
+    <script src="artemarcialismos-maniobras.js"></script>
 
     <script>
         // ==========================================
@@ -504,12 +556,16 @@
             } else if (mode === 'skills') {
                 document.getElementById('skills-app').style.display = 'block';
                 renderSkTable();
+            } else if (mode === 'am') {
+                document.getElementById('am-app').style.display = 'block';
+                renderAmTable();
             }
         }
 
         function closeApp(mode) {
             if (mode === 'nwp') document.getElementById('nwp-app').style.display = 'none';
             if (mode === 'skills') document.getElementById('skills-app').style.display = 'none';
+            if (mode === 'am') document.getElementById('am-app').style.display = 'none';
             document.getElementById('landing-screen').style.display = 'flex';
         }
 
@@ -545,6 +601,7 @@
         // ==========================================
         let nwpData = [], nwpFiltered = [], nwpExpandedId = null;
         let skData = [], skFiltered = [], skExpandedId = null;
+        let amData = {}, amFilteredKeys = [], amExpandedKey = null;
 
         document.addEventListener("DOMContentLoaded", () => {
             if (typeof periciasData !== 'undefined') {
@@ -556,6 +613,11 @@
                 skData = skillsData;
                 skFiltered = skillsData;
                 populateSkCheckboxes();
+            }
+            if (typeof artemarcialismosData !== 'undefined') {
+                amData = artemarcialismosData;
+                amFilteredKeys = Object.keys(artemarcialismosData);
+                populateAmCheckboxes();
             }
         });
 
@@ -729,15 +791,137 @@
         }
 
         // ==========================================
+        // PROCEDIMIENTOS MÓDULO: ARTEMARCIALISMOS (AM)
+        // ==========================================
+        function populateAmCheckboxes() {
+            const attacks = new Set(), numbers = new Set(), categories = new Set();
+            Object.keys(amData).forEach(key => {
+                const style = amData[key];
+                if (style.ataquePrincipal) attacks.add(style.ataquePrincipal);
+                if (style.numeroAtaques) numbers.add(style.numeroAtaques);
+                if (style.maniobras) {
+                    Object.keys(style.maniobras).forEach(cat => categories.add(cat));
+                }
+            });
+            fillCheckboxGroup('am-filter-attack', Array.from(attacks).sort(), applyAmFilters);
+            fillCheckboxGroup('am-filter-num', Array.from(numbers).sort(), applyAmFilters);
+            fillCheckboxGroup('am-filter-cats', Array.from(categories).sort(), applyAmFilters);
+        }
+
+        function applyAmFilters() {
+            const gSearch = document.getElementById('am-global-search').value.toLowerCase();
+            const fName = document.getElementById('am-filter-name').value.toLowerCase();
+            
+            const selAttacks = getSelectedValues('am-filter-attack');
+            const selNumbers = getSelectedValues('am-filter-num');
+            const selCats = getSelectedValues('am-filter-cats');
+            
+            amFilteredKeys = Object.keys(amData).filter(key => {
+                const style = amData[key];
+                
+                // Bloque textual unificado para búsqueda global
+                let searchableStr = key + " " + (style.ataquePrincipal || "") + " " + (style.numeroAtaques || "") + " " + (style.daño || "") + " " + (style.armasDisponibles || "");
+                if (style.maniobras) searchableStr += " " + Object.keys(style.maniobras).join(" ");
+                
+                const matchesGlobal = searchableStr.toLowerCase().includes(gSearch);
+                const matchesName = key.toLowerCase().includes(fName);
+                const matchesAttack = selAttacks.length === 0 || selAttacks.includes(style.ataquePrincipal);
+                const matchesNum = selNumbers.length === 0 || selNumbers.includes(style.numeroAtaques);
+                
+                const styleCats = style.maniobras ? Object.keys(style.maniobras) : [];
+                const matchesCats = selCats.length === 0 || selCats.some(c => styleCats.includes(c));
+                
+                return matchesGlobal && matchesName && matchesAttack && matchesNum && matchesCats;
+            });
+            
+            amExpandedKey = null;
+            renderAmTable();
+        }
+
+        function resetAmFilters() {
+            document.getElementById('am-global-search').value = '';
+            document.getElementById('am-filter-name').value = '';
+            document.querySelectorAll('#am-app .checkbox-group-container input').forEach(cb => cb.checked = false);
+            applyAmFilters();
+        }
+
+        function renderAmTable() {
+            const tbody = document.getElementById('am-table-body');
+            let html = '';
+            
+            amFilteredKeys.forEach(key => {
+                const style = amData[key];
+                const safeId = key.replace(/[^a-zA-Z0-9]/g, '_');
+                
+                html += `<tr class="main-row" onclick="toggleRow('am', '${safeId}')">`;
+                html += `<td data-label="Estilo"><strong>${key}</strong></td>`;
+                html += `<td data-label="Nº Ataques">${style.numeroAtaques || '-'}</td>`;
+                html += `<td data-label="Daño Base">${style.daño || '-'}</td>`;
+                html += `<td data-label="Mod. AC">${style.armorClassMod || '-'}</td>`;
+                html += `<td data-label="Ataque Principal">${style.ataquePrincipal || '-'}</td>`;
+                html += `<td data-label="Armas Disponibles">${style.armasDisponibles || '-'}</td>`;
+                html += `</tr>`;
+                
+                // Construcción relacional de los movimientos usando maniobrasData
+                let contentHtml = '';
+                if (style.maniobras && typeof maniobrasData !== 'undefined') {
+                    Object.keys(style.maniobras).forEach(catName => {
+                        contentHtml += `<div style="margin-bottom: 15px;">`;
+                        contentHtml += `<h4 style="color: var(--accent-main); margin: 0 0 8px 0; text-transform: uppercase; border-bottom: 1px dashed var(--border-color); padding-bottom: 2px; font-size: 1.1em; letter-spacing: 0.5px;">${catName}</h4>`;
+                        contentHtml += `<ul style="margin: 0; padding-left: 20px; list-style-type: square;">`;
+                        
+                        style.maniobras[catName].forEach(num => {
+                            const details = (maniobrasData[catName] && maniobrasData[catName][num]) ? maniobrasData[catName][num] : null;
+                            if (details) {
+                                contentHtml += `<li style="margin-bottom: 10px;">`;
+                                contentHtml += `<strong style="font-size: 1.05em;">[${num}] ${details.nombre}</strong>`;
+                                if (details.descripcionCorta) {
+                                    contentHtml += ` — <span style="color: var(--text-muted); font-style: italic; font-size: 0.95em;">${details.descripcionCorta}</span>`;
+                                }
+                                if (details.descripcionLarga) {
+                                    contentHtml += `<p style="margin: 4px 0 0 0; text-indent: 0; font-size: 0.95em; text-align: justify; color: var(--text-main);">${details.descripcionLarga}</p>`;
+                                }
+                                contentHtml += `</li>`;
+                            } else {
+                                contentHtml += `<li style="margin-bottom: 6px;"><strong>[${num}]</strong> Maniobra no identificada en el grimorio base.</li>`;
+                            }
+                        });
+                        
+                        contentHtml += `</ul>`;
+                        contentHtml += `</div>`;
+                    });
+                } else {
+                    contentHtml = `<p style="color: var(--text-muted); font-style: italic;">No se encontraron descriptores de maniobras cargados.</p>`;
+                }
+                
+                html += `<tr class="desc-row" id="am-desc-${safeId}">
+                    <td colspan="6">
+                        <div class="desc-content">
+                            ${contentHtml}
+                        </div>
+                    </td>
+                </tr>`;
+            });
+            
+            tbody.innerHTML = html;
+            if (amExpandedKey !== null) {
+                const el = document.getElementById(`am-desc-${amExpandedKey}`);
+                if (el) el.classList.add('show');
+            }
+        }
+
+        // ==========================================
         // Controlador Único de Acordeones
         // ==========================================
         function toggleRow(prefix, id) {
-            let currentExpanded = (prefix === 'nwp') ? nwpExpandedId : skExpandedId;
+            let currentExpanded = (prefix === 'nwp') ? nwpExpandedId : ((prefix === 'sk') ? skExpandedId : amExpandedKey);
             
             if (currentExpanded === id) {
                 const el = document.getElementById(`${prefix}-desc-${id}`);
                 if (el) el.classList.remove('show');
-                if (prefix === 'nwp') nwpExpandedId = null; else skExpandedId = null;
+                if (prefix === 'nwp') nwpExpandedId = null;
+                else if (prefix === 'sk') skExpandedId = null;
+                else amExpandedKey = null;
             } else {
                 if (currentExpanded !== null) {
                     const oldEl = document.getElementById(`${prefix}-desc-${currentExpanded}`);
@@ -746,7 +930,9 @@
                 const targetEl = document.getElementById(`${prefix}-desc-${id}`);
                 if (targetEl) {
                     targetEl.classList.add('show');
-                    if (prefix === 'nwp') nwpExpandedId = id; else skExpandedId = id;
+                    if (prefix === 'nwp') nwpExpandedId = id;
+                    else if (prefix === 'sk') skExpandedId = id;
+                    else amExpandedKey = id;
                 }
             }
         }
