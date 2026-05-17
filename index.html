@@ -99,7 +99,7 @@
             flex-wrap: wrap;
             justify-content: center;
             width: 100%;
-            max-width: 900px;
+            max-width: 850px;
         }
 
         .btn-large {
@@ -120,21 +120,21 @@
             min-width: 250px;
         }
 
-        .btn-large:hover {
+        .btn-large:hover:not(.disabled) {
             background-color: var(--accent-hover);
             color: #e6d8c3;
             transform: translateY(-2px);
             box-shadow: 0 6px 15px var(--shadow-color);
         }
 
-        /* Contenedores de Secciones */
+        /* Contenedores de las Secciones (Ocultos por defecto) */
         #nwp-app, #skills-app, #am-app {
             display: none;
             animation: fadeIn 0.8s ease-in-out;
         }
 
         /* =========================================================
-           Cabeceras y Paneles de Control
+           Secciones de Tablas y Paneles de Control
            ========================================================= */
         .header-container {
             display: flex;
@@ -242,6 +242,7 @@
         .checkbox-option:last-child { margin-bottom: 0; }
         .checkbox-option input { cursor: pointer; accent-color: var(--accent-main); margin: 0; }
 
+        /* Estilo Scroll */
         .checkbox-group-container::-webkit-scrollbar { width: 6px; }
         .checkbox-group-container::-webkit-scrollbar-track { background: var(--bg-body); }
         .checkbox-group-container::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
@@ -269,7 +270,7 @@
         }
 
         /* =========================================================
-           Tablas Estándar (Escritorio)
+           Tablas y Estructura Adaptable
            ========================================================= */
         table {
             width: 100%;
@@ -279,7 +280,6 @@
             overflow: hidden;
             box-shadow: 0 4px 10px var(--shadow-color);
             transition: background-color 0.4s;
-            margin-bottom: 30px;
         }
 
         th {
@@ -301,9 +301,7 @@
         tr.main-row { transition: background-color 0.2s; cursor: pointer; }
         tr.main-row:hover { background-color: var(--table-tr-hover); }
 
-        /* =========================================================
-           Ajuste de Spacing del Bloque Desplegable (Bug 2 Solucionado)
-           ========================================================= */
+        /* Acordeón de Descripciones Optimizado */
         .desc-row td { padding: 0 !important; border: none !important; }
 
         .desc-content {
@@ -317,42 +315,19 @@
         }
 
         .desc-row.show .desc-content {
-            max-height: 2000px; /* Ampliado para tolerar sub-listas extensas de maniobras */
-            /* SOLUCIÓN BUG 2: Se añade cojín inferior (45px) para dar aire antes de la siguiente fila */
-            padding: 25px 40px 45px 40px; 
+            max-height: 2000px; /* Incrementado para dar cabida a listas largas de maniobras */
+            padding: 20px 40px; 
             border-bottom: 1px solid var(--border-color);
             border-top: 1px dashed var(--accent-main);
         }
 
-        .desc-content p { margin: 0 0 12px 0; }
-        .desc-content p:last-child { margin-bottom: 0; }
-
-        /* Estilos específicos para el desglose interno de movimientos marciales */
-        .am-category-block {
-            margin-top: 15px;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 12px 20px;
-            border-left: 3px solid var(--accent-main);
-            border-radius: 4px;
-        }
-        .am-category-title {
-            font-weight: bold;
-            color: var(--accent-main);
-            text-transform: uppercase;
-            font-size: 0.95em;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-        .am-maneuver-item {
-            margin-bottom: 6px;
-            font-size: 0.95em;
-        }
-        .am-maneuver-item strong { color: var(--text-main); }
+        .desc-content p { margin: 0; text-indent: 10px; }
 
         /* =========================================================
-           Responsividad Flexible Avanzada (Bug 1 Solucionado)
+           Responsividad Estilo Cartas Móviles
            ========================================================= */
         @media screen and (max-width: 768px) {
+            .landing-title { font-size: 2em; }
             .header-container { flex-direction: column; gap: 12px; text-align: center; }
             table, thead, tbody, th, td, tr { display: block; }
             thead tr { position: absolute; top: -9999px; left: -9999px; }
@@ -366,37 +341,38 @@
                 box-shadow: 0 2px 5px var(--shadow-color);
             }
 
-            /* SOLUCIÓN BUG 1: Transición completa a Flexbox Distribuido. 
-               Evita colisiones entre etiquetas largas (Armas Disponibles) y valores. */
             td {
                 border: none;
                 border-bottom: 1px solid var(--border-color);
-                padding: 12px 15px;
+                position: relative;
+                padding-left: 45%;
+                text-align: left;
+                min-height: 30px;
                 display: flex;
-                justify-content: space-between; 
                 align-items: center;
-                text-align: right;
-                min-height: 35px;
             }
 
             td::before {
                 content: attr(data-label);
+                position: absolute;
+                left: 12px;
+                width: 40%;
+                white-space: nowrap;
                 font-weight: bold;
                 color: var(--accent-main);
                 text-align: left;
-                margin-right: 20px;
-                white-space: nowrap;
             }
 
             td:last-child { border-bottom: 0; }
-            .desc-row td { display: block; padding: 0 !important; border-bottom: none; }
+            .desc-row td::before { content: none; }
+            .desc-row td { padding-left: 0; border-bottom: none; display: block; }
             
             .desc-row.show .desc-content {
                 border-bottom-left-radius: 6px;
                 border-bottom-right-radius: 6px;
                 margin-bottom: 12px;
                 border: 1px solid var(--border-color);
-                padding: 20px 20px 30px 20px; 
+                padding: 18px 25px; 
             }
         }
     </style>
@@ -410,7 +386,7 @@
         <div class="landing-buttons">
             <button class="btn-large" onclick="openApp('nwp')">Pericias en No Armas</button>
             <button class="btn-large" onclick="openApp('skills')">Skills</button>
-            <button class="btn-large" onclick="openApp('am')">Artemarcialismos</button>
+            <button class="btn-large" onclick="openApp('am')">Estilos de Artes Marciales</button>
         </div>
     </div>
 
@@ -429,7 +405,7 @@
             <div class="filters-grid">
                 <div class="filter-group">
                     <label class="group-title">Nombre</label>
-                    <input type="text" id="nwp-filter-name" placeholder="Ej. Spellmaking" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit; font-size: 0.9em;" oninput="applyNwpFilters()">
+                    <input type="text" id="nwp-filter-name" placeholder="Ej. Spellmaking" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit;" oninput="applyNwpFilters()">
                 </div>
                 <div class="filter-group">
                     <label class="group-title">Slots</label>
@@ -487,7 +463,7 @@
             <div class="filters-grid">
                 <div class="filter-group">
                     <label class="group-title">Nombre</label>
-                    <input type="text" id="sk-filter-name" placeholder="Ej. Dureza" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit; font-size: 0.9em;" oninput="applySkFilters()">
+                    <input type="text" id="sk-filter-name" placeholder="Ej. Dureza" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit;" oninput="applySkFilters()">
                 </div>
                 <div class="filter-group">
                     <label class="group-title">Nivel / Rango</label>
@@ -516,7 +492,7 @@
 
     <div id="am-app">
         <div class="header-container">
-            <h1>Artemarcialismos</h1>
+            <h1>Estilos de Artes Marciales</h1>
             <div>
                 <button class="btn-theme" onclick="closeApp('am')" style="margin-right: 10px;">Volver</button>
                 <button class="btn-theme" onclick="toggleTheme()">Invocar Luz</button>
@@ -524,16 +500,24 @@
         </div>
 
         <div class="controls-panel">
-            <input type="text" id="am-global-search" class="search-bar" placeholder="Investigar estilos o maniobras..." oninput="applyAmFilters()">
+            <input type="text" id="am-global-search" class="search-bar" placeholder="Investigar estilos (Nombre, armas, maniobras...)" oninput="applyAmFilters()">
             
             <div class="filters-grid">
                 <div class="filter-group">
                     <label class="group-title">Nombre Estilo</label>
-                    <input type="text" id="am-filter-name" placeholder="Ej. Aikijutsu" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit; font-size: 0.9em;" oninput="applyAmFilters()">
+                    <input type="text" id="am-filter-name" placeholder="Ej. Karate" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit;" oninput="applyAmFilters()">
                 </div>
                 <div class="filter-group">
-                    <label class="group-title">Miembro Principal</label>
-                    <div id="am-filter-miembro" class="checkbox-group-container"></div>
+                    <label class="group-title">Ataque Principal</label>
+                    <div id="am-filter-attack" class="checkbox-group-container"></div>
+                </div>
+                <div class="filter-group">
+                    <label class="group-title">Nº Ataques</label>
+                    <div id="am-filter-num" class="checkbox-group-container"></div>
+                </div>
+                <div class="filter-group">
+                    <label class="group-title">Categorías Libres</label>
+                    <div id="am-filter-cats" class="checkbox-group-container"></div>
                 </div>
             </div>
 
@@ -543,8 +527,11 @@
         <table id="am-table">
             <thead>
                 <tr>
-                    <th>Nombre Estilo</th>
-                    <th>Miembro Principal</th>
+                    <th>Estilo</th>
+                    <th>Nº Ataques</th>
+                    <th>Daño Base</th>
+                    <th>Mod. AC</th>
+                    <th>Ataque Principal</th>
                     <th>Armas Disponibles</th>
                 </tr>
             </thead>
@@ -554,19 +541,13 @@
 
     <script src="non-weapon-proficiencies.js"></script>
     <script src="skills.js"></script>
-    <script src="artes-marciales.js"></script>
-    <script src="maniobras.js"></script>
+    <script src="artemarcialismos-lista.js"></script>
+    <script src="artemarcialismos-maniobras.js"></script>
 
     <script>
         // ==========================================
-        // Variables Globales de Fallbacks Seguros
+        // Enrutador y Conmutador de Pantallas
         // ==========================================
-        let nwpData = [], nwpFiltered = [], nwpExpandedId = null;
-        let skData = [], skFiltered = [], skExpandedId = null;
-        let amData = [], amFiltered = [], amExpandedId = null;
-        let dbManiobras = {};
-
-        // Enrutador de Aplicación
         function openApp(mode) {
             document.getElementById('landing-screen').style.display = 'none';
             if (mode === 'nwp') {
@@ -588,18 +569,27 @@
             document.getElementById('landing-screen').style.display = 'flex';
         }
 
-        // Interruptor del Sistema Cromático
+        // ==========================================
+        // Control Cromático de Iluminación
+        // ==========================================
+        const metaThemeColor = document.getElementById('meta-theme-color');
+
         function setTheme(themeName) {
             document.documentElement.setAttribute('data-theme', themeName);
             localStorage.setItem('ravenloftTheme', themeName);
-            document.querySelectorAll('.btn-theme').forEach(btn => {
-                btn.textContent = (themeName === 'light') ? 'Invocar Penumbra' : 'Invocar Luz';
+            
+            const buttons = document.querySelectorAll('.btn-theme');
+            buttons.forEach(btn => {
+                if (btn.textContent.includes('Luz') || btn.textContent.includes('Penumbra')) {
+                    btn.textContent = (themeName === 'light') ? 'Invocar Penumbra' : 'Invocar Luz';
+                }
             });
-            document.getElementById('meta-theme-color').setAttribute('content', (themeName === 'light') ? '#f4ebd8' : '#0c0a0a');
+            metaThemeColor.setAttribute('content', (themeName === 'light') ? '#f4ebd8' : '#0c0a0a');
         }
 
         function toggleTheme() {
-            setTheme(localStorage.getItem('ravenloftTheme') === 'light' ? 'dark' : 'light');
+            const current = localStorage.getItem('ravenloftTheme') === 'light' ? 'dark' : 'light';
+            setTheme(current);
         }
 
         (function() {
@@ -607,80 +597,61 @@
         })();
 
         // ==========================================
-        // Orquestador de Datos al Cargar el DOM
+        // Registro y Motores de Datos
         // ==========================================
+        let nwpData = [], nwpFiltered = [], nwpExpandedId = null;
+        let skData = [], skFiltered = [], skExpandedId = null;
+        let amData = {}, amFilteredKeys = [], amExpandedKey = null;
+
         document.addEventListener("DOMContentLoaded", () => {
-            // Inicialización Segura Módulo NWP
             if (typeof periciasData !== 'undefined') {
                 nwpData = periciasData;
                 nwpFiltered = periciasData;
                 populateNwpCheckboxes();
             }
-            
-            // Inicialización Segura Módulo SKILLS
             if (typeof skillsData !== 'undefined') {
                 skData = skillsData;
                 skFiltered = skillsData;
                 populateSkCheckboxes();
             }
-
-            // Inicialización Segura Módulo ARTEMARCIALISMOS Relacional (Opción 2)
-            if (typeof artesMarcialesData !== 'undefined') {
-                amData = artesMarcialesData;
-                amFiltered = artesMarcialesData;
-            } else {
-                // Fallback / Datos semilla por si aún no creas el archivo artes-marciales.js
-                amData = [{
-                    "id": 1,
-                    "name": "Aikijutsu",
-                    "miembro": "Brazos, Piernas",
-                    "armas": "Katana, Wakizashi, Ninguna",
-                    "description": "Se centra en desestabilizar y arrojar al oponente utilizando su propia inercia y fuerza de asalto contra él.",
-                    "maniobras": { "Llave": [1], "Arrojada": [1, 2] }
-                }];
-                amFiltered = amData;
+            if (typeof artemarcialismosData !== 'undefined') {
+                amData = artemarcialismosData;
+                amFilteredKeys = Object.keys(artemarcialismosData);
+                populateAmCheckboxes();
             }
-
-            if (typeof maniobrasData !== 'undefined') {
-                dbManiobras = maniobrasData;
-            } else {
-                // Fallback / Datos semilla por si aún no creas el archivo maniobras.js
-                dbManiobras = {
-                    "Llave": {
-                        "1": { "name": "Dormilona", "description": "El oponente cae inconsciente tras un asalto si falla salvación vs Paralización." }
-                    },
-                    "Arrojada": {
-                        "1": { "name": "Proyección de Cadera", "description": "Azota al oponente causando 1d6 de daño y derribándolo." },
-                        "2": { "name": "Hurracarrana", "description": "Toma la cabeza del rival con las piernas lanzándolo violentamente de espaldas." }
-                    }
-                };
-            }
-            populateAmCheckboxes();
         });
 
-        // Generadores Auxiliares de Componentes
+        // Inyección Generalizada de Cajas Checkbox
         function fillCheckboxGroup(containerId, values, onChangeFunc) {
             const container = document.getElementById(containerId);
             if (!container) return;
             container.innerHTML = '';
+            
             values.forEach(v => {
                 const label = document.createElement('label');
                 label.className = 'checkbox-option';
+                
                 const cb = document.createElement('input');
-                cb.type = 'checkbox'; cb.value = v; cb.onchange = onChangeFunc;
+                cb.type = 'checkbox';
+                cb.value = v;
+                cb.onchange = onChangeFunc;
+                
                 const span = document.createElement('span');
                 span.textContent = v;
-                label.appendChild(cb); label.appendChild(span);
+                
+                label.appendChild(cb);
+                label.appendChild(span);
                 container.appendChild(label);
             });
         }
 
         function getSelectedValues(containerId) {
-            return Array.from(document.querySelectorAll(`#${containerId} input:checked`)).map(cb => cb.value);
+            const checkboxes = document.querySelectorAll(`#${containerId} input:checked`);
+            return Array.from(checkboxes).map(cb => cb.value);
         }
 
         // ==========================================
-        // FILTROS Y RENDER DE PERICIAS (NWP)
+        // PROCEDIMIENTOS MÓDULO: NO ARMAS (NWP)
         // ==========================================
         function populateNwpCheckboxes() {
             const slots = new Set(), abilities = new Set(), classes = new Set(), races = new Set(), sources = new Set();
@@ -701,6 +672,7 @@
         function applyNwpFilters() {
             const gSearch = document.getElementById('nwp-global-search').value.toLowerCase();
             const fName = document.getElementById('nwp-filter-name').value.toLowerCase();
+            
             const selSlots = getSelectedValues('nwp-filter-slots');
             const selAbilities = getSelectedValues('nwp-filter-ability');
             const selClasses = getSelectedValues('nwp-filter-class');
@@ -708,13 +680,15 @@
             const selSources = getSelectedValues('nwp-filter-source');
             
             nwpFiltered = nwpData.filter(p => {
-                return Object.values(p).join(' ').toLowerCase().includes(gSearch) &&
-                       p.name.toLowerCase().includes(fName) &&
-                       (selSlots.length === 0 || selSlots.includes(p.slots.toString())) &&
-                       (selAbilities.length === 0 || (p.ability && selAbilities.includes(p.ability))) &&
-                       (selClasses.length === 0 || (p.class && selClasses.some(c => p.class.includes(c)))) &&
-                       (selRaces.length === 0 || (p.race && selRaces.some(r => p.race.includes(r)))) &&
-                       (selSources.length === 0 || (p.source && selSources.includes(p.source)));
+                const matchesGlobal = Object.values(p).join(' ').toLowerCase().includes(gSearch);
+                const matchesName = p.name.toLowerCase().includes(fName);
+                const matchesSlots = selSlots.length === 0 || selSlots.includes(p.slots.toString());
+                const matchesAbility = selAbilities.length === 0 || (p.ability && selAbilities.includes(p.ability));
+                const matchesClass = selClasses.length === 0 || (p.class && selClasses.some(c => p.class.includes(c)));
+                const matchesRace = selRaces.length === 0 || (p.race && selRaces.some(r => p.race.includes(r)));
+                const matchesSource = selSources.length === 0 || (p.source && selSources.includes(p.source));
+                
+                return matchesGlobal && matchesName && matchesSlots && matchesAbility && matchesClass && matchesRace && matchesSource;
             });
             nwpExpandedId = null;
             renderNwpTable();
@@ -732,24 +706,30 @@
             let html = '';
             nwpFiltered.forEach(item => {
                 const itemId = item.id || Math.floor(Math.random() * 100000);
-                html += `<tr class="main-row" onclick="toggleRow('nwp', ${itemId})">
-                    <td data-label="Nombre"><strong>${item.name}</strong></td>
-                    <td data-label="Slots">${item.slots}</td>
-                    <td data-label="Habilidad">${item.ability || '-'}</td>
-                    <td data-label="Mod">${item.modifier !== undefined ? item.modifier : '-'}</td>
-                    <td data-label="Clase">${item.class || '-'}</td>
-                    <td data-label="Raza">${item.race || '-'}</td>
-                    <td data-label="Source">${item.source || '-'}</td>
-                </tr>
-                <tr class="desc-row" id="nwp-desc-${itemId}">
-                    <td colspan="7"><div class="desc-content"><p><em>${item.description || 'Sin descripción.'}</em></p></div></td>
+                html += `<tr class="main-row" onclick="toggleRow('nwp', ${itemId})">`;
+                html += `<td data-label="Nombre"><strong>${item.name}</strong></td>`;
+                html += `<td data-label="Slots">${item.slots}</td>`;
+                html += `<td data-label="Habilidad">${item.ability || '-'}</td>`;
+                html += `<td data-label="Mod">${item.modifier !== undefined ? item.modifier : '-'}</td>`;
+                html += `<td data-label="Clase">${item.class || '-'}</td>`;
+                html += `<td data-label="Raza">${item.race || '-'}</td>`;
+                html += `<td data-label="Source">${item.source || '-'}</td>`;
+                html += `</tr>`;
+                html += `<tr class="desc-row" id="nwp-desc-${itemId}">
+                    <td colspan="7">
+                        <div class="desc-content"><p><em>${item.description || 'Sin descripción.'}</em></p></div>
+                    </td>
                 </tr>`;
             });
             tbody.innerHTML = html;
+            if (nwpExpandedId !== null) {
+                const el = document.getElementById(`nwp-desc-${nwpExpandedId}`);
+                if (el) el.classList.add('show');
+            }
         }
 
         // ==========================================
-        // FILTROS Y RENDER DE SKILLS
+        // PROCEDIMIENTOS MÓDULO: SKILLS ESPECIALES
         // ==========================================
         function populateSkCheckboxes() {
             const levels = new Set(), classes = new Set();
@@ -757,21 +737,25 @@
                 if (s.level !== undefined) levels.add(s.level);
                 if (s.class) s.class.split(',').forEach(c => classes.add(c.trim()));
             });
-            fillCheckboxGroup('sk-filter-level', Array.from(levels).sort((a,b)=>String(a).localeCompare(String(b),undefined,{numeric:true})), applySkFilters);
+            const sortedLevels = Array.from(levels).sort((a,b) => String(a).localeCompare(String(b), undefined, {numeric: true}));
+            fillCheckboxGroup('sk-filter-level', sortedLevels, applySkFilters);
             fillCheckboxGroup('sk-filter-class', Array.from(classes).sort(), applySkFilters);
         }
 
         function applySkFilters() {
             const gSearch = document.getElementById('sk-global-search').value.toLowerCase();
             const fName = document.getElementById('sk-filter-name').value.toLowerCase();
+            
             const selLevels = getSelectedValues('sk-filter-level');
             const selClasses = getSelectedValues('sk-filter-class');
             
             skFiltered = skData.filter(s => {
-                return Object.values(s).join(' ').toLowerCase().includes(gSearch) &&
-                       s.name.toLowerCase().includes(fName) &&
-                       (selLevels.length === 0 || selLevels.includes(s.level.toString())) &&
-                       (selClasses.length === 0 || (s.class && selClasses.some(c => s.class.includes(c))));
+                const matchesGlobal = Object.values(s).join(' ').toLowerCase().includes(gSearch);
+                const matchesName = s.name.toLowerCase().includes(fName);
+                const matchesLevel = selLevels.length === 0 || selLevels.includes(s.level.toString());
+                const matchesClass = selClasses.length === 0 || (s.class && selClasses.some(c => s.class.includes(c)));
+                
+                return matchesGlobal && matchesName && matchesLevel && matchesClass;
             });
             skExpandedId = null;
             renderSkTable();
@@ -788,54 +772,69 @@
             const tbody = document.getElementById('sk-table-body');
             let html = '';
             skFiltered.forEach((item, index) => {
-                html += `<tr class="main-row" onclick="toggleRow('sk', ${index})">
-                    <td data-label="Nombre"><strong>${item.name}</strong></td>
-                    <td data-label="Nivel / Rango">${item.level}</td>
-                    <td data-label="Clase Vínculo">${item.class || '-'}</td>
-                </tr>
-                <tr class="desc-row" id="sk-desc-${index}">
-                    <td colspan="3"><div class="desc-content"><p><em>${item.description || 'Sin descripción.'}</em></p></div></td>
+                html += `<tr class="main-row" onclick="toggleRow('sk', ${index})">`;
+                html += `<td data-label="Nombre"><strong>${item.name}</strong></td>`;
+                html += `<td data-label="Nivel / Rango">${item.level}</td>`;
+                html += `<td data-label="Clase Vínculo">${item.class || '-'}</td>`;
+                html += `</tr>`;
+                html += `<tr class="desc-row" id="sk-desc-${index}">
+                    <td colspan="3">
+                        <div class="desc-content"><p><em>${item.description || 'Sin descripción.'}</em></p></div>
+                    </td>
                 </tr>`;
             });
             tbody.innerHTML = html;
+            if (skExpandedId !== null) {
+                const el = document.getElementById(`sk-desc-${skExpandedId}`);
+                if (el) el.classList.add('show');
+            }
         }
 
         // ==========================================
-        // FILTROS Y RENDER DE ARTEMARCIALISMOS (NUEVO)
+        // PROCEDIMIENTOS MÓDULO: ARTEMARCIALISMOS (AM)
         // ==========================================
         function populateAmCheckboxes() {
-            const miembros = new Set();
-            amData.forEach(a => {
-                if (a.miembro) a.miembro.split(',').forEach(m => miembros.add(m.trim()));
+            const attacks = new Set(), numbers = new Set(), categories = new Set();
+            Object.keys(amData).forEach(key => {
+                const style = amData[key];
+                if (style.ataquePrincipal) attacks.add(style.ataquePrincipal);
+                if (style.numeroAtaques) numbers.add(style.numeroAtaques);
+                if (style.maniobras) {
+                    Object.keys(style.maniobras).forEach(cat => categories.add(cat));
+                }
             });
-            fillCheckboxGroup('am-filter-miembro', Array.from(miembros).sort(), applyAmFilters);
+            fillCheckboxGroup('am-filter-attack', Array.from(attacks).sort(), applyAmFilters);
+            fillCheckboxGroup('am-filter-num', Array.from(numbers).sort(), applyAmFilters);
+            fillCheckboxGroup('am-filter-cats', Array.from(categories).sort(), applyAmFilters);
         }
 
         function applyAmFilters() {
             const gSearch = document.getElementById('am-global-search').value.toLowerCase();
             const fName = document.getElementById('am-filter-name').value.toLowerCase();
-            const selMiembros = getSelectedValues('am-filter-miembro');
             
-            amFiltered = amData.filter(a => {
-                // Validación para buscar tanto en las propiedades básicas como en los nombres de las maniobras vinculadas
-                let stringManeuvers = '';
-                if (a.maniobras) {
-                    Object.keys(a.maniobras).forEach(cat => {
-                        a.maniobras[cat].forEach(num => {
-                            if (dbManiobras[cat] && dbManiobras[cat][num]) {
-                                stringManeuvers += ' ' + dbManiobras[cat][num].name + ' ' + dbManiobras[cat][num].description;
-                            }
-                        });
-                    });
-                }
+            const selAttacks = getSelectedValues('am-filter-attack');
+            const selNumbers = getSelectedValues('am-filter-num');
+            const selCats = getSelectedValues('am-filter-cats');
+            
+            amFilteredKeys = Object.keys(amData).filter(key => {
+                const style = amData[key];
                 
-                const matchesGlobal = (Object.values(a).join(' ') + stringManeuvers).toLowerCase().includes(gSearch);
-                const matchesName = a.name.toLowerCase().includes(fName);
-                const matchesMiembro = selMiembros.length === 0 || (a.miembro && selMiembros.some(m => a.miembro.includes(m)));
+                // Bloque textual unificado para búsqueda global
+                let searchableStr = key + " " + (style.ataquePrincipal || "") + " " + (style.numeroAtaques || "") + " " + (style.daño || "") + " " + (style.armasDisponibles || "");
+                if (style.maniobras) searchableStr += " " + Object.keys(style.maniobras).join(" ");
                 
-                return matchesGlobal && matchesName && matchesMiembro;
+                const matchesGlobal = searchableStr.toLowerCase().includes(gSearch);
+                const matchesName = key.toLowerCase().includes(fName);
+                const matchesAttack = selAttacks.length === 0 || selAttacks.includes(style.ataquePrincipal);
+                const matchesNum = selNumbers.length === 0 || selNumbers.includes(style.numeroAtaques);
+                
+                const styleCats = style.maniobras ? Object.keys(style.maniobras) : [];
+                const matchesCats = selCats.length === 0 || selCats.some(c => styleCats.includes(c));
+                
+                return matchesGlobal && matchesName && matchesAttack && matchesNum && matchesCats;
             });
-            amExpandedId = null;
+            
+            amExpandedKey = null;
             renderAmTable();
         }
 
@@ -850,62 +849,79 @@
             const tbody = document.getElementById('am-table-body');
             let html = '';
             
-            amFiltered.forEach(item => {
-                html += `<tr class="main-row" onclick="toggleRow('am', ${item.id})">
-                    <td data-label="Nombre Estilo"><strong>${item.name}</strong></td>
-                    <td data-label="Miembro Principal">${item.miembro || '-'}</td>
-                    <td data-label="Armas Disponibles">${item.armas || '-'}</td>
-                </tr>`;
+            amFilteredKeys.forEach(key => {
+                const style = amData[key];
+                const safeId = key.replace(/[^a-zA-Z0-9]/g, '_');
                 
-                // Construcción Dinámica Relacional del Acordeón (Lectura cruzada entre Estilos y Maniobras)
-                let subContentHtml = `<div class="desc-content">
-                    <p><strong>Descripción del Estilo:</strong> <em>${item.description || 'Sin descripción.'}</em></p>`;
+                html += `<tr class="main-row" onclick="toggleRow('am', '${safeId}')">`;
+                html += `<td data-label="Estilo"><strong>${key}</strong></td>`;
+                html += `<td data-label="Nº Ataques">${style.numeroAtaques || '-'}</td>`;
+                html += `<td data-label="Daño Base">${style.daño || '-'}</td>`;
+                html += `<td data-label="Mod. AC">${style.armorClassMod || '-'}</td>`;
+                html += `<td data-label="Ataque Principal">${style.ataquePrincipal || '-'}</td>`;
+                html += `<td data-label="Armas Disponibles">${style.armasDisponibles || '-'}</td>`;
+                html += `</tr>`;
                 
-                if (item.maniobras && Object.keys(item.maniobras).length > 0) {
-                    Object.keys(item.maniobras).forEach(category => {
-                        subContentHtml += `<div class="am-category-block">
-                            <div class="am-category-title">${category}s</div>`;
+                // Construcción relacional de los movimientos usando maniobrasData
+                let contentHtml = '';
+                if (style.maniobras && typeof maniobrasData !== 'undefined') {
+                    Object.keys(style.maniobras).forEach(catName => {
+                        contentHtml += `<div style="margin-bottom: 15px;">`;
+                        contentHtml += `<h4 style="color: var(--accent-main); margin: 0 0 8px 0; text-transform: uppercase; border-bottom: 1px dashed var(--border-color); padding-bottom: 2px; font-size: 1.1em; letter-spacing: 0.5px;">${catName}s</h4>`;
+                        contentHtml += `<ul style="margin: 0; padding-left: 20px; list-style-type: square;">`;
                         
-                        item.maniobras[category].forEach(num => {
-                            // Buscar datos en el diccionario relacional (dbManiobras)
-                            const maneuverData = (dbManiobras[category] && dbManiobras[category][num]) 
-                                                ? dbManiobras[category][num] 
-                                                : { "name": `Movimiento ${num}`, "description": "Detalles bajo investigación en las Brumas." };
-                            
-                            subContentHtml += `<div class="am-maneuver-item">
-                                <strong>${num} - ${maneuverData.name}:</strong> ${maneuverData.description}
-                            </div>`;
+                        style.maniobras[catName].forEach(num => {
+                            const details = (maniobrasData[catName] && maniobrasData[catName][num]) ? maniobrasData[catName][num] : null;
+                            if (details) {
+                                contentHtml += `<li style="margin-bottom: 10px;">`;
+                                contentHtml += `<strong style="font-size: 1.05em;">[${num}] ${details.nombre}</strong>`;
+                                if (details.descripcionCorta) {
+                                    contentHtml += ` — <span style="color: var(--text-muted); font-style: italic; font-size: 0.95em;">${details.descripcionCorta}</span>`;
+                                }
+                                if (details.descripcionLarga) {
+                                    contentHtml += `<p style="margin: 4px 0 0 0; text-indent: 0; font-size: 0.95em; text-align: justify; color: var(--text-main);">${details.descripcionLarga}</p>`;
+                                }
+                                contentHtml += `</li>`;
+                            } else {
+                                contentHtml += `<li style="margin-bottom: 6px;"><strong>[${num}]</strong> Maniobra no identificada en el grimorio base.</li>`;
+                            }
                         });
                         
-                        subContentHtml += `</div>`;
+                        contentHtml += `</ul>`;
+                        contentHtml += `</div>`;
                     });
+                } else {
+                    contentHtml = `<p style="color: var(--text-muted); font-style: italic;">No se encontraron descriptores de maniobras cargados.</p>`;
                 }
                 
-                subContentHtml += `</div>`;
-                
-                html += `<tr class="desc-row" id="am-desc-${item.id}">
-                    <td colspan="3">${subContentHtml}</td>
+                html += `<tr class="desc-row" id="am-desc-${safeId}">
+                    <td colspan="6">
+                        <div class="desc-content">
+                            ${contentHtml}
+                        </div>
+                    </td>
                 </tr>`;
             });
             
             tbody.innerHTML = html;
+            if (amExpandedKey !== null) {
+                const el = document.getElementById(`am-desc-${amExpandedKey}`);
+                if (el) el.classList.add('show');
+            }
         }
 
         // ==========================================
-        // Administrador Único de Acordeones
+        // Controlador Único de Acordeones
         // ==========================================
         function toggleRow(prefix, id) {
-            let currentExpanded = null;
-            if (prefix === 'nwp') currentExpanded = nwpExpandedId;
-            else if (prefix === 'sk') currentExpanded = skExpandedId;
-            else if (prefix === 'am') currentExpanded = amExpandedId;
+            let currentExpanded = (prefix === 'nwp') ? nwpExpandedId : ((prefix === 'sk') ? skExpandedId : amExpandedKey);
             
             if (currentExpanded === id) {
                 const el = document.getElementById(`${prefix}-desc-${id}`);
                 if (el) el.classList.remove('show');
-                if (prefix === 'nwp') nwpExpandedId = null; 
+                if (prefix === 'nwp') nwpExpandedId = null;
                 else if (prefix === 'sk') skExpandedId = null;
-                else if (prefix === 'am') amExpandedId = null;
+                else amExpandedKey = null;
             } else {
                 if (currentExpanded !== null) {
                     const oldEl = document.getElementById(`${prefix}-desc-${currentExpanded}`);
@@ -914,9 +930,9 @@
                 const targetEl = document.getElementById(`${prefix}-desc-${id}`);
                 if (targetEl) {
                     targetEl.classList.add('show');
-                    if (prefix === 'nwp') nwpExpandedId = id; 
+                    if (prefix === 'nwp') nwpExpandedId = id;
                     else if (prefix === 'sk') skExpandedId = id;
-                    else if (prefix === 'am') amExpandedId = id;
+                    else amExpandedKey = id;
                 }
             }
         }
