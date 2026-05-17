@@ -177,6 +177,18 @@ const artemarcialismosData = {
       "Strike": [1, 2, 3],
       "Vital Area": [1, 2, 3]
     },
+    armasDisponibles: "Clubbing Weapons",
+  },
+  "Box": {
+    numeroAtaques: "+2",
+    daño: "1d6",
+    armorClassMod: "-2",
+    ataquePrincipal: "Hands",
+    maniobras: {
+      "Strike": [1, 2],
+      "Movement": [1, 5],
+      "Mental and Physical Training": [2, 5]
+    },
     armasDisponibles: "Caestus, Fist Weapons",
   },
   "Callejero": {
