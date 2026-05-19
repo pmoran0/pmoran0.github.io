@@ -57,8 +57,8 @@ const artemarcialismosData = {
   },
   "Kung Fu": {
     numeroAtaques: "+1",
-    daño: "1d4",
-    armorClassMod: "-1",
+    daño: "1d3",
+    armorClassMod: "-2",
     ataquePrincipal: "Hand",
     maniobras: {
       "Lock": [1],
@@ -183,7 +183,7 @@ const artemarcialismosData = {
     numeroAtaques: "+2",
     daño: "1d6",
     armorClassMod: "-2",
-    ataquePrincipal: "Hands",
+    ataquePrincipal: "Hand",
     maniobras: {
       "Strike": [1, 2],
       "Movement": [1, 5],
