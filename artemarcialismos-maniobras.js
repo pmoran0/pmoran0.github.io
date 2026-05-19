@@ -201,7 +201,7 @@ const maniobrasData = {
     4: {
       nombre: "Ch'i Attacks",
       descripcionCorta: "Can hit as if a magical weapon",
-      descripcionLarga: "By channeling their inner spiritual energy into their unarmed strikes, the martial artist can bypass the defenses of supernatural creatures. Their empty-handed attacks are treated as magical weapons for the purpose of determining what creatures they can hit or damage. Weapons Allowed: Empty hand."
+      descripcionLarga: "By channeling their inner spiritual energy into their unarmed strikes, the martial artist can bypass the defenses of supernatural creatures. Their empty-handed attacks are treated as magical weapons for the purpose of determining what creatures they can hit or damage. Weapons Allowed: Empty hand. <p> <table><tr><th>XP Level</th><th>Character Hits As A</th></tr><tr><td>1-4</td><td>magical weapon</td></tr><tr><td>5-9</td><td>+1 magical weapon</td></tr><tr><td>10-14</td><td>+2 magical weapon</td></tr><tr><td>15-19</td><td>+3 magical weapon</td></tr><tr><td>20</td><td>+4 magical weapon</td><tr/></table>"
     },
     5: {
       nombre: "Blind Fighting",
