@@ -10,7 +10,6 @@
            Variables de Tema (Ravenloft Gothic vs Old Parchment)
            ========================================================= */
         :root {
-            /* Tema Oscuro (Gótico) */
             --bg-body: #0c0a0a;
             --bg-panel: #1a1515;
             --bg-input: #0c0a0a;
@@ -19,7 +18,6 @@
             --accent-main: #8b0000;
             --accent-hover: #5a1111;
             --border-color: #3a1c1c;
-            
             --table-th: #2b0c0c;
             --table-tr: #141010;
             --table-tr-hover: #2a1111;
@@ -28,7 +26,6 @@
         }
 
         [data-theme="light"] {
-            /* Tema Claro (Pergamino Antiguo) */
             --bg-body: #f4ebd8;
             --bg-panel: #e8dac3;
             --bg-input: #fdf6ec;
@@ -37,7 +34,6 @@
             --accent-main: #9e1b1b;
             --accent-hover: #7a1515;
             --border-color: #c4ab8f;
-            
             --table-th: #d1b99e;
             --table-tr: #f9f2e8;
             --table-tr-hover: #ebdcc5;
@@ -59,9 +55,6 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* =========================================================
-           Pantalla de Inicio (Landing Page)
-           ========================================================= */
         #landing-screen {
             display: flex;
             flex-direction: column;
@@ -89,25 +82,53 @@
         .landing-subtitle {
             font-size: 1.2em;
             color: var(--text-muted);
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             font-style: italic;
+        }
+
+        .user-greeting {
+            color: var(--accent-main);
+            font-weight: bold;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+
+        .header-greeting {
+            color: var(--text-muted);
+            font-weight: bold;
+            font-style: italic;
+            margin-right: 15px;
+            font-size: 1.1em;
         }
 
         .landing-buttons {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
             justify-content: center;
             width: 100%;
             max-width: 900px;
+            margin-bottom: 30px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            max-width: 600px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
         }
 
         .btn-large {
             background-color: var(--bg-panel);
             color: var(--text-main);
             border: 2px solid var(--accent-main);
-            padding: 18px 30px;
-            font-size: 1.2em;
+            padding: 16px 25px;
+            font-size: 1.1em;
             font-family: inherit;
             font-weight: bold;
             text-transform: uppercase;
@@ -117,7 +138,7 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 10px var(--shadow-color);
             flex: 1;
-            min-width: 250px;
+            min-width: 200px;
         }
 
         .btn-large:hover {
@@ -143,6 +164,8 @@
             border-bottom: 2px solid var(--accent-hover);
             padding-bottom: 10px;
             margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         h1 {
@@ -152,6 +175,13 @@
             letter-spacing: 2px;
             font-size: 1.4em;
             text-shadow: 1px 1px 2px var(--shadow-color);
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .btn-theme {
@@ -198,6 +228,31 @@
 
         .search-bar:focus { outline: none; border-color: var(--text-main); }
 
+        .filters-collapsible { display: block; }
+
+        .btn-toggle-filters {
+            display: none;
+            width: 100%;
+            background-color: var(--bg-panel);
+            color: var(--text-main);
+            border: 1px dashed var(--accent-main);
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .btn-toggle-filters:hover {
+            background-color: var(--accent-hover);
+            color: #e6d8c3;
+            border-style: solid;
+        }
+
         .filters-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -242,7 +297,6 @@
         .checkbox-option:last-child { margin-bottom: 0; }
         .checkbox-option input { cursor: pointer; accent-color: var(--accent-main); margin: 0; }
 
-        /* Estilos de barras de desplazamiento internas */
         .checkbox-group-container::-webkit-scrollbar,
         .desc-content::-webkit-scrollbar { width: 6px; }
         .checkbox-group-container::-webkit-scrollbar-track,
@@ -267,11 +321,7 @@
             font-size: 0.95em;
         }
 
-        .btn-reset:hover {
-            background-color: var(--accent-hover);
-            color: #e6d8c3;
-            border-style: solid;
-        }
+        .btn-reset:hover { background-color: var(--accent-hover); color: #e6d8c3; border-style: solid; }
 
         /* =========================================================
            Tablas Estándar (Escritorio)
@@ -306,15 +356,14 @@
         tr.main-row { transition: background-color 0.2s; cursor: pointer; }
         tr.main-row:hover { background-color: var(--table-tr-hover); }
 
-        /* =========================================================
-           Ajuste de Spacing del Bloque Desplegable (Con Scroll Interno)
-           ========================================================= */
+        .star-btn { font-size: 1.5em; cursor: pointer; user-select: none; transition: transform 0.2s; }
+        .star-btn:hover { transform: scale(1.2); }
+
         .desc-row td { padding: 0 !important; border: none !important; }
 
         .desc-content {
             max-height: 0;
             overflow: hidden;
-            /* Permite el scroll interno si el texto supera la altura asignada */
             overflow-y: auto; 
             transition: max-height 0.4s ease-out, padding 0.4s ease-out;
             background-color: var(--table-desc);
@@ -345,22 +394,21 @@
             text-transform: uppercase;
             font-size: 0.95em;
             letter-spacing: 1px;
-            /* Separador inferior */
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 5px;
             margin-bottom: 10px;
         }
-        .am-maneuver-item {
-            margin-bottom: 12px; 
-            font-size: 0.95em;
-        }
+        .am-maneuver-item { margin-bottom: 12px; font-size: 0.95em; }
         .am-maneuver-item strong { color: var(--text-main); }
 
         /* =========================================================
            Responsividad Flexible Avanzada
            ========================================================= */
         @media screen and (max-width: 768px) {
-            .header-container { flex-direction: column; gap: 12px; text-align: center; }
+            .header-container { flex-direction: column; text-align: center; }
+            .header-controls { justify-content: center; }
+            .header-greeting { margin-right: 0; margin-bottom: 10px; width: 100%; }
+            
             table, thead, tbody, th, td, tr { display: block; }
             thead tr { position: absolute; top: -9999px; left: -9999px; }
             table { background-color: transparent; box-shadow: none; }
@@ -403,6 +451,10 @@
                 border: 1px solid var(--border-color);
                 padding: 20px 20px 30px 20px; 
             }
+
+            .btn-toggle-filters { display: block; }
+            .filters-collapsible { display: none; }
+            .filters-collapsible.show { display: block; }
         }
     </style>
 </head>
@@ -412,18 +464,27 @@
         <h1 class="landing-title">Archivos de Ravenloft</h1>
         <p class="landing-subtitle">Elige el conocimiento que deseas develar...</p>
         
+        <div id="landing-greeting" class="user-greeting">Bienvenido, Invitado</div>
+
         <div class="landing-buttons">
             <button class="btn-large" onclick="openApp('nwp')">Pericias en No Armas</button>
             <button class="btn-large" onclick="openApp('skills')">Skills</button>
             <button class="btn-large" onclick="openApp('am')">Artemarcialismos</button>
+        </div>
+
+        <div class="action-buttons">
+            <input type="file" id="import-file" accept=".json" style="display:none" onchange="importCharacter(event)">
+            <button class="btn-large" style="border-color: var(--text-muted);" onclick="document.getElementById('import-file').click()">Importar Personaje</button>
+            <button class="btn-large" style="border-color: var(--text-muted);" onclick="exportCharacter()">Exportar Personaje</button>
         </div>
     </div>
 
     <div id="nwp-app">
         <div class="header-container">
             <h1>Pericias en No Armas</h1>
-            <div>
-                <button class="btn-theme" onclick="closeApp('nwp')" style="margin-right: 10px;">Volver</button>
+            <div class="header-controls">
+                <span class="header-greeting global-greeting-text">Bienvenido, Invitado</span>
+                <button class="btn-theme" onclick="closeApp('nwp')">Volver</button>
                 <button class="btn-theme" onclick="toggleTheme()">Invocar Luz</button>
             </div>
         </div>
@@ -431,34 +492,43 @@
         <div class="controls-panel">
             <input type="text" id="nwp-global-search" class="search-bar" placeholder="Investigar pericias (Nombre, descripciones...)" oninput="applyNwpFilters()">
             
-            <div class="filters-grid">
-                <div class="filter-group">
-                    <label class="group-title">Nombre</label>
-                    <input type="text" id="nwp-filter-name" placeholder="Ej. Spellmaking" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit; font-size: 0.9em;" oninput="applyNwpFilters()">
-                </div>
-                <div class="filter-group">
-                    <label class="group-title">Slots</label>
-                    <div id="nwp-filter-slots" class="checkbox-group-container"></div>
-                </div>
-                <div class="filter-group">
-                    <label class="group-title">Habilidad</label>
-                    <div id="nwp-filter-ability" class="checkbox-group-container"></div>
-                </div>
-                <div class="filter-group">
-                    <label class="group-title">Clase</label>
-                    <div id="nwp-filter-class" class="checkbox-group-container"></div>
-                </div>
-                <div class="filter-group">
-                    <label class="group-title">Raza</label>
-                    <div id="nwp-filter-race" class="checkbox-group-container"></div>
-                </div>
-                <div class="filter-group">
-                    <label class="group-title">Source</label>
-                    <div id="nwp-filter-source" class="checkbox-group-container"></div>
-                </div>
-            </div>
+            <button class="btn-toggle-filters" onclick="toggleFilters('nwp')">Mostrar/Ocultar Filtros</button>
 
-            <button class="btn-reset" onclick="resetNwpFilters()">Purificar Filtros</button>
+            <div id="nwp-filters-container" class="filters-collapsible">
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label class="group-title">Grimorio</label>
+                        <label class="checkbox-option" style="padding: 8px; border: 1px solid var(--accent-main); border-radius: 4px;">
+                            <input type="checkbox" id="nwp-filter-fav" onchange="applyNwpFilters()"> Solo Favoritos
+                        </label>
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Nombre</label>
+                        <input type="text" id="nwp-filter-name" placeholder="Ej. Spellmaking" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit; font-size: 0.9em;" oninput="applyNwpFilters()">
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Slots</label>
+                        <div id="nwp-filter-slots" class="checkbox-group-container"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Habilidad</label>
+                        <div id="nwp-filter-ability" class="checkbox-group-container"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Clase</label>
+                        <div id="nwp-filter-class" class="checkbox-group-container"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Raza</label>
+                        <div id="nwp-filter-race" class="checkbox-group-container"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Source</label>
+                        <div id="nwp-filter-source" class="checkbox-group-container"></div>
+                    </div>
+                </div>
+                <button class="btn-reset" onclick="resetNwpFilters()">Purificar Filtros</button>
+            </div>
         </div>
 
         <table id="nwp-table">
@@ -471,6 +541,7 @@
                     <th>Clase</th>
                     <th>Raza</th>
                     <th>Source</th>
+                    <th style="width: 40px;">★</th> 
                 </tr>
             </thead>
             <tbody id="nwp-table-body"></tbody>
@@ -480,8 +551,9 @@
     <div id="skills-app">
         <div class="header-container">
             <h1>Skills Especiales</h1>
-            <div>
-                <button class="btn-theme" onclick="closeApp('skills')" style="margin-right: 10px;">Volver</button>
+            <div class="header-controls">
+                <span class="header-greeting global-greeting-text">Bienvenido, Invitado</span>
+                <button class="btn-theme" onclick="closeApp('skills')">Volver</button>
                 <button class="btn-theme" onclick="toggleTheme()">Invocar Luz</button>
             </div>
         </div>
@@ -489,22 +561,31 @@
         <div class="controls-panel">
             <input type="text" id="sk-global-search" class="search-bar" placeholder="Investigar skills (Nombre, descripciones...)" oninput="applySkFilters()">
             
-            <div class="filters-grid">
-                <div class="filter-group">
-                    <label class="group-title">Nombre</label>
-                    <input type="text" id="sk-filter-name" placeholder="Ej. Dureza" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit; font-size: 0.9em;" oninput="applySkFilters()">
-                </div>
-                <div class="filter-group">
-                    <label class="group-title">Nivel / Rango</label>
-                    <div id="sk-filter-level" class="checkbox-group-container"></div>
-                </div>
-                <div class="filter-group">
-                    <label class="group-title">Clase Vínculo</label>
-                    <div id="sk-filter-class" class="checkbox-group-container"></div>
-                </div>
-            </div>
+            <button class="btn-toggle-filters" onclick="toggleFilters('sk')">Mostrar/Ocultar Filtros</button>
 
-            <button class="btn-reset" onclick="resetSkFilters()">Purificar Filtros</button>
+            <div id="sk-filters-container" class="filters-collapsible">
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label class="group-title">Grimorio</label>
+                        <label class="checkbox-option" style="padding: 8px; border: 1px solid var(--accent-main); border-radius: 4px;">
+                            <input type="checkbox" id="sk-filter-fav" onchange="applySkFilters()"> Solo Favoritos
+                        </label>
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Nombre</label>
+                        <input type="text" id="sk-filter-name" placeholder="Ej. Dureza" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit; font-size: 0.9em;" oninput="applySkFilters()">
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Nivel / Rango</label>
+                        <div id="sk-filter-level" class="checkbox-group-container"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Clase Vínculo</label>
+                        <div id="sk-filter-class" class="checkbox-group-container"></div>
+                    </div>
+                </div>
+                <button class="btn-reset" onclick="resetSkFilters()">Purificar Filtros</button>
+            </div>
         </div>
 
         <table id="sk-table">
@@ -513,6 +594,7 @@
                     <th>Nombre</th>
                     <th>Nivel / Rango</th>
                     <th>Clase Vínculo</th>
+                    <th style="width: 40px;">★</th> 
                 </tr>
             </thead>
             <tbody id="sk-table-body"></tbody>
@@ -522,8 +604,9 @@
     <div id="am-app">
         <div class="header-container">
             <h1>Artemarcialismos</h1>
-            <div>
-                <button class="btn-theme" onclick="closeApp('am')" style="margin-right: 10px;">Volver</button>
+            <div class="header-controls">
+                <span class="header-greeting global-greeting-text">Bienvenido, Invitado</span>
+                <button class="btn-theme" onclick="closeApp('am')">Volver</button>
                 <button class="btn-theme" onclick="toggleTheme()">Invocar Luz</button>
             </div>
         </div>
@@ -531,34 +614,43 @@
         <div class="controls-panel">
             <input type="text" id="am-global-search" class="search-bar" placeholder="Investigar estilos o maniobras..." oninput="applyAmFilters()">
             
-            <div class="filters-grid">
-                <div class="filter-group">
-                    <label class="group-title">Nombre Estilo</label>
-                    <input type="text" id="am-filter-name" placeholder="Ej. Aikijutsu" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit; font-size: 0.9em;" oninput="applyAmFilters()">
-                </div>
-                <div class="filter-group">
-                    <label class="group-title">Nº Ataques</label>
-                    <div id="am-filter-ataques" class="checkbox-group-container"></div>
-                </div>
-                <div class="filter-group">
-                    <label class="group-title">Daño Base</label>
-                    <div id="am-filter-danio" class="checkbox-group-container"></div>
-                </div>
-                <div class="filter-group">
-                    <label class="group-title">Mod. AC</label>
-                    <div id="am-filter-ac" class="checkbox-group-container"></div>
-                </div>
-                <div class="filter-group">
-                    <label class="group-title">Miembro Principal</label>
-                    <div id="am-filter-miembro" class="checkbox-group-container"></div>
-                </div>
-                <div class="filter-group">
-                    <label class="group-title">Categoría Maniobra</label>
-                    <div id="am-filter-categoria" class="checkbox-group-container"></div>
-                </div>
-            </div>
+            <button class="btn-toggle-filters" onclick="toggleFilters('am')">Mostrar/Ocultar Filtros</button>
 
-            <button class="btn-reset" onclick="resetAmFilters()">Purificar Filtros</button>
+            <div id="am-filters-container" class="filters-collapsible">
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label class="group-title">Grimorio</label>
+                        <label class="checkbox-option" style="padding: 8px; border: 1px solid var(--accent-main); border-radius: 4px;">
+                            <input type="checkbox" id="am-filter-fav" onchange="applyAmFilters()"> Solo Favoritos
+                        </label>
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Nombre Estilo</label>
+                        <input type="text" id="am-filter-name" placeholder="Ej. Aikijutsu" style="background-color: var(--bg-input); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 8px; font-family: inherit; font-size: 0.9em;" oninput="applyAmFilters()">
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Miembro Principal</label>
+                        <div id="am-filter-miembro" class="checkbox-group-container"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Categoría Maniobra</label>
+                        <div id="am-filter-categoria" class="checkbox-group-container"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Mod. AC</label>
+                        <div id="am-filter-ac" class="checkbox-group-container"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Nº Ataques</label>
+                        <div id="am-filter-ataques" class="checkbox-group-container"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="group-title">Daño Base</label>
+                        <div id="am-filter-danio" class="checkbox-group-container"></div>
+                    </div>
+                </div>
+                <button class="btn-reset" onclick="resetAmFilters()">Purificar Filtros</button>
+            </div>
         </div>
 
         <table id="am-table">
@@ -571,6 +663,7 @@
                     <th>Ataque Principal</th>
                     <th>Maniobras</th> 
                     <th>Armas Disponibles</th>
+                    <th style="width: 40px;">★</th> 
                 </tr>
             </thead>
             <tbody id="am-table-body"></tbody>
@@ -584,26 +677,134 @@
 
     <script>
         // ==========================================
-        // Variables Globales de Fallbacks Seguros
+        // Estructura Central de Personaje (PWA / JSON)
         // ==========================================
+        let characterProfile = {
+            name: "Invitado",
+            favorites: {
+                nwp: [], // Guardará los ID (números)
+                sk: [],  // Guardará los nombres (strings)
+                am: []   // Guardará los nombres del estilo (strings)
+            }
+        };
+
+        // Variables Globales de Datos y UI
         let nwpData = [], nwpFiltered = [], nwpExpandedId = null;
         let skData = [], skFiltered = [], skExpandedId = null;
         let amData = [], amFiltered = [], amExpandedKey = null;
         let dbManiobras = {};
 
+        // Actualizar UI con el Nombre del Personaje
+        function updateGreetings() {
+            document.getElementById('landing-greeting').textContent = `Bienvenido, ${characterProfile.name}`;
+            document.querySelectorAll('.global-greeting-text').forEach(el => {
+                el.textContent = `Bienvenido, ${characterProfile.name}`;
+            });
+        }
+
+        // Sistema de Favoritos OnClick
+        function toggleFavorite(type, id, event) {
+            event.stopPropagation(); // Evita que se abra el acordeón al dar clic en la estrella
+            
+            const favList = characterProfile.favorites[type];
+            const index = favList.indexOf(id);
+            
+            if (index > -1) {
+                favList.splice(index, 1); // Remover
+            } else {
+                favList.push(id); // Agregar
+            }
+            
+            // Re-renderizar la tabla específica para actualizar la estrella y aplicar el filtro si está activo
+            if (type === 'nwp') applyNwpFilters();
+            else if (type === 'sk') applySkFilters();
+            else if (type === 'am') applyAmFilters();
+        }
+
+        // Exportar Personaje (Descargar JSON)
+        async function exportCharacter() {
+            const userName = prompt("Nombra a tu personaje para forjar su archivo:", characterProfile.name);
+            if (userName === null) return; // Si cancela el prompt
+            
+            characterProfile.name = userName || "Invitado";
+            updateGreetings();
+            
+            const dataStr = JSON.stringify(characterProfile, null, 2);
+            const defaultFileName = `Personaje_${characterProfile.name.replace(/\s+/g, '_')}_ADnD.json`;
+            
+            // Intento con la API moderna de File System (Evita los duplicados (1), (2) permitiendo sobrescribir)
+            if (window.showSaveFilePicker) {
+                try {
+                    const fileHandle = await window.showSaveFilePicker({
+                        suggestedName: defaultFileName,
+                        types: [{
+                            description: 'Grimorio de Personaje (JSON)',
+                            accept: { 'application/json': ['.json'] }
+                        }]
+                    });
+                    const writable = await fileHandle.createWritable();
+                    await writable.write(dataStr);
+                    await writable.close();
+                    return; // Éxito total
+                } catch (err) {
+                    // Si el usuario cancela, simplemente detenemos el proceso sin fallback
+                    if (err.name === 'AbortError') return;
+                    console.warn("Fallo en File System API, usando método tradicional...", err);
+                }
+            }
+            
+            // Fallback tradicional si el navegador no soporta File System Access API (ej. móviles)
+            const blob = new Blob([dataStr], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = defaultFileName;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+// Importar Personaje (Cargar JSON)
+        function importCharacter(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const imported = JSON.parse(e.target.result);
+                    if (imported && imported.favorites) {
+                        characterProfile = imported;
+                        if (!characterProfile.name) characterProfile.name = "Viajero Anónimo";
+                        
+                        updateGreetings();
+                        // Refrescar todas las tablas para que pinten las nuevas estrellas
+                        applyNwpFilters();
+                        applySkFilters();
+                        applyAmFilters();
+                        
+                        alert(`Los archivos de ${characterProfile.name} se han restaurado con éxito desde la bruma.`);
+                    } else {
+                        alert("El archivo no tiene el formato correcto del grimorio.");
+                    }
+                } catch (err) {
+                    alert("El manuscrito está corrupto o es ilegible.");
+                }
+            };
+            reader.readAsText(file);
+            event.target.value = ""; // Limpiar el input para permitir cargar el mismo archivo si es necesario
+        }
+
+        // Mostrar/ocultar filtros móvil
+        function toggleFilters(prefix) {
+            const container = document.getElementById(`${prefix}-filters-container`);
+            if (container) container.classList.toggle('show');
+        }
+
         // Enrutador de Aplicación
         function openApp(mode) {
             document.getElementById('landing-screen').style.display = 'none';
-            if (mode === 'nwp') {
-                document.getElementById('nwp-app').style.display = 'block';
-                renderNwpTable();
-            } else if (mode === 'skills') {
-                document.getElementById('skills-app').style.display = 'block';
-                renderSkTable();
-            } else if (mode === 'am') {
-                document.getElementById('am-app').style.display = 'block';
-                renderAmTable();
-            }
+            if (mode === 'nwp') { document.getElementById('nwp-app').style.display = 'block'; renderNwpTable(); } 
+            else if (mode === 'skills') { document.getElementById('skills-app').style.display = 'block'; renderSkTable(); } 
+            else if (mode === 'am') { document.getElementById('am-app').style.display = 'block'; renderAmTable(); }
         }
 
         function closeApp(mode) {
@@ -613,7 +814,7 @@
             document.getElementById('landing-screen').style.display = 'flex';
         }
 
-        // Interruptor del Sistema Cromático
+        // Interruptor Cromático
         function setTheme(themeName) {
             document.documentElement.setAttribute('data-theme', themeName);
             localStorage.setItem('ravenloftTheme', themeName);
@@ -625,37 +826,23 @@
             document.getElementById('meta-theme-color').setAttribute('content', (themeName === 'light') ? '#f4ebd8' : '#0c0a0a');
         }
 
-        function toggleTheme() {
-            setTheme(localStorage.getItem('ravenloftTheme') === 'light' ? 'dark' : 'light');
-        }
+        function toggleTheme() { setTheme(localStorage.getItem('ravenloftTheme') === 'light' ? 'dark' : 'light'); }
+        (function() { setTheme(localStorage.getItem('ravenloftTheme') === 'light' ? 'light' : 'dark'); })();
 
-        (function() {
-            setTheme(localStorage.getItem('ravenloftTheme') === 'light' ? 'light' : 'dark');
-        })();
-
-        // ==========================================
-        // Orquestador de Datos al Cargar el DOM
-        // ==========================================
+        // Inicializador DOM
         document.addEventListener("DOMContentLoaded", () => {
-            if (typeof periciasData !== 'undefined') {
-                nwpData = periciasData;
-                nwpFiltered = periciasData;
-                populateNwpCheckboxes();
-            }
+            updateGreetings(); // Pintar el nombre base
             
-            if (typeof skillsData !== 'undefined') {
-                skData = skillsData;
-                skFiltered = skillsData;
-                populateSkCheckboxes();
+            if (typeof periciasData !== 'undefined') {
+                nwpData = periciasData; nwpFiltered = periciasData; populateNwpCheckboxes();
             }
-
+            if (typeof skillsData !== 'undefined') {
+                skData = skillsData; skFiltered = skillsData; populateSkCheckboxes();
+            }
             if (typeof artemarcialismosData !== 'undefined') {
-                amData = Object.entries(artemarcialismosData).map(([key, value]) => {
-                    return { id: key, name: key, ...value };
-                });
+                amData = Object.entries(artemarcialismosData).map(([key, value]) => ({ id: key, name: key, ...value }));
                 amFiltered = amData;
             }
-
             if (typeof maniobrasData !== 'undefined') {
                 dbManiobras = maniobrasData;
             }
@@ -667,14 +854,10 @@
             if (!container) return;
             container.innerHTML = '';
             values.forEach(v => {
-                const label = document.createElement('label');
-                label.className = 'checkbox-option';
-                const cb = document.createElement('input');
-                cb.type = 'checkbox'; cb.value = v; cb.onchange = onChangeFunc;
-                const span = document.createElement('span');
-                span.textContent = v;
-                label.appendChild(cb); label.appendChild(span);
-                container.appendChild(label);
+                const label = document.createElement('label'); label.className = 'checkbox-option';
+                const cb = document.createElement('input'); cb.type = 'checkbox'; cb.value = v; cb.onchange = onChangeFunc;
+                const span = document.createElement('span'); span.textContent = v;
+                label.appendChild(cb); label.appendChild(span); container.appendChild(label);
             });
         }
 
@@ -683,7 +866,7 @@
         }
 
         // ==========================================
-        // PROCEDIMIENTOS MÓDULO: NO ARMAS (NWP)
+        // NWP
         // ==========================================
         function populateNwpCheckboxes() {
             const slots = new Set(), abilities = new Set(), classes = new Set(), races = new Set(), sources = new Set();
@@ -704,6 +887,8 @@
         function applyNwpFilters() {
             const gSearch = document.getElementById('nwp-global-search').value.toLowerCase();
             const fName = document.getElementById('nwp-filter-name').value.toLowerCase();
+            const isFavFilter = document.getElementById('nwp-filter-fav').checked;
+            
             const selSlots = getSelectedValues('nwp-filter-slots');
             const selAbilities = getSelectedValues('nwp-filter-ability');
             const selClasses = getSelectedValues('nwp-filter-class');
@@ -711,7 +896,9 @@
             const selSources = getSelectedValues('nwp-filter-source');
             
             nwpFiltered = nwpData.filter(p => {
-                return Object.values(p).join(' ').toLowerCase().includes(gSearch) &&
+                const matchesFav = !isFavFilter || characterProfile.favorites.nwp.includes(p.id);
+                return matchesFav &&
+                       Object.values(p).join(' ').toLowerCase().includes(gSearch) &&
                        p.name.toLowerCase().includes(fName) &&
                        (selSlots.length === 0 || selSlots.includes(p.slots.toString())) &&
                        (selAbilities.length === 0 || (p.ability && selAbilities.includes(p.ability))) &&
@@ -726,6 +913,7 @@
         function resetNwpFilters() {
             document.getElementById('nwp-global-search').value = '';
             document.getElementById('nwp-filter-name').value = '';
+            document.getElementById('nwp-filter-fav').checked = false;
             document.querySelectorAll('#nwp-app .checkbox-group-container input').forEach(cb => cb.checked = false);
             applyNwpFilters();
         }
@@ -735,6 +923,10 @@
             let html = '';
             nwpFiltered.forEach(item => {
                 const itemId = item.id || Math.floor(Math.random() * 100000);
+                const isFav = characterProfile.favorites.nwp.includes(itemId);
+                const star = isFav ? '★' : '☆';
+                const starColor = isFav ? 'var(--accent-main)' : 'var(--text-muted)';
+
                 html += `<tr class="main-row" onclick="toggleRow('nwp', ${itemId})">
                     <td data-label="Nombre"><strong>${item.name}</strong></td>
                     <td data-label="Slots">${item.slots}</td>
@@ -743,16 +935,17 @@
                     <td data-label="Clase">${item.class || '-'}</td>
                     <td data-label="Raza">${item.race || '-'}</td>
                     <td data-label="Source">${item.source || '-'}</td>
+                    <td data-label="Fav" class="star-btn" style="color: ${starColor};" onclick="toggleFavorite('nwp', ${itemId}, event)">${star}</td>
                 </tr>
                 <tr class="desc-row" id="nwp-desc-${itemId}">
-                    <td colspan="7"><div class="desc-content"><p><em>${item.description || 'Sin descripción.'}</em></p></div></td>
+                    <td colspan="8"><div class="desc-content"><p><em>${item.description || 'Sin descripción.'}</em></p></div></td>
                 </tr>`;
             });
             tbody.innerHTML = html;
         }
 
         // ==========================================
-        // FILTROS Y RENDER DE SKILLS
+        // SKILLS
         // ==========================================
         function populateSkCheckboxes() {
             const levels = new Set(), classes = new Set();
@@ -767,11 +960,15 @@
         function applySkFilters() {
             const gSearch = document.getElementById('sk-global-search').value.toLowerCase();
             const fName = document.getElementById('sk-filter-name').value.toLowerCase();
+            const isFavFilter = document.getElementById('sk-filter-fav').checked;
+            
             const selLevels = getSelectedValues('sk-filter-level');
             const selClasses = getSelectedValues('sk-filter-class');
             
             skFiltered = skData.filter(s => {
-                return Object.values(s).join(' ').toLowerCase().includes(gSearch) &&
+                const matchesFav = !isFavFilter || characterProfile.favorites.sk.includes(s.name);
+                return matchesFav &&
+                       Object.values(s).join(' ').toLowerCase().includes(gSearch) &&
                        s.name.toLowerCase().includes(fName) &&
                        (selLevels.length === 0 || selLevels.includes(s.level.toString())) &&
                        (selClasses.length === 0 || (s.class && selClasses.some(c => s.class.includes(c))));
@@ -783,6 +980,7 @@
         function resetSkFilters() {
             document.getElementById('sk-global-search').value = '';
             document.getElementById('sk-filter-name').value = '';
+            document.getElementById('sk-filter-fav').checked = false;
             document.querySelectorAll('#skills-app .checkbox-group-container input').forEach(cb => cb.checked = false);
             applySkFilters();
         }
@@ -791,36 +989,35 @@
             const tbody = document.getElementById('sk-table-body');
             let html = '';
             skFiltered.forEach((item, index) => {
+                const isFav = characterProfile.favorites.sk.includes(item.name);
+                const star = isFav ? '★' : '☆';
+                const starColor = isFav ? 'var(--accent-main)' : 'var(--text-muted)';
+
                 html += `<tr class="main-row" onclick="toggleRow('sk', ${index})">
                     <td data-label="Nombre"><strong>${item.name}</strong></td>
                     <td data-label="Nivel / Rango">${item.level}</td>
                     <td data-label="Clase Vínculo">${item.class || '-'}</td>
+                    <td data-label="Fav" class="star-btn" style="color: ${starColor};" onclick="toggleFavorite('sk', '${item.name}', event)">${star}</td>
                 </tr>
                 <tr class="desc-row" id="sk-desc-${index}">
-                    <td colspan="3"><div class="desc-content"><p><em>${item.description || 'Sin descripción.'}</em></p></div></td>
+                    <td colspan="4"><div class="desc-content"><p><em>${item.description || 'Sin descripción.'}</em></p></div></td>
                 </tr>`;
             });
             tbody.innerHTML = html;
         }
 
         // ==========================================
-        // FILTROS Y RENDER DE ARTEMARCIALISMOS
+        // ARTEMARCIALISMOS
         // ==========================================
         function populateAmCheckboxes() {
-            const miembros = new Set();
-            const categorias = new Set();
-            const acMods = new Set();
-            const ataques = new Set();
-            const danios = new Set();
+            const miembros = new Set(), categorias = new Set(), acMods = new Set(), ataques = new Set(), danios = new Set();
 
             amData.forEach(a => {
                 if (a.ataquePrincipal) miembros.add(a.ataquePrincipal.trim());
                 if (a.armorClassMod) acMods.add(a.armorClassMod.trim());
                 if (a.numeroAtaques) ataques.add(a.numeroAtaques.trim());
                 if (a.daño) danios.add(a.daño.trim());
-                if (a.maniobras) {
-                    Object.keys(a.maniobras).forEach(cat => categorias.add(cat.trim()));
-                }
+                if (a.maniobras) Object.keys(a.maniobras).forEach(cat => categorias.add(cat.trim()));
             });
             
             fillCheckboxGroup('am-filter-miembro', Array.from(miembros).sort(), applyAmFilters);
@@ -833,6 +1030,7 @@
         function applyAmFilters() {
             const gSearch = document.getElementById('am-global-search').value.toLowerCase();
             const fName = document.getElementById('am-filter-name').value.toLowerCase();
+            const isFavFilter = document.getElementById('am-filter-fav').checked;
             
             const selMiembros = getSelectedValues('am-filter-miembro');
             const selCategorias = getSelectedValues('am-filter-categoria');
@@ -852,6 +1050,7 @@
                     });
                 }
                 
+                const matchesFav = !isFavFilter || characterProfile.favorites.am.includes(a.id);
                 const matchesGlobal = (Object.values(a).join(' ') + stringManeuvers).toLowerCase().includes(gSearch);
                 const matchesName = a.name.toLowerCase().includes(fName);
                 
@@ -861,7 +1060,7 @@
                 const matchesAtaques = selAtaques.length === 0 || (a.numeroAtaques && selAtaques.includes(a.numeroAtaques.trim()));
                 const matchesDanio = selDanios.length === 0 || (a.daño && selDanios.includes(a.daño.trim()));
                 
-                return matchesGlobal && matchesName && matchesMiembro && matchesCategoria && matchesAc && matchesAtaques && matchesDanio;
+                return matchesFav && matchesGlobal && matchesName && matchesMiembro && matchesCategoria && matchesAc && matchesAtaques && matchesDanio;
             });
             amExpandedKey = null;
             renderAmTable();
@@ -870,6 +1069,7 @@
         function resetAmFilters() {
             document.getElementById('am-global-search').value = '';
             document.getElementById('am-filter-name').value = '';
+            document.getElementById('am-filter-fav').checked = false;
             document.querySelectorAll('#am-app .checkbox-group-container input').forEach(cb => cb.checked = false);
             applyAmFilters();
         }
@@ -891,6 +1091,10 @@
                         .join('<br>');
                 }
 
+                const isFav = characterProfile.favorites.am.includes(item.id);
+                const star = isFav ? '★' : '☆';
+                const starColor = isFav ? 'var(--accent-main)' : 'var(--text-muted)';
+
                 html += `<tr class="main-row" onclick="toggleRow('am', '${item.id}')">
                     <td data-label="Estilo"><strong>${item.name}</strong></td>
                     <td data-label="Nº Ataques">${item.numeroAtaques || '-'}</td>
@@ -899,6 +1103,7 @@
                     <td data-label="Ataque Principal">${item.ataquePrincipal || '-'}</td>
                     <td data-label="Maniobras" style="font-size: 0.9em; line-height: 1.4;">${maneuversSummary}</td>
                     <td data-label="Armas Disponibles">${item.armasDisponibles || '-'}</td>
+                    <td data-label="Fav" class="star-btn" style="color: ${starColor};" onclick="toggleFavorite('am', '${item.id}', event)">${star}</td>
                 </tr>`;
                 
                 let subContentHtml = `<div class="desc-content">
@@ -930,7 +1135,7 @@
                 subContentHtml += `</div>`;
                 
                 html += `<tr class="desc-row" id="am-desc-${item.id}">
-                    <td colspan="7">${subContentHtml}</td>
+                    <td colspan="8">${subContentHtml}</td>
                 </tr>`;
             });
             
@@ -938,7 +1143,7 @@
         }
 
         // ==========================================
-        // Controlador Único de Acordeones (Ajustado para scroll interno)
+        // Controlador Único de Acordeones
         // ==========================================
         function toggleRow(prefix, id) {
             let currentExpanded = null;
@@ -963,7 +1168,6 @@
                     if (targetContent) {
                         let calculatedHeight = targetContent.scrollHeight;
                         let maxAllowedHeight = window.innerHeight * 0.55; 
-                        
                         targetContent.style.maxHeight = (calculatedHeight > maxAllowedHeight ? maxAllowedHeight : calculatedHeight) + "px";
                     }
                     
