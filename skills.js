@@ -57,7 +57,7 @@ const skillsData = [
     "name": "Grupo de pericias Extras",
     "description": "Otorga la capacidad de tomar pericias de otra categoría sin coste extra de Slots",
     "level": "1,5",
-    "class": ""
+    "class": "General"
   },
   {
     "name": "2 % MR/Nivel",
