@@ -875,7 +875,9 @@
                 if (p.ability) abilities.add(p.ability);
                 if (p.class) p.class.split(',').forEach(c => classes.add(c.trim()));
                 if (p.race) p.race.split(',').forEach(r => races.add(r.trim()));
-                if (p.source) sources.add(p.source);
+                //Separación de SOURCE por coma (',') al igual que Race y Class
+                if (p.source) p.source.split(',').forEach(p => sources.add(p.trim()));
+                // if (p.source) sources.add(p.source);
             });
             fillCheckboxGroup('nwp-filter-slots', Array.from(slots).sort((a,b)=>a-b), applyNwpFilters);
             fillCheckboxGroup('nwp-filter-ability', Array.from(abilities).sort(), applyNwpFilters);
@@ -904,7 +906,9 @@
                        (selAbilities.length === 0 || (p.ability && selAbilities.includes(p.ability))) &&
                        (selClasses.length === 0 || (p.class && selClasses.some(c => p.class.includes(c)))) &&
                        (selRaces.length === 0 || (p.race && selRaces.some(r => p.race.includes(r)))) &&
-                       (selSources.length === 0 || (p.source && selSources.includes(p.source)));
+                       // Búsqueda de Sources por diferentes manuales separados previamente en la invocación de Check-Boxes
+                       (selSources.length === 0 || (p.source && selSources.some(s => p.source.includes(s))));
+                       // (selSources.length === 0 || (p.source && selSources.includes(p.source)));
             });
             nwpExpandedId = null;
             renderNwpTable();
