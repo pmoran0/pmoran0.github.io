@@ -713,5 +713,148 @@ const periciasData = [
     "class": "Warrior",
     "source": "Player's Handbook",
     "race": "General"
+  },
+  {
+    "id": 66,
+    "name": "Alertness",
+    "description": "Un personaje con pericia Alerta está excepcionalmente en sintonía con su entorno, capaz de detectar perturbaciones y notar discrepancias. Una tirada de competencia exitosa reduce su probabilidad de ser sorprendido por 1.",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": 1,
+    "class": "Ranger, General",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 67,
+    "name": "Boating",
+    "description": "La pericia Canotaje permite al personaje pilotar cualquier embarcación pequeña, como un kayak o una canoa, a máxima velocidad. También le permite realizar reparaciones y mejoras menores en estas embarcaciones, como impermeabilizarlas y tapar agujeros. Una tirada exitosa le permite al personaje manejar la embarcación en situaciones peligrosas; por ejemplo, maniobrar la embarcación en aguas agitadas sin volcarla o evitar colisiones al guiarla por un canal estrecho lleno de rocas o hielo. Cabe destacar que, si bien las habilidades de Navegación (Navigation) y Mareaje (Seamanship) se refieren a barcos en océanos, mares y otras grandes masas de agua mientras que esta pericia se limita a embarcaciones pequeñas en ríos, lagos, océanos cercanos a la costa y terrenos similares, generalmente en aguas relativamente tranquilas.",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": 1,
+    "class": "Ranger, General",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 68,
+    "name": "Camouflage",
+    "description": "Mediante la pericia Camuflaje, el personaje puede intentar ocultarse a sí mismo, a sus compañeros y a objetos inanimados utilizando materiales naturales o artificiales. El éxito en su uso depende de la disponibilidad de todos los materiales necesarios. En bosques y selvas, el personaje puede usar arbustos, barro y otros recursos fácilmente disponibles. El Ártico o terrenos áridos similares generalmente requieren ropa especial, pinturas u otros materiales artificiales (aunque 'cavar' es un viejo truco que puede aplicarse en dichos terrenos, dependiendo de las condiciones locales). Un personaje tarda media hora en camuflarse a sí mismo o a otra persona, dos o tres horas en ocultar un carro u objeto inanimado de tamaño comparable, y medio día en esconder un edificio pequeño.<br>Ni humanos, semihumanos, monstruos ni animales que pasen por allí podrán ver a un personaje camuflado, suponiendo que el personaje tenga éxito en la tirada. Los compañeros camuflados también pasarán desapercibidos; solo se requiere una tirada de pericia para todo el grupo.<br>Los objetos también pueden camuflarse. Los objetos del tamaño de una persona no requieren penalización a la tirada; los objetos del tamaño de un carro requieren una penalización de -1, mientras que los objetos del tamaño de un edificio requieren una penalización de -3. El DM puede ajustar las penalizaciones según estas directrices.<br>El camuflaje no tiene efecto sobre los depredadores que localizan a sus presas por el olfato u otros sentidos agudos; un lobo hambriento aún puede olfatear a un humano camuflado. Una persona camuflada no tiene protección contra un transeúnte que la roce o choque accidentalmente con ella. Del mismo modo, una persona camuflada puede revelarse si estornuda, grita por la picadura de una abeja o emite cualquier otro sonido.<br>Tenga en cuenta que el camuflaje solo es necesario para personas u objetos que de otro modo estarían parcial o totalmente expuestos. Una persona escondida detrás de un muro de piedra no necesitaría camuflarse para evitar ser detectada, ni tampoco un objeto enterrado.",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": 0,
+    "class": "Ranger, Fighter, Rogue",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 69,
+    "name": "Cartography",
+    "description": "La pericia Cartografía otorga habilidad para la creación de mapas. Un personaje puede dibujar mapas a escala, con formaciones terrestres complejas, contornos costeros y otras características geográficas. El personaje debe estar razonablemente familiarizado con el área que se está cartografiando.<br>El DM realiza una tirada de pericia en secreto para determinar la precisión del mapa. Una tirada exitosa significa que el mapa es correcto en todos los detalles importantes. Si la tirada falla, el mapa contiene algunos errores, posiblemente uno significativo. Una tirada de exactamente 20 significa que el mapa contiene errores graves, lo que lo hace inservible.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": -2,
+    "class": "Ranger, General",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 70,
+    "name": "Distance Sense",
+    "description": "Sentido de la Distancia permite a un personaje estimar la distancia total que ha recorrido en un día determinado, parte de un día o un número de días consecutivos igual a su nivel. Por ejemplo, un personaje de nivel 7 puede estimar la distancia que ha recorrido en la semana anterior. La estimación tendrá una precisión del 90 %.",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": 0,
+    "class": "Ranger, General",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 71,
+    "name": "Foraging",
+    "description": "Mediante la habilidad de Recolectar, un personaje puede explorar una zona silvestre para encontrar una pequeña cantidad de un material deseado, como una rama adecuada para tallar un arco, suficiente leña para encender un fuego, una hierba medicinal o un componente necesario para un conjuro. El personaje debe dedicar de 2 a 8 (2d4) horas a la búsqueda, y el material debe estar disponible teóricamente en la zona explorada (por ejemplo, una bola de nieve no está disponible en el desierto, ni leña seca en el fondo del océano). El DM no confirma si el material buscado está realmente disponible hasta que el personaje haya buscado durante el tiempo estipulado.Si el DM decide que el material no está en la zona, no es necesaria una tirada de pericia; simplemente revela que la búsqueda fue en vano.<br>Si el DM decide que el material sí está disponible, una tirada exitosa significa que el personaje ha encontrado lo que buscaba. Por regla general, el personaje no encuentra más que un puñado del material deseado, aunque el DM puede hacer excepciones (si busca unas pocas hojas de una hierba en particular, el personaje podría encontrar un campo entero).<br>Si la tirada falla, el material no se encuentra. El personaje puede buscar en otra zona, lo que requiere de 2 a 8 horas más y una nueva tirada de competencia.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": -2,
+    "class": "Ranger, Warrior, Rogue",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 72,
+    "name": "Persuasion",
+    "description": "La pericia Persuasión permite al personaje presentar un argumento convincente para persuadir a un PNJ objetivo de que vea las cosas a su manera, responda de forma más favorable o acceda a una petición. El personaje entabla conversación con el PNJ durante al menos 10 rondas (lo que significa que el sujeto debe estar dispuesto a hablar con el personaje en primer lugar); los sujetos cuyas actitudes sean amenazantes u hostiles no se ven afectados por esta pericia.<br>Una tirada exitosa significa que la reacción del sujeto se modifica en +2 a favor del personaje (ver Tabla 59 en el Capítulo 11 del Manual de Dungeon Master). Esta bonificación no es acumulativa con ningún otro modificador de reacción, como los derivados de Carisma; otros modificadores de reacción no se aplican. Por cada slot adicional que un personaje gaste en esta pericia, aumenta el modificador de reacción en +1 (por ejemplo, gastar dos espacios en esta competencia da una bonificación de reacción de +3).",
+    "slots": 1,
+    "ability": "Cha",
+    "modifier": 0,
+    "class": "Ranger, General",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 73,
+    "name": "Riding, Sea-based",
+    "description": "La pericia Cabalgar por el Agua permite al personaje manejar una especie particular de montura marina. El tipo de montura debe especificarse cuando se adquiere la pericia. El personaje puede gastar slots adicionales para poder manejar otras especies.<br>Además de montar la montura, la pericia permite al personaje hacer lo siguiente:<ul>Cuando la montura está en la superficie del agua, el personaje puede saltar sobre su lomo y espolearla para que se mueva en el mismo turno. No se requiere una tirada de pericia</ul><ul>El personaje puede espolear a la montura para que salte sobre obstáculos en el agua que tengan menos de 3 pies de alto y 5 pies de ancho (en la dirección del salto). No se requiere una tirada. Los saltos más grandes requieren una tirada, con bonificaciones o penalizaciones asignadas por el DM de acuerdo con la altura y el ancho del obstáculo y el tipo y tamaño de la montura. Fallar significa que la montura se resiste; una segunda tirada inmediata determina si el personaje permanece en la montura o se cae</ul><ul>El personaje puede espolear a la montura a grandes velocidades. Si la tirada inicial falla, la montura se resiste a moverse más rápido de lo normal. De lo contrario, la montura comienza a moverse hasta 2d6 pies por asalto por encima de su velocidad normal. Las tiradas de pericia deben realizarse cada cinco rondas. Mientras las tiradas tengan éxito, la montura continúa moviéndose a mayor velocidad durante un máximo de dos turnos. Después de moverse a esta velocidad acelerada durante dos turnos, su velocidad se reduce a 2/3 veces su velocidad normal. No puede moverse a más del 35% de su velocidad normal hasta que se le permita descansar durante una hora completa.</ul>Si la segunda tirada o cualquier tirada posterior falla, el movimiento de la montura se reduce a la mitad de su velocidad normal. Continúa moviéndose a esta velocidad reducida hasta que se le permita descansar durante una hora.<ul>Si una montura marina que se encuentra en la superficie del agua es atacada, normalmente se sumergirá a menos que supere una tirada de moral. Si la tirada de moral falla, el jinete puede ordenar a la montura que vuelva a la superficie superando una tirada de pericia. Si la tirada falla, el jinete puede intentar otra tirada en cada ronda posterior, siempre que esté físicamente capacitado. Mientras esté sumergido con la montura e intente obligarla a salir a la superficie, el jinete corre el riesgo de ahogarse (véase el capítulo 14 del Manual del Jugador). Debido al esfuerzo que realiza, el número de rondas que el jinete puede contener la respiración es igual a la mitad de su puntuación de Constitución.",
+    "slots": 2,
+    "ability": "Dex",
+    "modifier": -2,
+    "class": "Ranger, General",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 74,
+    "name": "Signaling",
+    "description": "La pericia Señalización le otorga al personaje la capacidad de enviar mensajes a larga distancia. El personaje debe designar un método preferido de señalización. Los métodos típicos incluyen señales de humo, silbidos, ondear banderas, tambores o espejos reflectantes. Por cada slot adicional gastado, el personaje puede elegir un método adicional.<br>Dado que la señalización es esencialmente un lenguaje, se pueden comunicar mensajes de complejidad razonable. Un señalizador experimentado puede transmitir hasta 10 palabras por ronda de combate.<br>Para interpretar la señal, el receptor debe poder verla u oírla. También debe tener la pericia de Señalización y conocer el mismo método que el emisor. Para enviar un mensaje y que este sea comprendido, tanto el señalizador como el receptor deben superar las tiradas de pericia. Si uno falla la tirada, el mensaje se distorsiona; el mensaje puede enviarse de nuevo en la siguiente ronda y se pueden volver a intentar las tiradas de habilidad. Si ambas tiradas fallan, o si alguno de los personajes obtiene un 20 natural, se envió y recibió un mensaje incorrecto; el mensaje tiene el significado opuesto al previsto. Los personajes que no poseen la habilidad de señalización, así como los personajes que sí la poseen pero utilizan un método de señalización diferente, no pueden comprender las señales.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": -2,
+    "class": "Ranger, General",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 75,
+    "name": "Spelunking",
+    "description": "Un personaje con la pericia Exploración de Cuevas posee un conocimiento profundo de cuevas y pasajes subterráneos, incluyendo su geología, formación y peligros. Generalmente, el personaje sabe qué peligros naturales son posibles y qué equipo general debería llevar un grupo de espeleólogos. Una tirada exitosa puede revelar la siguiente información: <ul>Determinar, estudiando grietas en las paredes y guijarros en el suelo, oliendo el aire, etc., la probabilidad de un derrumbe, inundación repentina u otro peligro natural. Esto solo funciona con respecto a formaciones naturales y se anula si las formaciones naturales han sido apuntaladas, tapiadas o alteradas de alguna otra manera</ul><ul>Estimar el tiempo necesario para excavar un pasaje bloqueado con escombros</ul><ul>Mientras explora cavernas subterráneas extensas, una tirada exitosa reduce la probabilidad de perderse irremediablemente al enfrentarse a múltiples pasajes sin marcar, sumideros, etc., a un máximo del 30%, suponiendo buena iluminación (ver Tabla 81-82 del Manual del DM).",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": -2,
+    "class": "Ranger, Warrior",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 76,
+    "name": "Trail Marking",
+    "description": "Al marcar árboles, esparcir guijarros, apilar piedras y cortar maleza, el personaje puede marcar un sendero a través de cualquier área silvestre. Siempre que se mueva al 2/3 de su velocidad de movimiento normal, puede marcar un sendero continuo tan largo como quiera; sin embargo, cuanto más largo sea el sendero, menos probable será que pueda seguirlo de vuelta.<br>Una tirada exitosa permite a un personaje que retrocede seguir su propio sendero por una distancia igual a su nivel en millas. Si falla una tirada, pierde el sendero. Por ejemplo, supongamos que un personaje de nivel 3 marcó un sendero de 12 millas. Su primera tirada de Marcar Sendero exitosa le permite seguir este sendero de vuelta tres millas. Una segunda tirada exitosa significa que puede seguir el sendero otras tres millas. La tercera tirada falla y pierde el sendero; solo ha podido seguir su sendero por un total de seis millas.<br>La pericia de Rastreo (Tracking) no es necesaria para usar la pericia de Marcar Sendero. Sin embargo, cuando un ranger pierde su propio rastro marcado, aún puede intentar seguirlo usando su competencia de rastreo. Cualquier otro personaje con competencia de rastreo también puede intentar seguir el rastro marcado por un ranger, usando las reglas aplicables a la pericia de Rastreo (Tracking)<br>Un rastro marcado dura a menos que sea oscurecido por la lluvia, un incendio forestal o el paso del tiempo (un rastro intacto marcado en un bosque debería durar semanas, mientras que un rastro ártico puede durar menos de un día durante períodos de fuertes precipitaciones; el DM decide). Un ranger u otro personaje con competencia de rastreo aún puede intentar seguir un rastro oscurecido usando las reglas de Rastreo (Tracking).",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": 0,
+    "class": "Ranger, Warrior",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 77,
+    "name": "Trail Signs",
+    "description": "Un personaje con la pericia Señales de Sendero puede leer mensajes simbólicos indicados por una disposición de piedras u otros objetos físicos. El personaje debe especificar el método de dejar mensajes preferido por su familia, tribu o cultura. Los métodos típicos incluyen apilar piedras, ramas o construir esculturas de nieve. Cuando el personaje encuentra un mensaje de este tipo, comprende su significado si supera una tirada de pericia. («Un dragón habita en estos bosques». «Come las bayas verdes para recuperar la salud»). El mensaje carece de sentido para los personajes sin la pericia de interpretar Señales de Sendero. Un personaje con esta pericia que utilice un método distinto al encontrado puede intentar leerlo con la mitad de la probabilidad normal de éxito. Esta habilidad también puede utilizarse para identificar el grupo cultural o la tribu que ha dejado una señal de sendero específica.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": -1,
+    "class": "Ranger, Warrior, Rogue",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 78,
+    "name": "Veterinary Healing",
+    "description": "Un personaje con la pericia Curación Veterinaria puede intentar curar a todo tipo de animales normales, siguiendo los mismos procedimientos descritos en la descripción de la pericia de Primeros Auxilios (Healing). Las criaturas sobrenaturales (como esqueletos o ghouls) o las criaturas de otro plano (como sirvientes aéreos o xorn) no pueden ser tratadas con esta pericia. Esta pericia no es acumulativa con la competencia de Primeros Auxilios (Healing); la primera que se use tendrá prioridad. Esta pericia se puede usar en humanos, semihumanos y humanoides con una la mitad de probabilidad de éxito.",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": -3,
+    "class": "Ranger, Priest",
+    "source": "The Complete Ranger's Handbook",
+    "race": "General"
   }
 ]
