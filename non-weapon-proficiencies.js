@@ -966,5 +966,71 @@ const periciasData = [
     "class": "Rogue",
     "source": "The Complete Thief's Handbook",
     "race": "General"
+  },
+  {
+    "id": 89,
+    "name": "Bureaucracy",
+    "description": "La pericia Burocracia engloba un conocimiento laboral de protocolos gubernamentales y las habilidades necesarias para navegar organizaciones burocráticas. Un personaje con esta pericia conoce a cuales oficiales acercarse y el mejor momento para hacerlo (un auxiliar de recolector de impuestos puede tener información más detallada que el mismo recolector de impuestos al que sirve; un tesorero municipal puede estar más libre a inicios de mes que al final del este). El burócrata conoce la locación de los archivos y registros gubernamentales y los procesos para examinar dichos documentos. Conoce las maneras de incentivar a burócratas tediosos y pocos cooperativos. Es capaz de obtener permisos y otra documentación gubernamental en la mitad del tiempo establecido. No se requiere una tirada de pericia para acceder a cualquier función anteriormente explicada.<br>Un personaje puede usar esta pericia para girar al sistema en contra de alguien más. Una tirada exitosa duplica el tiempo de otorgar alguna licencia o permiso, inserta un nombre con un mal deletreo o temporalmente pierde un documento importante. Un paladín debe ser cuidadoso con este modo de uso de la pericia, para evitar romper la ley y/o violar su ethos.<br>La pericia Burocracia abarca las organizaciones gubernamentales en una región en particular, usualmente la ciudad natal del personaje. Puede añadir slots extras a esta pericia para expandir su rango de cobertura a una región por slot. Las organizaciones oficiales incluyen consejos gubernamentales, secretarías y jerarquías religiosas (iglesias, por ejemplo). Esta pericia solo funciona en organizaciones con 10 o más miembros.",
+    "slots": 2,
+    "ability": "Int",
+    "modifier": "0",
+    "class": "Paladin, Rogue, Priest",
+    "source": "The Complete Paladin's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 90,
+    "name": "Diagnostics",
+    "description": "Tanto la pericia Primeros Auxilios (Healing) como Diagnóstico (Diagnostics) auxilian a víctimas de traumas y enfermedades. Aquellos con la pericia Primeros Auxilios (Healing) pueden usarla para recuperar puntos de golpe mientras que la pericia Diagnóstico (Diagnostics) se enfoca en determinar la causa del daño y el pronóstico; Esta pericia <b>NO</b> cura daño.<br>Con una tirada exitosa, el personaje se da cuenta de la siguiente información aplicable a un paciente en particular:<ul>Si el paciente ha sufrido daño físico, el personaje puede determinar el alcance del daño, aunque puede o no acertar la causa exacta (si, a discreción del DM, el paciente fue atacado por un tigre entonces el personaje sabrá que la víctima ha sido rasguñada por un animal grande, pero no necesariamente conocerá la especie que lo causó). El personaje puede recomendar tratamientos y ofrecer un pronóstico, al igual con las víctimas de enfermedades.</ul><ul>Si el paciente ha sido envenenado, el personaje conoce el antídoto (en caso de que exista uno) así como realizar su preparación. Nótese que aunque el personaje conozca el proceso para crear el antídoto, es posible que no tenga acceso inmediato a todos los ingredientes.</ul><ul>El personaje conoce el nombre de la enfermedad, su causa, cuánto tiempo el paciente la ha portado así como su tratamiento óptimo. Si el paciente es tratado como se especifica, sufre los efectos más ligeros posibles de la enfermedad así como su duración más corta. Si el cuerpo del paciente rechaza el tratamiento o simplemente no funciona, el personaje puede determinar la prognosis con una precisión razonable ('El paciente se recuperará a fin de mes'.'El paciente quedará permanentemente ciego si no es tratado en un año'). El personaje puede diagnosticar enfermedades naturales y mágicas por igual.</ul><ul>Cuando se examina un cuerpo, el personaje puede determinar el cómo murió la víctima y aproximadamente cuánto tiempo lleva muerto. Si la víctima murió de causas no naturales, el personaje solo será capaz de determinar las causas generales de la muerte. Por ejemplo, si un hechicero malvado incineró a la víctima con una Bola de Fuego, una tirada exitosa de Diagnóstico puede revelar que la víctima ha sido incinerada de manera abrupta como resultado de algún tipo de magia, pero no que específicamente fue el conjuro Bola de Fuego.</ul>Un personaje con esta pericia puede diagnosticarse a si mismo, a otro individuo, animal o criatura una vez por tirada exitosa.<br>Si un personaje además tiene la pericia Primeros Auxilios (Healing), puede modificar las tiradas de Diagóstico en +1.",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": "-1",
+    "class": "Paladin, Priest",
+    "source": "The Complete Paladin's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 91,
+    "name": "Jousting",
+    "description": "La pericia Justa incluye las habilidades de combate necesarias para una justa exitosa, así como los modales, comportamiento y elegancia necesaria para impresionar a la audiencia. Para tomar esta pericia primero es necesario tener una especialización de arma en lanza de justa.<br>Un personaje con esta pericia modifica sus tiradas de ataque en una justa en +2. El uso de esta pericia asume que el personaje tiene una lanza, escudo y montura adecuados.<br>Si el personaje gana un combate, su estilo y desempeño impresionan de manera favorable a la audiencia. Los miembros de la audiencia con interés especial en el combate (como la realeza, apostadores o fanáticos de las justas) que posteriormente se topan con el personaje modifican sus tiradas de reacción en +2 a favor del personaje. Si ha ganado muchos combates en un torneo, el bonificador de reacción no va más allá de +2. Si posteriormente pierde un combate o dos en el mismo torneo, aún obtiene el bonus de reacción. Sin embargo si el combatiente tiene un día especialmente desastroso (si obtiene una racha de derrotas larga por ejemplo) la audiencia puede tomar su siguiente combate ganado como un 'golpe de suerte', y el DM puede cancelar el bonus.",
+    "slots": 1,
+    "ability": "Dex",
+    "modifier": "+2",
+    "class": "Paladin, Warrior",
+    "source": "The Complete Paladin's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 92,
+    "name": "Law",
+    "description": "Un personaje con la pericia Leyes es minuciosamente familiar con el sistema legal de su tierra natal (o de cualquier otra región elegida). El personaje conoce cuáles leyes son rigurosamente perseguidas (las apuestas ilegales pueden ser 'toleradas' en algunas regiones pero agresivamente perseguidas en otras), y procedimientos legales de rutina (como la manera de llevar a cabo una demanda contra un deudor). El entendimiento de los matices de la ley, así como interpretar las letras chiquitas de un contrato, requieren tiradas de pericia.<br>Una tirada exitosa permite al personaje llevar a cabo una defensa sólida cuando él mismo o uno de sus compañeros han sido acusados de un crimen. Si el juez es imparcial y la evidencia del crimen es ambigua, una tirada exitosa puede conducir el fallo del juez de manera favorable; puede que el acusado reciba la menor de las penas o que se considere libre de cargos. Sin embargo si la evidencia es clara o el juez es corrupto, una tirada exitosa no ayudará.<br>Un personaje puede gastar slots adicionales para conocer el sistema legal de otras regiones. De manera alternativa, puede gastar slots para ganar expertise en un área específica de la ley, como códigos de impuestos o derechos de propiedad. El experise asume un conocimiento detallado de un área elegida, requiriendo solo tiradas de pericia en instancias extremas.<br>Un paladín con la pericia Leyes no defenderá a alguien quien él crea que es culpable, eso incluye a sus propios compañeros. Aunque es sabido que un paladín no rompe las leyes de manera intencional (a menos que sea por un bien mayor), puede hacer uso de esta pericia para defenderse a si mismo si es erróneamente acusado por un crimen; una defensa fallida puede resultar en su reclusión.",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": "0",
+    "class": "Paladin, Priest",
+    "source": "The Complete Paladin's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 93,
+    "name": "Oratory",
+    "description": "A través de discursos inspiradores y por pura fuerza de personalidad, un personaje con la pericia Oratoria puede influenciar la opinión de una multitud. Cualquier tamaño de multitud puede ser influenciada siempre y cuando hablen el mismo idioma que el orador y puedan verlo y escucharlo de manera clara.<br>Para usar esta pericia, el orador debe dirigirse ante la multitud con un (1) tema específico. Por ejemplo, podría intentar persuadir que la multitud se proclame en contra de un déspota local, abandonen la ciudad por un peligro inminente (un monstruo a las afueras de la ciudad, la avanzada de un ejército malvado), o para ayudar a rescatar a un infante perdido.<br>Antes de que el orador comience su discurso, el DM debe determinar el tamaño de la multitud, su nivel y la actitud que tienen ante el orador y el tema que está abordando. Para multitudes pequeñas (digamos, menos de 5 individuos) se determina la actitud y los niveles de manera individual. Una multitud grande se debe dividir en grupos; se decide un nivel promedio y una actitud general por cada uno de los grupos. La actitud puede ser Amistosa, Indiferente, Cautelosa, Amenazante o Hostil.<br>Antes de realizar cualquier tirada o que el orador comience a hablar, el jugador le dice al DM si su personaje orador intentará ajustar la opinión 1 clase mejor o peor que la actual. El orador entonces debe hablar con la multitud; Debe hablar de manera ininterrumpida por al menos 10 rondas.<br>Cuando el orador termina su discurso, se realiza una tirada de pericia. Si la tirada es exitosa, se realiza una tirada de Inteligencia por cada individuo en una multitud pequeña o por cada grupo en una multitud grande. Modifica esas tiradas de Inteligencia con un penalti de -1 por cada número a favor de la tirada de pericia del jugador. Por ejemplo, si el orador necesitaba un 10 para tener éxito y su tirada fue 4, cada tirada de Inteligencia de la multitud tendrá un penalti de -4.<br>Individuos o grupos pequeños que fallen sus tiradas cambian su opinión sobre el tema ajustado en uno. Una opinión Indiferente se convierte en Amistosa o Cautelosa (puede cambiar en 1 a favor o en contra depende de la decisión tomada por el Orador en su tirada de pericia), una opinión Cautelosa se vuelve Indiferente o Amenazante. Sin embargo, todos los miembros de la audiencia que fallen sus tiradas de Inteligencia cambian sus opiniones de la misma manera. Las opiniones de aquellos que tienen éxito en sus tiradas mantienen sus opiniones firmes y sin cambios provocados por la pericia; sin embargo, de manera técnica, la presión social del resto de la multitud puede provocar el mismo resultado. El DM puede sobrescribir/modificar cualquier tirada de dado que produce resultados inapropiados; Por ejemplo, un PNJ en la multitud que ha tenido una longeva rivalidad con el orador puede no ser cambiado de opinión, sin importar la elocuencia del orador.<br>Un personaje puede usar esta pericia solo una vez en una misma multitud. Si nuevos miembros se unen a la misma multitud entonces tanto el jugador como los nuevos integrantes (o grupos pequeños) deben realizar las respectivas tiradas en el orden establecido previamente, además el jugador puede realizar otra tirada de pericia en la multitud entera si se discute otro tema diferente al anterior.<br>Nótese que esta pericia provoca cambios pequeños en la actitud. Si una multitud se siente Indiferente ante un déspota, un orador puede que sea capaz de mezclar emociones ambiguas de la multitud sobre el déspota, pero no será capaz de convencerlos de inmediatamente asaltar su castillo en grupo. Si la multitud sospecha acerca de una religión en particular, el orador los puede persuadir para ser más tolerantes pero no debe estar a la expectativa de conversiones espontáneas.",
+    "slots": 1,
+    "ability": "Cha",
+    "modifier": "0",
+    "class": "Paladin, Warrior, Priest",
+    "source": "The Complete Paladin's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 94,
+    "name": "Poetry",
+    "description": "Un personaje con la pericia Poesía se especializa ya sea en la poesía narrativa o lírica. La poesía lírica expresa pensamientos y sentimientos, e incluye baladas, sonetos, odas e himnos. La poesía narrativa cuenta historias en verso, algunas reales, otras ficción. Un personaje que gaste dos slots en esta pericia se puede especializar en ambas formas.<br>La pericia permite al personaje juzgar la calidad de la poesía en la que está especializado. Además conoce un repertorio robusto de poemas que puede recitar con fascinante habilidad. No se requiere tirada de pericia para las acciones mencionadas previamente.<br>El personaje también puede componer poemas de su especializad; Una tirada exitosa significa que el poema es de una calidad excepcional. Si el personaje tiene la pericia Leer/Escribir (Reading/Writing) puede guardar sus poemas en textos.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "-2",
+    "class": "Paladin, General",
+    "source": "The Complete Paladin's Handbook",
+    "race": "General"
   }
 ]
