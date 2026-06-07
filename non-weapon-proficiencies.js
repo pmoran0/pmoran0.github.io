@@ -1230,5 +1230,104 @@ const periciasData = [
     "class": "Rogue",
     "source": "The Complete Ninja's Handbook",
     "race": "General"
-  }
+  },
+  {
+    "id": 113,
+    "name": "Cheesemaking",
+    "description": "Elaboración de Queso permite al personaje que la posee crear queso con maestría a partir de la cuajada de leche agria. Solo se requiere una tirada de pericia al intentar preparar una rueda de queso verdaderamente magnífica como regalo especial o para una celebración especial.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "0",
+    "class": "General",
+    "source": "The Complete Book of Humanoids",
+    "race": "Humanoid"
+  },
+  {
+    "id": 114,
+    "name": "Danger Sense",
+    "description": "Sentido del Peligro otorga a un personaje humanoide un sexto sentido que le advierte de peligros inminentes. Si supera la tirada, el personaje evita una trampa en el último segundo o se da cuenta de que sus oponentes le esperan para emboscarlo gracias a una repentina señal de alerta que no puede ignorar. Los personajes que superan las tiradas detectan las trampas antes de caer en ellas y obtienen la iniciativa contra oponentes ocultos. Esta habilidad no funciona contra oponentes que están a la vista y no intentan ocultar sus acciones. Si falla, el personaje no percibe nada fuera de lo común y el juego continúa con normalidad.",
+    "slots": 2,
+    "ability": "Wis",
+    "modifier": "+1",
+    "class": "General",
+    "source": "The Complete Book of Humanoids",
+    "race": "Humanoid"
+  },
+  {
+    "id": 115,
+    "name": "Drinking",
+    "description": "Beber (y su habilidad complementaria, Comer) es importante para muchos humanoides, incluidos centauros, sátiros y wemics. Una tirada exitosa indica que el humanoide puede consumir hasta el doble de lo normal en una sola sentada. Esto le permitirá al humanoide pasar el doble de tiempo sin beber antes de comenzar a sufrir efectos adversos. Si se trata de bebidas alcohólicas, una tirada exitosa le permite al humanoide consumir el doble antes de que los efectos adversos comiencen a molestarle.",
+    "slots": 1,
+    "ability": "Con",
+    "modifier": "0",
+    "class": "General",
+    "source": "The Complete Book of Humanoids",
+    "race": "Humanoid"
+  },
+  {
+    "id": 116,
+    "name": "Eating",
+    "description": "Al igual que la pericia Beber (Drinking), Comer le permite al humanoide almacenar comida. Una tirada exitosa indica que el humanoide puede consumir hasta el doble de lo normal. Esto le permite pasar el doble de tiempo sin comer sin sufrir efectos adversos por el hambre.",
+    "slots": 1,
+    "ability": "Con",
+    "modifier": "0",
+    "class": "General",
+    "source": "The Complete Book of Humanoids",
+    "race": "Humanoid"
+  },
+  {
+    "id": 117,
+    "name": "Hiding",
+    "description": "Ocultarse es la capacidad de seleccionar instintivamente el mejor escondite en casi cualquier circunstancia. Los humanoides que superan las pruebas pueden prácticamente desaparecer de la vista. El éxito se determina mediante modificadores basados ​​en la Inteligencia del personaje del que se intenta ocultar. Esta competencia funciona independientemente de cualquier camuflaje natural o habilidad para ocultarse que el humanoide ya posea.<table><tr><th>Inteligencia del Oponente</th><th>Modificador</th></tr><tr><td>3 o menos</td><td>-5</td></tr><tr><td>4-5</td><td>-3</td></tr><tr><td>6-8</td><td>-1</td></tr><tr><td>9-12</td><td>0</td></tr><tr><td>13-15</td><td>+1</td></tr><tr><td>16-17</td><td>+2</td></tr><tr><td>18</td><td>+3</td></tr><tr><td>19</td><td>+5</td></tr><tr><td>20 o más</td><td>+7</td></tr></table>",
+    "slots": 2,
+    "ability": "Int",
+    "modifier": "-1",
+    "class": "General",
+    "source": "The Complete Book of Humanoids",
+    "race": "Humanoid"
+  },
+  {
+    "id": 118,
+    "name": "Winemaking",
+    "description": "Elaboración de Vino permite a los personajes crear vino a partir del jugo fermentado de uvas u otras plantas y frutas con la suficiente destreza como para ganarse la vida con ello. El personaje siempre tendrá cierto grado de éxito; las tiradas de pericia solo son necesarias al intentar preparar un vino verdaderamente magnífico como regalo especial o para una celebración importante.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "0",
+    "class": "General",
+    "source": "The Complete Book of Humanoids",
+    "race": "Humanoid"
+  },
+  {
+    "id": 119,
+    "name": "Close-Quarter Fighting",
+    "description": "Los humanoides con la pericia Luchar en Espacios Reducidos han aprendido a luchar en los estrechos confines de mazmorras y guaridas subterráneas. En tales lugares, o en otras condiciones de combate extremadamente cercano, los personajes armados con armas contundentes o perforantes (o sus propias armas naturales) reciben un bonificador de +2 a las tiradas de ataque. Las armas cortantes no se pueden usar en el combate cuerpo a cuerpo. Este bonificador no es acumulativo con la pericia Lucha Salvaje.<br>Una tirada exitosa al comienzo del combate otorga este bonificador. Un fallo significa que el humanoide lucha normalmente.",
+    "slots": 2,
+    "ability": "Dex",
+    "modifier": "0",
+    "class": "Warrior, Rogue",
+    "source": "The Complete Book of Humanoids",
+    "race": "Humanoid"
+  },
+  {
+    "id": 120,
+    "name": "Natural Fighting",
+    "description": "Lucha Natural otorga a los humanoides que poseen órganos propios de combate (garras, colmillos, colas, etc.) un bonificador de daño de +1 a todos sus ataques con armas naturales. Además, reciben un ataque natural adicional a los ataques normales permitidos. Para obtener los beneficios de esta habilidad, se debe realizar una tirada al inicio del combate. Si falla, los beneficios no se pueden usar durante el resto de la batalla.",
+    "slots": 2,
+    "ability": "Str",
+    "modifier": "+1",
+    "class": "Warrior",
+    "source": "The Complete Book of Humanoids",
+    "race": "Humanoid"
+  },
+  {
+    "id": 120,
+    "name": "Wild Fighting",
+    "description": "Los personajes con Lucha Salvaje emplean un estilo de lucha extremadamente poco ortodoxo e impredecible. La Lucha salvaje es feroz y letal, sin gracia ni disciplina. También es extremadamente agotadora, ya que parte de su naturaleza es que concentra cada gota de energía que tiene un personaje en el ataque.<br>Los beneficios están en la cantidad de ataques que el personaje obtiene en la cantidad de daño que infligen los ataques. Un personaje con Lucha Salvaje obtiene un ataque más por ronda de lo que normalmente tiene derecho. Todas las tiradas de daño para los ataques que impactan reciben un bonificador de +3.<br>Sin embargo, cuando lucha salvajemente, las tiradas de ataque de un personaje también se reducen en 3. Además, el AC del atacante se penaliza en 3, lo que hace que sea más fácil golpearlo.<br>Para usar la Lucha Salvaje, un personaje debe hacer una tirada de pericia exitosa al comienzo del combate. Un fallo significa que el personaje recibe solo las penalizaciones de la pericia y ninguno de los beneficios.<br>La Lucha Salvaje solo se puede usar dos veces al día, ya que es extremadamente agotadora. Tras finalizar un combate, el luchador salvaje debe descansar durante una hora antes de poder volver a usar su pericia . Descansar significa simplemente descansar o realizar un desplazamiento ligero (montar un caballo a paso lento, etc.). Si el personaje debe caminar, no podrá usar la pericia hasta que hayan transcurrido cuatro horas. Sin este descanso, un personaje cansado sufre una penalización de -3 a todas sus pericias, una penalización de -5 al Armor Class, una penalización de -5 al GAC0 y una penalización de -3 a las tiradas de daño. Estas penalizaciones se mantienen vigentes hasta que transcurra el periodo de descanso completo.",
+    "slots": 2,
+    "ability": "Con",
+    "modifier": "0",
+    "class": "Warrior",
+    "source": "The Complete Book of Humanoids",
+    "race": "Humanoid"
+  },
 ]
