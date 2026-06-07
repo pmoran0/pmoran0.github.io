@@ -1320,7 +1320,7 @@ const periciasData = [
     "race": "Humanoid"
   },
   {
-    "id": 120,
+    "id": 121,
     "name": "Wild Fighting",
     "description": "Los personajes con Lucha Salvaje emplean un estilo de lucha extremadamente poco ortodoxo e impredecible. La Lucha salvaje es feroz y letal, sin gracia ni disciplina. También es extremadamente agotadora, ya que parte de su naturaleza es que concentra cada gota de energía que tiene un personaje en el ataque.<br>Los beneficios están en la cantidad de ataques que el personaje obtiene en la cantidad de daño que infligen los ataques. Un personaje con Lucha Salvaje obtiene un ataque más por ronda de lo que normalmente tiene derecho. Todas las tiradas de daño para los ataques que impactan reciben un bonificador de +3.<br>Sin embargo, cuando lucha salvajemente, las tiradas de ataque de un personaje también se reducen en 3. Además, el AC del atacante se penaliza en 3, lo que hace que sea más fácil golpearlo.<br>Para usar la Lucha Salvaje, un personaje debe hacer una tirada de pericia exitosa al comienzo del combate. Un fallo significa que el personaje recibe solo las penalizaciones de la pericia y ninguno de los beneficios.<br>La Lucha Salvaje solo se puede usar dos veces al día, ya que es extremadamente agotadora. Tras finalizar un combate, el luchador salvaje debe descansar durante una hora antes de poder volver a usar su pericia . Descansar significa simplemente descansar o realizar un desplazamiento ligero (montar un caballo a paso lento, etc.). Si el personaje debe caminar, no podrá usar la pericia hasta que hayan transcurrido cuatro horas. Sin este descanso, un personaje cansado sufre una penalización de -3 a todas sus pericias, una penalización de -5 al Armor Class, una penalización de -5 al GAC0 y una penalización de -3 a las tiradas de daño. Estas penalizaciones se mantienen vigentes hasta que transcurra el periodo de descanso completo.",
     "slots": 2,
@@ -1329,5 +1329,126 @@ const periciasData = [
     "class": "Warrior",
     "source": "The Complete Book of Humanoids",
     "race": "Humanoid"
+  },
+  {
+    "id": 122,
+    "name": "Dwarf Runes",
+    "description": "Las Runas Enanas son el alfabeto básico de los enanos y se enseñan a todos los jóvenes como parte de su educación básica. Dependiendo del trasfondo de la campaña, las runas pueden haber sido un regalo de los dioses, una creación de los propios enanos o una forma modificada de algún otro lenguaje escrito. Los enanos siguen afirmando que las runas son una parte intrínseca de su herencia cultural y pueden ofenderse si se les acusa de haberlas copiado. Las runas enanas se encuentran grabadas en piedra y rara vez escritas en materiales transitorios como pergamino, tela o papel. Se utilizan para indicar propiedad, advertir sobre peligros cercanos y registrar la historia. Las tumbas de los enanos que han sido debidamente enterrados, a diferencia de los entierros apresurados durante la batalla, están grabadas con runas que revelan el clan, la ascendencia, los hijos y las hazañas del difunto. En ausencia de un entierro adecuado, los enanos erigen monolitos de piedra o graban paredes enteras de cavernas que representan las hazañas de sus muertos. Estas enumeran los clanes, los nombres de los que murieron y la naturaleza de sus muertes. El número de enemigos muertos se detalla minuciosamente.<br>Las runas enanas no son una forma de escritura fonética, sino conceptual, donde cada runa delinea una idea o implica un rango de ideas según su ubicación. Una sola runa puede transmitir páginas de escritura humana o élfica, o ser tan simple como un letrero que diga 'escaleras'. Se trata de saber qué significa la runa y cómo interpretarla en contexto. Las runas enanas no contienen conjunciones ni pronombres, pero los nombres propios se representan alterando una runa existente. Esto hace que las runas sean difíciles de entender para otras razas, y los enanos se consideran superiores a las razas que no pueden leer ni siquiera las más simples. Solo los enanos las conocen sin costo alguno.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "+2",
+    "class": "General",
+    "source": "The Complete Book of Dwarves",
+    "race": "Dwarf"
+  },
+  {
+    "id": 123,
+    "name": "Fungi Recognition",
+    "description": "Aunque prefieren evitarlo, los enanos a veces tienen que sobrevivir a base de hongos. Prefieren usarlos como complemento a su dieta habitual, pero en tiempos difíciles o durante expediciones subterráneas prolongadas, es útil poder distinguir los hongos comestibles de los venenosos o nocivos. Aproximadamente el 50 % de los hongos subterráneos son venenosos. Pueden causar malestar estomacal o ser tan tóxicos que provoquen la muerte. Es imposible recolectar hongos comestibles sin la pericia de Identificación de Hongos. Si el personaje tiene suficiente luz y la oportunidad de estudiar el hongo en cuestión detenidamente durante 10 minutos, no se requiere una tirada de pericia. Si no puede ver el hongo correctamente, lo cual suele ocurrir al usar visión infrarroja, o si tiene que tomar una decisión apresurada sobre su comestibilidad, deberá realizar una tirada.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "+3",
+    "class": "General",
+    "source": "The Complete Book of Dwarves",
+    "race": "Dwarf"
+  },
+  {
+    "id": 124,
+    "name": "Local Dwarf History",
+    "description": "La pericia Historia Local de Enanos es diferente de la pericia Historia Local (Local History); un personaje con esta pericia solo conoce la historia de los enanos. Se centra principalmente en los linajes y eventos que afectan a los enanos. Trata sobre los fundadores de los clanes y fortalezas, y rastrea a los descendientes hasta el presente. Se conocen las batallas y eventos del clan y la fortaleza, así como el destino de aquellos que partieron para establecer nuevos hogares o que perecieron en sus aventuras.<br>El alcance del conocimiento geográfico depende del trasfondo de la campaña. Aquellos que no han tenido contacto con el mundo de la superficie pueden ser totalmente ignorantes de lo que yace en ella, pero tendrán un amplio conocimiento de su propia fortaleza. Aquellos cuyos parientes han establecido nuevas fortalezas o son miembros de tales fortalezas tendrán conocimiento del área entre ambas y cierto conocimiento de la geografía que las rodea. Aun así, la mayoría de los enanos, a menos que vivan cerca de otras razas, tienen una idea muy vaga de dónde está el mar, por ejemplo.<br>Si bien un personaje con esta pericia conoce la historia de los enanos, su conocimiento de la historia de otras razas es mínimo. Si los humanos libraron una gran batalla entre sí, es poco probable que un enano que no viviera con humanos haya oído hablar de ella. Si la batalla involucró a enanos, probablemente lo sabría. Si involucró a enanos de su propia fortaleza o clan, tendría un conocimiento extenso de los eventos que la llevaron y el curso de la batalla. Como con algunas otras pericias de enanos, el alcance exacto del conocimiento de un individuo está determinado por su trasfondo.<br>La pericia en Historia Local de Enanos puede usarse para entretener a otros personajes. Cuando participa en esto, obtiene un bonificador de +2 a su Carisma mientras trata con enanos. Con otras razas no obtiene la bonificación, porque las historias de enanos tienden a ser aburridas, lentas y excesivamente centradas en quién está emparentado con quién, sus lugares de origen y todos los lugares que fundaron los ancestros de los héroes a lo largo del camino. Intentar contar una historia de enanos a seres hostiles probablemente los incite a la violencia. Los orcos no se impresionarán, ni siquiera con el mejor relato de enanos.",
+    "slots": 1,
+    "ability": "Cha",
+    "modifier": "+2",
+    "class": "General",
+    "source": "The Complete Book of Dwarves",
+    "race": "Dwarf"
+  },
+  {
+    "id": 125,
+    "name": "Navigation, Underground",
+    "description": "Un personaje con la pericia Navegación Subterranea puede determinar la dirección bajo tierra y la ruta más corta a la superficie. Mediante un análisis cuidadoso de las corrientes de aire y su contenido, un personaje puede incluso determinar si hay bolsas de gas venenoso en el aire. Se requiere una tirada exitosa para usar la pericia.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "0",
+    "class": "General",
+    "source": "The Complete Book of Dwarves",
+    "race": "Dwarf"
+  },
+  {
+    "id": 126,
+    "name": "Sign Language",
+    "description": "El Lenguaje de Señas es utilizado con mayor frecuencia por los enanos que han estado en guerra prolongada con otros enanos o razas. Permite la comunicación silenciosa con cualquiera que vea y entienda las señales. El alcance máximo suele ser la línea de visión en un área iluminada, o el alcance de la visión infrarroja del receptor. El Lenguaje de Señas puede ser un lenguaje extenso capaz de mantener conversaciones largas, o simplemente un medio para comunicar frases sencillas como «ataquen:», «orcos detrás de la roca:» o «ustedes tres, muévanse a la izquierda». Se realiza una tirada al hablar o interpretar el lenguaje de señas. El bonificador de +2 solo debe usarse al dar órdenes cortas y fáciles de reconocer. Las señales más detalladas requieren un modificador de -1.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "+2",
+    "class": "General",
+    "source": "The Complete Book of Dwarves",
+    "race": "Dwarf"
+  },
+  {
+    "id": 127,
+    "name": "Slow Respiration",
+    "description": "Un personaje con Respiración Lenta puede entrar en un trance profundo y reducir la cantidad de aire que necesita para sobrevivir. Para inducir el trance, debe estar en una posición de descanso, ya sea sentado o acostado. Tras concentrarse durante un turno, el pulso y la respiración disminuyen considerablemente, de modo que la respiración requiere solo el 10 % de la frecuencia normal. El personaje sale del trance a voluntad, plenamente consciente de todo lo que ocurre a su alrededor.",
+    "slots": 1,
+    "ability": "N/A",
+    "modifier": "N/A",
+    "class": "General",
+    "source": "The Complete Book of Dwarves",
+    "race": "Dwarf"
+  },
+  {
+    "id": 128,
+    "name": "Sound Analysis",
+    "description": "Análisis de Sonido permite al personaje calcular el tamaño de áreas subterráneas generando ruido y analizando los ecos que regresan. Usando esta pericia, puede calcular distancias de hasta una milla y determinar la dirección del sonido. Para usar Análisis de Sonido, el personaje debe trabajar en absoluto silencio. El sonido creado debe tener una calidad aguda y entrecortada. Un aullido o un gemido son ineficaces, pero un chasquido o un fuerte 'hey' funcionan bien.<br>El PJ debe hacer una tirada de pericia. Si la tirada es exitosa, ha analizado correctamente el tamaño del área en cuestión con una precisión de más o menos el 25% de su altura, anchura y longitud. Si la tirada falla, el eco se ha vuelto distorsionado en sus reverberaciones. Ningún otro intento del PJ de analizar esa área tendrá éxito, aunque otros con la pericia pueden intentarlo.<br>Una tirada de 5 o menos significa que el personaje ha aprendido no solo el tamaño del área analizada, sino también otros detalles: el número de pasajes laterales ramificados, si hay un corredor recto o sinuoso, y si hay agua o no.<br>La desventaja de esta habilidad es que, si bien es útil para aprender sobre un área completamente desconocida, anuncia a los personajes a todas las criaturas dentro del alcance auditivo. Sin duda estarán preparadas y podrían ir en busca de los intrusos.",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": "0",
+    "class": "General",
+    "source": "The Complete Book of Dwarves",
+    "race": "Dwarf"
+  },
+  {
+    "id": 129,
+    "name": "Survival, Underground",
+    "description": "La Supervivencia Subterránea es una extensión de la pericia Supervivencia (Survival) encontrada en el Manual del Jugador, proporciona conocimientos sobre el subsuelo. Similar a la pericia Superviviencia (Survival), ayuda al personaje a distinguir entre insectos comestibles y venenosos y a determinar la seguridad y estabilidad de túneles, techos de cavernas y similares, etc.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "0",
+    "class": "General",
+    "source": "The Complete Book of Dwarves",
+    "race": "Dwarf"
+  },
+  {
+    "id": 130,
+    "name": "Smelting",
+    "description": "La pericia de Fundición está estrechamente ligada a la de Minería (Mining). Juntas, proporcionan todo el metal a las fortalezas. Con esta pericia se puede operar un horno de fundición. Un horno de fundición es un horno muy caliente que se utiliza para separar el metal de la roca mineralizada. El horno se sobrecalienta forzando el paso de aire de un fuelle, a menudo operado por dos o más enanos, a través de carbón en combustión. El mineral se introduce en la fundición en cubos de hierro que se mueven a lo largo de una cadena, la cual arrastra los cubos por un riel y vierte su contenido en el horno. El mineral se calienta hasta la temperatura de fusión del metal (que es inferior a la de la roca). Ocasionalmente se añade agua o ácido para mejorar el proceso. El metal fundido sale de la base de la fundición y cae en moldes o canales conocidos como 'lingotes', de ahí el término arrabio. Los lingotes se venden a herreros, armeros y fabricantes de armas para producir artículos de metal, armas y armaduras. Las fundiciones también pueden fabricar aleaciones, como acero o bronce.<br>La cantidad de mineral que se puede procesar depende más del tamaño de la fundición que de la velocidad de trabajo de cualquier personaje. Una fundición pequeña puede procesar mineral tan rápido como cuatro mineros puedan excavarlo. Una fundición mediana puede procesar el mineral producido por hasta 20 mineros. Una fundición grande puede procesar el mineral excavado por hasta 100 mineros.<br>Además del costo del equipo de fundición, el mantenimiento de una fundición es costoso debido a los materiales necesarios para su funcionamiento. Una operación de fundición pequeña cuesta 5 monedas de oro por día, el costo de una operación mediana es de 12 monedas de oro por día, y una grande cuesta 25 monedas de oro por día para funcionar. Los costos de la fundición solo se aplican cuando la fundición está en funcionamiento. Para mantenerla funcionando con la máxima eficiencia, es práctica común acumular una reserva de mineral antes de encender el horno. Una vez fundido todo el mineral, se deja enfriar el equipo y luego se limpia.<br>Dado su tamaño, incluso una fundición pequeña no es muy portátil. <table><tr><th>Horno de Fundición</th><th>Precio</th><th>Tamaño</th></tr><tr><td>Pequeño</td><td>1000 monedas de oro</td><td>30' x 30'</td></tr><tr><td>Medio</td><td>2000 monedas de oro</td><td>50' x 50'</td></tr><tr><td>Grande</td><td>3000 monedas de oro </td><td>75' x 75'</td></tr></table>",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "0",
+    "class": "General",
+    "source": "The Complete Book of Dwarves",
+    "race": "Dwarf"
+  },
+  {
+    "id": 131,
+    "name": "Pest Control",
+    "description": "Control de Plagas se utiliza para mantener las fortalezas enanas libres de plagas como ratas, carroñeros, jermalaines, kobolds y otras criaturas pequeñas. Similar a la pericia de Montar Trampas (Set Snares), se centra en capturar plagas subterráneas y no utiliza trampas. Las trampas se colocan para activar jaulas metálicas, redes de caída o puertas de hierro que cierran secciones individuales de túneles. Se pueden colocar trampas de resorte o pequeñas trampas mortales (daño máximo 1d6) utilizando esta competencia. No hay modificador de -4 al usar el control de plagas para atrapar criaturas más grandes.<br>Solo los personajes ladrones pueden usar esta competencia para colocar trampas más grandes adecuadas para criaturas del tamaño de humanos u orcos. Estas trampas pueden incluir ballestas, trampas mortales más grandes y trampolines con pinchos.<br>Un personaje con esta pericia no tiene la capacidad de fabricar los objetos necesarios para estos dispositivos; solo puede colocar las trampas y sus activadores.<br>Se debe realizar una tirada al colocar la trampa. Un fallo en la pericia significa que la trampa no funcionará. Puede que no se haya colocado correctamente, que esté mal ocultada o que sea demasiado pequeña o demasiado grande para que la criatura la active.<br>Colocar una trampa lleva una hora y el personaje debe tener el equipo y los materiales adecuados.<br>Los personajes con pericia Comprensión de Animales (Animal Lore) obtienen un bonificador de +2 al intentar colocar trampas para atrapar plagas animales.",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": "0",
+    "class": "Thief",
+    "source": "The Complete Book of Dwarves",
+    "race": "Dwarf"
+  },
+  {
+    "id": 132,
+    "name": "Boatwright",
+    "description": "La pericia de Constructor de Barcos permite a un personaje construir todo tipo de embarcaciones de hasta  60 pies de largo. No se pueden construir embarcaciones más grandes.<br>El tiempo necesario para construir un barco depende de su tamaño. Como referencia, se requiere una semana de construcción por cada pie largo. Dos personajes con la habilidad de constructor de barcos reducen este tiempo a la mitad; tres lo reducen a un tercio. Un máximo de un constructor de barcos por cada 5 pies de largo pueden trabajar en la misma embarcación.<br>El barco básico incluye casco, mástiles (si corresponde), cubierta y bancos, según sea necesario. Elementos como una cabina o una bodega sellada añaden aproximadamente una semana cada uno para su finalización. Los personajes sin la habilidad de constructor de barcos pueden ayudar al constructor en la construcción, pero dos personajes sin esta habilidad ahorran el mismo tiempo que un constructor de barcos adicional.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "-2",
+    "class": "General",
+    "source": "The Complete Book of Dwarves",
+    "race": "Dwarf"
   },
 ]
