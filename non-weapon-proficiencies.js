@@ -1038,7 +1038,7 @@ const periciasData = [
     "name": "Acting",
     "description": "La pericia Actuación, originalmente presentada en <i>The Complete Bard's Handbook</i>, permite al personaje personificar de manera muy hábil a otra persona. Aunque la pericia Actuación es usualmente considerada una forma de entretenimiento, puede ser muy útil en ayudar al ninja en completar metas y misiones. Si el ninja posee las pericias Actuación y Disfraz (Disguise), la tirada de cualquiera de las dos recibe un bonus de +1.<br>Las tiradas de pericia de Actuación son requeridas solamente si el actor debe representar a un personaje particularmente difícil o si está intentando <i>improvisar</i> un rol (un rol no ensayado o una presentación con muy poco tiempo de aviso ('a quemarropa').",
     "slots": 1,
-    "ability": "Char",
+    "ability": "Cha",
     "modifier": "-1",
     "class": "Rogue",
     "source": "The Complete Ninja's Handbook",
@@ -1101,17 +1101,6 @@ const periciasData = [
   },
   {
     "id": 101,
-    "name": "Escape",
-    "description": "La pericia Escapismo permite a un personaje zafarse de cuerdas y otros tipos de ataduras.<br>Cuando un personaje está atado o inmovilizado, el DM asigna una penalización según el tipo y las circunstancias de la atadura. La Tabla muestra las penalizaciones estándar para diversas situaciones. El personaje con pericia en Escapismo puede intentar usar su habilidad para liberarse. Tira su pericia y aplica las penalizaciones correspondientes. Si la tirada tiene éxito, puede desatarse.<table><tr><th>Tipos de Amarre</th><th>Penalti (Acumulativo)</th></tr><tr><td>Cuerda estándar</td><td>0</td></tr><tr><td>Cuero crudo, seco</td><td>-2</td></tr><tr><td>Cuero crudo, empapado y encogido</td><td>-4</td></tr><tr><td>Alambre</td><td>-3</td></tr><tr><td>Dedos atados/encintados individualmente</td><td>-4</td></tr></table><table><tr><th>Circunstancia/Escenario</th><th>Penalti (Acumulativo)</th></tr><tr><td>Amarrador se toma su tiempo y </td atención><td>-2</td></tr><tr><td>Amarrador se toma poco tiempo y atención</td><td>+2</td></tr><tr><td>Amarrador es un ladrón o un ninja</td><td>-3</td></tr><tr><td>Amarrador realiza tirada de Detectar/Retirar Trampas</td><td>-2</td></tr><tr><td>Personaje con esta pericia intenta desatar a otro personaje</td><td>+4</td></tr><tr><td>Personaje atado intenta desatar a otro personaje usando esta pericia</td><td>-4</td></tr></table><br><b>Ejemplo:</b>Ichiro el ninja está atado espalda con espalda con su amigo luchador Olaf. Ichiro ha sido atado con una cuerda estándar, pero el personaje que lo amarró dedicó más tiempo a la tarea y ató individualmente los dedos del ninja. Ichiro recibe una penalización de -6 contra su tirada de Destreza -1 de 16. El ninja saca un 11 y falla.<br>Ichiro intenta entonces liberar a Olaf. La penalización es la misma, pero está intentando desatar a otra persona mientras él mismo está atado, lo que resulta en una penalización adicional de -4 para un total de -10. El ninja logra sacar un 6 y libera con éxito a su aliado.<br>La pericia Escapismo no permite al personaje abrir cerraduras ni escapar de otro tipo de trampas. Esas tareas requieren las habilidades de Abrir Cerraduras y Encontrar/Quitar Trampas.",
-    "slots": 2,
-    "ability": "Dex",
-    "modifier": "0",
-    "class": "Rogue",
-    "source": "The Complete Ninja's Handbook",
-    "race": "General"
-  },
-  {
-    "id": 102,
     "name": "Feign/Detect Sleep",
     "description": "Quienes fingen dormir rara vez lo hacen bien. Sin embargo, la mayoría desconoce cómo distinguir a los impostores de los que realmente duermen. Los personajes con la pericia Fingir/Detectar Dormido están entrenados para simular el sueño con precisión y para determinar cuándo otros lo fingen. Esta habilidad es especialmente útil para los ninjas de guardia y para quienes se infiltran en un lugar seguro. Un ninja la usará al escuchar a guardias e invitados que parecen dormir. Si detecta a alguien con una respiración irregular, puede tomar medidas para capturar o silenciar al impostor. Asimismo, un ninja puede usar esta habilidad para convencer a un intruso de que está profundamente dormido, de modo que pueda acercarse sigilosamente por detrás cuando esté de espaldas. La habilidad de Actuación (Acting) puede otorgar la capacidad de fingir el sueño, pero la tirada de Actuación se realiza con una penalización de -4 en lugar de la regular de -1.",
     "slots": 1,
@@ -1122,29 +1111,18 @@ const periciasData = [
     "race": "General"
   },
   {
+    "id": 102,
+    "name": "Giant Kite Flying",
+    "description": "Volar Cometa Gigante solo es útil para personajes que pretenden volar objetos inusuales como el 'hito washi' (águila humana) y el 'yami doko' (cometa del tamaño de un hombre). Es una habilidad costosa y difícil de dominar, por lo que hay muy pocos practicantes. Sin esta pericia, un personaje que intente volar sobre una cometa gigante seguramente se estrellará y se hará mucho daño, eso es si no se muere. Incluso con esta habilidad, es muy probable que el personaje lo haga.",
+    "slots": 1,
+    "ability": "Dex",
+    "modifier": "-3",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
     "id": 103,
-    "name": "Giant Kite Flying",
-    "description": "Volar Cometa Gigante solo es útil para personajes que pretenden volar objetos inusuales como el 'hito washi' (águila humana) y el 'yami doko' (cometa del tamaño de un hombre). Es una habilidad costosa y difícil de dominar, por lo que hay muy pocos practicantes. Sin esta pericia, un personaje que intente volar sobre una cometa gigante seguramente se estrellará y se hará mucho daño, eso es si no se muere. Incluso con esta habilidad, es muy probable que el personaje lo haga.",
-    "slots": 1,
-    "ability": "Dex",
-    "modifier": "-3",
-    "class": "Rogue",
-    "source": "The Complete Ninja's Handbook",
-    "race": "General"
-  },
-  {
-    "id": 104,
-    "name": "Giant Kite Flying",
-    "description": "Volar Cometa Gigante solo es útil para personajes que pretenden volar objetos inusuales como el 'hito washi' (águila humana) y el 'yami doko' (cometa del tamaño de un hombre). Es una habilidad costosa y difícil de dominar, por lo que hay muy pocos practicantes. Sin esta pericia, un personaje que intente volar sobre una cometa gigante seguramente se estrellará y se hará mucho daño, eso es si no se muere. Incluso con esta habilidad, es muy probable que el personaje lo haga.",
-    "slots": 1,
-    "ability": "Dex",
-    "modifier": "-3",
-    "class": "Rogue",
-    "source": "The Complete Ninja's Handbook",
-    "race": "General"
-  },
-  {
-    "id": 105,
     "name": "Hold Breath",
     "description": "Aguantar La Respiración ayuda a un personaje a contener la respiración durante periodos prolongados.(Consulta las reglas en el Manual del Jugador, Capítulo 14, para saber cuánto tiempo puede contener la respiración normalmente un personaje).<br>Con esta pericia un personaje puede contener la respiración durante la mitad de su Constitución en rondas (redondeando hacia arriba). Si el personaje está realizando algún tipi de esfuerzo, este tiempo se reduce a la mitad (de nuevo redondeando hacia arriba). Al intentar contener la respiración más allá de este tiempo, el personaje realiza la tirada de Constitución habitual en cada asalto. La primera tirada no tiene penalización, pero cada tirada posterior tiene una penalización acumulativa de -1. Una vez que falla una tirada, el personaje debe respirar; si no puede alcanzar el aire, muere.",
     "slots": 1,
@@ -1155,7 +1133,7 @@ const periciasData = [
     "race": "General"
   },
   {
-    "id": 106,
+    "id": 104,
     "name": "Night Vision",
     "description": "Visión Nocturna mejora la capacidad de un personaje para ver en condiciones de poca luz. No es igual a la infravisión, pero sigue siendo útil.<br>Para usar su Visión Nocturna, el personaje debe pasar cinco rondas en el tipo de luz en la que se moverá o esperará. Hasta que no haya pasado esa cantidad de tiempo en la oscuridad, esta pericia simplemente no funciona. (Sin embargo, el personaje puede estar haciendo otras cosas mientras deja que sus ojos se adapten, siempre que estas otras tareas no lo expongan a condiciones de luz variables). <br>Una vez que sus ojos se hayan adaptado, el personaje puede usar su Visión Nocturna en cualquier momento. Siempre que mire algo, debe hacer una tirada de Visión Nocturna. Con una tirada exitosa, los Rangos de Visibilidad del personaje (del Manual del Jugador, Capítulo 13) se duplican en las siguientes condiciones: Niebla (densa o ventisca), Niebla (moderada), Noche (luna llena), Noche (sin luna), Crepúsculo. Así, un personaje bajo la luna llena por la noche podría detectar movimiento a 200 pies en lugar de a 100 pies.<br>Si el personaje con esta pericia se expone a un cambio en la iluminación, como por ejemplo, si una bola de fuego explota a menos de 500 pies o si le agitan una antorcha o lámpara frente a la cara, sus ojos se deslumbran. Su visión nocturna desaparece y no se recupera hasta que el personaje haya pasado cinco rondas permitiendo que sus ojos se adapten.",
     "slots": 1,
@@ -1166,7 +1144,7 @@ const periciasData = [
     "race": "General"
   },
   {
-    "id": 107,
+    "id": 105,
     "name": "Quick Study",
     "description": "Estudio Rápido permite a un ninja aprender temporalmente lo suficiente sobre una habilidad, un trabajo o un área de conocimiento para hacerse pasar por alguien perteneciente a una profesión relacionada.<br>Al usar esta pericia, el ninja pasa una semana (ocho horas al día) estudiando la habilidad que desea aprender. Al final de la semana, el personaje tiene un conocimiento práctico del campo estudiado. Durante los siguientes días, podrá hacerse pasar por un practicante de esa habilidad, aunque no como un experto.<br>Cuando haya completado su estudio y deba utilizar la habilidad, el personaje realiza una tirada normal con una penalización adicional de -3. Una semana después de que el personaje haya completado su estudio, sufre una penalización de -2 porque ha olvidado algunos detalles de la habilidad. Cada semana posterior, sufre otra penalización acumulativa de -2.<br>Esta pericia no permitirá que un personaje demuestre un nivel experto de habilidad con la habilidad que se está simulando. Si el personaje emprende una tarea que, en opinión del DM, requiere un conocimiento especialmente amplio o profundo del tema, el DM puede decidir que el personaje no puede realizar la tarea. El personaje puede entonces hacer una tirada de Inteligencia; si tiene éxito, se da cuenta de que está sobrepasado y no puede tener éxito. No es posible gastar slots adicionales que en Estudio Rápido para mejorar la tirada. Sin embargo, es posible comprar la pericia más de una vez para estudiar dos habilidades por misión.",
     "slots": 2,
@@ -1177,7 +1155,7 @@ const periciasData = [
     "race": "General"
   },
   {
-    "id": 108,
+    "id": 106,
     "name": "Style Analysis",
     "description": "Análisis de Estilo otorga al personaje conocimiento (no habilidad) sobre el combate armado y desarmado. Tras observar a alguien luchar durante al menos una ronda, un personaje con esta pericia puede realizar una tirada de Análisis de Estilo para obtener información sobre el estilo de lucha de su oponente.<br>Si el personaje supera la tirada con el valor indicado, obtiene la información que sigue a ese número.<ul>0: El estilo general utilizado (p. ej., karate, kenjutsu, esgrima, etc.).</ul><ul>2: El nivel del practicante (p. ej., estudiante básico, experto, gran maestro del estilo, etc.).</ul><ul>4: La escuela del estilo que se está utilizando. p. ej., lucha sumo de la familia Odo.</ul><ul>6: Debilidades superficiales o transitorias que el practicante presenta actualmente (como favorecer una pierna lesionada). El personaje con Análisis de Estilo recibe un +2 en todas las tiradas de ataque al luchar contra el practicante (a menos que este cambie de estilo). El +2 desaparece después de un día.</ul><ul>8: Quién fue probablemente el maestro del practicante (p. ej., Odo Kusuke).</ul><ul>10: Debilidades generales en el aprendizaje del practicante (como la tendencia a favorecer los ataques de la izquierda sobre los de la derecha). El personaje con Análisis de Estilo recibe un +2 en todas las tiradas de ataque al luchar contra el practicante. El +2 desaparece después de un año.</ul>.Naturalmente, existen límites a lo que el personaje puede aprender incluso en los mejores niveles de éxito. Por ejemplo, no puede descubrir la verdadera identidad de un maestro que no sea conocido, aunque podría identificar un estilo como el mismo que el de otro personaje, infiriendo así un maestro común.",
     "slots": 1,
@@ -1188,7 +1166,7 @@ const periciasData = [
     "race": "General"
   },
   {
-    "id": 109,
+    "id": 107,
     "name": "Toxicology",
     "description": "En manos de un ninja, la habilidad en Herbalismo (Herbalism) se centra en el conocimiento de somníferos y venenos. Un personaje con Toxicología sabe más sobre estos fármacos que un herbolario con una puntuación de Inteligencia similar (de ahí la ausencia de penalización), pero desconocerá otros tipos de compuestos químicos.",
     "slots": 2,
@@ -1199,7 +1177,7 @@ const periciasData = [
     "race": "General"
   },
   {
-    "id": 110,
+    "id": 108,
     "name": "Underclass",
     "description": "La pericia Clase Baja proporciona una comprensión del funcionamiento de la subclase —la combinación de clases más pobres y elementos criminales— en una sociedad. El personaje con esta competencia puede realizar una tirada de Clase Baja para obtener información sobre el submundo de cualquier comunidad que visite. El DM debe asignar tiempo y penalizaciones a la tirada en función de las diferencias culturales y la sensibilidad de la información que busca el personaje. Intentar comprar un arma ilegal llevaría aproximadamente una hora y resultaría en una penalización de 0 o -1. Buscar el escondite secreto del capo local podría llevar semanas e impondría una penalización de -8 o peor.",
     "slots": 1,
@@ -1210,7 +1188,7 @@ const periciasData = [
     "race": "General"
   },
   {
-    "id": 111,
+    "id": 109,
     "name": "Voice Mimicry",
     "description": "La pericia Imitación de Voces es el arte de imitar de forma convincente las voces de otras personas. Es una habilidad muy exigente que requiere un entrenamiento y una práctica intensos de las cuerdas vocales. Por esta razón, requiere dos slots de pericia.<br>Un personaje con la habilidad de Imitación de Voces puede imitar cualquier acento que haya escuchado. El éxito es automático a menos que sus oyentes hablen con ese acento; en tal caso, se requiere una tirada de pericia (con un penalty de +2).<br>Más difícil es imitar la voz de una persona específica. Para ello, el ladrón debe, por supuesto, estar familiarizado con la voz. Se necesita una tirada para determinar si se detecta la imitación; los modificadores dependen de qué tan bien conozcan los oyentes la voz que se está imitando. El éxito es seguro si el oyente es un desconocido, alguien que nunca ha escuchado la voz original. Para engañar a un conocido, no hay modificador; mientras que engañar a un amigo del sujeto tiene una penalización de -2, a un amigo cercano de -5, y a alguien extremadamente cercano (p. ej., un padre, cónyuge o alguien que ha tenido contacto cercano con la persona durante años) tiene una penalización de -7.<br>Esta habilidad se usa a menudo junto con la pericia Disfraz (Disguise). La pericia que se debe tirar primero depende de si el personaje es visto u oído. Si el Disfraz tiene éxito primero, hay un modificador de +5 a la imitación de voz: los oyentes ya han aceptado la apariencia, por lo que es menos probable que duden de la voz. Si el Disfraz falla, no importa qué tan buena sea la imitación de voz. Si la voz se imita con éxito primero, otorga un modificador de +1 a la tirada de Disfraz.",
     "slots": 2,
@@ -1221,7 +1199,7 @@ const periciasData = [
     "race": "General"
   },
   {
-    "id": 112,
+    "id": 110,
     "name": "Water Walking",
     "description": "Caminar Por El Agua permite al personaje usar correctamente los mizugumo, los pontones especiales que los ninjas usan para caminar sobre superficies de agua tranquila. El ninja debe realizar una tirada de pericia en cada ronda. Si falla la prueba, el ninja cae al agua con un gran chapuzón.",
     "slots": 1,
@@ -1232,7 +1210,7 @@ const periciasData = [
     "race": "General"
   },
   {
-    "id": 113,
+    "id": 111,
     "name": "Cheesemaking",
     "description": "Elaboración de Queso permite al personaje que la posee crear queso con maestría a partir de la cuajada de leche agria. Solo se requiere una tirada de pericia al intentar preparar una rueda de queso verdaderamente magnífica como regalo especial o para una celebración especial.",
     "slots": 1,
@@ -1243,7 +1221,7 @@ const periciasData = [
     "race": "Humanoid"
   },
   {
-    "id": 114,
+    "id": 112,
     "name": "Danger Sense",
     "description": "Sentido del Peligro otorga a un personaje humanoide un sexto sentido que le advierte de peligros inminentes. Si supera la tirada, el personaje evita una trampa en el último segundo o se da cuenta de que sus oponentes le esperan para emboscarlo gracias a una repentina señal de alerta que no puede ignorar. Los personajes que superan las tiradas detectan las trampas antes de caer en ellas y obtienen la iniciativa contra oponentes ocultos. Esta habilidad no funciona contra oponentes que están a la vista y no intentan ocultar sus acciones. Si falla, el personaje no percibe nada fuera de lo común y el juego continúa con normalidad.",
     "slots": 2,
@@ -1254,7 +1232,7 @@ const periciasData = [
     "race": "Humanoid"
   },
   {
-    "id": 115,
+    "id": 113,
     "name": "Drinking",
     "description": "Beber (y su habilidad complementaria, Comer) es importante para muchos humanoides, incluidos centauros, sátiros y wemics. Una tirada exitosa indica que el humanoide puede consumir hasta el doble de lo normal en una sola sentada. Esto le permitirá al humanoide pasar el doble de tiempo sin beber antes de comenzar a sufrir efectos adversos. Si se trata de bebidas alcohólicas, una tirada exitosa le permite al humanoide consumir el doble antes de que los efectos adversos comiencen a molestarle.",
     "slots": 1,
@@ -1265,7 +1243,7 @@ const periciasData = [
     "race": "Humanoid"
   },
   {
-    "id": 116,
+    "id": 114,
     "name": "Eating",
     "description": "Al igual que la pericia Beber (Drinking), Comer le permite al humanoide almacenar comida. Una tirada exitosa indica que el humanoide puede consumir hasta el doble de lo normal. Esto le permite pasar el doble de tiempo sin comer sin sufrir efectos adversos por el hambre.",
     "slots": 1,
@@ -1276,7 +1254,7 @@ const periciasData = [
     "race": "Humanoid"
   },
   {
-    "id": 117,
+    "id": 115,
     "name": "Hiding",
     "description": "Ocultarse es la capacidad de seleccionar instintivamente el mejor escondite en casi cualquier circunstancia. Los humanoides que superan las pruebas pueden prácticamente desaparecer de la vista. El éxito se determina mediante modificadores basados ​​en la Inteligencia del personaje del que se intenta ocultar. Esta competencia funciona independientemente de cualquier camuflaje natural o habilidad para ocultarse que el humanoide ya posea.<table><tr><th>Inteligencia del Oponente</th><th>Modificador</th></tr><tr><td>3 o menos</td><td>-5</td></tr><tr><td>4-5</td><td>-3</td></tr><tr><td>6-8</td><td>-1</td></tr><tr><td>9-12</td><td>0</td></tr><tr><td>13-15</td><td>+1</td></tr><tr><td>16-17</td><td>+2</td></tr><tr><td>18</td><td>+3</td></tr><tr><td>19</td><td>+5</td></tr><tr><td>20 o más</td><td>+7</td></tr></table>",
     "slots": 2,
@@ -1287,7 +1265,7 @@ const periciasData = [
     "race": "Humanoid"
   },
   {
-    "id": 118,
+    "id": 116,
     "name": "Winemaking",
     "description": "Elaboración de Vino permite a los personajes crear vino a partir del jugo fermentado de uvas u otras plantas y frutas con la suficiente destreza como para ganarse la vida con ello. El personaje siempre tendrá cierto grado de éxito; las tiradas de pericia solo son necesarias al intentar preparar un vino verdaderamente magnífico como regalo especial o para una celebración importante.",
     "slots": 1,
@@ -1298,7 +1276,7 @@ const periciasData = [
     "race": "Humanoid"
   },
   {
-    "id": 119,
+    "id": 117,
     "name": "Close-Quarter Fighting",
     "description": "Los humanoides con la pericia Luchar en Espacios Reducidos han aprendido a luchar en los estrechos confines de mazmorras y guaridas subterráneas. En tales lugares, o en otras condiciones de combate extremadamente cercano, los personajes armados con armas contundentes o perforantes (o sus propias armas naturales) reciben un bonificador de +2 a las tiradas de ataque. Las armas cortantes no se pueden usar en el combate cuerpo a cuerpo. Este bonificador no es acumulativo con la pericia Lucha Salvaje.<br>Una tirada exitosa al comienzo del combate otorga este bonificador. Un fallo significa que el humanoide lucha normalmente.",
     "slots": 2,
@@ -1309,7 +1287,7 @@ const periciasData = [
     "race": "Humanoid"
   },
   {
-    "id": 120,
+    "id": 118,
     "name": "Natural Fighting",
     "description": "Lucha Natural otorga a los humanoides que poseen órganos propios de combate (garras, colmillos, colas, etc.) un bonificador de daño de +1 a todos sus ataques con armas naturales. Además, reciben un ataque natural adicional a los ataques normales permitidos. Para obtener los beneficios de esta habilidad, se debe realizar una tirada al inicio del combate. Si falla, los beneficios no se pueden usar durante el resto de la batalla.",
     "slots": 2,
@@ -1320,7 +1298,7 @@ const periciasData = [
     "race": "Humanoid"
   },
   {
-    "id": 121,
+    "id": 119,
     "name": "Wild Fighting",
     "description": "Los personajes con Lucha Salvaje emplean un estilo de lucha extremadamente poco ortodoxo e impredecible. La Lucha salvaje es feroz y letal, sin gracia ni disciplina. También es extremadamente agotadora, ya que parte de su naturaleza es que concentra cada gota de energía que tiene un personaje en el ataque.<br>Los beneficios están en la cantidad de ataques que el personaje obtiene en la cantidad de daño que infligen los ataques. Un personaje con Lucha Salvaje obtiene un ataque más por ronda de lo que normalmente tiene derecho. Todas las tiradas de daño para los ataques que impactan reciben un bonificador de +3.<br>Sin embargo, cuando lucha salvajemente, las tiradas de ataque de un personaje también se reducen en 3. Además, el AC del atacante se penaliza en 3, lo que hace que sea más fácil golpearlo.<br>Para usar la Lucha Salvaje, un personaje debe hacer una tirada de pericia exitosa al comienzo del combate. Un fallo significa que el personaje recibe solo las penalizaciones de la pericia y ninguno de los beneficios.<br>La Lucha Salvaje solo se puede usar dos veces al día, ya que es extremadamente agotadora. Tras finalizar un combate, el luchador salvaje debe descansar durante una hora antes de poder volver a usar su pericia . Descansar significa simplemente descansar o realizar un desplazamiento ligero (montar un caballo a paso lento, etc.). Si el personaje debe caminar, no podrá usar la pericia hasta que hayan transcurrido cuatro horas. Sin este descanso, un personaje cansado sufre una penalización de -3 a todas sus pericias, una penalización de -5 al Armor Class, una penalización de -5 al GAC0 y una penalización de -3 a las tiradas de daño. Estas penalizaciones se mantienen vigentes hasta que transcurra el periodo de descanso completo.",
     "slots": 2,
@@ -1331,7 +1309,7 @@ const periciasData = [
     "race": "Humanoid"
   },
   {
-    "id": 122,
+    "id": 120,
     "name": "Dwarf Runes",
     "description": "Las Runas Enanas son el alfabeto básico de los enanos y se enseñan a todos los jóvenes como parte de su educación básica. Dependiendo del trasfondo de la campaña, las runas pueden haber sido un regalo de los dioses, una creación de los propios enanos o una forma modificada de algún otro lenguaje escrito. Los enanos siguen afirmando que las runas son una parte intrínseca de su herencia cultural y pueden ofenderse si se les acusa de haberlas copiado. Las runas enanas se encuentran grabadas en piedra y rara vez escritas en materiales transitorios como pergamino, tela o papel. Se utilizan para indicar propiedad, advertir sobre peligros cercanos y registrar la historia. Las tumbas de los enanos que han sido debidamente enterrados, a diferencia de los entierros apresurados durante la batalla, están grabadas con runas que revelan el clan, la ascendencia, los hijos y las hazañas del difunto. En ausencia de un entierro adecuado, los enanos erigen monolitos de piedra o graban paredes enteras de cavernas que representan las hazañas de sus muertos. Estas enumeran los clanes, los nombres de los que murieron y la naturaleza de sus muertes. El número de enemigos muertos se detalla minuciosamente.<br>Las runas enanas no son una forma de escritura fonética, sino conceptual, donde cada runa delinea una idea o implica un rango de ideas según su ubicación. Una sola runa puede transmitir páginas de escritura humana o élfica, o ser tan simple como un letrero que diga 'escaleras'. Se trata de saber qué significa la runa y cómo interpretarla en contexto. Las runas enanas no contienen conjunciones ni pronombres, pero los nombres propios se representan alterando una runa existente. Esto hace que las runas sean difíciles de entender para otras razas, y los enanos se consideran superiores a las razas que no pueden leer ni siquiera las más simples. Solo los enanos las conocen sin costo alguno.",
     "slots": 1,
@@ -1342,7 +1320,7 @@ const periciasData = [
     "race": "Dwarf"
   },
   {
-    "id": 123,
+    "id": 121,
     "name": "Fungi Recognition",
     "description": "Aunque prefieren evitarlo, los enanos a veces tienen que sobrevivir a base de hongos. Prefieren usarlos como complemento a su dieta habitual, pero en tiempos difíciles o durante expediciones subterráneas prolongadas, es útil poder distinguir los hongos comestibles de los venenosos o nocivos. Aproximadamente el 50 % de los hongos subterráneos son venenosos. Pueden causar malestar estomacal o ser tan tóxicos que provoquen la muerte. Es imposible recolectar hongos comestibles sin la pericia de Identificación de Hongos. Si el personaje tiene suficiente luz y la oportunidad de estudiar el hongo en cuestión detenidamente durante 10 minutos, no se requiere una tirada de pericia. Si no puede ver el hongo correctamente, lo cual suele ocurrir al usar visión infrarroja, o si tiene que tomar una decisión apresurada sobre su comestibilidad, deberá realizar una tirada.",
     "slots": 1,
@@ -1353,7 +1331,7 @@ const periciasData = [
     "race": "Dwarf"
   },
   {
-    "id": 124,
+    "id": 122,
     "name": "Local Dwarf History",
     "description": "La pericia Historia Local de Enanos es diferente de la pericia Historia Local (Local History); un personaje con esta pericia solo conoce la historia de los enanos. Se centra principalmente en los linajes y eventos que afectan a los enanos. Trata sobre los fundadores de los clanes y fortalezas, y rastrea a los descendientes hasta el presente. Se conocen las batallas y eventos del clan y la fortaleza, así como el destino de aquellos que partieron para establecer nuevos hogares o que perecieron en sus aventuras.<br>El alcance del conocimiento geográfico depende del trasfondo de la campaña. Aquellos que no han tenido contacto con el mundo de la superficie pueden ser totalmente ignorantes de lo que yace en ella, pero tendrán un amplio conocimiento de su propia fortaleza. Aquellos cuyos parientes han establecido nuevas fortalezas o son miembros de tales fortalezas tendrán conocimiento del área entre ambas y cierto conocimiento de la geografía que las rodea. Aun así, la mayoría de los enanos, a menos que vivan cerca de otras razas, tienen una idea muy vaga de dónde está el mar, por ejemplo.<br>Si bien un personaje con esta pericia conoce la historia de los enanos, su conocimiento de la historia de otras razas es mínimo. Si los humanos libraron una gran batalla entre sí, es poco probable que un enano que no viviera con humanos haya oído hablar de ella. Si la batalla involucró a enanos, probablemente lo sabría. Si involucró a enanos de su propia fortaleza o clan, tendría un conocimiento extenso de los eventos que la llevaron y el curso de la batalla. Como con algunas otras pericias de enanos, el alcance exacto del conocimiento de un individuo está determinado por su trasfondo.<br>La pericia en Historia Local de Enanos puede usarse para entretener a otros personajes. Cuando participa en esto, obtiene un bonificador de +2 a su Carisma mientras trata con enanos. Con otras razas no obtiene la bonificación, porque las historias de enanos tienden a ser aburridas, lentas y excesivamente centradas en quién está emparentado con quién, sus lugares de origen y todos los lugares que fundaron los ancestros de los héroes a lo largo del camino. Intentar contar una historia de enanos a seres hostiles probablemente los incite a la violencia. Los orcos no se impresionarán, ni siquiera con el mejor relato de enanos.",
     "slots": 1,
@@ -1364,7 +1342,7 @@ const periciasData = [
     "race": "Dwarf"
   },
   {
-    "id": 125,
+    "id": 123,
     "name": "Navigation, Underground",
     "description": "Un personaje con la pericia Navegación Subterranea puede determinar la dirección bajo tierra y la ruta más corta a la superficie. Mediante un análisis cuidadoso de las corrientes de aire y su contenido, un personaje puede incluso determinar si hay bolsas de gas venenoso en el aire. Se requiere una tirada exitosa para usar la pericia.",
     "slots": 1,
@@ -1375,7 +1353,7 @@ const periciasData = [
     "race": "Dwarf"
   },
   {
-    "id": 126,
+    "id": 124,
     "name": "Sign Language",
     "description": "El Lenguaje de Señas es utilizado con mayor frecuencia por los enanos que han estado en guerra prolongada con otros enanos o razas. Permite la comunicación silenciosa con cualquiera que vea y entienda las señales. El alcance máximo suele ser la línea de visión en un área iluminada, o el alcance de la visión infrarroja del receptor. El Lenguaje de Señas puede ser un lenguaje extenso capaz de mantener conversaciones largas, o simplemente un medio para comunicar frases sencillas como «ataquen:», «orcos detrás de la roca:» o «ustedes tres, muévanse a la izquierda». Se realiza una tirada al hablar o interpretar el lenguaje de señas. El bonificador de +2 solo debe usarse al dar órdenes cortas y fáciles de reconocer. Las señales más detalladas requieren un modificador de -1.",
     "slots": 1,
@@ -1386,7 +1364,7 @@ const periciasData = [
     "race": "Dwarf"
   },
   {
-    "id": 127,
+    "id": 125,
     "name": "Slow Respiration",
     "description": "Un personaje con Respiración Lenta puede entrar en un trance profundo y reducir la cantidad de aire que necesita para sobrevivir. Para inducir el trance, debe estar en una posición de descanso, ya sea sentado o acostado. Tras concentrarse durante un turno, el pulso y la respiración disminuyen considerablemente, de modo que la respiración requiere solo el 10 % de la frecuencia normal. El personaje sale del trance a voluntad, plenamente consciente de todo lo que ocurre a su alrededor.",
     "slots": 1,
@@ -1397,7 +1375,7 @@ const periciasData = [
     "race": "Dwarf"
   },
   {
-    "id": 128,
+    "id": 126,
     "name": "Sound Analysis",
     "description": "Análisis de Sonido permite al personaje calcular el tamaño de áreas subterráneas generando ruido y analizando los ecos que regresan. Usando esta pericia, puede calcular distancias de hasta una milla y determinar la dirección del sonido. Para usar Análisis de Sonido, el personaje debe trabajar en absoluto silencio. El sonido creado debe tener una calidad aguda y entrecortada. Un aullido o un gemido son ineficaces, pero un chasquido o un fuerte 'hey' funcionan bien.<br>El PJ debe hacer una tirada de pericia. Si la tirada es exitosa, ha analizado correctamente el tamaño del área en cuestión con una precisión de más o menos el 25% de su altura, anchura y longitud. Si la tirada falla, el eco se ha vuelto distorsionado en sus reverberaciones. Ningún otro intento del PJ de analizar esa área tendrá éxito, aunque otros con la pericia pueden intentarlo.<br>Una tirada de 5 o menos significa que el personaje ha aprendido no solo el tamaño del área analizada, sino también otros detalles: el número de pasajes laterales ramificados, si hay un corredor recto o sinuoso, y si hay agua o no.<br>La desventaja de esta habilidad es que, si bien es útil para aprender sobre un área completamente desconocida, anuncia a los personajes a todas las criaturas dentro del alcance auditivo. Sin duda estarán preparadas y podrían ir en busca de los intrusos.",
     "slots": 1,
@@ -1408,7 +1386,7 @@ const periciasData = [
     "race": "Dwarf"
   },
   {
-    "id": 129,
+    "id": 127,
     "name": "Survival, Underground",
     "description": "La Supervivencia Subterránea es una extensión de la pericia Supervivencia (Survival) encontrada en el Manual del Jugador, proporciona conocimientos sobre el subsuelo. Similar a la pericia Superviviencia (Survival), ayuda al personaje a distinguir entre insectos comestibles y venenosos y a determinar la seguridad y estabilidad de túneles, techos de cavernas y similares, etc.",
     "slots": 1,
@@ -1419,7 +1397,7 @@ const periciasData = [
     "race": "Dwarf"
   },
   {
-    "id": 130,
+    "id": 128,
     "name": "Smelting",
     "description": "La pericia de Fundición está estrechamente ligada a la de Minería (Mining). Juntas, proporcionan todo el metal a las fortalezas. Con esta pericia se puede operar un horno de fundición. Un horno de fundición es un horno muy caliente que se utiliza para separar el metal de la roca mineralizada. El horno se sobrecalienta forzando el paso de aire de un fuelle, a menudo operado por dos o más enanos, a través de carbón en combustión. El mineral se introduce en la fundición en cubos de hierro que se mueven a lo largo de una cadena, la cual arrastra los cubos por un riel y vierte su contenido en el horno. El mineral se calienta hasta la temperatura de fusión del metal (que es inferior a la de la roca). Ocasionalmente se añade agua o ácido para mejorar el proceso. El metal fundido sale de la base de la fundición y cae en moldes o canales conocidos como 'lingotes', de ahí el término arrabio. Los lingotes se venden a herreros, armeros y fabricantes de armas para producir artículos de metal, armas y armaduras. Las fundiciones también pueden fabricar aleaciones, como acero o bronce.<br>La cantidad de mineral que se puede procesar depende más del tamaño de la fundición que de la velocidad de trabajo de cualquier personaje. Una fundición pequeña puede procesar mineral tan rápido como cuatro mineros puedan excavarlo. Una fundición mediana puede procesar el mineral producido por hasta 20 mineros. Una fundición grande puede procesar el mineral excavado por hasta 100 mineros.<br>Además del costo del equipo de fundición, el mantenimiento de una fundición es costoso debido a los materiales necesarios para su funcionamiento. Una operación de fundición pequeña cuesta 5 monedas de oro por día, el costo de una operación mediana es de 12 monedas de oro por día, y una grande cuesta 25 monedas de oro por día para funcionar. Los costos de la fundición solo se aplican cuando la fundición está en funcionamiento. Para mantenerla funcionando con la máxima eficiencia, es práctica común acumular una reserva de mineral antes de encender el horno. Una vez fundido todo el mineral, se deja enfriar el equipo y luego se limpia.<br>Dado su tamaño, incluso una fundición pequeña no es muy portátil. <table><tr><th>Horno de Fundición</th><th>Precio</th><th>Tamaño</th></tr><tr><td>Pequeño</td><td>1000 monedas de oro</td><td>30' x 30'</td></tr><tr><td>Medio</td><td>2000 monedas de oro</td><td>50' x 50'</td></tr><tr><td>Grande</td><td>3000 monedas de oro </td><td>75' x 75'</td></tr></table>",
     "slots": 1,
@@ -1430,7 +1408,7 @@ const periciasData = [
     "race": "Dwarf"
   },
   {
-    "id": 131,
+    "id": 129,
     "name": "Pest Control",
     "description": "Control de Plagas se utiliza para mantener las fortalezas enanas libres de plagas como ratas, carroñeros, jermalaines, kobolds y otras criaturas pequeñas. Similar a la pericia de Montar Trampas (Set Snares), se centra en capturar plagas subterráneas y no utiliza trampas. Las trampas se colocan para activar jaulas metálicas, redes de caída o puertas de hierro que cierran secciones individuales de túneles. Se pueden colocar trampas de resorte o pequeñas trampas mortales (daño máximo 1d6) utilizando esta competencia. No hay modificador de -4 al usar el control de plagas para atrapar criaturas más grandes.<br>Solo los personajes ladrones pueden usar esta competencia para colocar trampas más grandes adecuadas para criaturas del tamaño de humanos u orcos. Estas trampas pueden incluir ballestas, trampas mortales más grandes y trampolines con pinchos.<br>Un personaje con esta pericia no tiene la capacidad de fabricar los objetos necesarios para estos dispositivos; solo puede colocar las trampas y sus activadores.<br>Se debe realizar una tirada al colocar la trampa. Un fallo en la pericia significa que la trampa no funcionará. Puede que no se haya colocado correctamente, que esté mal ocultada o que sea demasiado pequeña o demasiado grande para que la criatura la active.<br>Colocar una trampa lleva una hora y el personaje debe tener el equipo y los materiales adecuados.<br>Los personajes con pericia Comprensión de Animales (Animal Lore) obtienen un bonificador de +2 al intentar colocar trampas para atrapar plagas animales.",
     "slots": 1,
@@ -1441,7 +1419,7 @@ const periciasData = [
     "race": "Dwarf"
   },
   {
-    "id": 132,
+    "id": 130,
     "name": "Boatwright",
     "description": "La pericia de Constructor de Barcos permite a un personaje construir todo tipo de embarcaciones de hasta  60 pies de largo. No se pueden construir embarcaciones más grandes.<br>El tiempo necesario para construir un barco depende de su tamaño. Como referencia, se requiere una semana de construcción por cada pie largo. Dos personajes con la habilidad de constructor de barcos reducen este tiempo a la mitad; tres lo reducen a un tercio. Un máximo de un constructor de barcos por cada 5 pies de largo pueden trabajar en la misma embarcación.<br>El barco básico incluye casco, mástiles (si corresponde), cubierta y bancos, según sea necesario. Elementos como una cabina o una bodega sellada añaden aproximadamente una semana cada uno para su finalización. Los personajes sin la habilidad de constructor de barcos pueden ayudar al constructor en la construcción, pero dos personajes sin esta habilidad ahorran el mismo tiempo que un constructor de barcos adicional.",
     "slots": 1,
