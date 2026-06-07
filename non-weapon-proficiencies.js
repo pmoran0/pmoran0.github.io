@@ -904,12 +904,12 @@ const periciasData = [
   {
     "id": 83,
     "name": "Information Gathering",
-    "description": "La pericia Obtención de Información representa la capacidad de obtener información del submundo, sobre todo sobre 'trabajos' y personajes turbios. Un personaje con esta pericia, en las circunstancias adecuadas, estará al tanto de cualquier rumor importante que circule entre la gente de baja calaña de una zona; y con una tirada exitosa, se puede obtener información específica sobre una persona o un lugar. (El DM debe decidir cuán específica es la información).<br>Los siguientes modificadores pueden ajustar la tirada de pericia:<ul>Los ajustes de reacción de los personajes (basados ​​en Carisma) deberían beneficiar o penalizar la tirada, suponiendo que el contacto con personas esté involucrado en la búsqueda</ul><ul>Los miembros del gremio de ladrones reciben una bonificación de +2, porque se supone que tienen más contactos y mejor informados que los mercenarios. Además, su «territorio (leer abajo)» se considera el del gremio, no solo su propia área de operaciones.</ul><ul>Dado que esta pericia depende de una red de informantes y contactos, el ladrón estará en desventaja al intentar usarla fuera de su territorio. «Territorio» se refiere a su base de operaciones habitual: un pueblo, un barrio de una ciudad o incluso una provincia o zona rural entera. Fuera de este territorio, el ladrón no oye rumores automáticamente (se requiere una tirada de pericia normal), y la recopilación de información específica sufre una penalización de al menos -3. El DM puede aumentarla en zonas verdaderamente extranjeras (por ejemplo, un ladrón de Waterdeep intentando recopilar información en Calimshan), debido a las grandes diferencias de idioma, cultura o raza.</ul><ul>Finalmente, cada vez que se requiera una tirada de pericia para recopilar información, se debe realizar una pequeña inversión de dinero en bebidas, sobornos, etc., o se impone una penalización adicional de -3. El total es de 10 monedas de oro. Es típico y se pierde tanto si se encuentra la información deseada como si no. (Si la información sigue sin encontrarse, el personaje puede continuar su búsqueda al día siguiente, gastando más dinero y realizando otra tirada de pericia). El DM puede aumentar el coste de usar esta pericia si lo considera oportuno para la campaña.</ul>",
+    "description": "La pericia Obtención de Información representa la capacidad de obtener información del submundo, sobre todo sobre 'trabajos' y personajes turbios. Un personaje con esta pericia, en las circunstancias adecuadas, estará al tanto de cualquier rumor importante que circule entre la gente de baja calaña de una zona; y con una tirada exitosa, se puede obtener información específica sobre una persona o un lugar. (El DM debe decidir cuán específica es la información).<br>Los siguientes modificadores pueden ajustar la tirada de pericia:<ul>Los ajustes de reacción de los personajes (basados ​​en Carisma) deberían beneficiar o penalizar la tirada, suponiendo que el contacto con personas esté involucrado en la búsqueda</ul><ul>Los miembros del gremio de ladrones reciben una bonificación de +2, porque se supone que tienen más contactos y mejor informados que los mercenarios. Además, su «territorio (leer abajo)» se considera el del gremio, no solo su propia área de operaciones.</ul>Dado que esta pericia depende de una red de informantes y contactos, el ladrón estará en desventaja al intentar usarla fuera de su territorio. «Territorio» se refiere a su base de operaciones habitual: un pueblo, un barrio de una ciudad o incluso una provincia o zona rural entera. Fuera de este territorio, el ladrón no oye rumores automáticamente (se requiere una tirada de pericia normal), y la recopilación de información específica sufre una penalización de al menos -3. El DM puede aumentarla en zonas verdaderamente extranjeras (por ejemplo, un ladrón de Waterdeep intentando recopilar información en Calimshan), debido a las grandes diferencias de idioma, cultura o raza.Finalmente, cada vez que se requiera una tirada de pericia para recopilar información, se debe realizar una pequeña inversión de dinero en bebidas, sobornos, etc., o se impone una penalización adicional de -3. El total es de 10 monedas de oro. Es típico y se pierde tanto si se encuentra la información deseada como si no. (Si la información sigue sin encontrarse, el personaje puede continuar su búsqueda al día siguiente, gastando más dinero y realizando otra tirada de pericia). El DM puede aumentar el coste de usar esta pericia si lo considera oportuno para la campaña.",
     "slots": 1,
     "ability": "Int",
     "modifier": "Special",
     "class": "Rogue",
-    "source": "The Complete Thief's Handbook",
+    "source": "The Complete Thief's Handbook, The Complete Ninja's Handbook",
     "race": "General"
   },
   {
@@ -1031,6 +1031,204 @@ const periciasData = [
     "modifier": "-2",
     "class": "Paladin, General",
     "source": "The Complete Paladin's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 95,
+    "name": "Acting",
+    "description": "La pericia Actuación, originalmente presentada en <i>The Complete Bard's Handbook</i>, permite al personaje personificar de manera muy hábil a otra persona. Aunque la pericia Actuación es usualmente considerada una forma de entretenimiento, puede ser muy útil en ayudar al ninja en completar metas y misiones. Si el ninja posee las pericias Actuación y Disfraz (Disguise), la tirada de cualquiera de las dos recibe un bonus de +1.<br>Las tiradas de pericia de Actuación son requeridas solamente si el actor debe representar a un personaje particularmente difícil o si está intentando <i>improvisar</i> un rol (un rol no ensayado o una presentación con muy poco tiempo de aviso ('a quemarropa').",
+    "slots": 1,
+    "ability": "Char",
+    "modifier": "-1",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 96,
+    "name": "Assimilation",
+    "description": "El personaje la pericia Asimilación puede estudiar una cultura diferente lo suficientemente bien como para fingir ser miembro de ella. La asimilación le permite adquirir costumbres culturales (rituales comunes, expresiones del habla, tabúes, etc.). Es distinta de la pericia de Actuación (Acting), pero la complementa. Un personaje con Actuación y Asimilación recibe un bonificador de +1 a las tiradas con cualquiera de estas dos pericias al representar a un miembro de otra cultura. (Este bonificador no es acumulativo con el de Actuación/Disfraz (Disguise); si un personaje tiene las tres pericias no recibe el bonificador de +2).",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "0",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 97,
+    "name": "City Familiarity",
+    "description": "Un personaje con Familiaridad con la Ciudad posee un conocimiento excepcional de una (1) comunidad específica, elegida al adquirir la pericia. Familiaridad con la Ciudad le proporciona un buen conocimiento de las figuras políticas y financieras importantes de la comunidad, una comprensión de qué familias (y organizaciones criminales) son las más importantes y cómo se relacionan entre sí, y un buen dominio de las calles principales y callejones de la ciudad. El personaje no necesita realizar una tirada de pericia para acceder a esta información. Cuando el personaje desea información más detallada (como el trazado exacto de las calles al huir de la guardia de la ciudad, el nombre del número dos de una organización criminal específica o saber qué políticos son los más fáciles de sobornar) el personaje debe realizar una tirada de pericia con un modificador de dificultad determinado por el DM.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "0",
+    "class": "Rogue, General",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 98,
+    "name": "Detect Signing",
+    "description": "Detectar Señales permite a un personaje darse cuenta cuando ninjas de otros clanes se comunican usando sus propias señales. El personaje que realiza una tirada de Detectar Señales reconoce símbolos aparentemente sin sentido como escritura y el habla común como algo con un significado especial, aunque no conocerá el contenido de la comunicación.<br>A discreción del DM, una tirada de Detectar Señales de 2 o más permitirá al personaje reconocer otros tipos de comunicación sutil, como el canto de los ladrones.<br>Si un personaje realiza su tirada de de 6 o más, puede reconocer una palabra o símbolo en una comunicación específica y comprender su significado. El DM elige qué palabra reconoce el personaje. (Esta es una oportunidad para que el DM le dé una pista interesante al personaje ninja).",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "+1",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 99,
+    "name": "Enamor",
+    "description": "Enamorar permite a un ninja engañar a un PNJ para que se enamore de él o ella. Es más que la habilidad de saber qué flores enviar o qué prendas usar. La periciaEnamorar permite al ninja estudiar a su objetivo como un ladrón estudia una bóveda, buscando puntos débiles para explotar.<br>El uso estándar de la pericia requiere una semana de contacto constante para una víctima susceptible, un mes o más para un objetivo más difícil. El DM puede permitir bonificaciones a la tirada para un PJ que sea minucioso e inteligente en su investigación de la psique de la víctima y que tome tiempo extra, y puede asignar penalizaciones a uno que pase demasiado poco tiempo o haga suposiciones erróneas.<br>Al final del período de contacto, el DM tira la pericia en Enamorar para el ninja y compara los resultados con los que se enumeran en la siguiente tabla:<br><ul>Ninja Perdió por 4+:<ul>La víctima ha sido insultada (accidentalmente) durante la persecución romántica. La víctima puede atacar al ninja, puede planear que el ninja sea agredido, puede fingir ser seducida para causarle un gran daño más adelante, etc.</ul></ul><ul>Ninja Perdió por 2-3:<ul>La víctima no está interesada en el ninja y puede irritarse con la persecución continua.</ul></ul><ul>Ninja Perdió por 1:<ul>La víctima se siente halagada pero no convencida. El ninja puede volver a empezar con una penalización de -2 a su tirada, o puede abandonar la persecución, tal vez dejando algunos resentimientos.</ul></ul><ul>Justo lo Necesario:<ul>La víctima se siente halagada pero no convencida. El ninja puede volver a empezar o puede abandonar la persecución sin resentimientos.</ul></ul><ul>Ninja Ganó por 1:<ul>La víctima se siente halagada pero no convencida. El ninja puede volver a empezar con una bonificación de +1 a su tirada de Enamorar, o puede abandonar la persecución sin resentimientos.</ul></ul><ul>Ninja Ganó por 2-3:<ul>La víctima está encaprichada con el ninja, pero no cambiará su ética, objetivos ni lealtades.</ul></ul><ul>Ninja Ganó por 4-6:<ul>La víctima está enamorada del ninja y lo ayudará en todo lo que no viole su ética y lealtades importantes.</ul></ul><ul>Ninja Ganó por 7+:<ul>La víctima está locamente enamorada del ninja y abandonará toda ética, objetivos y lealtades.</ul></ul>El DM, a su discreción, puede realizar una tirada de Sabiduría adicional para la víctima. Si la víctima supera la tirada de Sabiduría por un margen mayor que el que el ninja obtuvo en su tirada de pericia el resultado es el mismo que para el resultado 'Justo lo Necesario'.<br>Irónicamente, cuanto más éxito tenga el ninja, más peligrosa se vuelve la situación. Una víctima perdidamente enamorada puede hacer todo lo que el ninja desee, incluyendo traicionar a los secretarios de Estado y convertirse en traidor, pero espera que el personaje con pericia en Enamorar esté igual de enamorado. La víctima se vuelve peligrosamente celosa de los posibles rivales (viendo a cualquiera remotamente adecuado como un rival potencial) y podría volverse asesina si se da cuenta de que ha sido engañada.<br>La relación que se construye mediante el uso de la pericia en Enamorar no tiene por qué ser romántica. Dependiendo de la situación, la relación podría ser una amistad o ganarse la lealtad de alguien que se ha alejado de un enemigo.<br>Aunque nada impide que los personajes de alineación buena aprendan la habilidad Enamorar, la primera vez que arruinen una vida con ella podría ser la última vez que la usen.",
+    "slots": 1,
+    "ability": "Cha",
+    "modifier": "-2",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 100,
+    "name": "Escape",
+    "description": "La pericia Escapismo permite a un personaje zafarse de cuerdas y otros tipos de ataduras.<br>Cuando un personaje está atado o inmovilizado, el DM asigna una penalización según el tipo y las circunstancias de la atadura. La Tabla muestra las penalizaciones estándar para diversas situaciones. El personaje con pericia en Escapismo puede intentar usar su habilidad para liberarse. Tira su pericia y aplica las penalizaciones correspondientes. Si la tirada tiene éxito, puede desatarse.<table><tr><th>Tipos de Amarre</th><th>Penalti (Acumulativo)</th></tr><tr><td>Cuerda estándar</td><td>0</td></tr><tr><td>Cuero crudo, seco</td><td>-2</td></tr><tr><td>Cuero crudo, empapado y encogido</td><td>-4</td></tr><tr><td>Alambre</td><td>-3</td></tr><tr><td>Dedos atados/encintados individualmente</td><td>-4</td></tr></table><table><tr><th>Circunstancia/Escenario</th><th>Penalti (Acumulativo)</th></tr><tr><td>Amarrador se toma su tiempo y </td atención><td>-2</td></tr><tr><td>Amarrador se toma poco tiempo y atención</td><td>+2</td></tr><tr><td>Amarrador es un ladrón o un ninja</td><td>-3</td></tr><tr><td>Amarrador realiza tirada de Detectar/Retirar Trampas</td><td>-2</td></tr><tr><td>Personaje con esta pericia intenta desatar a otro personaje</td><td>+4</td></tr><tr><td>Personaje atado intenta desatar a otro personaje usando esta pericia</td><td>-4</td></tr></table><br><b>Ejemplo:</b>Ichiro el ninja está atado espalda con espalda con su amigo luchador Olaf. Ichiro ha sido atado con una cuerda estándar, pero el personaje que lo amarró dedicó más tiempo a la tarea y ató individualmente los dedos del ninja. Ichiro recibe una penalización de -6 contra su tirada de Destreza -1 de 16. El ninja saca un 11 y falla.<br>Ichiro intenta entonces liberar a Olaf. La penalización es la misma, pero está intentando desatar a otra persona mientras él mismo está atado, lo que resulta en una penalización adicional de -4 para un total de -10. El ninja logra sacar un 6 y libera con éxito a su aliado.<br>La pericia Escapismo no permite al personaje abrir cerraduras ni escapar de otro tipo de trampas. Esas tareas requieren las habilidades de Abrir Cerraduras y Encontrar/Quitar Trampas.",
+    "slots": 2,
+    "ability": "Dex",
+    "modifier": "0",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 101,
+    "name": "Escape",
+    "description": "La pericia Escapismo permite a un personaje zafarse de cuerdas y otros tipos de ataduras.<br>Cuando un personaje está atado o inmovilizado, el DM asigna una penalización según el tipo y las circunstancias de la atadura. La Tabla muestra las penalizaciones estándar para diversas situaciones. El personaje con pericia en Escapismo puede intentar usar su habilidad para liberarse. Tira su pericia y aplica las penalizaciones correspondientes. Si la tirada tiene éxito, puede desatarse.<table><tr><th>Tipos de Amarre</th><th>Penalti (Acumulativo)</th></tr><tr><td>Cuerda estándar</td><td>0</td></tr><tr><td>Cuero crudo, seco</td><td>-2</td></tr><tr><td>Cuero crudo, empapado y encogido</td><td>-4</td></tr><tr><td>Alambre</td><td>-3</td></tr><tr><td>Dedos atados/encintados individualmente</td><td>-4</td></tr></table><table><tr><th>Circunstancia/Escenario</th><th>Penalti (Acumulativo)</th></tr><tr><td>Amarrador se toma su tiempo y </td atención><td>-2</td></tr><tr><td>Amarrador se toma poco tiempo y atención</td><td>+2</td></tr><tr><td>Amarrador es un ladrón o un ninja</td><td>-3</td></tr><tr><td>Amarrador realiza tirada de Detectar/Retirar Trampas</td><td>-2</td></tr><tr><td>Personaje con esta pericia intenta desatar a otro personaje</td><td>+4</td></tr><tr><td>Personaje atado intenta desatar a otro personaje usando esta pericia</td><td>-4</td></tr></table><br><b>Ejemplo:</b>Ichiro el ninja está atado espalda con espalda con su amigo luchador Olaf. Ichiro ha sido atado con una cuerda estándar, pero el personaje que lo amarró dedicó más tiempo a la tarea y ató individualmente los dedos del ninja. Ichiro recibe una penalización de -6 contra su tirada de Destreza -1 de 16. El ninja saca un 11 y falla.<br>Ichiro intenta entonces liberar a Olaf. La penalización es la misma, pero está intentando desatar a otra persona mientras él mismo está atado, lo que resulta en una penalización adicional de -4 para un total de -10. El ninja logra sacar un 6 y libera con éxito a su aliado.<br>La pericia Escapismo no permite al personaje abrir cerraduras ni escapar de otro tipo de trampas. Esas tareas requieren las habilidades de Abrir Cerraduras y Encontrar/Quitar Trampas.",
+    "slots": 2,
+    "ability": "Dex",
+    "modifier": "0",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 102,
+    "name": "Feign/Detect Sleep",
+    "description": "Quienes fingen dormir rara vez lo hacen bien. Sin embargo, la mayoría desconoce cómo distinguir a los impostores de los que realmente duermen. Los personajes con la pericia Fingir/Detectar Dormido están entrenados para simular el sueño con precisión y para determinar cuándo otros lo fingen. Esta habilidad es especialmente útil para los ninjas de guardia y para quienes se infiltran en un lugar seguro. Un ninja la usará al escuchar a guardias e invitados que parecen dormir. Si detecta a alguien con una respiración irregular, puede tomar medidas para capturar o silenciar al impostor. Asimismo, un ninja puede usar esta habilidad para convencer a un intruso de que está profundamente dormido, de modo que pueda acercarse sigilosamente por detrás cuando esté de espaldas. La habilidad de Actuación (Acting) puede otorgar la capacidad de fingir el sueño, pero la tirada de Actuación se realiza con una penalización de -4 en lugar de la regular de -1.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "0",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 103,
+    "name": "Giant Kite Flying",
+    "description": "Volar Cometa Gigante solo es útil para personajes que pretenden volar objetos inusuales como el 'hito washi' (águila humana) y el 'yami doko' (cometa del tamaño de un hombre). Es una habilidad costosa y difícil de dominar, por lo que hay muy pocos practicantes. Sin esta pericia, un personaje que intente volar sobre una cometa gigante seguramente se estrellará y se hará mucho daño, eso es si no se muere. Incluso con esta habilidad, es muy probable que el personaje lo haga.",
+    "slots": 1,
+    "ability": "Dex",
+    "modifier": "-3",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 104,
+    "name": "Giant Kite Flying",
+    "description": "Volar Cometa Gigante solo es útil para personajes que pretenden volar objetos inusuales como el 'hito washi' (águila humana) y el 'yami doko' (cometa del tamaño de un hombre). Es una habilidad costosa y difícil de dominar, por lo que hay muy pocos practicantes. Sin esta pericia, un personaje que intente volar sobre una cometa gigante seguramente se estrellará y se hará mucho daño, eso es si no se muere. Incluso con esta habilidad, es muy probable que el personaje lo haga.",
+    "slots": 1,
+    "ability": "Dex",
+    "modifier": "-3",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 105,
+    "name": "Hold Breath",
+    "description": "Aguantar La Respiración ayuda a un personaje a contener la respiración durante periodos prolongados.(Consulta las reglas en el Manual del Jugador, Capítulo 14, para saber cuánto tiempo puede contener la respiración normalmente un personaje).<br>Con esta pericia un personaje puede contener la respiración durante la mitad de su Constitución en rondas (redondeando hacia arriba). Si el personaje está realizando algún tipi de esfuerzo, este tiempo se reduce a la mitad (de nuevo redondeando hacia arriba). Al intentar contener la respiración más allá de este tiempo, el personaje realiza la tirada de Constitución habitual en cada asalto. La primera tirada no tiene penalización, pero cada tirada posterior tiene una penalización acumulativa de -1. Una vez que falla una tirada, el personaje debe respirar; si no puede alcanzar el aire, muere.",
+    "slots": 1,
+    "ability": "Con",
+    "modifier": "0",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 106,
+    "name": "Night Vision",
+    "description": "Visión Nocturna mejora la capacidad de un personaje para ver en condiciones de poca luz. No es igual a la infravisión, pero sigue siendo útil.<br>Para usar su Visión Nocturna, el personaje debe pasar cinco rondas en el tipo de luz en la que se moverá o esperará. Hasta que no haya pasado esa cantidad de tiempo en la oscuridad, esta pericia simplemente no funciona. (Sin embargo, el personaje puede estar haciendo otras cosas mientras deja que sus ojos se adapten, siempre que estas otras tareas no lo expongan a condiciones de luz variables). <br>Una vez que sus ojos se hayan adaptado, el personaje puede usar su Visión Nocturna en cualquier momento. Siempre que mire algo, debe hacer una tirada de Visión Nocturna. Con una tirada exitosa, los Rangos de Visibilidad del personaje (del Manual del Jugador, Capítulo 13) se duplican en las siguientes condiciones: Niebla (densa o ventisca), Niebla (moderada), Noche (luna llena), Noche (sin luna), Crepúsculo. Así, un personaje bajo la luna llena por la noche podría detectar movimiento a 200 pies en lugar de a 100 pies.<br>Si el personaje con esta pericia se expone a un cambio en la iluminación, como por ejemplo, si una bola de fuego explota a menos de 500 pies o si le agitan una antorcha o lámpara frente a la cara, sus ojos se deslumbran. Su visión nocturna desaparece y no se recupera hasta que el personaje haya pasado cinco rondas permitiendo que sus ojos se adapten.",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": "-2",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 107,
+    "name": "Quick Study",
+    "description": "Estudio Rápido permite a un ninja aprender temporalmente lo suficiente sobre una habilidad, un trabajo o un área de conocimiento para hacerse pasar por alguien perteneciente a una profesión relacionada.<br>Al usar esta pericia, el ninja pasa una semana (ocho horas al día) estudiando la habilidad que desea aprender. Al final de la semana, el personaje tiene un conocimiento práctico del campo estudiado. Durante los siguientes días, podrá hacerse pasar por un practicante de esa habilidad, aunque no como un experto.<br>Cuando haya completado su estudio y deba utilizar la habilidad, el personaje realiza una tirada normal con una penalización adicional de -3. Una semana después de que el personaje haya completado su estudio, sufre una penalización de -2 porque ha olvidado algunos detalles de la habilidad. Cada semana posterior, sufre otra penalización acumulativa de -2.<br>Esta pericia no permitirá que un personaje demuestre un nivel experto de habilidad con la habilidad que se está simulando. Si el personaje emprende una tarea que, en opinión del DM, requiere un conocimiento especialmente amplio o profundo del tema, el DM puede decidir que el personaje no puede realizar la tarea. El personaje puede entonces hacer una tirada de Inteligencia; si tiene éxito, se da cuenta de que está sobrepasado y no puede tener éxito. No es posible gastar slots adicionales que en Estudio Rápido para mejorar la tirada. Sin embargo, es posible comprar la pericia más de una vez para estudiar dos habilidades por misión.",
+    "slots": 2,
+    "ability": "Special",
+    "modifier": "-3",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 108,
+    "name": "Style Analysis",
+    "description": "Análisis de Estilo otorga al personaje conocimiento (no habilidad) sobre el combate armado y desarmado. Tras observar a alguien luchar durante al menos una ronda, un personaje con esta pericia puede realizar una tirada de Análisis de Estilo para obtener información sobre el estilo de lucha de su oponente.<br>Si el personaje supera la tirada con el valor indicado, obtiene la información que sigue a ese número.<ul>0: El estilo general utilizado (p. ej., karate, kenjutsu, esgrima, etc.).</ul><ul>2: El nivel del practicante (p. ej., estudiante básico, experto, gran maestro del estilo, etc.).</ul><ul>4: La escuela del estilo que se está utilizando. p. ej., lucha sumo de la familia Odo.</ul><ul>6: Debilidades superficiales o transitorias que el practicante presenta actualmente (como favorecer una pierna lesionada). El personaje con Análisis de Estilo recibe un +2 en todas las tiradas de ataque al luchar contra el practicante (a menos que este cambie de estilo). El +2 desaparece después de un día.</ul><ul>8: Quién fue probablemente el maestro del practicante (p. ej., Odo Kusuke).</ul><ul>10: Debilidades generales en el aprendizaje del practicante (como la tendencia a favorecer los ataques de la izquierda sobre los de la derecha). El personaje con Análisis de Estilo recibe un +2 en todas las tiradas de ataque al luchar contra el practicante. El +2 desaparece después de un año.</ul>.Naturalmente, existen límites a lo que el personaje puede aprender incluso en los mejores niveles de éxito. Por ejemplo, no puede descubrir la verdadera identidad de un maestro que no sea conocido, aunque podría identificar un estilo como el mismo que el de otro personaje, infiriendo así un maestro común.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "-1",
+    "class": "Rogue, Warrior",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 109,
+    "name": "Toxicology",
+    "description": "En manos de un ninja, la habilidad en Herbalismo (Herbalism) se centra en el conocimiento de somníferos y venenos. Un personaje con Toxicología sabe más sobre estos fármacos que un herbolario con una puntuación de Inteligencia similar (de ahí la ausencia de penalización), pero desconocerá otros tipos de compuestos químicos.",
+    "slots": 2,
+    "ability": "Int",
+    "modifier": "0",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 110,
+    "name": "Underclass",
+    "description": "La pericia Clase Baja proporciona una comprensión del funcionamiento de la subclase —la combinación de clases más pobres y elementos criminales— en una sociedad. El personaje con esta competencia puede realizar una tirada de Clase Baja para obtener información sobre el submundo de cualquier comunidad que visite. El DM debe asignar tiempo y penalizaciones a la tirada en función de las diferencias culturales y la sensibilidad de la información que busca el personaje. Intentar comprar un arma ilegal llevaría aproximadamente una hora y resultaría en una penalización de 0 o -1. Buscar el escondite secreto del capo local podría llevar semanas e impondría una penalización de -8 o peor.",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": "0",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 111,
+    "name": "Voice Mimicry",
+    "description": "La pericia Imitación de Voces es el arte de imitar de forma convincente las voces de otras personas. Es una habilidad muy exigente que requiere un entrenamiento y una práctica intensos de las cuerdas vocales. Por esta razón, requiere dos slots de pericia.<br>Un personaje con la habilidad de Imitación de Voces puede imitar cualquier acento que haya escuchado. El éxito es automático a menos que sus oyentes hablen con ese acento; en tal caso, se requiere una tirada de pericia (con un penalty de +2).<br>Más difícil es imitar la voz de una persona específica. Para ello, el ladrón debe, por supuesto, estar familiarizado con la voz. Se necesita una tirada para determinar si se detecta la imitación; los modificadores dependen de qué tan bien conozcan los oyentes la voz que se está imitando. El éxito es seguro si el oyente es un desconocido, alguien que nunca ha escuchado la voz original. Para engañar a un conocido, no hay modificador; mientras que engañar a un amigo del sujeto tiene una penalización de -2, a un amigo cercano de -5, y a alguien extremadamente cercano (p. ej., un padre, cónyuge o alguien que ha tenido contacto cercano con la persona durante años) tiene una penalización de -7.<br>Esta habilidad se usa a menudo junto con la pericia Disfraz (Disguise). La pericia que se debe tirar primero depende de si el personaje es visto u oído. Si el Disfraz tiene éxito primero, hay un modificador de +5 a la imitación de voz: los oyentes ya han aceptado la apariencia, por lo que es menos probable que duden de la voz. Si el Disfraz falla, no importa qué tan buena sea la imitación de voz. Si la voz se imita con éxito primero, otorga un modificador de +1 a la tirada de Disfraz.",
+    "slots": 2,
+    "ability": "Cha",
+    "modifier": "Special",
+    "class": "Rogue",
+    "source": "The Complete Thief's Handbook, The Complete Ninja's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 112,
+    "name": "Water Walking",
+    "description": "Caminar Por El Agua permite al personaje usar correctamente los mizugumo, los pontones especiales que los ninjas usan para caminar sobre superficies de agua tranquila. El ninja debe realizar una tirada de pericia en cada ronda. Si falla la prueba, el ninja cae al agua con un gran chapuzón.",
+    "slots": 1,
+    "ability": "Dex",
+    "modifier": "-1",
+    "class": "Rogue",
+    "source": "The Complete Ninja's Handbook",
     "race": "General"
   }
 ]
