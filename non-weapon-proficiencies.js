@@ -1414,7 +1414,7 @@ const periciasData = [
     "slots": 1,
     "ability": "Wis",
     "modifier": "0",
-    "class": "Thief",
+    "class": "Rogue",
     "source": "The Complete Book of Dwarves",
     "race": "Dwarf"
   },
