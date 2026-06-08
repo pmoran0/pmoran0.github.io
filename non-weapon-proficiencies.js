@@ -1029,8 +1029,8 @@ const periciasData = [
     "slots": 1,
     "ability": "Int",
     "modifier": "-2",
-    "class": "Paladin, General",
-    "source": "The Complete Paladin's Handbook",
+    "class": "Paladin, General, Rogue",
+    "source": "The Complete Paladin's Handbook, The Complete Bard's Handbook",
     "race": "General"
   },
   {
@@ -1041,7 +1041,7 @@ const periciasData = [
     "ability": "Cha",
     "modifier": "-1",
     "class": "Rogue",
-    "source": "The Complete Ninja's Handbook",
+    "source": "The Complete Ninja's Handbook, The Complete Bard's Handbook",
     "race": "General"
   },
   {
@@ -1428,5 +1428,49 @@ const periciasData = [
     "class": "General",
     "source": "The Complete Book of Dwarves",
     "race": "Dwarf"
+  },
+  {
+    "id": 131,
+    "name": "Chanting",
+    "description": "La pericia de Constructor de Barcos permite a un personaje construir todo tipo de embarcaciones de hasta  60 pies de largo. No se pueden construir embarcaciones más grandes.<br>El tiempo necesario para construir un barco depende de su tamaño. Como referencia, se requiere una semana de construcción por cada pie largo. Dos personajes con la habilidad de constructor de barcos reducen este tiempo a la mitad; tres lo reducen a un tercio. Un máximo de un constructor de barcos por cada 5 pies de largo pueden trabajar en la misma embarcación.<br>El barco básico incluye casco, mástiles (si corresponde), cubierta y bancos, según sea necesario. Elementos como una cabina o una bodega sellada añaden aproximadamente una semana cada uno para su finalización. Los personajes sin la habilidad de constructor de barcos pueden ayudar al constructor en la construcción, pero dos personajes sin esta habilidad ahorran el mismo tiempo que un constructor de barcos adicional.",
+    "slots": 1,
+    "ability": "Cha",
+    "modifier": "+2",
+    "class": "Rogue",
+    "source": "The Complete Bard's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 132,
+    "name": "Craft Instrument",
+    "description": "Quienes adquieran la pericia Fabricar Instrumento deben especificar si son hábiles en la fabricación de instrumentos de viento, cuerda, percusión o teclado. Se requiere un slot adicional para obtener una de las otras habilidades. Tres slots adicionales permiten al personaje obtener el título de 'maestro artesano', ya que es capaz de fabricar instrumentos de todas las formas. Un artesano debe comprar materiales equivalentes a una cuarta parte del valor de venta del instrumento. Luego, se necesitan 1d6 días para fabricar un instrumento de viento o percusión, 2d8 días para formar un instrumento de cuerda y 3d10 días para crear un instrumento de teclado. Estos tiempos asumen que el artesano dedica 10 horas diarias al trabajo en el instrumento. Si no se dispone de herramientas de artesano (coste 25 monedas de oro, peso 5 libras), todos los tiempos se duplican.<br>La calidad de un instrumento se determina mediante una tirada de pericia final. Un fallo resulta en un instrumento de mala calidad, mientras que un éxito indica buena calidad. Un 20 natural indica que el instrumento no funciona, mientras que un 1 natural resulta en una obra maestra que vale el doble de lo normal. Las reparaciones sencillas solo tardan 1d4 horas y no requieren una tirada de pericia, a menos que no se disponga de las herramientas adecuadas. Sin embargo, reparar daños graves requiere 1d8 horas y una tirada es obligatoria para tener éxito.",
+    "slots": 2,
+    "ability": "Dex",
+    "modifier": "-2",
+    "class": "Rogue",
+    "source": "The Complete Bard's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 133,
+    "name": "Crowd Working",
+    "description": "Casi todos los bardos conocen bien el comportamiento de las multitudes. Sin embargo, quienes se dedican al Trabajo del Público aprenden todos los trucos del oficio. Estos bardos son expertos en observar a las multitudes y adaptar sus actuaciones en consecuencia.<br>Cualquier bardo que utilice una habilidad especial para modificar las reacciones de una multitud (por ejemplo, reacciones de influencia) puede realizar una prueba de pericia en Trabajo del Público. Si esta prueba tiene éxito, el bardo puede alterar las reacciones de la multitud en dos niveles en lugar del habitual un nivel.<br>Si el bardo o su grupo solicitan dinero a una multitud, una tirada exitosa indica que el bardo es particularmente atractivo y que la multitud dona voluntariamente el doble de dinero de lo normal (o las condiciones mejoran en una categoría si se utilizan las reglas de actuación mencionadas anteriormente en este manual).",
+    "slots": 1,
+    "ability": "Cha",
+    "modifier": "0",
+    "class": "Rogue",
+    "source": "The Complete Bard's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 134,
+    "name": "Whistling/Humming",
+    "description": "Casi cualquiera puede Silbar/Tararear. Quienes adquieren esta habilidad son silbadores y tarareadores excepcionales. Pueden producir melodías tan cautivadoras como la mayoría de las canciones. Una persona con esta pericia es un verdadero maestro del silbido y el tarareo.<br>Es tan fácil aprender una nueva melodía para silbar o tararear que los personajes con esta pericia pueden aprender numerosas melodías. De hecho, si se realiza una tirada exitosa, un silbador o tarareador conoce cualquier melodía en particular en cuestión. Además, un personaje con esta pericia y la pericia de Comprensión de Animales (Animal Lore) puede imitar cualquier canto de pájaro que haya escuchado.<br>Sin embargo, la mayoría de los aventureros no adquieren el silbido solo por su valor de entretenimiento. En cambio, buscan sus usos en la comunicación. Esta comunicación solo es posible entre aquellos que conocen esta habilidad. Si ambos personajes tienen éxito en sus tiradas de pericia, se puede comunicar un solo concepto. Algunos ejemplos son: 'Ve por la puerta lateral', 'Los oigo venir', 'Extiende la mano lentamente, el guardia no te ve'.",
+    "slots": 1,
+    "ability": "Dex",
+    "modifier": "+2",
+    "class": "Rogue",
+    "source": "The Complete Bard's Handbook",
+    "race": "General"
   },
 ]
