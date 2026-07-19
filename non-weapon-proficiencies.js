@@ -6,8 +6,8 @@ const periciasData = [
     "slots": 1,
     "ability": "Int",
     "modifier": 0,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -17,30 +17,30 @@ const periciasData = [
     "slots": 1,
     "ability": "Wis",
     "modifier": -1,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 3,
     "name": "Animal Training",
-    "description": "Un personaje con pericia Entrenamiento de Animales puede entrenar a un tipo de criatura (el jugador debe decidir qué tipo cuando elige la pericia). Se pueden entrenar tipos adicionales de criaturas si se gastan más ranuras (slots) de pericia.<br> Un entrenador puede trabajar con hasta tres criaturas a la vez. El personaje puede elegir entrenarlas para tareas generales o enseñarles un truco específico. Las tareas generales incluyen entrenar a un animal para llevar a un jinete, vigilar, atacar o realizar trabajos pesados. Enseñar una tarea general a una criatura requiere 2d6 semanas. Un truco específico podría ser atacar a un tipo específico de criatura, rescatar a una persona, rastrear o realizar una acrobacia. Enseñar un truco específico requiere 1d4 semanas. Al final del período de entrenamiento, el entrenador hace una tirada de pericia. Si la tirada tiene éxito, el animal está entrenado. Si la tirada falla, el animal no puede aprender esa tarea o truco específico.<br> Un animal puede ser entrenado en 2d4 tareas generales o trucos específicos, o cualquier combinación de los dos. Los animales salvajes solo pueden ser entrenados cuando son crías (jóvenes). Solo se les puede enseñar un máximo de 1d4 tareas o trucos y requieren tres veces más tiempo para ser entrenados.",
+    "description": "Un personaje con pericia Entrenamiento de Animales puede entrenar a un tipo de criatura (el jugador debe decidir qué tipo cuando elige la pericia). Se pueden entrenar tipos adicionales de criaturas si se gastan más ranuras (slots) de pericia.<br> Un entrenador puede trabajar con hasta tres criaturas a la vez. El personaje puede elegir entrenarlas para tareas generales o enseñarles un truco específico. Las tareas generales incluyen entrenar a un animal para llevar a un jinete, vigilar, atacar o realizar trabajos pesados. Enseñar una tarea general a una criatura requiere 2d6 semanas. Un truco específico podría ser atacar a un tipo específico de criatura, rescatar a una persona, rastrear o realizar una acrobacia. Enseñar un truco específico requiere 1d4 semanas. Al final del período de entrenamiento, el entrenador hace una tirada de pericia. Si la tirada tiene éxito, el animal está entrenado. Si la tirada falla, el animal no puede aprender esa tarea o truco específico.<br> Un animal puede ser entrenado en 2d4 tareas generales o trucos específicos, o cualquier combinación de los dos. Los animales salvajes solo pueden ser entrenados cuando son crías (jóvenes). Solo se les puede enseñar un máximo de 1d4 tareas o trucos y requieren tres veces más tiempo para ser entrenados.<hr>Para adquirir esta pericia, un bárbaro debe provenir de una sociedad donde los animales hayan sido domesticados como mascotas, monturas o trabajadores. Generalmente, un bárbaro solo puede entrenar animales nativos de su tierra natal, aunque el DM puede aprobar especies emparentadas. Por ejemplo, con el permiso del DM, un bárbaro ártico puede entrenar un oso pardo, incluso si el oso polar es la única especie nativa de su tierra natal.",
     "slots": 1,
     "ability": "Wis",
     "modifier": 0,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 4,
     "name": "Artistic Ability",
-    "description": "Los personajes con pericia Habilidad Artística son naturalmente adeptos a diversas formas de arte. El personaje debe seleccionar un medio específico (pintura, escultura, dibujo, etc.) cuando se elige la pericia. El personaje puede crear obras de arte en este medio sin necesidad de una tirada de pericia. Se requiere una tirada de pericia solo cuando el personaje intenta crear una obra de arte de calidad excepcional. Si la tirada tiene éxito, la obra de arte es muy apreciada y puede alcanzar un precio alto. Si la tirada es exactamente el número necesario para tener éxito, o si se saca un 1 natural, la obra es una obra maestra. Si la tirada falla, la obra de arte es de calidad promedio.<br> La habilidad artística también confiere un bonificador de +1 a todas las tiradas de pericia que requieran habilidad artística (música o danza) y a los intentos de tasar objetos de arte.",
+    "description": "Los personajes con pericia Habilidad Artística son naturalmente adeptos a diversas formas de arte. El personaje debe seleccionar un medio específico (pintura, escultura, dibujo, etc.) cuando se elige la pericia. El personaje puede crear obras de arte en este medio sin necesidad de una tirada de pericia. Se requiere una tirada de pericia solo cuando el personaje intenta crear una obra de arte de calidad excepcional. Si la tirada tiene éxito, la obra de arte es muy apreciada y puede alcanzar un precio alto. Si la tirada es exactamente el número necesario para tener éxito, o si se saca un 1 natural, la obra es una obra maestra. Si la tirada falla, la obra de arte es de calidad promedio.<br> La habilidad artística también confiere un bonificador de +1 a todas las tiradas de pericia que requieran habilidad artística (música o danza) y a los intentos de tasar objetos de arte.<hr>Un bárbaro debe seleccionar una forma de arte común en su tierra natal. Entre las opciones aceptables se incluyen la pintura rupestre, el canto llano (un estilo de canto basado en tonos aproximados en lugar de intervalos fijos, interpretado sin armonía ni acompañamiento instrumental), la escultura tosca (en arcilla, madera o hueso) y los mosaicos primitivos (guijarros de colores o trozos de hueso dispuestos en patrones atractivos). Un bárbaro con pericia en Habilidad Artística recibe un bonificador de +1 a las tiradas de pericia en Bailar (Dancing) e Instrumento Musical (Musical Instrument).",
     "slots": 1,
     "ability": "Wis",
     "modifier": 0,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -101,12 +101,12 @@ const periciasData = [
   {
     "id": 10,
     "name": "Dancing",
-    "description": "El personaje sabe cómo Bailar. Puede realizar danzas locales y aprender nuevas. Solo se requiere una tirada de pericia cuando el personaje intenta un baile excepcionalmente difícil o complejo, o cuando intenta crear un nuevo baile.",
+    "description": "El personaje sabe cómo Bailar. Puede realizar danzas locales y aprender nuevas. Solo se requiere una tirada de pericia cuando el personaje intenta un baile excepcionalmente difícil o complejo, o cuando intenta crear un nuevo baile.<hr>Un bárbaro con esta pericia conoce las danzas ceremoniales y recreativas propias de su tierra. Dichas danzas pueden complementarse con aros, palos, sonajeros y otros objetos que realzan tanto la complejidad como la calidad estética de la representación.",
     "slots": 1,
     "ability": "Dex",
     "modifier": 0,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -116,8 +116,8 @@ const periciasData = [
     "slots": 1,
     "ability": "Wis",
     "modifier": 1,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -138,19 +138,19 @@ const periciasData = [
     "slots": 1,
     "ability": "Wis",
     "modifier": -1,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 14,
     "name": "Fishing",
-    "description": "El personaje es hábil en el arte de la Pesca, ya sea con anzuelo y sedal, red o arpón. Cada hora que el personaje dedique a pescar, realiza una tirada de pericia. Si falla, no pescará nada esa hora. De lo contrario, con anzuelo y sedal o arpón pescará una cantidad de peces igual a la diferencia entre la tirada del dado y la puntuación de Sabiduría (Wisdom) del personaje. Con red pescará el triple de esta cantidad.<br> Por supuesto, no se puede pescar nada donde no hay peces. Sin embargo, algunas zonas están repletas de peces, como un río o una laguna durante la época de desove. El DM puede modificar los resultados según la situación.",
+    "description": "El personaje es hábil en el arte de la Pesca, ya sea con anzuelo y sedal, red o arpón. Cada hora que el personaje dedique a pescar, realiza una tirada de pericia. Si falla, no pescará nada esa hora. De lo contrario, con anzuelo y sedal o arpón pescará una cantidad de peces igual a la diferencia entre la tirada del dado y la puntuación de Sabiduría (Wisdom) del personaje. Con red pescará el triple de esta cantidad.<br> Por supuesto, no se puede pescar nada donde no hay peces. Sin embargo, algunas zonas están repletas de peces, como un río o una laguna durante la época de desove. El DM puede modificar los resultados según la situación.<hr>En lugar de pescar con anzuelos y redes, la mayoría de los bárbaros usan lanzas o sus manos. Al pescar, un bárbaro realiza una tirada de pericia cada hora. Si la tirada tiene éxito, el número de peces capturados es igual a la diferencia entre la tirada del dado y la puntuación de Sabiduría del bárbaro. Un adulto sobrevivir comiendo dos peces de caza típicos (como trucha, lubina o bagre) por día. Modifica el número de peces capturados teniendo en cuenta la calidad del lugar de pesca. Consulta la siguiente tabla y multiplica el número base (la tirada del dado de pericia menos la Sabiduría del pescador) por el modificador indicado. Estas pautas ayudan a determinar la calidad del lugar: <ul><b>Mala:</b>Pantano, ciénega, poco profundo, arroyo</ul><ul><b>Media:</b>Arroyo o río de corriente lenta; estanque o lago moderadamente profundo; orilla de un cuerpo de agua (en contraposición al centro); área soleada en clima cálido, área sombreada en clima frío.</ul><ul><b>Bueno:</b>Arroyo o río de corriente rápida; estanque o lago profundo; centro de un cuerpo de agua (en contraposición a la orilla); área sombreada en clima cálido, área abierta y soleada en clima frío.</ul><table><tr><th>Calidad</th><th>Multiplicador</th></tr><tr><td>Malo</td><td>1/2 (redondeado hacia abajo)</td></tr><tr><td>Promedio</td><td>1</td></tr><tr><td>Bueno</td><td>2</td></tr></table>Ejemplo: Grog tiene la pericia de Pesca y una puntuación de Sabiduría de 13. Está pescando en un lugar de mala calidad. El jugador de Grog tira un 8. Con esta tirada en un lugar promedio, Grog normalmente pescaría cinco peces (13-8). Multiplica el número base por el multiplicador de mala calidad de la tabla anterior (1/2 redondeado hacia abajo). Grog pesca dos peces (5 x 1/2 redondeado hacia abajo).",
     "slots": 1,
     "ability": "Wis",
     "modifier": -1,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -200,34 +200,34 @@ const periciasData = [
   {
     "id": 19,
     "name": "Pottery",
-    "description": "Un personaje con pericia en Alfarería puede crear cualquier tipo de vasija o recipiente de arcilla comúnmente utilizado en el mundo de la campaña. El personaje necesita una rueda de alfarería y un horno, así como un suministro de arcilla y esmalte. Generalmente, el personaje puede crear dos objetos pequeños o medianos, o un objeto grande por día. Las piezas de cerámica deben luego cocerse en el horno durante un día adicional.<br> Las materias primas involucradas cuestan 3 cp para hacer un objeto pequeño, 5 cp para hacer un objeto mediano y 1 sp para hacer un objeto grande.",
+    "description": "Un personaje con pericia en Alfarería puede crear cualquier tipo de vasija o recipiente de arcilla comúnmente utilizado en el mundo de la campaña. El personaje necesita una rueda de alfarería y un horno, así como un suministro de arcilla y esmalte. Generalmente, el personaje puede crear dos objetos pequeños o medianos, o un objeto grande por día. Las piezas de cerámica deben luego cocerse en el horno durante un día adicional.<br> Las materias primas involucradas cuestan 3 cp para hacer un objeto pequeño, 5 cp para hacer un objeto mediano y 1 sp para hacer un objeto grande.<hr>Aunque los bárbaros generalmente no tienen ruedas de alfarero, hornos ni esmaltes, pueden crear una sorprendente variedad de objetos de barro. Comienzan quitando piedras, astillas y otros residuos de los terrones de arcilla, luego la amasan con agua hasta que se ablanda. La enrollan formando rollos y luego le dan forma de cuencos, ollas y tazas. Pueden incrustar guijarros ornamentales y huesos en los laterales del objeto o usar palos afilados para grabar diseños. Finalmente, los objetos se secan al aire o se colocan cerca del fuego para endurecerlos.",
     "slots": 1,
     "ability": "Dex",
     "modifier": -2,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 20,
     "name": "Riding, Airborne",
-    "description": "El personaje con pericia Cabalgar por el Aire está entrenado para manejar una montura voladora. La criatura en cuestión debe elegirse al seleccionar la pericia. Se pueden usar espacios de pericia adicionales para aprender a manejar otros tipos de monturas. A diferencia de la equitación terrestre, un personaje debe tener esta pericia (o montar con alguien que la tenga) para manejar una montura voladora. Además, un personaje competente puede hacer lo siguiente:<br><ul>Salta sobre la silla de la criatura (cuando está parada en el suelo) y la estimula hacia el aire en una sola acción. Esto no requiere tirada de pericia.</ul><ul> Salta desde la parte trasera de la montura y déjate caer 10 pies al suelo o sobre la parte trasera de otra montura (terrestre o voladora). Aquellos con un peso (total: equipamiento y masa) ligero pueden caer al suelo sin realizar una tirada. En todas las demás situaciones, se requiere una tirada de pericia. Una tirada fallida significa que el personaje sufre daño normal por caída o no alcanza a su objetivo (quizás sufriendo grandes cantidades de daño como resultado). Un personaje que está cayendo al suelo puede intentar un ataque cuerpo a cuerpo inmediato si su tirada de pericia se realiza con una penalización de -4 a la tirada de pericia. El fallo tiene las consecuencias indicadas anteriormente.</ul><ul> Aumenta la velocidad de su montura en una tirada exitosa, añadiendo 1d4 a la velocidad de movimiento de la montura. Esta velocidad se puede mantener durante cuatro rondas consecutivas. Si la tirada falla, se puede intentar de nuevo en el siguiente rondas. Si fallan dos tiradas, no se puede intentar durante un turno completo. Después de los rondas de velocidad aumentada, su movimiento se reduce a 2/3 de su velocidad normal y su Clase de Maniobrabilidad se entorpece una clase. Estas condiciones duran hasta que la montura aterriza y se le permite descansar durante al menos una hora.</ul><ul>El jinete puede guiar a la montura con sus rodillas y pies, manteniendo sus manos libres. Se realiza una tirada de pericia si el personaje llega a sufrir daño. Si la tirada falla, el personaje es derribado de la silla. Se permite una segunda tirada para ver si el personaje logra sujetarse (quedando así colgando de un lado con una mano o en alguna posición igualmente peligrosa). Si falla, el jinete cae. Por supuesto, un jinete puede atarse a la silla, aunque esto podría ser una desventaja si su montura muere y se precipita al suelo.</ul>",
+    "description": "El personaje con pericia Cabalgar por el Aire está entrenado para manejar una montura voladora. La criatura en cuestión debe elegirse al seleccionar la pericia. Se pueden usar espacios de pericia adicionales para aprender a manejar otros tipos de monturas. A diferencia de la equitación terrestre, un personaje debe tener esta pericia (o montar con alguien que la tenga) para manejar una montura voladora. Además, un personaje competente puede hacer lo siguiente:<br><ul>Salta sobre la silla de la criatura (cuando está parada en el suelo) y la estimula hacia el aire en una sola acción. Esto no requiere tirada de pericia.</ul><ul> Salta desde la parte trasera de la montura y déjate caer 10 pies al suelo o sobre la parte trasera de otra montura (terrestre o voladora). Aquellos con un peso (total: equipamiento y masa) ligero pueden caer al suelo sin realizar una tirada. En todas las demás situaciones, se requiere una tirada de pericia. Una tirada fallida significa que el personaje sufre daño normal por caída o no alcanza a su objetivo (quizás sufriendo grandes cantidades de daño como resultado). Un personaje que está cayendo al suelo puede intentar un ataque cuerpo a cuerpo inmediato si su tirada de pericia se realiza con una penalización de -4 a la tirada de pericia. El fallo tiene las consecuencias indicadas anteriormente.</ul><ul> Aumenta la velocidad de su montura en una tirada exitosa, añadiendo 1d4 a la velocidad de movimiento de la montura. Esta velocidad se puede mantener durante cuatro rondas consecutivas. Si la tirada falla, se puede intentar de nuevo en el siguiente rondas. Si fallan dos tiradas, no se puede intentar durante un turno completo. Después de los rondas de velocidad aumentada, su movimiento se reduce a 2/3 de su velocidad normal y su Clase de Maniobrabilidad se entorpece una clase. Estas condiciones duran hasta que la montura aterriza y se le permite descansar durante al menos una hora.</ul><ul>El jinete puede guiar a la montura con sus rodillas y pies, manteniendo sus manos libres. Se realiza una tirada de pericia si el personaje llega a sufrir daño. Si la tirada falla, el personaje es derribado de la silla. Se permite una segunda tirada para ver si el personaje logra sujetarse (quedando así colgando de un lado con una mano o en alguna posición igualmente peligrosa). Si falla, el jinete cae. Por supuesto, un jinete puede atarse a la silla, aunque esto podría ser una desventaja si su montura muere y se precipita al suelo.</ul><hr>Un bárbaro solo puede montar criaturas terrestres o aéreas propias de su tierra natal. Gracias a su excepcional habilidad física, puede realizar cualquiera de las hazañas especiales descritas en el <i>Manual del Jugador</i> sin silla de montar. Por ejemplo, puede saltar sobre el lomo desnudo de una criatura aérea y espolearla para que vuele en el aire como una sola acción. Aun así, debe superar todas las tiradas de pericia requeridas.",
     "slots": 2,
     "ability": "Wis",
     "modifier": -2,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 21,
     "name": "Riding, Land-Based",
-    "description": "Los hábiles en Cabalgar por el Suelo son competentes en el arte de montar y manejar caballos u otros tipos de monturas terrestres. Cuando se llena la ranura de pericia, el personaje debe declarar en qué tipo de montura es competente. Las posibilidades incluyen unicornios, lobos terribles y prácticamente cualquier criatura utilizada como montura por humanos, semihumanos o humanoides.<br>Un personaje con esta pericia puede realizar todas las siguientes hazañas. Algunas de ellas son automáticas, mientras que otras requieren una tirada para tener éxito.<ul> El personaje puede saltar sobre una silla de montar siempre que la montura esté quieta, incluso cuando el personaje lleva armadura. Esto no requiere una tiradas de pericia. Sin embargo, el personaje debe hacer una tirada si desea hacer que la montura se mueva durante el mismo ronda en el que aterriza en su silla. También debe hacer una tirada si intenta saltar sobre la silla de una montura en movimiento. El fallo indica que el personaje cae al suelo</ul><ul>El personaje puede incitar a la montura a saltar obstáculos altos o a saltar a través de huecos. No se requiere una tirada si el obstáculo es de menos de 3 pies de altura o el hueco es de menos de 12 pies de ancho. Si el personaje quiere hacer una tirada de pericia, se puede incitar a la montura a saltar obstáculos de hasta 7 pies de altura o a saltar a través de huecos de hasta 30 pies de ancho. El éxito significa que la montura ha realizado el salto. El fallo indica que se resiste, y el personaje debe hacer otra tirada para ver si conserva su asiento o cae al suelo.</ul><ul>El personaje puede incitar a su montura a grandes velocidades, añadiendo 6 pies por ronda a la velocidad de movimiento del animal durante un máximo de cuatro turnos. Esto requiere una tirada de pericia cada turno para ver si la montura puede cabalgar con tanta fuerza. Si la tirada inicial falla, no se pueden hacer más intentos, pero la montura puede moverse normalmente. Si la segunda o subsiguiente tirada falla, la montura inmediatamente reduce la velocidad a paso, y el personaje debe desmontar y guiar al animal durante un turno. En cualquier caso, después de cuatro turnos de carrera, el corcel debe ser guiado por su jinete desmontado durante un turno.</ul><ul>El personaje puede guiar a su montura con las rodillas, lo que le permite usar armas que requieren dos manos (como arcos y espadas a dos manos) mientras está montando. Esta hazaña no requiere una tirada de pericia a menos que el personaje reciba daño mientras cabalga. En este caso, se requiere una tirada y fallar significa que el personaje cae al suelo y sufre 1d6 puntos de daño adicionales.</ul><ul>El personaje puede agacharse y colgarse junto al corcel, usándolo como escudo contra ataques o usar armadura mientras realiza esta hazaña. El AC del personaje se reduce en -6 mientras se realiza esta maniobra. Cualquier ataque que hubiera golpeado al AC normal del personaje se considera que ha golpeado a la montura en su lugar. No se requiere tirada de pericia.</ul><ul>El personaje puede saltar desde el lomo de su montura hasta el suelo y realizar un ataque cuerpo a cuerpo contra cualquier personaje o criatura a menos de 10 pies. El jugador debe realizar una tirada exitosa con una penalización de -4 para tener éxito. Si falla la tirada, el personaje no aterriza de pie, cae torpemente al suelo y sufre 1d3 puntos de daño.</ul>",
+    "description": "Los hábiles en Cabalgar por el Suelo son competentes en el arte de montar y manejar caballos u otros tipos de monturas terrestres. Cuando se llena la ranura de pericia, el personaje debe declarar en qué tipo de montura es competente. Las posibilidades incluyen unicornios, lobos terribles y prácticamente cualquier criatura utilizada como montura por humanos, semihumanos o humanoides.<br>Un personaje con esta pericia puede realizar todas las siguientes hazañas. Algunas de ellas son automáticas, mientras que otras requieren una tirada para tener éxito.<ul> El personaje puede saltar sobre una silla de montar siempre que la montura esté quieta, incluso cuando el personaje lleva armadura. Esto no requiere una tiradas de pericia. Sin embargo, el personaje debe hacer una tirada si desea hacer que la montura se mueva durante el mismo ronda en el que aterriza en su silla. También debe hacer una tirada si intenta saltar sobre la silla de una montura en movimiento. El fallo indica que el personaje cae al suelo</ul><ul>El personaje puede incitar a la montura a saltar obstáculos altos o a saltar a través de huecos. No se requiere una tirada si el obstáculo es de menos de 3 pies de altura o el hueco es de menos de 12 pies de ancho. Si el personaje quiere hacer una tirada de pericia, se puede incitar a la montura a saltar obstáculos de hasta 7 pies de altura o a saltar a través de huecos de hasta 30 pies de ancho. El éxito significa que la montura ha realizado el salto. El fallo indica que se resiste, y el personaje debe hacer otra tirada para ver si conserva su asiento o cae al suelo.</ul><ul>El personaje puede incitar a su montura a grandes velocidades, añadiendo 6 pies por ronda a la velocidad de movimiento del animal durante un máximo de cuatro turnos. Esto requiere una tirada de pericia cada turno para ver si la montura puede cabalgar con tanta fuerza. Si la tirada inicial falla, no se pueden hacer más intentos, pero la montura puede moverse normalmente. Si la segunda o subsiguiente tirada falla, la montura inmediatamente reduce la velocidad a paso, y el personaje debe desmontar y guiar al animal durante un turno. En cualquier caso, después de cuatro turnos de carrera, el corcel debe ser guiado por su jinete desmontado durante un turno.</ul><ul>El personaje puede guiar a su montura con las rodillas, lo que le permite usar armas que requieren dos manos (como arcos y espadas a dos manos) mientras está montando. Esta hazaña no requiere una tirada de pericia a menos que el personaje reciba daño mientras cabalga. En este caso, se requiere una tirada y fallar significa que el personaje cae al suelo y sufre 1d6 puntos de daño adicionales.</ul><ul>El personaje puede agacharse y colgarse junto al corcel, usándolo como escudo contra ataques o usar armadura mientras realiza esta hazaña. El AC del personaje se reduce en -6 mientras se realiza esta maniobra. Cualquier ataque que hubiera golpeado al AC normal del personaje se considera que ha golpeado a la montura en su lugar. No se requiere tirada de pericia.</ul><ul>El personaje puede saltar desde el lomo de su montura hasta el suelo y realizar un ataque cuerpo a cuerpo contra cualquier personaje o criatura a menos de 10 pies. El jugador debe realizar una tirada exitosa con una penalización de -4 para tener éxito. Si falla la tirada, el personaje no aterriza de pie, cae torpemente al suelo y sufre 1d3 puntos de daño.</ul><hr>Un bárbaro solo puede montar criaturas terrestres o aéreas propias de su tierra natal. Gracias a su excepcional habilidad física, puede realizar cualquiera de las hazañas especiales descritas en el <i>Manual del Jugador</i> sin silla de montar. Por ejemplo, puede saltar sobre el lomo desnudo de una criatura aérea y espolearla para que vuele en el aire como una sola acción. Aun así, debe superar todas las tiradas de pericia requeridas.",
     "slots": 1,
     "ability": "Wis",
     "modifier": 3,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -270,8 +270,8 @@ const periciasData = [
     "slots": 1,
     "ability": "Cha",
     "modifier": 0,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -292,8 +292,8 @@ const periciasData = [
     "slots": 1,
     "ability": "Str",
     "modifier": 0,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -303,8 +303,8 @@ const periciasData = [
     "slots": 1,
     "ability": "Wis",
     "modifier": -1,
-    "class": "General",
-    "source": "Player's Handbook",
+    "class": "General, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -354,56 +354,56 @@ const periciasData = [
   {
     "id": 33,
     "name": "Healing",
-    "description": "Un personaje con pericia Primeros Auxilios puede cuidar de los heridos, enfermos y envenenados. Si un personaje herido recibe primeros auxilios por parte de un sanador dentro de un asalto tras sufrir la herida, el sanador logra estabilizarlo y restaurarle 1 punto de golpe (esta aplicación toma un asalto completo y no se puede recuperar más de 1 punto de golpe por herida de esta manera).<br> Un personaje bajo el cuidado continuo de un sanador con esta pericia recupera puntos de golpe a una tasa acelerada: 2 puntos de golpe por día de descanso normal (en lugar de 1), o 3 puntos de golpe por día si se encuentra en descanso completo en cama. Un sanador puede cuidar hasta a seis pacientes a la vez de esta manera.<br> Al tratar enfermedades comunes o envenenamientos, una tirada exitosa por parte del sanador reduce a la mitad la duración de los efectos o mitiga los síntomas, y otorga al paciente un bonificador de +2 en sus tiradas de salvación contra el veneno o la enfermedad. Solo los personajes con pericias tanto en primeros auxilios (Healing) como en Herbalismo (Herbalism) pueden intentar el mismo tratamiento para los venenos que la víctima haya ingerido o tocado (el personaje usa su habilidad de Primeros Auxilios [Healing] para diagnosticar el veneno y su conocimiento de Herbalismo [Herbalism] para preparar una cura). Un personaje con Primeros Auxilios (Healing) también puede intentar diagnosticar y tratar enfermedades. Al tratar enfermedades comunes, una tirada de pericia exitosa reduce automáticamente la enfermedad a su forma más leve y de menor duración. Quienes también tengan conocimientos de Herbalismo (Herbalism) obtienen un bonificador adicional de +2 a esta tirada.<br> Un personaje con esta pericia puede intentar tratar enfermedades mágicas, ya sean causadas por hechizos o criaturas. En este caso, una tirada exitosa diagnostica la causa de la enfermedad. Sin embargo, dado que la enfermedad es de naturaleza mágica, solo puede tratarse por medios mágicos.",
+    "description": "Un personaje con pericia Primeros Auxilios puede cuidar de los heridos, enfermos y envenenados. Si un personaje herido recibe primeros auxilios por parte de un sanador dentro de un asalto tras sufrir la herida, el sanador logra estabilizarlo y restaurarle 1 punto de golpe (esta aplicación toma un asalto completo y no se puede recuperar más de 1 punto de golpe por herida de esta manera).<br> Un personaje bajo el cuidado continuo de un sanador con esta pericia recupera puntos de golpe a una tasa acelerada: 2 puntos de golpe por día de descanso normal (en lugar de 1), o 3 puntos de golpe por día si se encuentra en descanso completo en cama. Un sanador puede cuidar hasta a seis pacientes a la vez de esta manera.<br> Al tratar enfermedades comunes o envenenamientos, una tirada exitosa por parte del sanador reduce a la mitad la duración de los efectos o mitiga los síntomas, y otorga al paciente un bonificador de +2 en sus tiradas de salvación contra el veneno o la enfermedad. Solo los personajes con pericias tanto en primeros auxilios (Healing) como en Herbalismo (Herbalism) pueden intentar el mismo tratamiento para los venenos que la víctima haya ingerido o tocado (el personaje usa su habilidad de Primeros Auxilios [Healing] para diagnosticar el veneno y su conocimiento de Herbalismo [Herbalism] para preparar una cura). Un personaje con Primeros Auxilios (Healing) también puede intentar diagnosticar y tratar enfermedades. Al tratar enfermedades comunes, una tirada de pericia exitosa reduce automáticamente la enfermedad a su forma más leve y de menor duración. Quienes también tengan conocimientos de Herbalismo (Herbalism) obtienen un bonificador adicional de +2 a esta tirada.<br> Un personaje con esta pericia puede intentar tratar enfermedades mágicas, ya sean causadas por hechizos o criaturas. En este caso, una tirada exitosa diagnostica la causa de la enfermedad. Sin embargo, dado que la enfermedad es de naturaleza mágica, solo puede tratarse por medios mágicos.<hr>Un bárbaro con Primeros Auxilios (Healing) solo puede diagnosticar y tratar enfermedades comunes en su territorio natal. No puede tratar a una persona envenenada a menos que la víctima sufra un veneno natural, no mágico. Además, debe conocer la fuente del veneno. Si la víctima ha sido envenenada por una criatura, esta debe ser nativa del territorio natal del bárbaro. Si la víctima ha sido afectada por un arma envenenada, el veneno debe provenir de una planta, animal o mineral que se encuentre en el territorio natal del bárbaro.",
     "slots": 2,
     "ability": "Wis",
     "modifier": -2,
-    "class": "Priest",
-    "source": "Player's Handbook",
+    "class": "Priest, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 34,
     "name": "Herbalism",
-    "description": "Los personajes con pericia Herbalismo conocen las propiedades medicinales y mágicas de las plantas, hierbas, raíces y hojas. Poseer esta pericia permite al personaje identificar plantas e intentar recolectar y preparar las dosis adecuadas de hierbas para tratamientos medicinales o ungüentos. Un personaje que posea tanto Herbalismo como la pericia de Primeros Auxilios (Healing) recibe un bonificador de +2 en todas sus tiradas de pericia de Primeros Auxilios (Healing). Además, el conocimiento de Herbalismo es un requisito indispensable para cualquier personaje que intente preparar o destilar pociones mágicas.",
+    "description": "Los personajes con pericia Herbalismo conocen las propiedades medicinales y mágicas de las plantas, hierbas, raíces y hojas. Poseer esta pericia permite al personaje identificar plantas e intentar recolectar y preparar las dosis adecuadas de hierbas para tratamientos medicinales o ungüentos. Un personaje que posea tanto Herbalismo como la pericia de Primeros Auxilios (Healing) recibe un bonificador de +2 en todas sus tiradas de pericia de Primeros Auxilios (Healing). Además, el conocimiento de Herbalismo es un requisito indispensable para cualquier personaje que intente preparar o destilar pociones mágicas.<hr>Un bárbaro solo puede identificar y trabajar con la vegetación autóctona de su tierra natal. Si posee las pericias de Herbalismo (Herbalism) y Primeros Auxilios (Healing), puede preparar y tratar venenos de acuerdo con las restricciones descritas en la descripción de la pericia de Primeros Auxilios. Con el permiso del DM, se asume que un bárbaro lleva consigo una cantidad razonable de hierbas curativas y venenosas de su tierra natal.",
     "slots": 2,
     "ability": "Int",
     "modifier": -2,
-    "class": "Priest, Wizard, Rogue",
-    "source": "Player's Handbook, The Complete Thief's Handbook",
+    "class": "Priest, Wizard, Rogue, Barbarian",
+    "source": "Player's Handbook, The Complete Thief's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 35,
     "name": "Languages, Ancient",
-    "description": "El personaje con pericia Lenguajes Antiguos ha estudiado y domina un idioma antiguo o muerto (por ejemplo, el alto elfo arcaico, el enano antiguo o lenguas litúrgicas sagradas caídas en desuso). El idioma específico debe ser elegido en el momento en que se adquiere la pericia. Esta habilidad permite al personaje tanto hablar como leer y escribir en dicho idioma, siempre y cuando existan registros escritos o un tutor disponible para su estudio inicial. Se requiere una tirada de pericia solo cuando el personaje intenta descifrar un texto fragmentado, inscripciones parcialmente dañadas, pasajes oscuros o pergaminos antiguos muy desgastados.",
+      "description": "El personaje con pericia Lenguajes Antiguos ha estudiado y domina un idioma antiguo o muerto (por ejemplo, el alto elfo arcaico, el enano antiguo o lenguas litúrgicas sagradas caídas en desuso). El idioma específico debe ser elegido en el momento en que se adquiere la pericia. Esta habilidad permite al personaje tanto hablar como leer y escribir en dicho idioma, siempre y cuando existan registros escritos o un tutor disponible para su estudio inicial. Se requiere una tirada de pericia solo cuando el personaje intenta descifrar un texto fragmentado, inscripciones parcialmente dañadas, pasajes oscuros o pergaminos antiguos muy desgastados.<hr>El bárbaro ha dominado una lengua oscura asociada a su tierra natal. Las lenguas bárbaras antiguas no necesariamente incluyen palabras; pueden consistir en gruñidos, bufidos, chasquidos de lengua o silbidos. Esta pericia le permite al bárbaro reproducir la lengua vocalmente; no puede escribirla ni leerla. El jugador debe proporcionar una explicación de la fluidez del bárbaro.",
     "slots": 1,
     "ability": "Int",
     "modifier": 0,
-    "class": "Priest, Wizard",
-    "source": "Player's Handbook",
+    "class": "Priest, Wizard, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 36,
     "name": "Local History",
-    "description": "El personaje con pericia Historia Local es un experto en las leyendas, la historia, las tradiciones, las personalidades prominentes y las características físicas y geográficas de una región o área local relativamente pequeña (como una ciudad, un condado o una isla). El área específica debe ser determinada en el momento en que se adquiere la pericia.<br> Con una tirada de pericia exitosa, el personaje puede recordar de manera precisa información detallada sobre la geografía local, rutas comerciales ocultas, antiguos héroes de la zona, la reputación de los residentes actuales y los eventos significativos del pasado reciente o lejano del lugar. Un personaje puede adquirir esta pericia múltiples veces para representar el conocimiento de diferentes regiones geográficas separadas. El personaje puede contar estas historias para entretener a los demás, lo que le otorga un bonificador de +2 a su Carisma durante el encuentro. Sin embargo, contar historias a seres hostiles probablemente no sirva de nada.",
+    "description": "El personaje con pericia Historia Local es un experto en las leyendas, la historia, las tradiciones, las personalidades prominentes y las características físicas y geográficas de una región o área local relativamente pequeña (como una ciudad, un condado o una isla). El área específica debe ser determinada en el momento en que se adquiere la pericia.<br> Con una tirada de pericia exitosa, el personaje puede recordar de manera precisa información detallada sobre la geografía local, rutas comerciales ocultas, antiguos héroes de la zona, la reputación de los residentes actuales y los eventos significativos del pasado reciente o lejano del lugar. Un personaje puede adquirir esta pericia múltiples veces para representar el conocimiento de diferentes regiones geográficas separadas. El personaje puede contar estas historias para entretener a los demás, lo que le otorga un bonificador de +2 a su Carisma durante el encuentro. Sin embargo, contar historias a seres hostiles probablemente no sirva de nada.<hr>Un bárbaro con esta pericia debe especializarse en las leyendas y tradiciones de su tierra natal. Como historiador oral, el bárbaro puede recitar de memoria una gran cantidad de información sobre eventos, personajes y lugares de épocas pasadas.",
     "slots": 1,
     "ability": "Cha",
     "modifier": 0,
-    "class": "Priest, Rogue",
-    "source": "Player's Handbook",
+    "class": "Priest, Rogue, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 37,
     "name": "Musical Instrument",
-    "description": "El personaje ha aprendido a tocar un Instrumento Musical específico (el tipo exacto de instrumento debe elegirse cuando se toma la pericia). Ranuras (slots) adicionales invertidas en esta pericia permiten dominar otros instrumentos diferentes. El personaje puede tocar melodías comunes de manera automática y agradable para entretener en entornos casuales. Sin embargo, se requiere una tirada de pericia cuando intenta tocar composiciones inusualmente complejas, cuando intenta improvisar de manera efectiva en una situación tensa o ante una audiencia sumamente crítica, o cuando intenta ocultar un mensaje codificado dentro de la interpretación musical para que sea detectado por sus aliados.",
+    "description": "El personaje ha aprendido a tocar un Instrumento Musical específico (el tipo exacto de instrumento debe elegirse cuando se toma la pericia). Ranuras (slots) adicionales invertidas en esta pericia permiten dominar otros instrumentos diferentes. El personaje puede tocar melodías comunes de manera automática y agradable para entretener en entornos casuales. Sin embargo, se requiere una tirada de pericia cuando intenta tocar composiciones inusualmente complejas, cuando intenta improvisar de manera efectiva en una situación tensa o ante una audiencia sumamente crítica, o cuando intenta ocultar un mensaje codificado dentro de la interpretación musical para que sea detectado por sus aliados.<hr>Un bárbaro debe elegir un instrumento de su tierra natal. Entre los instrumentos típicos se encuentran el arco y la calabaza (un tendón animal tensado sobre un palo curvo con una calabaza hueca; al doblar el palo mientras se pulsa la cuerda, se varía el tono, que se amplifica gracias a la calabaza);<br><i>cuerno de elefante</i> (un colmillo hueco con aberturas en ambos extremos, que se toca como una trompeta);<br><i>silbato de caña</i> (una rama o caña hueca, perforada con agujeros que se pueden cubrir con los dedos y que se toca como una flauta);<br><i>tambor de tronco</i> (un tronco hueco con una piel animal tensada en la parte superior, que se toca con baquetas o con las manos);<br>y <i>lamelófono</i> (un piano de pulgar, hecho de tiras de bambú sujetas a una caja pequeña; al pulsar las tiras se producen tonos que resuenan dentro de la caja).<br>El enfoque de un bárbaro hacia el ritmo y la armonía puede ser inusual, pero la complejidad y el contenido emocional de sus interpretaciones son comparables a los de un músico experimentado de otros mundos.",
     "slots": 1,
     "ability": "Dex",
     "modifier": -1,
-    "class": "Priest, Rogue",
-    "source": "Player's Handbook",
+    "class": "Priest, Rogue, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -435,8 +435,8 @@ const periciasData = [
     "slots": 1,
     "ability": "Wis",
     "modifier": 0,
-    "class": "Priest, Wizard",
-    "source": "Player's Handbook",
+    "class": "Priest, Wizard, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -468,8 +468,8 @@ const periciasData = [
     "slots": 2,
     "ability": "N/A",
     "modifier": "N/A",
-    "class": "Rogue, Warrior",
-    "source": "Player's Handbook",
+    "class": "Rogue, Warrior, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -530,12 +530,12 @@ const periciasData = [
   {
     "id": 49,
     "name": "Jumping",
-    "description": "La pericia Saltar le otorga al personaje la habilidad de intentar saltos excepcionales tanto vertical como horizontalmente. Si el personaje tiene una carrera de al menos 20 pies, puede saltar (salto de longitud) 2d6+su nivel en pies. Sin embargo, ningún personaje puede saltar de longitud más de seis veces su altura. Con la misma carrera, puede saltar verticalmente (salto de altura) 1d3+la mitad de su nivel en pies. Ningún personaje puede saltar de altura más de 1 ½ veces su propia altura.<br>Desde una posición estática, un personaje con esta pericia puede realizar un salto de longitud 1d6 + la mitad de su nivel en pies o realizar un salto de altura de  solo 3 pies.<br>El personaje también puede intentar saltos con pértiga. Un salto requiere una carrera de al menos 30 pies. Si se usa una pértiga, debe ser de 4 a 10 pies más larga que la altura del personaje. El salto abarca una distancia igual a 1 ½ veces la longitud de la pértiga. El personaje puede superar alturas iguales a la altura de la pértiga. También puede optar por aterrizar de pie si el salto lo lleva por encima de un obstáculo que no supere la mitad de la altura de su pértiga. Así, con una pértiga de 12 pies, el personaje podría saltar a través de una ventana a 12 pies del suelo (cayendo en la habitación contigua), aterrizar de pie en una abertura a 6 pies del suelo o saltar a través de un foso de 18 pies de ancho. En todos los casos, la pértiga se suelta al final del salto.",
+    "description": "La pericia Saltar le otorga al personaje la habilidad de intentar saltos excepcionales tanto vertical como horizontalmente. Si el personaje tiene una carrera de al menos 20 pies, puede saltar (salto de longitud) 2d6+su nivel en pies. Sin embargo, ningún personaje puede saltar de longitud más de seis veces su altura. Con la misma carrera, puede saltar verticalmente (salto de altura) 1d3+la mitad de su nivel en pies. Ningún personaje puede saltar de altura más de 1 ½ veces su propia altura.<br>Desde una posición estática, un personaje con esta pericia puede realizar un salto de longitud 1d6 + la mitad de su nivel en pies o realizar un salto de altura de  solo 3 pies.<br>El personaje también puede intentar saltos con pértiga. Un salto requiere una carrera de al menos 30 pies. Si se usa una pértiga, debe ser de 4 a 10 pies más larga que la altura del personaje. El salto abarca una distancia igual a 1 ½ veces la longitud de la pértiga. El personaje puede superar alturas iguales a la altura de la pértiga. También puede optar por aterrizar de pie si el salto lo lleva por encima de un obstáculo que no supere la mitad de la altura de su pértiga. Así, con una pértiga de 12 pies, el personaje podría saltar a través de una ventana a 12 pies del suelo (cayendo en la habitación contigua), aterrizar de pie en una abertura a 6 pies del suelo o saltar a través de un foso de 18 pies de ancho. En todos los casos, la pértiga se suelta al final del salto.<hr>Los bárbaros ya poseen una excepcional capacidad de salto y agilidad. En la mayoría de los casos, invertir puntos en la pericia de Saltar no mejorará sus habilidades naturales. Por lo general, los bárbaros no intentarán realizar saltos con pértiga, independientemente de si poseen esta pericia.",
     "slots": 1,
     "ability": "Str",
     "modifier": 0,
-    "class": "Rogue",
-    "source": "Player's Handbook",
+    "class": "Rogue, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -556,30 +556,30 @@ const periciasData = [
     "slots": 1,
     "ability": "Dex",
     "modifier": -1,
-    "class": "Rogue, Warrior",
-    "source": "Player's Handbook",
+    "class": "Rogue, Warrior, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 52,
     "name": "Tightrope Walking",
-    "description": "El personaje puede intentar Caminar por la Cuerda Floja o vigas estrechas con mayores probabilidades de éxito de lo normal. Puede sortear cualquier superficie estrecha que no tenga una inclinación mayor a 45 grados. Cada ronda, el personaje puede caminar 60 pies. Se realiza una tirada de pericia cada 60 pies (o fracción de ellos), y un fallo indica una caída. La tirada se realiza con una penalización de -10 si la superficie tiene 1 pulgada o menos de ancho (una cuerda), una penalización de -5 si tiene entre 2 y 6 pulgadas de ancho, y sin modificaciones si tiene entre 7 y 12 pulgadas de ancho. Si tiene más de 1 pie de ancho, no se requiere tirada para los personajes competentes en circunstancias normales. Cada slot adicional gastado en Caminar Sobre La Cuerda Floja reduce estas penalizaciones en 1. El uso de una barra de equilibrio reduce las penalizaciones en 2. El viento o las vibraciones en la cuerda aumentan las penalizaciones de 2 a 6.<br>El personaje puede intentar luchar mientras está en una cuerda floja, pero sufre una penalización de -5 a su tirada de ataque y debe realizar una tirada de pericia exitosa al comienzo de cada ronda para evitar caerse. Dado que el personaje no puede maniobrar, no obtiene ninguna bonificación a su AC por Destreza. Si es golpeado mientras está en la cuerda, debe realizar una tirada de pericia inmediata para mantener el equilibrio.",
+    "description": "El personaje puede intentar Caminar por la Cuerda Floja o vigas estrechas con mayores probabilidades de éxito de lo normal. Puede sortear cualquier superficie estrecha que no tenga una inclinación mayor a 45 grados. Cada ronda, el personaje puede caminar 60 pies. Se realiza una tirada de pericia cada 60 pies (o fracción de ellos), y un fallo indica una caída. La tirada se realiza con una penalización de -10 si la superficie tiene 1 pulgada o menos de ancho (una cuerda), una penalización de -5 si tiene entre 2 y 6 pulgadas de ancho, y sin modificaciones si tiene entre 7 y 12 pulgadas de ancho. Si tiene más de 1 pie de ancho, no se requiere tirada para los personajes competentes en circunstancias normales. Cada slot adicional gastado en Caminar Sobre La Cuerda Floja reduce estas penalizaciones en 1. El uso de una barra de equilibrio reduce las penalizaciones en 2. El viento o las vibraciones en la cuerda aumentan las penalizaciones de 2 a 6.<br>El personaje puede intentar luchar mientras está en una cuerda floja, pero sufre una penalización de -5 a su tirada de ataque y debe realizar una tirada de pericia exitosa al comienzo de cada ronda para evitar caerse. Dado que el personaje no puede maniobrar, no obtiene ninguna bonificación a su AC por Destreza. Si es golpeado mientras está en la cuerda, debe realizar una tirada de pericia inmediata para mantener el equilibrio.<hr>Un bárbaro con esta pericia posee un sentido del equilibrio excepcionalmente desarrollado. En su tierra natal, podría usarla para sortear una estrecha cornisa de montaña o trepar por una liana tendida entre dos árboles. Se aplican las mismas bonificaciones y penalizaciones descritas en el <i>Manual del Jugador</i>; sin embargo, un bárbaro rara vez usa una vara de equilibrio.",
     "slots": 1,
     "ability": "Dex",
     "modifier": 0,
-    "class": "Rogue",
-    "source": "Player's Handbook",
+    "class": "Rogue, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 53,
     "name": "Tumbling",
-    "description": "El personaje está entrenado en todo tipo de Acrobacias: saltos, volteretas, mortales, paradas de manos, giros, etc. Las acrobacias solo se pueden realizar con una carga ligera o menor. Además de entretener, el personaje con pericia en acrobacias puede mejorar su AC en 4 contra ataques dirigidos únicamente a él en cualquier ronda de combate, siempre que tenga la iniciativa y renuncie a todos los ataques en esa ronda. Cuando está en combate sin armas puede mejorar su tirada de ataque en 2.<br>En una tirada de pericia exitosa, sufre solo la mitad del daño normal por caídas de 60 pies o menos y ninguno por caídas de 10 pies o menos. Las caídas desde alturas mayores resultan en daño normal.",
+    "description": "El personaje está entrenado en todo tipo de Acrobacias: saltos, volteretas, mortales, paradas de manos, giros, etc. Las acrobacias solo se pueden realizar con una carga ligera o menor. Además de entretener, el personaje con pericia en acrobacias puede mejorar su AC en 4 contra ataques dirigidos únicamente a él en cualquier ronda de combate, siempre que tenga la iniciativa y renuncie a todos los ataques en esa ronda. Cuando está en combate sin armas puede mejorar su tirada de ataque en 2.<br>En una tirada de pericia exitosa, sufre solo la mitad del daño normal por caídas de 60 pies o menos y ninguno por caídas de 10 pies o menos. Las caídas desde alturas mayores resultan en daño normal.<hr>En la mayoría de los casos, un bárbaro no usará la pericia de Acrobacia con fines de entretenimiento. En cambio, la usa para eludir y confundir a los enemigos. Obtiene las mejoras de AC, la tirada de ataque, las bonificaciones y las reducciones de daño por caídas descritas en el <i>Manual del Jugador</i>.",
     "slots": 1,
     "ability": "Dex",
     "modifier": 0,
-    "class": "Rogue",
-    "source": "Player's Handbook",
+    "class": "Rogue, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -596,12 +596,12 @@ const periciasData = [
   {
     "id": 55,
     "name": "Animal Lore",
-    "description": "La pericia Comprensión de Animales permite a un personaje observar las acciones o el hábitat de un animal e interpretar lo que sucede. Las acciones pueden mostrar cuán peligrosa es la criatura, si tiene hambre, protege a sus crías o defiende una guarida cercana. Además, la observación cuidadosa de señales y comportamientos puede incluso indicar la ubicación de un abrevadero, una manada de animales, un depredador o un peligro inminente, como un incendio forestal. El DM realizará en secreto una tirada de pericia. Una tirada exitosa significa que el personaje comprendió las acciones básicas de la criatura. Si la tirada falla por 4 o menos, no se obtiene información. Si la tirada falla por 5 o más, el personaje malinterpreta las acciones del animal.<br>Un personaje también puede imitar los llamados y gritos de animales con los que está razonablemente familiarizado, según su trasfondo. Esta habilidad está limitada por el volumen. El rugido de un tiranosaurio rex estaría más allá de las capacidades de un personaje normal. Una tirada de pericia exitosa significa que solo medios mágicos pueden distinguir el llamado del personaje del del animal real. El grito es suficiente para engañar a los animales, quizás asustándolos o atrayéndolos. Un fallo en la tirada significa que el sonido es ligeramente incorrecto. Un grito fallido aún puede engañar a algunos oyentes, pero las criaturas muy familiarizadas con el grito detectan automáticamente un falso. Todas las demás criaturas y personajes pueden realizar una tirada de Sabiduría para detectar el falso.<br>Finalmente, la pericia Comprensión de Animales (Animal Lore) aumenta la probabilidad de colocar trampas con éxito (para la caza), ya que el personaje conoce los hábitos generales de la criatura que se caza.",
+    "description": "La pericia Comprensión de Animales permite a un personaje observar las acciones o el hábitat de un animal e interpretar lo que sucede. Las acciones pueden mostrar cuán peligrosa es la criatura, si tiene hambre, protege a sus crías o defiende una guarida cercana. Además, la observación cuidadosa de señales y comportamientos puede incluso indicar la ubicación de un abrevadero, una manada de animales, un depredador o un peligro inminente, como un incendio forestal. El DM realizará en secreto una tirada de pericia. Una tirada exitosa significa que el personaje comprendió las acciones básicas de la criatura. Si la tirada falla por 4 o menos, no se obtiene información. Si la tirada falla por 5 o más, el personaje malinterpreta las acciones del animal.<br>Un personaje también puede imitar los llamados y gritos de animales con los que está razonablemente familiarizado, según su trasfondo. Esta habilidad está limitada por el volumen. El rugido de un tiranosaurio rex estaría más allá de las capacidades de un personaje normal. Una tirada de pericia exitosa significa que solo medios mágicos pueden distinguir el llamado del personaje del del animal real. El grito es suficiente para engañar a los animales, quizás asustándolos o atrayéndolos. Un fallo en la tirada significa que el sonido es ligeramente incorrecto. Un grito fallido aún puede engañar a algunos oyentes, pero las criaturas muy familiarizadas con el grito detectan automáticamente un falso. Todas las demás criaturas y personajes pueden realizar una tirada de Sabiduría para detectar el falso.<br>Finalmente, la pericia Comprensión de Animales (Animal Lore) aumenta la probabilidad de colocar trampas con éxito (para la caza), ya que el personaje conoce los hábitos generales de la criatura que se caza.<hr>Todos los bárbaros poseen automáticamente la pericia en Comprensión de Animales para las criaturas de su territorio natal. En situaciones donde se requiera una tirada, el DM deberá realizar una tirada de Inteligencia en su lugar.<br>Si un bárbaro invierte un slot en esta pericia, adquiere Comprensión Animal para criaturas distintas a las nativas de su territorio natal. Luego, aplica las reglas descritas en la pericia del Player's Handbook.",
     "slots": 1,
     "ability": "Int",
     "modifier": 0,
-    "class": "Warrior",
-    "source": "Player's Handbook",
+    "class": "Warrior, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -644,19 +644,19 @@ const periciasData = [
     "slots": 2,
     "ability": "Con",
     "modifier": 0,
-    "class": "Warrior, Rogue",
-    "source": "Player's Handbook, The Complete Thief's Handbook",
+    "class": "Warrior, Rogue, Barbarian",
+    "source": "Player's Handbook, The Complete Thief's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 60,
     "name": "Hunting",
-    "description": "En entornos salvajes, un personaje con la pericia Caza/Cacería puede intentar acechar y abatir a la presa. Se debe realizar una tirada de pericia con una penalización de -1 por cada cazador no competente del grupo. Si la tirada de dados es exitosa, el cazador (y quienes lo acompañan) se habrán acercado a entre 101 y 200 yardas (100+1d100) de un animal. El grupo puede intentar acortar la distancia, pero se debe realizar una tirada de pericia por cada 20 yardas que se acerquen. Si el acecho es exitoso, el cazador sorprende automáticamente a la presa. El tipo de animal acechado depende de la naturaleza del terreno y del criterio del DM.",
+    "description": "En entornos salvajes, un personaje con la pericia Caza/Cacería puede intentar acechar y abatir a la presa. Se debe realizar una tirada de pericia con una penalización de -1 por cada cazador no competente del grupo. Si la tirada de dados es exitosa, el cazador (y quienes lo acompañan) se habrán acercado a entre 101 y 200 yardas (100+1d100) de un animal. El grupo puede intentar acortar la distancia, pero se debe realizar una tirada de pericia por cada 20 yardas que se acerquen. Si el acecho es exitoso, el cazador sorprende automáticamente a la presa. El tipo de animal acechado depende de la naturaleza del terreno y del criterio del DM.<hr>Un bárbaro tiene un bonificador de +2 al usar la pericia Despiece de Animal (Animal Rending) cuando caza en el terreno de su tierra natal, o cuando caza un animal nativo de dicho terreno. Por ejemplo, un bárbaro de una tierra natal selvática no califica para un bonificador cuando caza en las llanuras. Pero si acecha a un animal de la jungla en las llanuras (como un tigre que escapó de la reserva de caza privada de un rey), realiza sus tiradas de periciacon un bonificador de +2.<br>La siguiente tabla indica la cantidad de raciones proporcionadas por animales de caza de varios tamaños. Estas cifras son aproximaciones; Las cantidades reales dependen del tamaño de los consumidores (un luchador corpulento puede necesitar más comida que un clérigo delgado), la edad (los adolescentes pueden comer más que los ancianos), la salud (un personaje sano puede necesitar menos comida que su compañero enfermo) y las actividades (un personaje que pasó el día luchando puede necesitar más comida que un amigo que pasó el día leyendo).<table><tr><th>Tamaño del animal</th><th>Cantidad de raciones*</th></tr><tr><td>Pequeño (S)</td><td>1-2/2-3</td></tr><tr><td>Mediano (M)</td><td>3-4/4-6</td></tr><tr><td>Grande (L)</td><td>5-8/8-12</td></tr><tr><td>Enorme (H)</td><td>9-15/15-25</td></tr></table><sub>*Una ración es la cantidad de alimento necesaria para alimentar a un adulto promedio durante un día. Las cifras a la izquierda de la barra indican la cantidad de raciones obtenidas cuando un personaje de pericia promedio realiza el despiece. La cifra a la derecha muestra la cantidad de raciones obtenidas por un personaje con la pericia de Despiece de Animales (Animal Rending).</sub>",
     "slots": 1,
     "ability": "Wis",
     "modifier": -1,
-    "class": "Warrior, Rogue",
-    "source": "Player's Handbook, The Complete Thief's Handbook",
+    "class": "Warrior, Rogue, Barbarian",
+    "source": "Player's Handbook, The Complete Thief's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -677,30 +677,30 @@ const periciasData = [
     "slots": 1,
     "ability": "Con",
     "modifier": -6,
-    "class": "Warrior",
-    "source": "Player's Handbook",
+    "class": "Warrior, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 63,
     "name": "Survival",
-    "description": "Al elegirse la pericia Supervivencia debe seleccionarse un entorno específico, es decir, a un tipo específico de terreno y factores climáticos. Los entornos típicos incluyen ártico, bosque, desierto, estepa, montaña o tropical. El personaje tiene conocimientos básicos de supervivencia para ese tipo de terreno. Se pueden usar espacios de pericia adicionales para agregar más tipos de terreno.<br>Un personaje hábil en Supervivencia tiene conocimientos básicos de los peligros que podría enfrentar en esa tierra. Comprende los efectos del clima y conoce los pasos adecuados para disminuir el riesgo de exposición. Conoce los métodos para localizar o recolectar agua potable. Sabe cómo encontrar comida básica (no necesariamente apetitosa) donde no es evidente, evitando así la inanición. Además, un personaje con la pericia de Supervivencia puede instruir y ayudar a otros en la misma situación. Al usar la pericia para encontrar comida o agua, el personaje debe hacer una tirada. Si falla la tirada, no puede hacer más intentos ese día.<br>La pericia Supervivencia no exime de ninguna manera a los personajes jugadores de las dificultades y los horrores de estar perdidos en la naturaleza. En el mejor de los casos, alivia una pequeña parte del sufrimiento. La comida que se encuentra es apenas suficiente, y el agua se halla en cantidades minúsculas. Aun así, es muy posible que un personaje con conocimientos de supervivencia muera en la naturaleza. De hecho, ¡el escaso conocimiento que posee el personaje puede llevarlo a la sobreconfianza y a la perdición!",
+    "description": "Al elegirse la pericia Supervivencia debe seleccionarse un entorno específico, es decir, a un tipo específico de terreno y factores climáticos. Los entornos típicos incluyen ártico, bosque, desierto, estepa, montaña o tropical. El personaje tiene conocimientos básicos de supervivencia para ese tipo de terreno. Se pueden usar espacios de pericia adicionales para agregar más tipos de terreno.<br>Un personaje hábil en Supervivencia tiene conocimientos básicos de los peligros que podría enfrentar en esa tierra. Comprende los efectos del clima y conoce los pasos adecuados para disminuir el riesgo de exposición. Conoce los métodos para localizar o recolectar agua potable. Sabe cómo encontrar comida básica (no necesariamente apetitosa) donde no es evidente, evitando así la inanición. Además, un personaje con la pericia de Supervivencia puede instruir y ayudar a otros en la misma situación. Al usar la pericia para encontrar comida o agua, el personaje debe hacer una tirada. Si falla la tirada, no puede hacer más intentos ese día.<br>La pericia Supervivencia no exime de ninguna manera a los personajes jugadores de las dificultades y los horrores de estar perdidos en la naturaleza. En el mejor de los casos, alivia una pequeña parte del sufrimiento. La comida que se encuentra es apenas suficiente, y el agua se halla en cantidades minúsculas. Aun así, es muy posible que un personaje con conocimientos de supervivencia muera en la naturaleza. De hecho, ¡el escaso conocimiento que posee el personaje puede llevarlo a la sobreconfianza y a la perdición!.<hr>Todo bárbaro posee habilidades básicas de supervivencia en su tierra natal; la pericia en Supervivencia no es necesaria. Si un bárbaro gasta slots para adquirir esta pericia, elige un tipo de terreno distinto al de su tierra natal, lo que le otorga Supervivencia en dos terrenos. Más slots le proporcionan habilidades de supervivencia en terrenos adicionales. Durante la creación del personaje, el jugador debe justificar cómo el bárbaro posee estas pericias.",
     "slots": 2,
     "ability": "Int",
     "modifier": 0,
-    "class": "Warrior",
-    "source": "Player's Handbook",
+    "class": "Warrior, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
     "id": 64,
     "name": "Tracking",
-    "description": "Los personajes con pericia de Rastreo pueden seguir el rastro de criaturas y personajes en la mayoría de los terrenos. Los personajes que no son Rangers realizan una tirada con una penalización de -6; los rangers no sufren ninguna penalización. Además, también se aplican otros modificadores al intento, según la siguiente tabla:<table><tr><th>Terreno</th><th>Modificador</th></tr><tr><td>Terreno blando o fangoso</td><td>+4</td></tr><tr><td>Matorrales densos, enredaderas o juncos</td><td>+3</td></tr><tr><td>Señales ocasionales de paso, polvo</td><td>+2</td></tr><tr><td>Terreno normal, suelo de madera</td><td>0</td></tr><tr><td>Terreno rocoso o agua poco profunda</td><td>-10</td></tr><tr><td>Cada dos criaturas en el grupo</td><td>+1</td></tr><tr><td>Cada 12 horas desde que se abrió el rastro</td><td>-1</td></tr><tr><td>Cada hora de lluvia, nieve o aguanieve</td><td>-5</td></tr><tr><td>Iluminación escasa (luz de la luna o de las estrellas)</td><td>-6</td></tr><tr><td>Intentos del grupo rastreado de ocultar el rastro </td><td>-5</td></tr></table>Los modificadores de la tabla anterior son acumulativos: suma los modificadores de todas las condiciones que se aplican y combínalos con la puntuación de Sabiduría del rastreador para obtener la probabilidad modificada de rastrear. Por ejemplo, si la puntuación de Sabiduría de Thule es 16 y está intentando rastrear a través del barro (+4), de noche (–6), durante una tormenta de aguanieve (–5), su probabilidad de rastrear es 9 (16+4–6–5). (Thule es un ranger, por lo que no sufre la penalización de -6 por rastreo de no ranger).<br>Para que el rastreo tenga éxito, la criatura rastreada debe dejar algún tipo de rastro. Por lo tanto, es prácticamente imposible rastrear criaturas voladoras o incorpóreas. El DM puede permitir esto en raras ocasiones, pero también debe asignar penalizaciones sustanciales al intento.<br>Para rastrear una criatura, el personaje primero debe encontrar el rastro. En interiores, el rastreador debe haber visto a la criatura en los últimos 30 minutos y debe comenzar a rastrear desde el lugar donde fue vista por última vez. En exteriores, el rastreador debe haber visto a la criatura, tener informes de testigos presenciales de su movimiento reciente ('Sí, vimos a esos orcos salir corriendo por ese sendero ayer mismo'), o debe tener evidencia obvia de que la criatura está en el área (como un sendero de caza muy usado). Si se cumplen estas condiciones, se tira una tirada de pericia. Éxito significa que se ha encontrado un rastro. Fallo significa que no se ha encontrado ningún rastro. No se puede realizar otro intento hasta que se cumplan nuevamente las condiciones anteriores en circunstancias diferentes.<br>Una vez encontrado el rastro, se realizan tiradas de pericia adicionales para las siguientes situaciones:<ul>La probabilidad de rastrear disminuye (terreno, lluvia, criaturas, separarse del grupo, oscuridad, etc.)</ul><ul>Un segundo rastro cruza el primero</ul><ul>El grupo reanuda el rastreo después de una parada (para descansar, comer, luchar, etc.)</ul>Una vez que el rastreador falla una tirada de pericia, se puede realizar otra tirada después de pasar al menos una hora buscando nuevas señales en la zona. Si se falla esta tirada, no se pueden realizar más intentos. Si varios rastreadores siguen un rastro, se añade un bonificador de +1 a la puntuación de característica del rastreador más hábil. Una vez que pierde el rastro, se pierde para todos.<br>Si los modificadores reducen la probabilidad de rastrear por debajo de 0 (por ejemplo, los modificadores son –11 y la Sabiduría del personaje es 10), el rastro se pierde por completo para ese personaje y es imposible seguir rastreando (incluso si la probabilidad mejora más adelante). Otros personajes pueden continuar rastreando, pero ese personaje no.<br>Un personaje rastreador también puede intentar identificar el tipo de criaturas que está siguiendo y el número aproximado tirando una prueba de pericia. Se aplican todos los modificadores de rastreo normales. Se puede tirar Rastreo una segunda ocasión para intentar identificar el tipo de criatura cada vez que se tira con éxito una prueba para seguir el rastro. Una tirada exitosa identifica a las criaturas (siempre que el personaje tenga algún conocimiento de ese tipo de criatura) y da una estimación aproximada de la cantidad de seres. La precisión de esta estimación depende del DM.<br>Al seguir un rastro, el personaje (y quienes lo acompañan) deben reducir la velocidad, dependiendo de la probabilidad modificada de rastreo del personaje, según se encuentra en la siguiente tabla:<table><tr><th>Probabilidad de rastreo</th><th>Velocidad de movimiento</th></tr><tr><td>1-6</td><td>1/4 de lo normal</td></tr><tr><td>7-14</td><td>1/2 de lo normal</td></tr><tr><td>14 o más</td><td>3/4 de lo normal</td></tr></table>En el ejemplo anterior, Thule tiene una probabilidad de rastreo modificada de 9 (sumatoria final), por lo que se mueve a la mitad de su velocidad de moviento normal",
+    "description": "Los personajes con pericia de Rastreo pueden seguir el rastro de criaturas y personajes en la mayoría de los terrenos. Los personajes que no son Rangers realizan una tirada con una penalización de -6; los rangers no sufren ninguna penalización. Además, también se aplican otros modificadores al intento, según la siguiente tabla:<table><tr><th>Terreno</th><th>Modificador</th></tr><tr><td>Terreno blando o fangoso</td><td>+4</td></tr><tr><td>Matorrales densos, enredaderas o juncos</td><td>+3</td></tr><tr><td>Señales ocasionales de paso, polvo</td><td>+2</td></tr><tr><td>Terreno normal, suelo de madera</td><td>0</td></tr><tr><td>Terreno rocoso o agua poco profunda</td><td>-10</td></tr><tr><td>Cada dos criaturas en el grupo</td><td>+1</td></tr><tr><td>Cada 12 horas desde que se abrió el rastro</td><td>-1</td></tr><tr><td>Cada hora de lluvia, nieve o aguanieve</td><td>-5</td></tr><tr><td>Iluminación escasa (luz de la luna o de las estrellas)</td><td>-6</td></tr><tr><td>Intentos del grupo rastreado de ocultar el rastro </td><td>-5</td></tr></table>Los modificadores de la tabla anterior son acumulativos: suma los modificadores de todas las condiciones que se aplican y combínalos con la puntuación de Sabiduría del rastreador para obtener la probabilidad modificada de rastrear. Por ejemplo, si la puntuación de Sabiduría de Thule es 16 y está intentando rastrear a través del barro (+4), de noche (–6), durante una tormenta de aguanieve (–5), su probabilidad de rastrear es 9 (16+4–6–5). (Thule es un ranger, por lo que no sufre la penalización de -6 por rastreo de no ranger).<br>Para que el rastreo tenga éxito, la criatura rastreada debe dejar algún tipo de rastro. Por lo tanto, es prácticamente imposible rastrear criaturas voladoras o incorpóreas. El DM puede permitir esto en raras ocasiones, pero también debe asignar penalizaciones sustanciales al intento.<br>Para rastrear una criatura, el personaje primero debe encontrar el rastro. En interiores, el rastreador debe haber visto a la criatura en los últimos 30 minutos y debe comenzar a rastrear desde el lugar donde fue vista por última vez. En exteriores, el rastreador debe haber visto a la criatura, tener informes de testigos presenciales de su movimiento reciente ('Sí, vimos a esos orcos salir corriendo por ese sendero ayer mismo'), o debe tener evidencia obvia de que la criatura está en el área (como un sendero de caza muy usado). Si se cumplen estas condiciones, se tira una tirada de pericia. Éxito significa que se ha encontrado un rastro. Fallo significa que no se ha encontrado ningún rastro. No se puede realizar otro intento hasta que se cumplan nuevamente las condiciones anteriores en circunstancias diferentes.<br>Una vez encontrado el rastro, se realizan tiradas de pericia adicionales para las siguientes situaciones:<ul>La probabilidad de rastrear disminuye (terreno, lluvia, criaturas, separarse del grupo, oscuridad, etc.)</ul><ul>Un segundo rastro cruza el primero</ul><ul>El grupo reanuda el rastreo después de una parada (para descansar, comer, luchar, etc.)</ul>Una vez que el rastreador falla una tirada de pericia, se puede realizar otra tirada después de pasar al menos una hora buscando nuevas señales en la zona. Si se falla esta tirada, no se pueden realizar más intentos. Si varios rastreadores siguen un rastro, se añade un bonificador de +1 a la puntuación de característica del rastreador más hábil. Una vez que pierde el rastro, se pierde para todos.<br>Si los modificadores reducen la probabilidad de rastrear por debajo de 0 (por ejemplo, los modificadores son –11 y la Sabiduría del personaje es 10), el rastro se pierde por completo para ese personaje y es imposible seguir rastreando (incluso si la probabilidad mejora más adelante). Otros personajes pueden continuar rastreando, pero ese personaje no.<br>Un personaje rastreador también puede intentar identificar el tipo de criaturas que está siguiendo y el número aproximado tirando una prueba de pericia. Se aplican todos los modificadores de rastreo normales. Se puede tirar Rastreo una segunda ocasión para intentar identificar el tipo de criatura cada vez que se tira con éxito una prueba para seguir el rastro. Una tirada exitosa identifica a las criaturas (siempre que el personaje tenga algún conocimiento de ese tipo de criatura) y da una estimación aproximada de la cantidad de seres. La precisión de esta estimación depende del DM.<br>Al seguir un rastro, el personaje (y quienes lo acompañan) deben reducir la velocidad, dependiendo de la probabilidad modificada de rastreo del personaje, según se encuentra en la siguiente tabla:<table><tr><th>Probabilidad de rastreo</th><th>Velocidad de movimiento</th></tr><tr><td>1-6</td><td>1/4 de lo normal</td></tr><tr><td>7-14</td><td>1/2 de lo normal</td></tr><tr><td>14 o más</td><td>3/4 de lo normal</td></tr></table>En el ejemplo anterior, Thule tiene una probabilidad de rastreo modificada de 9 (sumatoria final), por lo que se mueve a la mitad de su velocidad de moviento normal.<hr>Un bárbaro posee automáticamente la pericia de Rastreo en el terreno de su tierra natal (véase el Capítulo 1 de <i>The Complete Barbarian's Handbook</i>). Si gasta dos slots, adquiere la pericia de Rastreo de un Ranger del mismo nivel. Generalmente, su probabilidad de éxito se reduce a la mitad en terrenos urbanos y artificiales.",
     "slots": 2,
     "ability": "Wis",
     "modifier": 0,
-    "class": "Warrior",
-    "source": "Player's Handbook",
+    "class": "Warrior, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -710,8 +710,8 @@ const periciasData = [
     "slots": 3,
     "ability": "Int",
     "modifier": -3,
-    "class": "Warrior",
-    "source": "Player's Handbook",
+    "class": "Warrior, Barbarian",
+    "source": "Player's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -721,8 +721,8 @@ const periciasData = [
     "slots": 1,
     "ability": "Wis",
     "modifier": 1,
-    "class": "Ranger, General, Rogue",
-    "source": "The Complete Ranger's Handbook, The Complete Thief's Handbook",
+    "class": "Ranger, General, Rogue, Barbarian",
+    "source": "The Complete Ranger's Handbook, The Complete Thief's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -732,8 +732,8 @@ const periciasData = [
     "slots": 1,
     "ability": "Wis",
     "modifier": 1,
-    "class": "Ranger, General, Rogue",
-    "source": "The Complete Ranger's Handbook, The Complete Thief's Handbook",
+    "class": "Ranger, General, Rogue, Barbarian",
+    "source": "The Complete Ranger's Handbook, The Complete Thief's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -743,7 +743,7 @@ const periciasData = [
     "slots": 1,
     "ability": "Wis",
     "modifier": 0,
-    "class": "Ranger, Fighter, Rogue",
+    "class": "Ranger, Warrior, Rogue",
     "source": "The Complete Ranger's Handbook",
     "race": "General"
   },
@@ -776,8 +776,8 @@ const periciasData = [
     "slots": 1,
     "ability": "Int",
     "modifier": -2,
-    "class": "Ranger, Warrior, Rogue",
-    "source": "The Complete Ranger's Handbook",
+    "class": "Ranger, Warrior, Rogue, Barbarian",
+    "source": "The Complete Ranger's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -809,8 +809,8 @@ const periciasData = [
     "slots": 1,
     "ability": "Int",
     "modifier": -2,
-    "class": "Ranger, General",
-    "source": "The Complete Ranger's Handbook",
+    "class": "Ranger, General, Barbarian",
+    "source": "The Complete Ranger's Handbook, The Complete Barbarian's Handbook",
     "race": "General"
   },
   {
@@ -959,7 +959,7 @@ const periciasData = [
   {
     "id": 88,
     "name": "Trailing",
-    "description": "La pericia Seguimiento se asemeja a Rastreo (Tracking), excepto que el rastreo se asocia principalmente con la naturaleza salvaje, y el seguimiento se usa típicamente en los principales centros urbanos (es decir, ciudades y pueblos grandes). Es la habilidad de seguir a alguien, de mantener cierta distancia o incluso alcanzarlo, aunque esté intentando mezclarse entre la multitud, o al menos perderse en la confusión de una calle llena de gente.<br>Primero se realiza una tirada de pericia para ver si el ladrón puede seguir sin ser detectado. Si la persona seguida tiene la competencia de Alerta (Alertness), entonces el ladrón sufre una penalización de -5.<br>Si el ladrón es detectado, la persona seguida puede intentar evadir. Para no perder el seguimiento, el ladrón debe hacer otra tirada de pericia. Se puede usar un modificador de -3 a +3 (que varía desde la primera vez en una ciudad extranjera hasta el barrio de origen del ladrón), si el DM así lo elige, para reflejar qué tan bien conoce el ladrón la zona. Avisa al jugador de antemano si aplicarás modificadores (aunque no es necesario que le digas exactamente cuáles son).<br>El DM debería sentirse libre de usar modificadores situacionales en estas tiradas. Por ejemplo, si una calle está relativamente poblada, el ladrón debería obtener -1 o -2 en un intento de seguir sin ser visto, pero +1 o +2 si ha sido visto y está persiguiendo a su objetivo. Los números opuestos podrían usarse para situaciones excepcionalmente concurridas o de noche.<br>Para cualquier tirada de Seguimiento, se aplica una penalización de -3 si la persona seguida también tiene la competencia de Seguimiento (y, presumiblemente, sabe mejor cómo frustrar los trucos de su propio oficio).",
+    "description": "La pericia Seguimiento se asemeja a Rastreo (Tracking), excepto que el rastreo se asocia principalmente con la naturaleza salvaje, y el seguimiento se usa típicamente en los principales centros urbanos (es decir, ciudades y pueblos grandes). Es la habilidad de seguir a alguien, de mantener cierta distancia o incluso alcanzarlo, aunque esté intentando mezclarse entre la multitud, o al menos perderse en la confusión de una calle llena de gente.<br>Primero se realiza una tirada de pericia para ver si el ladrón puede seguir sin ser detectado. Si la persona seguida tiene la pericia de Alerta (Alertness), entonces el ladrón sufre una penalización de -5.<br>Si el ladrón es detectado, la persona seguida puede intentar evadir. Para no perder el seguimiento, el ladrón debe hacer otra tirada de pericia. Se puede usar un modificador de -3 a +3 (que varía desde la primera vez en una ciudad extranjera hasta el barrio de origen del ladrón), si el DM así lo elige, para reflejar qué tan bien conoce el ladrón la zona. Avisa al jugador de antemano si aplicarás modificadores (aunque no es necesario que le digas exactamente cuáles son).<br>El DM debería sentirse libre de usar modificadores situacionales en estas tiradas. Por ejemplo, si una calle está relativamente poblada, el ladrón debería obtener -1 o -2 en un intento de seguir sin ser visto, pero +1 o +2 si ha sido visto y está persiguiendo a su objetivo. Los números opuestos podrían usarse para situaciones excepcionalmente concurridas o de noche.<br>Para cualquier tirada de Seguimiento, se aplica una penalización de -3 si la persona seguida también tiene la pericia de Seguimiento (y, presumiblemente, sabe mejor cómo frustrar los trucos de su propio oficio).",
     "slots": 1,
     "ability": "Dex",
     "modifier": "Special",
@@ -1102,7 +1102,7 @@ const periciasData = [
   {
     "id": 101,
     "name": "Feign/Detect Sleep",
-    "description": "Quienes fingen dormir rara vez lo hacen bien. Sin embargo, la mayoría desconoce cómo distinguir a los impostores de los que realmente duermen. Los personajes con la pericia Fingir/Detectar Dormido están entrenados para simular el sueño con precisión y para determinar cuándo otros lo fingen. Esta habilidad es especialmente útil para los ninjas de guardia y para quienes se infiltran en un lugar seguro. Un ninja la usará al escuchar a guardias e invitados que parecen dormir. Si detecta a alguien con una respiración irregular, puede tomar medidas para capturar o silenciar al impostor. Asimismo, un ninja puede usar esta habilidad para convencer a un intruso de que está profundamente dormido, de modo que pueda acercarse sigilosamente por detrás cuando esté de espaldas. La habilidad de Actuación (Acting) puede otorgar la capacidad de fingir el sueño, pero la tirada de Actuación se realiza con una penalización de -4 en lugar de la regular de -1.",
+    "description": "Quienes fingen dormir rara vez lo hacen bien. Sin embargo, la mayoría desconoce cómo distinguir a los impostores de los que realmente duermen. Los personajes con la pericia Fingir/Detectar Siesta están entrenados para simular el sueño con precisión y para determinar cuándo otros lo fingen. Esta habilidad es especialmente útil para los ninjas de guardia y para quienes se infiltran en un lugar seguro. Un ninja la usará al escuchar a guardias e invitados que parecen dormir. Si detecta a alguien con una respiración irregular, puede tomar medidas para capturar o silenciar al impostor. Asimismo, un ninja puede usar esta habilidad para convencer a un intruso de que está profundamente dormido, de modo que pueda acercarse sigilosamente por detrás cuando esté de espaldas. La habilidad de Actuación (Acting) puede otorgar la capacidad de fingir el sueño, pero la tirada de Actuación se realiza con una penalización de -4 en lugar de la regular de -1.",
     "slots": 1,
     "ability": "Int",
     "modifier": "0",
@@ -1179,7 +1179,7 @@ const periciasData = [
   {
     "id": 108,
     "name": "Underclass",
-    "description": "La pericia Clase Baja proporciona una comprensión del funcionamiento de la subclase —la combinación de clases más pobres y elementos criminales— en una sociedad. El personaje con esta competencia puede realizar una tirada de Clase Baja para obtener información sobre el submundo de cualquier comunidad que visite. El DM debe asignar tiempo y penalizaciones a la tirada en función de las diferencias culturales y la sensibilidad de la información que busca el personaje. Intentar comprar un arma ilegal llevaría aproximadamente una hora y resultaría en una penalización de 0 o -1. Buscar el escondite secreto del capo local podría llevar semanas e impondría una penalización de -8 o peor.",
+    "description": "La pericia Clase Baja proporciona una comprensión del funcionamiento de la subclase —la combinación de clases más pobres y elementos criminales— en una sociedad. El personaje con esta pericia puede realizar una tirada de Clase Baja para obtener información sobre el submundo de cualquier comunidad que visite. El DM debe asignar tiempo y penalizaciones a la tirada en función de las diferencias culturales y la sensibilidad de la información que busca el personaje. Intentar comprar un arma ilegal llevaría aproximadamente una hora y resultaría en una penalización de 0 o -1. Buscar el escondite secreto del capo local podría llevar semanas e impondría una penalización de -8 o peor.",
     "slots": 1,
     "ability": "Wis",
     "modifier": "0",
@@ -1256,13 +1256,13 @@ const periciasData = [
   {
     "id": 115,
     "name": "Hiding",
-    "description": "Ocultarse es la capacidad de seleccionar instintivamente el mejor escondite en casi cualquier circunstancia. Los humanoides que superan las pruebas pueden prácticamente desaparecer de la vista. El éxito se determina mediante modificadores basados ​​en la Inteligencia del personaje del que se intenta ocultar. Esta competencia funciona independientemente de cualquier camuflaje natural o habilidad para ocultarse que el humanoide ya posea.<table><tr><th>Inteligencia del Oponente</th><th>Modificador</th></tr><tr><td>3 o menos</td><td>-5</td></tr><tr><td>4-5</td><td>-3</td></tr><tr><td>6-8</td><td>-1</td></tr><tr><td>9-12</td><td>0</td></tr><tr><td>13-15</td><td>+1</td></tr><tr><td>16-17</td><td>+2</td></tr><tr><td>18</td><td>+3</td></tr><tr><td>19</td><td>+5</td></tr><tr><td>20 o más</td><td>+7</td></tr></table>",
+    "description": "Ocultarse es la capacidad de seleccionar instintivamente el mejor escondite en casi cualquier circunstancia. Los humanoides que superan las pruebas pueden prácticamente desaparecer de la vista. El éxito se determina mediante modificadores basados ​​en la Inteligencia del personaje del que se intenta ocultar. Esta pericia funciona independientemente de cualquier camuflaje natural o habilidad para ocultarse que el humanoide ya posea.<table><tr><th>Inteligencia del Oponente</th><th>Modificador</th></tr><tr><td>3 o menos</td><td>-5</td></tr><tr><td>4-5</td><td>-3</td></tr><tr><td>6-8</td><td>-1</td></tr><tr><td>9-12</td><td>0</td></tr><tr><td>13-15</td><td>+1</td></tr><tr><td>16-17</td><td>+2</td></tr><tr><td>18</td><td>+3</td></tr><tr><td>19</td><td>+5</td></tr><tr><td>20 o más</td><td>+7</td></tr></table>",
     "slots": 2,
     "ability": "Int",
     "modifier": "-1",
-    "class": "General",
-    "source": "The Complete Book of Humanoids",
-    "race": "Humanoid"
+    "class": "General, Barbarian",
+    "source": "The Complete Book of Humanoids, The Complete Barbarian's Handbook",
+    "race": "Humanoid, General (Barbarian Only)"
   },
   {
     "id": 116,
@@ -1304,9 +1304,9 @@ const periciasData = [
     "slots": 2,
     "ability": "Con",
     "modifier": "0",
-    "class": "Warrior",
-    "source": "The Complete Book of Humanoids",
-    "race": "Humanoid"
+    "class": "Warrior, Barbarian",
+    "source": "The Complete Book of Humanoids, The Complete Barbarian's Handbook",
+    "race": "Humanoid, General (Barbarian Only)"
   },
   {
     "id": 120,
@@ -1359,9 +1359,9 @@ const periciasData = [
     "slots": 1,
     "ability": "Int",
     "modifier": "+2",
-    "class": "General",
-    "source": "The Complete Book of Dwarves",
-    "race": "Dwarf"
+    "class": "General, Barbarian",
+    "source": "The Complete Book of Dwarves, The Complete Barbarian's Handbook",
+    "race": "Dwarf, General (Barbarian Only)"
   },
   {
     "id": 125,
@@ -1410,7 +1410,7 @@ const periciasData = [
   {
     "id": 129,
     "name": "Pest Control",
-    "description": "Control de Plagas se utiliza para mantener las fortalezas enanas libres de plagas como ratas, carroñeros, jermalaines, kobolds y otras criaturas pequeñas. Similar a la pericia de Montar Trampas (Set Snares), se centra en capturar plagas subterráneas y no utiliza trampas. Las trampas se colocan para activar jaulas metálicas, redes de caída o puertas de hierro que cierran secciones individuales de túneles. Se pueden colocar trampas de resorte o pequeñas trampas mortales (daño máximo 1d6) utilizando esta competencia. No hay modificador de -4 al usar el control de plagas para atrapar criaturas más grandes.<br>Solo los personajes ladrones pueden usar esta competencia para colocar trampas más grandes adecuadas para criaturas del tamaño de humanos u orcos. Estas trampas pueden incluir ballestas, trampas mortales más grandes y trampolines con pinchos.<br>Un personaje con esta pericia no tiene la capacidad de fabricar los objetos necesarios para estos dispositivos; solo puede colocar las trampas y sus activadores.<br>Se debe realizar una tirada al colocar la trampa. Un fallo en la pericia significa que la trampa no funcionará. Puede que no se haya colocado correctamente, que esté mal ocultada o que sea demasiado pequeña o demasiado grande para que la criatura la active.<br>Colocar una trampa lleva una hora y el personaje debe tener el equipo y los materiales adecuados.<br>Los personajes con pericia Comprensión de Animales (Animal Lore) obtienen un bonificador de +2 al intentar colocar trampas para atrapar plagas animales.",
+    "description": "Control de Plagas se utiliza para mantener las fortalezas enanas libres de plagas como ratas, carroñeros, jermalaines, kobolds y otras criaturas pequeñas. Similar a la pericia de Montar Trampas (Set Snares), se centra en capturar plagas subterráneas y no utiliza trampas. Las trampas se colocan para activar jaulas metálicas, redes de caída o puertas de hierro que cierran secciones individuales de túneles. Se pueden colocar trampas de resorte o pequeñas trampas mortales (daño máximo 1d6) utilizando esta pericia. No hay modificador de -4 al usar el control de plagas para atrapar criaturas más grandes.<br>Solo los personajes ladrones pueden usar esta pericia para colocar trampas más grandes adecuadas para criaturas del tamaño de humanos u orcos. Estas trampas pueden incluir ballestas, trampas mortales más grandes y trampolines con pinchos.<br>Un personaje con esta pericia no tiene la capacidad de fabricar los objetos necesarios para estos dispositivos; solo puede colocar las trampas y sus activadores.<br>Se debe realizar una tirada al colocar la trampa. Un fallo en la pericia significa que la trampa no funcionará. Puede que no se haya colocado correctamente, que esté mal ocultada o que sea demasiado pequeña o demasiado grande para que la criatura la active.<br>Colocar una trampa lleva una hora y el personaje debe tener el equipo y los materiales adecuados.<br>Los personajes con pericia Comprensión de Animales (Animal Lore) obtienen un bonificador de +2 al intentar colocar trampas para atrapar plagas animales.",
     "slots": 1,
     "ability": "Wis",
     "modifier": "0",
@@ -1473,4 +1473,147 @@ const periciasData = [
     "source": "The Complete Bard's Handbook",
     "race": "General"
   },
+  {
+    "id": 135,
+    "name": "Animal Rending",
+    "description": "Despiece de Animal (Animal Rending) confiere pericia en el desollado y despiece de cadáveres de animales. Permite a un personaje obtener la máxima cantidad de alimento de un cadáver (véase la tabla en la pericia Caza (Hunting) de la modificación para Bárbaros). También le permite obtener productos valiosos del cadáver sin dañarlos. Estos productos suelen incluir pieles, cuernos, dientes, cueros y órganos. El uso de esta pericia requiere acceso a las herramientas necesarias. No se requieren tiradas para despiezar la mayoría de los animales, pero el DM puede requerirlas en situaciones inusuales. Por ejemplo, puede ser necesaria una tirada para despiezar un animal que el personaje nunca ha visto antes, o para obtener con éxito una parte delicada del cuerpo (por ejemplo, el ojo de un Beholder no maduro). Si la tirada falla, el personaje solo puede obtener una cantidad media de alimento (véase la tabla en la pericia Caza (Hunting) de la modificación para Bárbaros), o daña la parte del cuerpo que intentaba obtener.",
+    "slots": 1,
+    "ability": "Dex",
+    "modifier": "+2",
+    "class": "Barbarian, Warrior",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 136,
+    "name": "Armorer, Crude",
+    "description": "Con la pericia de Armero (Rudimentario), un personaje puede fabricar armaduras rudimentarias pero efectivas con materiales naturales como pieles, pelajes y conchas. No puede crear armaduras con una AC mejor a 6.<br>Se tarda una semana por cada nivel de CA inferior a 10 en fabricar una armadura rudimentaria (siempre que se disponga de los materiales necesarios). Un personaje puede fabricar una armadura de piel en cuatro semanas y un escudo en solo una.<br>Las armaduras rudimentarias suelen ser más defectuosas y menos duraderas que las armaduras estándar. Tras crear una armadura rudimentaria, se realiza una tirada de pericia. Si la tirada falla por más de 4, la armadura es inservible. Si la tirada fallida está a menos de 4 puntos del valor necesario para tener éxito, la armadura es defectuosa y funciona con un AC 2 puntos peor a la normal (pero nunca peor que 10). Una armadura de piel rudimentaria defectuosa tiene un AC de 8; un escudo rudimentario defectuoso no ofrece ninguna protección.<br>Si una armadura rudimentaria defectuosa recibe un golpe en combate cuerpo a cuerpo con una tirada de dado natural de 19 o 20, se rompe. El AC del portador empeora inmediatamente en 4 (hasta un límite de AC 10). Quitarse la armadura inútil lleva 1d4 rondas; durante ese tiempo, el portador se mueve a la mitad de su velocidad normal y sufre una penalización de 4 a todas las tiradas de ataque.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "-1",
+    "class": "Barbarian, Warrior",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 137,
+    "name": "Bartering",
+    "description": "El Trueque, que simula una pericia en el comercio y la tasación, tiene dos aplicaciones:<ul><b><i>Comprobación de valor:</b></i> Con una tirada de pericia exitosa, el personaje puede acceder al valor aproximado de un objeto común (una lanza, un pollo, una bolsa de arroz). La pericia solo funciona con objetos con un valor real de 50 monedas de oro o menos. No funciona con objetos mágicos. Un personaje solo puede hacer un intento por objeto.<br></ul><ul><b><i>Comprobación de descuento:</b></i> Esta pericia también puede ayudar al personaje a comprar objetos a precios de ganga mediante la intimidación, la terquedad y la pura fuerza de la persistencia. El personaje debe indicar un objeto en particular (con un valor de 50 monedas de oro o menos) y hacer una tirada de pericia. Si la tirada es exitosa, el personaje puede comprar el objeto con hasta un 20% menos que el precio de venta. El DM determina el descuento (entre el 10 y el 20%); Si lo prefiere, puede determinar el descuento aleatoriamente (tirar 1d4 y multiplicar el resultado por 5%). Si la tirada falla, el comprador no recibe ningún beneficio especial de la pericia (aún puede comprar el artículo al precio de venta). Con una tirada natural de 1, el comprador recibe un descuento del 30-50%. Con una tirada de 20, el vendedor se ofende por la actitud del comprador y se niega a venderle nada.<br>Solo se puede hacer una <b></i>Comprobación de descuento</i></b> por artículo. Sin embargo, se puede hacer una <b><i>Comprobación de valor</i></b> y una <b><i>Comprobación de descuento</i></b> en el mismo artículo (la <b><i>Comprobación de descuento</i></b> se puede hacer independientemente del resultado de la <b><i>Comprobación de valor</i></b>).</ul><ul><b><i>Bárbaros:</i></b> Siempre que sea posible, los valores deben expresarse en un medio de intercambio utilizado en la tierra natal del bárbaro. Si un bárbaro suele comerciar con pieles de lince (con un valor de 2 monedas de oro cada una) y determina correctamente el valor de una canoa pequeña (con un valor de 30 monedas de oro), el DM podría decirle que la canoa vale 'unas 15 pieles de lince' o 'entre 14 y 16 pieles de lince'. Si realiza una tirada de descuento exitosa y el DM decide darle un descuento del 20%, la canoa le costará 12 pieles. Los valores fraccionarios deben resolverse a favor del vendedor; si el bárbaro recibe un descuento del 30% en una canoa de 30 monedas de oro (para un precio final de 21 monedas de oro), la canoa le costará 11 pieles (valoradas en 22 monedas de oro).",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "-2",
+    "class": "Barbarian, Rogue",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 138,
+    "name": "Bowyer/Fletcher, Crude",
+    "description": "Con la pericia de Arquero/Flechero (Rudimentario), un personaje puede fabricar arcos cortos y flechas. Para fabricar arcos cortos, el personaje debe ser competente en su uso. Para fabricar flechas, debe ser competente en algún tipo de arco.<br>Si el personaje tiene la pericia de Caza/Cacería (Hunting), recibe un bonificador de +3 a todas las tiradas de pericia de de Arquero/Flechero (Rudimentario).<br>Debido a que los arcos y flechas primitivos utilizan materiales naturales, como hueso, madera y piedra, y no se requiere una artesanía fina, el tiempo de construcción se reduce. Las puntas de flecha deben ser hechas por Forjadores de Armas (Weaponsmithing), pero el Arquero/Flechero (Rudimentario) fabrica los arcos, las astas y las cuerdas.<table><tr><th>Arma</th><th>Tiempo de creación</th></tr><tr><td>Flecha, Descarga (Flight)</td><td>7 al día</td></tr><tr><td>Flecha, Incendiaria o Veneno</td><td>5 al día</td></tr><tr><td>Arco, corto</td><td>12 días para crear 1</td></tr></table><br>Al igual que con la pericia estándar de Arquero/Flechero (Bowyer/Fletcher), las armas hechas con esta pericia deben ser revisadas para comprobar su calidad. Una prueba de pericia fallida, realizada cuando el arma está terminada significa que la flecha se rompe en el primer disparo; Un arco se rompe si el personaje que lo usa obtiene un 1 sin modificar en su tirada de ataque de 1d20.<br>Esta pericia no permite la opción de crear armas de alta calidad, incluido el arco largo.",
+    "slots": 1,
+    "ability": "Dex",
+    "modifier": "0",
+    "class": "Barbarian, Warrior",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 139,
+    "name": "Clothesmaking, Crude",
+    "description": "La pericia Confección de Ropa (Rudimentaria) permite a un personaje crear prendas sencillas con pieles, cueros, hojas y otros materiales naturales. Si bien la ropa rudimentaria no es atractiva ni elegante, suele ser cómoda y funcional. Los mantos de piel, las faldas de hierba y los taparrabos de cuero son ejemplos típicos.",
+    "slots": 1,
+    "ability": "Int",
+    "modifier": "-1",
+    "class": "Barbarian, General",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 140,
+    "name": "Danger Sense (Barbarian)",
+    "description": "Sentido del Peligro (Bárbaro) otorga al personaje un sexto sentido que le advierte de peligros inminentes como trampas, riesgos y emboscadas. Cuando el personaje está a aproximadamente un round de activar la amenaza (por ejemplo, en un round pisará una serpiente de cascabel si continúa moviéndose a su ritmo actual), el DM realiza una tirada de pericia secreta. Si la tirada falla, el DM no le dice nada. Si la tirada tiene éxito, el personaje siente un hormigueo en la nuca o en las yemas de los dedos; el DM le indica la dirección general de la amenaza (delante, a la derecha, arriba, etc.). El personaje no descubre el tipo de amenaza; podría ser un pozo de arenas movedizas, un león oculto o un cable trampa escondido. Depende del personaje averiguar cómo responder a la advertencia.<br>Si la amenaza es una emboscada inminente de un PNJ o una criatura, el personaje automáticamente gana la iniciativa en la primera ronda de combate (suponiendo que el combate se produzca una ronda después de que el personaje sea alterado por su sentido del peligro).<br>El DM puede decidir que el sentido del peligro del personaje no funcione contra peligros desconocidos. Si un bárbaro isleño nunca ha visto una serpiente venenosa, podría ser ajeno al peligro de la serpiente de cascabel. Las trampas mágicas exóticas o las ilusiones también pueden eludir el sentido del peligro.",
+    "slots": 2,
+    "ability": "Wis",
+    "modifier": "+1",
+    "class": "Barbarian, General",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 141,
+    "name": "Horde Summoning",
+    "description": "Aunque un personaje puede gastar espacios para adquirir Invocación de Horda en cualquier momento de su carrera, solo puede usarla cuando alcanza el nivel 10. La pericia le permite invocar una horda de personajes afines para llevar a cabo una misión específica.<br>El personaje solo puede invocar una horda en su tierra natal. Solo los miembros de su tierra natal se unirán a la horda. Ningún miembro de alineamiento malvado responderá.<br>Para invocar una horda, el personaje debe cumplir las siguientes condiciones:<ul>Debe declarar una misión clara y específica para la horda, como 'Defender nuestra tierra natal de la invasión', 'Recoger comida para nuestros vecinos hambrientos' o 'Expulsar a los ogros del bosque'.</ul><ul>Debe designar un área de preparación en su tierra natal donde se reunirá la horda</ul><ul>Debe permanecer en su tierra natal durante una semana para difundir la noticia de sus intenciones</ul>Al final de la semana, realiza una tirada de lealtad. Si la tirada falla, la horda no responde. Puede pasar otra semana intentando reunir una horda, haciendo una segunda tirada de pericia al final de este período, esta vez con una penalización de -3. Si falla una segunda vez, no puede reunir una horda durante un período de un mes.<br>Si la tirada tiene éxito, la horda comienza a reunirse en el área de preparación a razón de 500 hombres y mujeres por semana. El número total de miembros es igual al nivel de puntos de experiencia del personaje dividido entre 2,000. (Si el invocador tiene 1,500,000 puntos de experiencia, la horda consta de 750 miembros; 500 la primera semana, 250 la segunda semana). El número de miembros no puede exceder la población elegible de la tierra natal del invocador.<br>Aproximadamente el 90% de la horda está compuesta por luchadores de nivel 0. El 10% restante está compuesto por luchadores de nivel 1. La horda también incluye un Ayudante por cada 500 miembros, redondeado hacia arriba; Los Ayudantes tienen la mitad del nivel del invocador (redondeado hacia arriba) y deben ser de la misma clase que el invocador. Además, cada Ayudante tiene dos Asistentes; los Asistentes tienen la mitad del nivel de los Ayudantes (redondeado hacia arriba) y pueden ser de cualquier clase que elija el DM. Finalmente, el DM puede incluir un mago o sacerdote por cada 1,000 miembros (redondeado hacia arriba); estos personajes tienen la mitad del nivel del invocador. (Ejemplo: Un guerrero de nivel 14 con 1,500,000 puntos de experiencia invoca una horda de 750 miembros. La horda consta de 675 luchadores de nivel 0, 75 luchadores de nivel 1, dos Ayudantes de nivel 7, cuatro Asistentes de nivel 4 y un sacerdote de nivel 7).<br>La horda intenta cumplir su misión lo mejor que puede. El invocador no puede cambiar la misión. Si intenta hacerlo, la horda se disuelve inmediatamente y los miembros regresan a casa; la misión original fracasa. Del mismo modo, si la horda permanece inactiva durante más de dos semanas, los miembros desertan; de nuevo, la misión es un fracaso.<br>De lo contrario, el invocador puede mantener unida a la horda durante un período de semanas igual a su nivel. Controlar la horda es un trabajo de tiempo completo. Durante este tiempo, el invocador está constantemente obligado a resolver disputas, asignar tareas y castigar a los desobedientes. Aunque sus Ayudantes pueden encargarse de muchas de estas tareas, la responsabilidad última recae en el invocador. En cualquier semana en la que el invocador no dedique toda su atención a su horda, debe hacer una tirada de pericia. Si la tirada falla, la horda se disuelve y la misión es un fracaso.<br>Si la misión no se ha completado en un número de semanas igual al nivel del invocador, y la horda sigue intacta, el invocador puede apelar a la horda para que permanezca unida más tiempo. El invocador debe hacer una tirada de pericia; Si la horda está a punto de tener éxito o ha logrado acumular un tesoro considerable, el DM puede modificar la tirada hasta en +4. Si la tirada tiene éxito, la horda permanece intacta durante una semana más. Si falla, la horda se disuelve y la misión fracasa. Ninguna horda puede permanecer unida durante más semanas que el 150% del nivel del invocador, redondeado hacia arriba. (Teóricamente, un invocador de nivel 13 podría mantener una horda unida durante 20 semanas. Sin embargo, esto requeriría superar las tiradas de pericia durante siete semanas consecutivas).<br>Si la horda se disuelve tras una misión exitosa, el invocador tendrá más posibilidades de reunirla de nuevo; durante el año siguiente, recibe una bonificación de +2 al invocar una horda. Pero si la misión fracasa, su reputación se ve afectada; Debe esperar un año completo antes de poder intentar invocar otra horda.<br><b><i>Bárbaros:</i></b> Una horda bárbara se compone enteramente de guerreros bárbaros, en las mismas proporciones descritas anteriormente. A opción del DM, la horda puede incluir un chamán (la mitad del nivel del invocador) por cada 1,000 miembros, redondeando hacia arriba. El invocador no puede ordenar a una horda que emprenda una misión que requiera que abandonen su tierra natal a menos que también tenga la pericia de Liderazgo (Leadership).",
+    "slots": 2,
+    "ability": "Wis",
+    "modifier": "+1",
+    "class": "Barbarian, Warrior",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 142,
+    "name": "Leadership",
+    "description": "Un personaje con la pericia de Liderazgo tiene una manera dominante que hace que otros de su misma especie se inclinen a responder favorablemente. El personaje suma su nivel de experiencia a su puntuación de Carisma al determinar los ajustes de reacción (ver Capítulo 1 del Manual del Jugador). Este bono de reacción solo está en efecto cuando trata con personas de su tierra natal; el bono de reacción no afecta a aquellos de alineación maligna.<br>Ejemplo: Grog, un bárbaro de nivel 7, tiene una puntuación de Carisma de 13 y la pericia de Liderazgo. Según la Tabla 6 del Manual del Jugador, tiene un ajuste de reacción estándar de +1. Pero cuando trata con personas de su tierra natal, tiene un bono de reacción de +9 (7+13=20; según la Tabla 6, un Carisma de 20 da un bono de +9). Sin embargo, cuando trata con personajes malignos de su tierra natal, usa su bono estándar de +1.",
+    "slots": 1,
+    "ability": "Cha",
+    "modifier": "0",
+    "class": "Barbarian, Warrior",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 143,
+    "name": "Light Sleeping",
+    "description": "La pericia Siesta Ligera permite al personaje disfrutar de los beneficios de una noche completa de descanso con una siesta de una hora. El personaje debe realizar una tirada de pericia antes de dormir. Si la tirada tiene éxito, el personaje se despierta en una hora, completamente descansado; recupera la misma cantidad de puntos de golpe perdidos que si hubiera descansado durante ocho horas. Si la tirada falla, permanece dormido y se despierta como de costumbre. Puede usar esta habilidad solo una vez por semana, independientemente de si tiene éxito o falla.<br>Esta habilidad no es efectiva para memorizar hechizos.",
+    "slots": 1,
+    "ability": "Con",
+    "modifier": "-1",
+    "class": "Barbarian, Warrior",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 144,
+    "name": "Soothsaying",
+    "description": "La pericia de Adivinación (Soothsaying) le otorga al personaje una capacidad limitada para ver el futuro. Al adquirirla, debe seleccionar una técnica de adivinación primitiva. Algunas posibilidades incluyen lanzar guijarros al suelo, romper una rama y examinar la madera astillada, estudiar las arrugas del rostro de una persona, examinar las entrañas de un animal o contemplar las estrellas. Una vez seleccionada la técnica, no puede cambiarla. Para usar esta habilidad, debe emplearla; por ejemplo, si su técnica consiste en contemplar las estrellas, no puede intentar adivinar el futuro durante el día. Si puede emplearla, el personaje puede formular una pregunta de sí o no. La pregunta debe estar relacionada con un evento que ocurra en los próximos 30 días. Entre las preguntas aceptables se encuentran: '¿Encontraremos un tesoro en la cueva del dragón?', '¿Sobrevivirá nuestro líder hasta la próxima luna llena?', '¿Son comestibles estas setas?'.<br>El DM realiza una tirada de pericia en secreto. Si falla, el personaje no recibe información. Si tiene éxito, el DM responde con sinceridad; si no está seguro de la respuesta correcta, puede indicar que el resultado es incierto. Si el personaje formula una pregunta que el DM prefiere que quede sin respuesta —por ejemplo, si no quiere que sepa que la cueva del dragón contiene un tesoro—, puede negarse a darle información, incluso si la tirada tiene éxito. Con una tirada natural de 20, el DM  le da al personaje una respuesta incorrecta.<br>Un personaje puede usar esta pericia una vez por semana, independientemente de si la tirada tiene éxito o falla.",
+    "slots": 2,
+    "ability": "Int",
+    "modifier": "0",
+    "class": "Barbarian, Priest",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 145,
+    "name": "Weapon Improvisation",
+    "description": "Con la pericia Improvisación de Armas, el personaje puede improvisar un arma a partir de materiales naturales. Debe buscar en el área durante 1d6 rondas, luego hacer una tirada de pericia. Si la prueba falla, no encuentra nada útil; puede intentarlo de nuevo en un área diferente. Si tiene éxito, encuentra un objeto que puede ser empuñado como un garrote, como una rama, un hueso o un carámbano. El arma improvisada inflige 1d6+1 de daño a criaturas del tamaño de un hombre y más pequeñas, o 1d3+1 a oponentes más grandes. En una tirada natural de 1 o 2, el objeto tiene proyecciones dentadas o es lo suficientemente pesado como para causar daño adicional: las criaturas del tamaño de un hombre y más pequeñas sufren 1d6+3 de daño, los oponentes más grandes sufren 1d3+3 de daño. En una tirada natural de 20, el arma improvisada se rompe o se astilla en su primer uso, sin causar daño; Es inútil después.<br>El DM puede vetar el uso de esta pericia en entornos inapropiados, como una llanura estéril o un valle cubierto de nieve. Asimismo, puede imponer penalizaciones o bonificaciones a la tirada en áreas donde las armas improvisadas son excepcionalmente difíciles o fáciles de encontrar. Por ejemplo, una colina cubierta de piedras podría merecer una bonificación de +1; una llanura vacía podría merecer una penalización de -2.<br><i>Bárbaros:</i>Un bárbaro recibe una bonificación de +2 al buscar un arma improvisada en el terreno de su tierra natal.",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": "-1",
+    "class": "Barbarian, Warrior",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 146,
+    "name": "Weaponsmithing, Crude",
+    "description": "La pericia Forja de Armas (Rudimentario) permite al personaje fabricar armas sencillas no metálicas usando piedra, madera, hueso y otras sustancias naturales. El personaje solo puede fabricar armas para las que tenga pericia en armas. Por ejemplo, un personaje con pericia en lanzas puede fabricar lanzas rudimentarias, pero no hachas rudimentarias.<br>La siguiente tabla resume los tiempos de construcción de varias armas. El DM puede ampliar esta lista con armas adicionales (ver Capítulo 5 para obtener ideas).<br>Después de completar un arma, el personaje debe hacer una tirada de pericia. Si tiene pericia en Caza/Cacería (Hunting), modifica sus tiradas en +3. Si la tirada falla, el arma está tan defectuosa que no se puede usar. Con una tirada de 20, se rompe al primer uso. Con una tirada de 1, el arma no se romperá a menos que se golpee contra un material más duro.<br><i>Bárbaros:</i> Un bárbaro solo puede fabricar armas de uso común en su tierra natal. <table><tr><th>Arma</th><th>Tiempo de creación</th></tr><tr><td>Atlatl</td><td>1 día</td></tr><tr><td>Hacha de mano</td><td>1 día</td></tr><tr><td>Hacha arrojadiza</td><td>6 días</td></tr><tr><td>Bolas</td><td>1 día</td></tr><tr><td>Cerbatana</td><td>2 días</td></tr><tr><td>Garrote de mano</td><td>1 día</td></tr><tr><td>Dardo</td><td>3 al día</td></tr><tr><td>Javalina</td><td>1 día</td></tr><tr><td>Red</td><td>3 días</td></tr><tr><td>Cuchillo</td><td>2 días</td></tr><tr><td>Honda</td><td>2 días</td></tr><tr><td>Fustíbalo (Honda de Bastón)</td><td>3 días</td></tr><tr><td>Lanza</td><td>2 días</td></tr></table>",
+    "slots": 1,
+    "ability": "Wis",
+    "modifier": "-3",
+    "class": "Barbarian, General",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  },
+  {
+    "id": 147,
+    "name": "Wild Fighting (Barbarian)",
+    "description": "Un personaje con la pericia Lucha Salvaje (Bárbaro) tiene la capacidad de entrar en un frenesí de ataque, empleando un estilo de lucha feroz y desprovisto de disciplina.<br>Para usar la Lucha Salvaje, el personaje debe hacer una tirada de pericia justo antes de que comience el combate. Si la tirada tiene éxito, recibe los siguientes beneficios y penalizaciones:<ul>Puede hacer un ataque más por ronda más allá de su límite normal.</ul><ul>Recibe +3 a todas las tiradas de daño.</ul><ul>Su AC se penaliza en 3 (hasta un límite de AC 10).</ul><ul>Sus tiradas de ataque se penalizan en 3.</ul>Si la tirada de pericia falla, el personaje recibe ambas penalizaciones pero ninguno de los beneficios.<br>Independientemente de si la tirada tiene éxito o falla, el personaje recibe los efectos de la pericia durante la duración de la batalla o durante una hora, lo que ocurra primero.<br>Después de que termine la batalla (o transcurra una hora), el personaje debe descansar durante una hora antes de poder usar la pericia de nuevo. Mientras descansa, el personaje no puede realizar ninguna acción que no sea un viaje ligero (como montar un caballo de movimiento lento). Si debe caminar, no puede usar la pericia hasta que pasen cuatro horas. Si no descansa, sufre las siguientes penalizaciones: <ul>Una penalización de -3 a todas las tiradas de pericia.</ul><ul>Una penalización de -5 a su Armor Class.</ul><ul>Una penalización de -5 a su GAC0.</ul><ul>1 punto de daño adicional recibido por cada golpe enemigo exitoso.</ul>Las penalizaciones permanecen en efecto hasta que el personaje descanse durante el período indicado.",
+    "slots": 2,
+    "ability": "Con",
+    "modifier": "0",
+    "class": "Barbarian, General",
+    "source": "The Complete Barbarian's Handbook",
+    "race": "General"
+  }
 ]
