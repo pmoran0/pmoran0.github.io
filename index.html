@@ -4,456 +4,423 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0c0a0a" id="meta-theme-color">
-    <title>Archivos de Ravenloft</title>
+    <title>Archivos de AD&D 2e</title>
     <style>
         /* =========================================================
-           Variables de Tema (Ravenloft Gothic vs Old Parchment)
+           1. VARIABLES DE TEMA Y GEOMETRÍA (Fantasía Medieval)
            ========================================================= */
         :root {
-            --bg-body: #0c0a0a;
-            --bg-panel: #1a1515;
-            --bg-input: #0c0a0a;
-            --text-main: #d8cbb8;
-            --text-muted: #a89f91;
-            --accent-main: #8b0000;
-            --accent-hover: #5a1111;
-            --border-color: #3a1c1c;
-            --table-th: #2b0c0c;
-            --table-tr: #141010;
-            --table-tr-hover: #2a1111;
-            --table-desc: #080606;
-            --shadow-color: rgba(0, 0, 0, 0.7);
-        }
-
-        [data-theme="light"] {
-            --bg-body: #f4ebd8;
-            --bg-panel: #e8dac3;
-            --bg-input: #fdf6ec;
-            --text-main: #2b1c15;
-            --text-muted: #5c4335;
-            --accent-main: #9e1b1b;
-            --accent-hover: #7a1515;
-            --border-color: #c4ab8f;
-            --table-th: #d1b99e;
-            --table-tr: #f9f2e8;
-            --table-tr-hover: #ebdcc5;
-            --table-desc: #efe4d3;
-            --shadow-color: rgba(60, 40, 20, 0.15);
+            /* Tema Ravenloft: Gótico, Sangre Seca y Hierro Forjado */
+            --bg-body: #0a0a0c;
+            --bg-panel: #141214;
+            --bg-input: #050405;
+            --text-main: #d5c8b5;      /* Pergamino antiguo (muy legible) */
+            --text-muted: #8c8273;     /* Tinta gastada */
+            --accent-main: #961414;    /* Carmesí Ravenloft */
+            --accent-hover: #bd1a1a;
+            --border-color: #3b2b2b;   /* Hierro oxidado / oscuro */
+            --table-th: #1c1111;
+            --table-tr: #100e0e;
+            --table-tr-hover: #211212;
+            --table-desc: #0a0808;
+            --shadow-color: rgba(0, 0, 0, 0.85);
+            --glow-color: rgba(150, 20, 20, 0.3);
+            
+            /* Geometría Clásica (Cero estilo corporativo) */
+            --radius-btn: 2px;
+            --radius-panel: 4px;
+            --font-fantasy: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
         }
 
         /* =========================================================
-           Estilos Base e Interfaz
+           0. RESETEO DE CAJA (Prevenir Scroll Horizontal)
+           ========================================================= */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        html { overflow-x: hidden; }
+
+        /* Tema Luz Continua: Tomo Iluminado y Papiro Limpio */
+        [data-theme="light"] {
+            --bg-body: #E8DECE; 
+            --bg-panel: #F4EFE7; 
+            --bg-input: #FCFAF5;
+            --text-main: #1A1614;      /* Tinta de carbón espesa */
+            --text-muted: #594D46;
+            --accent-main: #9E1B1B; 
+            --accent-hover: #7A1515;
+            --border-color: #C4B5A5; 
+            --table-th: #D4C6B3; 
+            --table-tr: #F4EFE7;
+            --table-tr-hover: #EBE1D1; 
+            --table-desc: #DFD5C5;
+            --shadow-color: rgba(30, 20, 15, 0.2);
+            --glow-color: rgba(158, 27, 27, 0.15);
+        }
+
+        /* Tema Ranger: Cuero Viejo, Musgo y Sombra de Árbol */
+        [data-theme="ranger"] {
+            --bg-body: #080c08; 
+            --bg-panel: #121712; 
+            --bg-input: #040604;
+            --text-main: #c0cfc0; 
+            --text-muted: #798a79;
+            --accent-main: #3a7a3a; 
+            --accent-hover: #4ea14e;
+            --border-color: #1e2e1e; 
+            --table-th: #0f170f; 
+            --table-tr: #121712;
+            --table-tr-hover: #192619; 
+            --table-desc: #0a0f0a;
+            --shadow-color: rgba(0, 0, 0, 0.85);
+            --glow-color: rgba(58, 122, 58, 0.25);
+        }
+
+        /* Tema Bárbaro: Piedra, Tierra Húmeda y Pintura de Guerra */
+        [data-theme="barbaro"] {
+            --bg-body: #0d0907; 
+            --bg-panel: #1a120e; 
+            --bg-input: #050302;
+            --text-main: #d1c1b4; 
+            --text-muted: #948073;
+            --accent-main: #a34e17; 
+            --accent-hover: #c9601c;
+            --border-color: #3b271d; 
+            --table-th: #1f140f; 
+            --table-tr: #1a120e;
+            --table-tr-hover: #2b1d16; 
+            --table-desc: #0f0a08;
+            --shadow-color: rgba(0, 0, 0, 0.9);
+            --glow-color: rgba(163, 78, 23, 0.25);
+        }
+
+        /* Tema Bribón: Noche Urbana, Acero y Veneno */
+        [data-theme="bribon"] {
+            --bg-body: #060608; 
+            --bg-panel: #111117; 
+            --bg-input: #030304;
+            --text-main: #b8b8c7; 
+            --text-muted: #6a6a7c;
+            --accent-main: #694a91; 
+            --accent-hover: #865ebd;
+            --border-color: #21212e; 
+            --table-th: #15151c; 
+            --table-tr: #111117;
+            --table-tr-hover: #1b1b26; 
+            --table-desc: #09090c;
+            --shadow-color: rgba(0, 0, 0, 0.9);
+            --glow-color: rgba(105, 74, 145, 0.25);
+        }
+
+        /* =========================================================
+           2. ESTILOS BASE Y TIPOGRAFÍA
            ========================================================= */
         body {
             background-color: var(--bg-body);
             color: var(--text-main); 
-            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            font-family: var(--font-fantasy); /* Puramente Fantasía */
             margin: 0;
-            padding: 15px;
-            transition: background-color 0.4s, color 0.4s;
-            line-height: 1.5;
+            padding: 20px;
+            transition: background-color 0.5s ease, color 0.5s ease;
+            line-height: 1.6;
+            font-size: 16px;
             -webkit-tap-highlight-color: transparent;
         }
 
+        /* Scrollbars Estilo Forja */
+        ::-webkit-scrollbar { width: 10px; height: 10px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); border-left: 1px solid var(--border-color); }
+        ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 0; border: 1px solid var(--bg-body); }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent-main); }
+
+        /* =========================================================
+           3. PANTALLA DE INICIO (El Tomo Abierto)
+           ========================================================= */
         #landing-screen {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 85vh;
-            text-align: center;
-            animation: fadeIn 1s ease-in-out;
+            display: flex; flex-direction: column; align-items: center;
+            justify-content: center; min-height: 85vh; text-align: center;
+            animation: fadeIn 1s ease-out;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .landing-title {
-            font-size: 2.8em;
-            color: var(--accent-main);
-            margin-bottom: 5px;
-            text-shadow: 2px 2px 4px var(--shadow-color);
-            border-bottom: none;
-            letter-spacing: 3px;
+            font-size: 3.2em; color: var(--accent-main); margin-bottom: 5px;
+            text-shadow: 2px 2px 8px var(--shadow-color), 0 0 15px var(--glow-color); 
+            letter-spacing: 4px; text-transform: uppercase; border-bottom: none;
         }
 
-        .landing-subtitle {
-            font-size: 1.2em;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-style: italic;
-        }
+        .landing-subtitle { font-size: 1.3em; color: var(--text-muted); margin-bottom: 25px; font-style: italic; }
+        .user-greeting { color: var(--text-main); font-size: 1.4em; margin-bottom: 40px; border-bottom: 1px solid var(--accent-main); padding-bottom: 5px;}
 
-        .user-greeting {
-            color: var(--accent-main);
-            font-weight: bold;
-            font-size: 1.2em;
-            letter-spacing: 1px;
-            margin-bottom: 30px;
+        .landing-buttons, .action-buttons {
+            display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;
+            width: 100%; max-width: 900px;
         }
-
-        .header-greeting {
-            color: var(--text-muted);
-            font-weight: bold;
-            font-style: italic;
-            margin-right: 15px;
-            font-size: 1.1em;
-        }
-
-        .landing-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-            max-width: 900px;
-            margin-bottom: 30px;
-        }
-
+        
         .action-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-            max-width: 600px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 20px;
+            max-width: 600px; padding-top: 35px; margin-top: 25px;
+            border-top: 1px double var(--border-color); /* Toque clásico */
         }
 
+        /* Botones estilo Placas Grabadas */
         .btn-large {
             background-color: var(--bg-panel);
             color: var(--text-main);
-            border: 2px solid var(--accent-main);
+            border: 2px solid var(--border-color);
+            border-bottom: 4px solid var(--border-color); /* Efecto de peso / relieve grueso */
             padding: 16px 25px;
-            font-size: 1.1em;
+            font-size: 1.15em;
             font-family: inherit;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 6px;
+            letter-spacing: 2px;
+            border-radius: var(--radius-btn);
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px var(--shadow-color);
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .btn-large:hover {
-            background-color: var(--accent-hover);
-            color: #e6d8c3;
-            transform: translateY(-2px);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             box-shadow: 0 6px 15px var(--shadow-color);
+            flex: 1; min-width: 200px;
+        }
+        
+        .btn-large:hover {
+            border-color: var(--accent-main);
+            background-color: var(--accent-hover);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px var(--glow-color);
         }
 
-        /* Contenedores de Secciones */
-        #nwp-app, #skills-app, #am-app {
-            display: none;
-            animation: fadeIn 0.8s ease-in-out;
+        .btn-large:active {
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+            margin-top: 2px;
         }
 
         /* =========================================================
-           Cabeceras y Paneles de Control
+           4. CABECERAS Y PANELES (Controles de Búsqueda)
            ========================================================= */
+        #nwp-app, #skills-app, #am-app { display: none; animation: fadeIn 0.6s ease-out; max-width: 1200px; margin: 0 auto; }
+
         .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: flex; justify-content: space-between; align-items: center;
+            padding-bottom: 15px; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;
             border-bottom: 2px solid var(--accent-hover);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            gap: 10px;
         }
 
-        h1 {
-            color: var(--accent-main); 
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 1.4em;
-            text-shadow: 1px 1px 2px var(--shadow-color);
-        }
+        h1 { color: var(--accent-main); margin: 0; font-size: 1.8em; letter-spacing: 3px; text-transform: uppercase; text-shadow: 1px 1px 3px var(--shadow-color); }
 
-        .header-controls {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+        .header-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .header-greeting { color: var(--text-muted); font-size: 1.05em; font-style: italic; margin-right: 15px; }
 
         .btn-theme {
-            background-color: var(--bg-panel);
-            color: var(--text-main);
-            border: 1px solid var(--accent-main);
-            padding: 8px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: inherit;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px var(--shadow-color);
+            background-color: var(--bg-input); color: var(--text-main);
+            border: 1px solid var(--border-color); padding: 8px 14px;
+            border-radius: var(--radius-btn); cursor: pointer;
+            font-family: inherit; font-size: 1em; font-weight: bold;
+            transition: all 0.3s ease; box-shadow: 0 2px 5px var(--shadow-color);
         }
-        
-        .btn-theme:hover {
-            background-color: var(--accent-hover);
-            color: #e6d8c3;
-        }
+        .btn-theme:hover, .btn-theme:focus { border-color: var(--accent-main); background-color: var(--bg-panel); outline: none; }
 
+        /* Panel estilo Caja de Madera / Forjado */
         .controls-panel {
-            background-color: var(--bg-panel);
-            border: 1px solid var(--border-color);
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 6px;
-            box-shadow: 0 4px 10px var(--shadow-color);
-            transition: background-color 0.4s, border-color 0.4s;
+            background-color: var(--bg-panel); border: 1px solid var(--border-color);
+            padding: 20px; margin-bottom: 30px; border-radius: var(--radius-panel);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 8px 20px var(--shadow-color);
         }
 
+        /* Buscador estilo placa inscrita */
         .search-bar {
-            width: 100%;
-            padding: 12px;
-            font-size: 1.1em;
-            background-color: var(--bg-input);
-            color: var(--text-main);
-            border: 1px solid var(--accent-main);
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-bottom: 15px;
-            font-family: inherit;
-            transition: background-color 0.4s, color 0.4s;
+            width: 100%; padding: 14px 20px; font-size: 1.15em;
+            background-color: var(--bg-input); color: var(--text-main);
+            border: 1px solid var(--border-color); border-radius: var(--radius-btn);
+            box-sizing: border-box; margin-bottom: 20px; font-family: inherit; font-style: italic;
+            transition: all 0.4s ease; box-shadow: inset 0 3px 6px var(--shadow-color);
         }
-
-        .search-bar:focus { outline: none; border-color: var(--text-main); }
-
-        .filters-collapsible { display: block; }
+        .search-bar:focus { outline: none; border-color: var(--accent-main); font-style: normal; box-shadow: inset 0 3px 6px var(--shadow-color), 0 0 8px var(--glow-color); }
 
         .btn-toggle-filters {
-            display: none;
-            width: 100%;
-            background-color: var(--bg-panel);
-            color: var(--text-main);
-            border: 1px dashed var(--accent-main);
-            padding: 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: inherit;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-size: 0.9em;
-            transition: all 0.3s;
+            display: none; width: 100%; background-color: var(--bg-input);
+            color: var(--text-main); border: 1px dashed var(--border-color);
+            padding: 12px; border-radius: var(--radius-btn); cursor: pointer;
+            font-family: inherit; font-weight: bold; margin-bottom: 15px;
+            text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s;
         }
-
-        .btn-toggle-filters:hover {
-            background-color: var(--accent-hover);
-            color: #e6d8c3;
-            border-style: solid;
-        }
-
-        .filters-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
+        .btn-toggle-filters:hover { border-color: var(--accent-main); color: var(--accent-main); }
+        
+        .filters-collapsible { display: block; }
+        .filters-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin-bottom: 20px; }
         .filter-group { display: flex; flex-direction: column; }
-
+        
         .filter-group label.group-title {
-            font-size: 0.85em;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 0.9em; color: var(--accent-main); margin-bottom: 6px;
+            font-weight: bold; text-transform: uppercase; letter-spacing: 1px;
+            border-bottom: 1px solid var(--border-color); padding-bottom: 4px;
         }
 
         .checkbox-group-container {
-            background-color: var(--bg-input);
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            max-height: 120px;
-            overflow-y: auto;
-            padding: 8px;
-            transition: border-color 0.3s;
+            background-color: var(--bg-input); border: 1px solid var(--border-color);
+            border-radius: var(--radius-btn); max-height: 130px; overflow-y: auto; padding: 10px;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
         }
-
-        .checkbox-group-container:focus-within { border-color: var(--accent-main); }
-
         .checkbox-option {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9em;
-            color: var(--text-main);
-            cursor: pointer;
-            margin-bottom: 6px;
-            user-select: none;
+            display: flex; align-items: center; gap: 8px; font-size: 0.95em;
+            color: var(--text-main); cursor: pointer; margin-bottom: 8px; user-select: none;
         }
-
         .checkbox-option:last-child { margin-bottom: 0; }
-        .checkbox-option input { cursor: pointer; accent-color: var(--accent-main); margin: 0; }
-
-        .checkbox-group-container::-webkit-scrollbar,
-        .desc-content::-webkit-scrollbar { width: 6px; }
-        .checkbox-group-container::-webkit-scrollbar-track,
-        .desc-content::-webkit-scrollbar-track { background: var(--bg-body); }
-        .checkbox-group-container::-webkit-scrollbar-thumb,
-        .desc-content::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
-        .checkbox-group-container::-webkit-scrollbar-thumb:hover,
-        .desc-content::-webkit-scrollbar-thumb:hover { background: var(--accent-main); }
+        .checkbox-option input { cursor: pointer; accent-color: var(--accent-main); width: 16px; height: 16px; margin: 0; }
 
         .btn-reset {
-            background-color: var(--bg-panel);
-            color: var(--text-main);
-            border: 1px dashed var(--accent-main);
-            padding: 10px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: inherit;
-            font-weight: bold;
-            transition: all 0.3s;
-            width: 100%;
-            margin-top: 5px;
-            font-size: 0.95em;
+            background-color: transparent; color: var(--text-muted);
+            border: 1px solid var(--border-color); padding: 10px 15px;
+            border-radius: var(--radius-btn); cursor: pointer;
+            font-family: inherit; font-weight: bold; width: 100%;
+            transition: all 0.3s; font-size: 1em; text-transform: uppercase; letter-spacing: 1px;
         }
-
-        .btn-reset:hover { background-color: var(--accent-hover); color: #e6d8c3; border-style: solid; }
+        .btn-reset:hover { background-color: var(--accent-hover); color: #fff; border-color: var(--accent-hover); }
 
         /* =========================================================
-           Tablas Estándar (Escritorio)
+           5. TABLAS DE CATÁLOGO (Legibilidad y Temática)
            ========================================================= */
         table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: var(--table-tr);
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px var(--shadow-color);
-            transition: background-color 0.4s;
-            margin-bottom: 30px;
+            width: 100%; border-collapse: collapse;
+            background-color: var(--table-tr); border-radius: var(--radius-panel);
+            overflow: hidden; border: 2px solid var(--border-color);
+            box-shadow: 0 8px 25px var(--shadow-color); margin-bottom: 40px;
         }
 
         th {
-            background-color: var(--table-th);
-            color: var(--text-main);
-            padding: 14px;
-            border: 1px solid var(--border-color);
-            text-align: center;
-            font-weight: bold;
+            background-color: var(--table-th); color: var(--accent-main);
+            padding: 16px 14px; text-align: left; font-weight: bold;
+            font-size: 1.05em; text-transform: uppercase; letter-spacing: 1px;
+            border-bottom: 2px solid var(--border-color); 
         }
 
         td {
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            text-align: center;
-            color: var(--text-main);
+            padding: 14px 14px; text-align: left; color: var(--text-main);
+            border-bottom: 1px solid var(--border-color); font-size: 1.05em;
         }
 
-        tr.main-row { transition: background-color 0.2s; cursor: pointer; }
+        th:last-child, td:last-child { text-align: center; }
+
+        tr.main-row { transition: background-color 0.2s ease; cursor: pointer; }
         tr.main-row:hover { background-color: var(--table-tr-hover); }
+        
+        td strong { font-size: 1.1em; color: var(--text-main); font-weight: bold; letter-spacing: 0.5px; }
 
-        .star-btn { font-size: 1.5em; cursor: pointer; user-select: none; transition: transform 0.2s; }
-        .star-btn:hover { transform: scale(1.2); }
+        .star-btn { font-size: 1.5em; cursor: pointer; user-select: none; transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .star-btn:hover { transform: scale(1.3); text-shadow: 0 0 10px var(--accent-main); }
 
+        /* Fila de Descripción Expandida (El Grimorio) */
         .desc-row td { padding: 0 !important; border: none !important; }
-
+        
         .desc-content {
-            max-height: 0;
-            overflow: hidden;
-            overflow-y: auto; 
+            max-height: 0; overflow: hidden; overflow-y: auto; 
             transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-            background-color: var(--table-desc);
-            color: var(--text-main);
-            text-align: left;
-            font-size: 1.08em; 
+            background-color: var(--table-desc); color: var(--text-main);
+            text-align: left; font-size: 1.1em; /* Texto grande para lectura cómoda */
         }
 
         .desc-row.show .desc-content {
-            padding: 25px 40px 45px 40px; 
-            border-bottom: 1px solid var(--border-color);
-            border-top: 1px dashed var(--accent-main);
+            padding: 30px 40px; 
+            border-left: 4px solid var(--accent-main); /* Marca de libro lateral */
+            border-bottom: 2px solid var(--border-color);
+            box-shadow: inset 0 10px 15px -10px rgba(0,0,0,0.6);
         }
 
-        .desc-content p { margin: 0 0 12px 0; }
+        .desc-content p { margin: 0 0 18px 0; line-height: 1.7; } /* Alto interlineado para descanso visual */
         .desc-content p:last-child { margin-bottom: 0; }
 
         .am-category-block {
-            margin-top: 15px;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 12px 20px;
-            border-left: 3px solid var(--accent-main);
-            border-radius: 4px;
+            margin-top: 20px; background: var(--bg-input);
+            padding: 18px 25px; border-radius: var(--radius-btn);
+            border: 1px solid var(--border-color); border-left: 2px solid var(--accent-main);
         }
+        
         .am-category-title {
-            font-weight: bold;
-            color: var(--accent-main);
-            text-transform: uppercase;
-            font-size: 0.95em;
-            letter-spacing: 1px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 5px;
-            margin-bottom: 10px;
+            color: var(--text-main); text-transform: uppercase;
+            font-size: 1.05em; font-weight: bold; letter-spacing: 1px;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 8px; margin-bottom: 15px; 
         }
-        .am-maneuver-item { margin-bottom: 12px; font-size: 0.95em; }
-        .am-maneuver-item strong { color: var(--text-main); }
+        
+        .am-maneuver-item { margin-bottom: 18px; font-size: 1em; line-height: 1.6; }
+        .am-maneuver-item strong { color: var(--accent-main); }
+        .am-maneuver-item em { color: var(--text-muted); }
 
         /* =========================================================
-           Responsividad Flexible Avanzada
+           6. RESPONSIVIDAD (MÓVILES)
+           ========================================================= */
+        /* =========================================================
+           6. RESPONSIVIDAD (MÓVILES) - Sin Scroll Horizontal
            ========================================================= */
         @media screen and (max-width: 768px) {
-            .header-container { flex-direction: column; text-align: center; }
-            .header-controls { justify-content: center; }
-            .header-greeting { margin-right: 0; margin-bottom: 10px; width: 100%; }
+            body { padding: 10px; font-size: 15px; overflow-x: hidden; }
             
-            table, thead, tbody, th, td, tr { display: block; }
+            /* Ajuste de Títulos y Botones para evitar desbordamiento */
+            .landing-title { font-size: 2.2em; letter-spacing: 2px; }
+            .landing-buttons, .action-buttons { flex-direction: column; width: 100%; align-items: stretch; }
+            .btn-large { min-width: 100%; width: 100%; margin-bottom: 5px; }
+
+            /* Ajuste de Cabeceras */
+            .header-container { flex-direction: column; text-align: center; border-bottom: none; }
+            .header-controls { justify-content: center; width: 100%; flex-direction: column; gap: 8px; }
+            .header-greeting { margin-right: 0; margin-bottom: 5px; width: 100%; }
+            .btn-theme, .theme-selector { width: 100%; text-align: center; }
+
+            /* Filtros en una sola columna */
+            .filters-grid { grid-template-columns: 1fr; }
+            
+            /* Tablas Convertidas en Tarjetas Verticales */
+            table, thead, tbody, th, td, tr { display: block; width: 100%; }
             thead tr { position: absolute; top: -9999px; left: -9999px; }
-            table { background-color: transparent; box-shadow: none; }
+            table { background-color: transparent; box-shadow: none; border: none; margin-bottom: 20px; }
 
             tr.main-row {
-                margin-bottom: 12px;
-                border: 1px solid var(--border-color);
-                border-radius: 6px;
-                background-color: var(--bg-panel);
-                box-shadow: 0 2px 5px var(--shadow-color);
+                margin-bottom: 15px; border: 2px solid var(--border-color);
+                border-radius: var(--radius-panel); background-color: var(--table-tr);
+                box-shadow: 0 4px 10px var(--shadow-color); padding: 5px 0;
+                width: 100%; display: block;
             }
 
             td {
-                border: none;
-                border-bottom: 1px solid var(--border-color);
-                padding: 12px 15px;
-                display: flex;
-                justify-content: space-between; 
-                align-items: center;
-                text-align: right;
-                min-height: 35px;
+                border: none; border-bottom: 1px solid var(--border-color);
+                padding: 12px 15px; 
+                display: flex; flex-direction: column; /* Etiqueta arriba, valor abajo */
+                align-items: flex-start; text-align: left; 
+                min-height: auto; word-break: break-word; /* Evita que palabras corten la caja */
             }
 
             td::before {
-                content: attr(data-label);
-                font-weight: bold;
-                color: var(--accent-main);
-                text-align: left;
-                margin-right: 20px;
-                white-space: nowrap;
+                content: attr(data-label); font-weight: bold;
+                font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px;
+                color: var(--accent-main); margin-bottom: 4px; margin-right: 0;
+                white-space: normal;
             }
 
-            td:last-child { border-bottom: 0; }
+            /* La última celda (La Estrella de Favoritos) */
+            td:last-child { 
+                border-bottom: 0; 
+                flex-direction: row; 
+                justify-content: space-between; 
+                align-items: center; 
+            }
+            td:last-child::before { margin-bottom: 0; }
+            
             .desc-row td { display: block; padding: 0 !important; border-bottom: none; }
             
             .desc-row.show .desc-content {
-                border-bottom-left-radius: 6px;
-                border-bottom-right-radius: 6px;
-                margin-bottom: 12px;
-                border: 1px solid var(--border-color);
-                padding: 20px 20px 30px 20px; 
+                border-bottom-left-radius: var(--radius-panel); border-bottom-right-radius: var(--radius-panel);
+                margin-bottom: 15px; border: 2px solid var(--border-color); border-top: none;
+                padding: 20px 15px; box-shadow: 0 4px 10px var(--shadow-color);
+                border-left: 4px solid var(--accent-main); /* Mantiene la estética de marca de libro */
             }
 
             .btn-toggle-filters { display: block; }
-            .filters-collapsible { display: none; }
+            .filters-collapsible { display: none; margin-top: 15px; }
             .filters-collapsible.show { display: block; }
         }
     </style>
@@ -461,7 +428,7 @@
 <body>
 
     <div id="landing-screen">
-        <h1 class="landing-title">Archivos de Ravenloft</h1>
+        <h1 class="landing-title">Archivos de AD&D 2e</h1>
         <p class="landing-subtitle">Elige el conocimiento que deseas develar...</p>
         
         <div id="landing-greeting" class="user-greeting">Bienvenido, Invitado</div>
@@ -485,7 +452,13 @@
             <div class="header-controls">
                 <span class="header-greeting global-greeting-text">Bienvenido, Invitado</span>
                 <button class="btn-theme" onclick="closeApp('nwp')">Volver</button>
-                <button class="btn-theme" onclick="toggleTheme()">Invocar Luz</button>
+                <select class="btn-theme theme-selector" onchange="changeTheme(this.value)">
+                    <option value="ravenloft">Tema: Ravenloft</option>
+                    <option value="light">Tema: Luz Continua</option>
+                    <option value="ranger">Tema: Ranger</option>
+                    <option value="barbaro">Tema: Bárbaro</option>
+                    <option value="bribon">Tema: Bribón</option>
+                </select>
             </div>
         </div>
 
@@ -554,7 +527,13 @@
             <div class="header-controls">
                 <span class="header-greeting global-greeting-text">Bienvenido, Invitado</span>
                 <button class="btn-theme" onclick="closeApp('skills')">Volver</button>
-                <button class="btn-theme" onclick="toggleTheme()">Invocar Luz</button>
+                <select class="btn-theme theme-selector" onchange="changeTheme(this.value)">
+                    <option value="ravenloft">Tema: Ravenloft</option>
+                    <option value="light">Tema: Luz Continua</option>
+                    <option value="ranger">Tema: Ranger</option>
+                    <option value="barbaro">Tema: Bárbaro</option>
+                    <option value="bribon">Tema: Bribón</option>
+                </select>
             </div>
         </div>
 
@@ -607,7 +586,13 @@
             <div class="header-controls">
                 <span class="header-greeting global-greeting-text">Bienvenido, Invitado</span>
                 <button class="btn-theme" onclick="closeApp('am')">Volver</button>
-                <button class="btn-theme" onclick="toggleTheme()">Invocar Luz</button>
+                <select class="btn-theme theme-selector" onchange="changeTheme(this.value)">
+                    <option value="ravenloft">Tema: Ravenloft</option>
+                    <option value="light">Tema: Luz Continua</option>
+                    <option value="ranger">Tema: Ranger</option>
+                    <option value="barbaro">Tema: Bárbaro</option>
+                    <option value="bribon">Tema: Bribón</option>
+                </select>
             </div>
         </div>
 
@@ -681,6 +666,7 @@
         // ==========================================
         let characterProfile = {
             name: "Invitado",
+            theme: "ravenloft",
             favorites: {
                 nwp: [], // Guardará los ID (números)
                 sk: [],  // Guardará los nombres (strings)
@@ -776,6 +762,14 @@
                         if (!characterProfile.name) characterProfile.name = "Viajero Anónimo";
                         
                         updateGreetings();
+                        
+                        // Cargar el tema si el archivo lo posee, de lo contrario usar Ravenloft
+                        if (characterProfile.theme) {
+                            changeTheme(characterProfile.theme);
+                        } else {
+                            changeTheme('ravenloft');
+                        }
+                        
                         // Refrescar todas las tablas para que pinten las nuevas estrellas
                         applyNwpFilters();
                         applySkFilters();
@@ -814,20 +808,35 @@
             document.getElementById('landing-screen').style.display = 'flex';
         }
 
-        // Interruptor Cromático
-        function setTheme(themeName) {
+        // Interruptor Cromático (Actualizado)
+        function changeTheme(themeName) {
             document.documentElement.setAttribute('data-theme', themeName);
-            localStorage.setItem('ravenloftTheme', themeName);
-            document.querySelectorAll('.btn-theme').forEach(btn => {
-                if (btn.textContent.includes('Luz') || btn.textContent.includes('Penumbra')) {
-                    btn.textContent = (themeName === 'light') ? 'Invocar Penumbra' : 'Invocar Luz';
-                }
+            localStorage.setItem('adndTheme', themeName);
+            
+            // Vincular el tema al perfil actual para que se exporte con el JSON
+            characterProfile.theme = themeName; 
+
+            // Sincronizar todos los selects de la interfaz para que muestren la opción correcta
+            document.querySelectorAll('.theme-selector').forEach(sel => {
+                sel.value = themeName;
             });
-            document.getElementById('meta-theme-color').setAttribute('content', (themeName === 'light') ? '#f4ebd8' : '#0c0a0a');
+
+            // Ajustar el color meta de la barra de navegación en móviles
+            const metaColors = {
+                'ravenloft': '#0c0a0a',
+                'light': '#f4ebd8',
+                'ranger': '#0a110a',
+                'barbaro': '#140d0a',
+                'bribon': '#08080a'
+            };
+            document.getElementById('meta-theme-color').setAttribute('content', metaColors[themeName] || '#0c0a0a');
         }
 
-        function toggleTheme() { setTheme(localStorage.getItem('ravenloftTheme') === 'light' ? 'dark' : 'light'); }
-        (function() { setTheme(localStorage.getItem('ravenloftTheme') === 'light' ? 'light' : 'dark'); })();
+        // Inicialización del tema al cargar la página (Sustituye la función anónima autoejecutable que tenías)
+        (function() { 
+            const savedTheme = localStorage.getItem('adndTheme') || 'ravenloft';
+            changeTheme(savedTheme);
+        })();
 
         // Inicializador DOM
         document.addEventListener("DOMContentLoaded", () => {
@@ -875,7 +884,6 @@
                 if (p.ability) abilities.add(p.ability);
                 if (p.class) p.class.split(',').forEach(c => classes.add(c.trim()));
                 if (p.race) p.race.split(',').forEach(r => races.add(r.trim()));
-                //Separación de SOURCE por coma (',') al igual que Race y Class
                 if (p.source) p.source.split(',').forEach(p => sources.add(p.trim()));
                 // if (p.source) sources.add(p.source);
             });
@@ -906,9 +914,8 @@
                        (selAbilities.length === 0 || (p.ability && selAbilities.includes(p.ability))) &&
                        (selClasses.length === 0 || (p.class && selClasses.some(c => p.class.includes(c)))) &&
                        (selRaces.length === 0 || (p.race && selRaces.some(r => p.race.includes(r)))) &&
-                       // Búsqueda de Sources por diferentes manuales separados previamente en la invocación de Check-Boxes
                        (selSources.length === 0 || (p.source && selSources.some(s => p.source.includes(s))));
-                       // (selSources.length === 0 || (p.source && selSources.includes(p.source)));
+                    //    (selSources.length === 0 || (p.source && selSources.includes(p.source)));
             });
             nwpExpandedId = null;
             renderNwpTable();
