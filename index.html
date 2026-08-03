@@ -31,6 +31,25 @@
             --radius-panel: 4px;
             --font-fantasy: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
         }
+        /* Patrón de fondo infinito para el Tema Ravenloft al 15% de opacidad */
+        [data-theme="ravenloft"] body {
+            position: relative;
+            background-color: var(--bg-body);
+        }
+        [data-theme="ravenloft"] body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('Backgrounds/Background Ravenloft.png');
+            background-repeat: repeat; /* Patrón infinito en mosaico */
+            background-position: top left;
+            opacity: 0.12; /* Opacidad exacta del 15% */
+            pointer-events: none; /* Evita interferir con clics en botones o tablas */
+            z-index: -1; /* Mantiene la textura siempre por detrás del contenido */
+        }
 
         /* =========================================================
            0. RESETEO DE CAJA (Prevenir Scroll Horizontal)
@@ -76,6 +95,25 @@
             --shadow-color: rgba(0, 0, 0, 0.9);
             --glow-color: rgba(70, 115, 58, 0.25);
         }
+        /* Patrón de fondo infinito para el Tema Ranger al 15% de opacidad */
+        [data-theme="ranger"] body {
+            position: relative;
+            background-color: var(--bg-body);
+        }
+        [data-theme="ranger"] body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('Backgrounds/Background Ranger.png');
+            background-repeat: repeat; /* Patrón infinito en mosaico */
+            background-position: top left;
+            opacity: 0.12; /* Opacidad del 50% solicitada */
+            pointer-events: none; /* Permite hacer clic en los elementos de la página sin interferencias */
+            z-index: -1; /* Mantiene la textura siempre por detrás del contenido */
+        }
 
         /* Tema Hechicero: Noche Urbana (Base Bribón) con Aura Azul Mística */
         [data-theme="hechicero"] {
@@ -93,6 +131,25 @@
             --table-desc: #090a0f;
             --shadow-color: rgba(0, 0, 0, 0.9);
             --glow-color: rgba(84, 138, 240, 0.25); /* Resplandor de aura */
+        }
+        /* Patrón de fondo infinito para el Tema Hechicero al 15% de opacidad */
+        [data-theme="hechicero"] body {
+            position: relative;
+            background-color: var(--bg-body);
+        }
+        [data-theme="hechicero"] body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('Backgrounds/Background Hechicero.png');
+            background-repeat: repeat; /* Patrón infinito en mosaico */
+            background-position: top left;
+            opacity: 0.12; /* Opacidad del 50% solicitada */
+            pointer-events: none; /* Permite hacer clic en los elementos de la página sin interferencias */
+            z-index: -1; /* Mantiene la textura siempre por detrás del contenido */
         }
 
         /* Tema Sacerdote: Templo, Incienso, Oro Viejo y Vestimentas Sagradas */
@@ -112,6 +169,25 @@
             --shadow-color: rgba(0, 0, 0, 0.85);
             --glow-color: rgba(168, 132, 56, 0.2);
         }
+        /* Patrón de fondo infinito para el Tema Sacerdote al 15% de opacidad */
+        [data-theme="sacerdote"] body {
+            position: relative;
+            background-color: var(--bg-body);
+        }
+        [data-theme="sacerdote"] body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('Backgrounds/Background Sacerdote.png');
+            background-repeat: repeat; /* Patrón infinito en mosaico */
+            background-position: top left;
+            opacity: 0.12; /* Opacidad del 50% solicitada */
+            pointer-events: none; /* Permite hacer clic en los elementos de la página sin interferencias */
+            z-index: -1; /* Mantiene la textura siempre por detrás del contenido */
+        }
 
         /* Tema Bárbaro: Piedra, Tierra Húmeda y Pintura de Guerra */
         [data-theme="barbaro"] {
@@ -129,6 +205,25 @@
             --table-desc: #0f0a08;
             --shadow-color: rgba(0, 0, 0, 0.9);
             --glow-color: rgba(163, 78, 23, 0.25);
+        }
+        /* Patrón de fondo infinito para el Tema Bárbaro al 15% de opacidad */
+        [data-theme="barbaro"] body {
+            position: relative;
+            background-color: var(--bg-body);
+        }
+        [data-theme="barbaro"] body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('Backgrounds/Background Barbaro.png');
+            background-repeat: repeat; /* Patrón infinito en mosaico */
+            background-position: top left;
+            opacity: 0.12; /* Opacidad del 50% solicitada */
+            pointer-events: none; /* Permite hacer clic en los elementos de la página sin interferencias */
+            z-index: -1; /* Mantiene la textura siempre por detrás del contenido */
         }
 
         /* Tema Bribón: Noche Urbana, Acero y Veneno */
