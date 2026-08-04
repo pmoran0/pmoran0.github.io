@@ -243,6 +243,25 @@
             --shadow-color: rgba(0, 0, 0, 0.9);
             --glow-color: rgba(105, 74, 145, 0.25);
         }
+        /* Patrón de fondo infinito para el Tema Bribón al 15% de opacidad */
+        [data-theme="bribon"] body {
+            position: relative;
+            background-color: var(--bg-body);
+        }
+        [data-theme="bribon"] body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('Backgrounds/Background Bribon.png');
+            background-repeat: repeat; /* Patrón infinito en mosaico */
+            background-position: top left;
+            opacity: 0.12; /* Opacidad del 50% solicitada */
+            pointer-events: none; /* Permite hacer clic en los elementos de la página sin interferencias */
+            z-index: -1; /* Mantiene la textura siempre por detrás del contenido */
+        }
 
         /* =========================================================
            2. ESTILOS BASE Y TIPOGRAFÍA
