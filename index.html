@@ -10,15 +10,14 @@
            1. VARIABLES DE TEMA Y GEOMETRÍA (Fantasía Medieval)
            ========================================================= */
         :root {
-            /* Tema Ravenloft: Gótico, Sangre Seca y Hierro Forjado */
             --bg-body: #0a0a0c;
             --bg-panel: #141214;
             --bg-input: #050405;
-            --text-main: #d5c8b5;      /* Pergamino antiguo (muy legible) */
-            --text-muted: #8c8273;     /* Tinta gastada */
-            --accent-main: #961414;    /* Carmesí Ravenloft */
+            --text-main: #d5c8b5;
+            --text-muted: #8c8273;
+            --accent-main: #961414;
             --accent-hover: #bd1a1a;
-            --border-color: #3b2b2b;   /* Hierro oxidado / oscuro */
+            --border-color: #3b2b2b;
             --table-th: #1c1111;
             --table-tr: #100e0e;
             --table-tr-hover: #211212;
@@ -26,332 +25,279 @@
             --shadow-color: rgba(0, 0, 0, 0.85);
             --glow-color: rgba(150, 20, 20, 0.3);
             
-            /* Geometría Clásica (Cero estilo corporativo) */
             --radius-btn: 2px;
             --radius-panel: 4px;
             --font-fantasy: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
         }
-        /* Patrón de fondo infinito para el Tema Ravenloft al 15% de opacidad */
-        [data-theme="ravenloft"] body {
-            position: relative;
-            background-color: var(--bg-body);
-        }
+
+        [data-theme="ravenloft"] body { position: relative; background-color: var(--bg-body); }
         [data-theme="ravenloft"] body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background-image: url('Backgrounds/Background Ravenloft.png');
-            background-repeat: repeat; /* Patrón infinito en mosaico */
-            background-position: top left;
-            opacity: 0.12; /* Opacidad exacta del 15% */
-            pointer-events: none; /* Evita interferir con clics en botones o tablas */
-            z-index: -1; /* Mantiene la textura siempre por detrás del contenido */
+            background-repeat: repeat; background-position: top left;
+            opacity: 0.12; pointer-events: none; z-index: -1; 
         }
 
-        /* =========================================================
-           0. RESETEO DE CAJA (Prevenir Scroll Horizontal)
-           ========================================================= */
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-        
+        *, *::before, *::after { box-sizing: border-box; }
         html { overflow-x: hidden; }
 
-        /* Tema Luz Continua: Tomo Iluminado y Papiro Limpio */
+        /* =========================================================
+           TEMAS ALTERNATIVOS
+           ========================================================= */
         [data-theme="light"] {
-            --bg-body: #E8DECE; 
-            --bg-panel: #F4EFE7; 
-            --bg-input: #FCFAF5;
-            --text-main: #1A1614;      /* Tinta de carbón espesa */
-            --text-muted: #594D46;
-            --accent-main: #9E1B1B; 
-            --accent-hover: #7A1515;
-            --border-color: #C4B5A5; 
-            --table-th: #D4C6B3; 
-            --table-tr: #F4EFE7;
-            --table-tr-hover: #EBE1D1; 
-            --table-desc: #DFD5C5;
-            --shadow-color: rgba(30, 20, 15, 0.2);
-            --glow-color: rgba(158, 27, 27, 0.15);
+            --bg-body: #E8DECE; --bg-panel: #F4EFE7; --bg-input: #FCFAF5;
+            --text-main: #1A1614; --text-muted: #594D46; --accent-main: #9E1B1B; 
+            --accent-hover: #7A1515; --border-color: #C4B5A5; --table-th: #D4C6B3; 
+            --table-tr: #F4EFE7; --table-tr-hover: #EBE1D1; --table-desc: #DFD5C5;
+            --shadow-color: rgba(30, 20, 15, 0.2); --glow-color: rgba(158, 27, 27, 0.15);
         }
-
-       /* Tema Ranger: Troncos Oscuros, Follaje y Acero */
         [data-theme="ranger"] {
-            --bg-body: #0d0a07;        /* Corteza de árbol muy oscura */
-            --bg-panel: #17130e;       /* Madera tallada */
-            --bg-input: #080503;       /* Tierra profunda */
-            --text-main: #c4c9b9;      /* Hoja pálida / pergamino natural */
-            --text-muted: #8c8574;     /* Madera seca */
-            --accent-main: #46733a;    /* Verde follaje / Hojas vivas */
-            --accent-hover: #5ea14d;   /* Verde brillante (luz en el bosque) */
-            --border-color: #33271d;   /* Ramas entrelazadas */
-            --table-th: #120e0a; 
-            --table-tr: #17130e;
-            --table-tr-hover: #211c15; 
-            --table-desc: #0d0a07;
-            --shadow-color: rgba(0, 0, 0, 0.9);
-            --glow-color: rgba(70, 115, 58, 0.25);
-        }
-        /* Patrón de fondo infinito para el Tema Ranger al 15% de opacidad */
-        [data-theme="ranger"] body {
-            position: relative;
-            background-color: var(--bg-body);
+            --bg-body: #0d0a07; --bg-panel: #17130e; --bg-input: #080503;
+            --text-main: #c4c9b9; --text-muted: #8c8574; --accent-main: #46733a; 
+            --accent-hover: #5ea14d; --border-color: #33271d; --table-th: #120e0a; 
+            --table-tr: #17130e; --table-tr-hover: #211c15; --table-desc: #0d0a07;
+            --shadow-color: rgba(0, 0, 0, 0.9); --glow-color: rgba(70, 115, 58, 0.25);
         }
         [data-theme="ranger"] body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background-image: url('Backgrounds/Background Ranger.png');
-            background-repeat: repeat; /* Patrón infinito en mosaico */
-            background-position: top left;
-            opacity: 0.12; /* Opacidad del 50% solicitada */
-            pointer-events: none; /* Permite hacer clic en los elementos de la página sin interferencias */
-            z-index: -1; /* Mantiene la textura siempre por detrás del contenido */
+            background-repeat: repeat; background-position: top left;
+            opacity: 0.12; pointer-events: none; z-index: -1;
         }
-
-        /* Tema Hechicero: Noche Urbana (Base Bribón) con Aura Azul Mística */
         [data-theme="hechicero"] {
-            --bg-body: #060608;        /* Igual al Bribón: Oscuridad pura */
-            --bg-panel: #111117;       /* Igual al Bribón: Sombra profunda */
-            --bg-input: #030304;       /* Igual al Bribón: Vacío */
-            --text-main: #bac4d6;      /* Blanco azulado lunar */
-            --text-muted: #6a748c;     /* Azul grisáceo apagado */
-            --accent-main: #3460b3;    /* Azul marino / Magia condensada */
-            --accent-hover: #548af0;   /* Azul claro / Aura brillante */
-            --border-color: #1e2233;   /* Borde entintado de azul oscuro */
-            --table-th: #0b0e17; 
-            --table-tr: #111117;
-            --table-tr-hover: #171a26; 
-            --table-desc: #090a0f;
-            --shadow-color: rgba(0, 0, 0, 0.9);
-            --glow-color: rgba(84, 138, 240, 0.25); /* Resplandor de aura */
-        }
-        /* Patrón de fondo infinito para el Tema Hechicero al 15% de opacidad */
-        [data-theme="hechicero"] body {
-            position: relative;
-            background-color: var(--bg-body);
+            --bg-body: #060608; --bg-panel: #111117; --bg-input: #030304;
+            --text-main: #bac4d6; --text-muted: #6a748c; --accent-main: #3460b3; 
+            --accent-hover: #548af0; --border-color: #1e2233; --table-th: #0b0e17; 
+            --table-tr: #111117; --table-tr-hover: #171a26; --table-desc: #090a0f;
+            --shadow-color: rgba(0, 0, 0, 0.9); --glow-color: rgba(84, 138, 240, 0.25);
         }
         [data-theme="hechicero"] body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background-image: url('Backgrounds/Background Hechicero.png');
-            background-repeat: repeat; /* Patrón infinito en mosaico */
-            background-position: top left;
-            opacity: 0.12; /* Opacidad del 50% solicitada */
-            pointer-events: none; /* Permite hacer clic en los elementos de la página sin interferencias */
-            z-index: -1; /* Mantiene la textura siempre por detrás del contenido */
+            background-repeat: repeat; background-position: top left;
+            opacity: 0.12; pointer-events: none; z-index: -1;
         }
-
-        /* Tema Sacerdote: Templo, Incienso, Oro Viejo y Vestimentas Sagradas */
         [data-theme="sacerdote"] {
-            --bg-body: #0d0b0a;        /* Oscuridad de templo / Humo de incienso */
-            --bg-panel: #171311;       /* Madera de altar */
-            --bg-input: #080605;
-            --text-main: #e6dfd3;      /* Mármol pálido / Hostia */
-            --text-muted: #918476;     /* Textos litúrgicos secundarios */
-            --accent-main: #a88438;    /* Oro viejo / Latón de Símbolo Sagrado */
-            --accent-hover: #cca44d;   /* Luz divina cálida */
-            --border-color: #332a24;   /* Relieve de retablo */
-            --table-th: #120e0c; 
-            --table-tr: #171311;
-            --table-tr-hover: #211c18; 
-            --table-desc: #0d0a09;
-            --shadow-color: rgba(0, 0, 0, 0.85);
-            --glow-color: rgba(168, 132, 56, 0.2);
-        }
-        /* Patrón de fondo infinito para el Tema Sacerdote al 15% de opacidad */
-        [data-theme="sacerdote"] body {
-            position: relative;
-            background-color: var(--bg-body);
+            --bg-body: #0d0b0a; --bg-panel: #171311; --bg-input: #080605;
+            --text-main: #e6dfd3; --text-muted: #918476; --accent-main: #a88438; 
+            --accent-hover: #cca44d; --border-color: #332a24; --table-th: #120e0c; 
+            --table-tr: #171311; --table-tr-hover: #211c18; --table-desc: #0d0a09;
+            --shadow-color: rgba(0, 0, 0, 0.85); --glow-color: rgba(168, 132, 56, 0.2);
         }
         [data-theme="sacerdote"] body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background-image: url('Backgrounds/Background Sacerdote.png');
-            background-repeat: repeat; /* Patrón infinito en mosaico */
-            background-position: top left;
-            opacity: 0.12; /* Opacidad del 50% solicitada */
-            pointer-events: none; /* Permite hacer clic en los elementos de la página sin interferencias */
-            z-index: -1; /* Mantiene la textura siempre por detrás del contenido */
+            background-repeat: repeat; background-position: top left;
+            opacity: 0.12; pointer-events: none; z-index: -1;
         }
-
-        /* Tema Bárbaro: Piedra, Tierra Húmeda y Pintura de Guerra */
         [data-theme="barbaro"] {
-            --bg-body: #0d0907; 
-            --bg-panel: #1a120e; 
-            --bg-input: #050302;
-            --text-main: #d1c1b4; 
-            --text-muted: #948073;
-            --accent-main: #a34e17; 
-            --accent-hover: #c9601c;
-            --border-color: #3b271d; 
-            --table-th: #1f140f; 
-            --table-tr: #1a120e;
-            --table-tr-hover: #2b1d16; 
-            --table-desc: #0f0a08;
-            --shadow-color: rgba(0, 0, 0, 0.9);
-            --glow-color: rgba(163, 78, 23, 0.25);
-        }
-        /* Patrón de fondo infinito para el Tema Bárbaro al 15% de opacidad */
-        [data-theme="barbaro"] body {
-            position: relative;
-            background-color: var(--bg-body);
+            --bg-body: #0d0907; --bg-panel: #1a120e; --bg-input: #050302;
+            --text-main: #d1c1b4; --text-muted: #948073; --accent-main: #a34e17; 
+            --accent-hover: #c9601c; --border-color: #3b271d; --table-th: #1f140f; 
+            --table-tr: #1a120e; --table-tr-hover: #2b1d16; --table-desc: #0f0a08;
+            --shadow-color: rgba(0, 0, 0, 0.9); --glow-color: rgba(163, 78, 23, 0.25);
         }
         [data-theme="barbaro"] body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background-image: url('Backgrounds/Background Barbaro.png');
-            background-repeat: repeat; /* Patrón infinito en mosaico */
-            background-position: top left;
-            opacity: 0.12; /* Opacidad del 50% solicitada */
-            pointer-events: none; /* Permite hacer clic en los elementos de la página sin interferencias */
-            z-index: -1; /* Mantiene la textura siempre por detrás del contenido */
+            background-repeat: repeat; background-position: top left;
+            opacity: 0.12; pointer-events: none; z-index: -1;
         }
-
-        /* Tema Bribón: Noche Urbana, Acero y Veneno */
         [data-theme="bribon"] {
-            --bg-body: #060608; 
-            --bg-panel: #111117; 
-            --bg-input: #030304;
-            --text-main: #b8b8c7; 
-            --text-muted: #6a6a7c;
-            --accent-main: #694a91; 
-            --accent-hover: #865ebd;
-            --border-color: #21212e; 
-            --table-th: #15151c; 
-            --table-tr: #111117;
-            --table-tr-hover: #1b1b26; 
-            --table-desc: #09090c;
-            --shadow-color: rgba(0, 0, 0, 0.9);
-            --glow-color: rgba(105, 74, 145, 0.25);
-        }
-        /* Patrón de fondo infinito para el Tema Bribón al 15% de opacidad */
-        [data-theme="bribon"] body {
-            position: relative;
-            background-color: var(--bg-body);
+            --bg-body: #060608; --bg-panel: #111117; --bg-input: #030304;
+            --text-main: #b8b8c7; --text-muted: #6a6a7c; --accent-main: #694a91; 
+            --accent-hover: #865ebd; --border-color: #21212e; --table-th: #15151c; 
+            --table-tr: #111117; --table-tr-hover: #1b1b26; --table-desc: #09090c;
+            --shadow-color: rgba(0, 0, 0, 0.9); --glow-color: rgba(105, 74, 145, 0.25);
         }
         [data-theme="bribon"] body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background-image: url('Backgrounds/Background Bribon.png');
-            background-repeat: repeat; /* Patrón infinito en mosaico */
-            background-position: top left;
-            opacity: 0.12; /* Opacidad del 50% solicitada */
-            pointer-events: none; /* Permite hacer clic en los elementos de la página sin interferencias */
-            z-index: -1; /* Mantiene la textura siempre por detrás del contenido */
+            background-repeat: repeat; background-position: top left;
+            opacity: 0.12; pointer-events: none; z-index: -1;
         }
 
         /* =========================================================
            2. ESTILOS BASE Y TIPOGRAFÍA
            ========================================================= */
         body {
-            background-color: var(--bg-body);
-            color: var(--text-main); 
-            font-family: var(--font-fantasy); /* Puramente Fantasía */
-            margin: 0;
-            padding: 20px;
+            background-color: var(--bg-body); color: var(--text-main); 
+            font-family: var(--font-fantasy); margin: 0;
+            padding: 85px 20px 20px 20px; 
             transition: background-color 0.5s ease, color 0.5s ease;
-            line-height: 1.6;
-            font-size: 16px;
+            line-height: 1.6; font-size: 16px;
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* Scrollbars Estilo Forja */
         ::-webkit-scrollbar { width: 10px; height: 10px; }
         ::-webkit-scrollbar-track { background: var(--bg-body); border-left: 1px solid var(--border-color); }
         ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 0; border: 1px solid var(--bg-body); }
         ::-webkit-scrollbar-thumb:hover { background: var(--accent-main); }
 
         /* =========================================================
-           3. PANTALLA DE INICIO (El Tomo Abierto)
+           3. BARRA DE ATRIBUTOS (STATS) CORONA
+           ========================================================= */
+        #stats-bar {
+            position: fixed; top: 0; left: 0; width: 100vw; z-index: 1000;
+            background-color: var(--bg-panel); border-bottom: 2px solid var(--accent-main);
+            display: flex; justify-content: center; align-items: center; gap: 1vw;
+            padding: 10px 15px; box-shadow: 0 4px 15px var(--shadow-color);
+            transition: right 0.4s ease;
+        }
+
+        .stat-item {
+            position: relative; display: flex; align-items: center; gap: 5px;
+            background: var(--bg-input); padding: 4px 12px; border-radius: var(--radius-btn);
+            border: 1px solid var(--border-color); cursor: pointer;
+        }
+
+        .stat-item label { color: var(--accent-main); font-weight: bold; font-size: 1.1em; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+        
+        .stat-item input[type=text] {
+            width: 60px; background: transparent; border: none; color: var(--text-main);
+            font-size: 1.25em; font-family: inherit; font-weight: bold; text-align: center;
+        }
+        .stat-item input:focus { outline: none; border-bottom: 1px solid var(--accent-main); }
+        .stat-item input:disabled { opacity: 0.8; cursor: not-allowed; }
+
+        /* Tooltip de Modificadores */
+        .stat-tooltip {
+            position: absolute; top: 120%; left: 50%; transform: translateX(-50%);
+            background-color: var(--table-desc); border: 2px solid var(--border-color);
+            border-top: 2px solid var(--accent-main); padding: 12px; width: max-content;
+            border-radius: var(--radius-panel); box-shadow: 0 5px 15px var(--shadow-color);
+            opacity: 0; visibility: hidden; transition: all 0.2s ease; z-index: 1001;
+            pointer-events: none;
+        }
+        .stat-item:hover .stat-tooltip { opacity: 1; visibility: visible; top: 130%; }
+        
+        /* Clase especial para ocultar el tooltip mientras se edita */
+        .stat-item.hide-tooltip .stat-tooltip { display: none !important; opacity: 0 !important; visibility: hidden !important; }
+
+        .stat-tooltip p { margin: 4px 0; font-size: 0.95em; color: var(--text-main); line-height: 1.3;}
+        .stat-tooltip p strong { color: var(--accent-main); }
+
+        .btn-lock {
+            background: transparent; color: var(--text-muted); border: 1px dashed var(--border-color);
+            padding: 8px 15px; cursor: pointer; font-family: inherit; font-weight: bold;
+            font-size: 0.95em; text-transform: uppercase; letter-spacing: 1px;
+            transition: all 0.3s; border-radius: var(--radius-btn);
+        }
+        .btn-lock:hover { border-color: var(--accent-main); color: var(--text-main); }
+        .btn-lock.locked { border-style: solid; color: var(--accent-main); border-color: var(--accent-main); }
+
+        /* Botón Flotante Lateral Móvil - Ahora Arrastrable */
+        #mobile-stats-btn {
+            display: none; position: fixed; right: 0; top: 50%; 
+            background-color: var(--bg-panel); color: var(--accent-main);
+            border: 2px solid var(--border-color); border-right: none;
+            padding: 20px 10px; border-radius: 8px 0 0 8px; font-weight: bold; font-family: var(--font-fantasy);
+            cursor: pointer; z-index: 1002; box-shadow: -4px 2px 10px var(--shadow-color);
+            writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 3px; font-size: 1.1em;
+        }
+        #mobile-stats-btn:hover { background-color: var(--bg-input); color: #fff; }
+
+        /* Estilos Animados para Indicadores (Móvil y Tutorial) */
+        @keyframes dragPulse {
+            0%, 100% { transform: translateY(0); opacity: 0.7; }
+            50% { transform: translateY(-5px); opacity: 1; text-shadow: 0 0 8px var(--accent-main); }
+        }
+        .drag-arrows {
+            display: inline-block; font-size: 1.3em; margin: 5px 0;
+            color: var(--text-muted); animation: dragPulse 2s infinite;
+        }
+
+        @keyframes borderPulse {
+            0% { box-shadow: 0 0 0 0 var(--glow-color); border-color: var(--border-color); }
+            50% { box-shadow: 0 0 15px 5px var(--glow-color); border-color: var(--accent-main); }
+            100% { box-shadow: 0 0 0 0 var(--glow-color); border-color: var(--border-color); }
+        }
+        .row-hint {
+            position: relative;
+            animation: borderPulse 2s infinite;
+        }
+        .row-hint::after {
+            content: "¡Toca para expandir descripción!";
+            position: absolute; right: 15px; top: 15px;
+            background-color: var(--accent-main); color: #fff;
+            padding: 4px 10px; border-radius: var(--radius-btn);
+            font-size: 0.85em; font-weight: bold; letter-spacing: 1px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            z-index: 10; pointer-events: none;
+            animation: dragPulse 1.5s infinite;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Botón de Tabla Completa en los Stats */
+        .stat-table-btn {
+            font-size: 1.1em; cursor: pointer; color: var(--text-muted);
+            transition: all 0.3s ease; opacity: 0.7; margin-left: 2px;
+        }
+        .stat-table-btn:hover {
+            color: var(--text-main); opacity: 1; transform: scale(1.1);
+            text-shadow: 0 0 8px var(--accent-main);
+        }
+
+        /* Estilos del Modal de Stats */
+        #stat-modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.85); z-index: 2000;
+            align-items: center; justify-content: center; padding: 20px;
+            backdrop-filter: blur(3px);
+        }
+        .stat-modal-content {
+            background-color: var(--bg-panel); border: 2px solid var(--accent-main);
+            border-radius: var(--radius-panel); padding: 20px; max-width: 95vw; max-height: 90vh;
+            box-shadow: 0 10px 40px var(--shadow-color); display: flex; flex-direction: column;
+        }
+        .stat-modal-header {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 2px solid var(--border-color); padding-bottom: 10px; margin-bottom: 15px;
+        }
+        .stat-modal-title { color: var(--accent-main); margin: 0; font-size: 1.5em; text-transform: uppercase; letter-spacing: 2px; }
+        .stat-modal-close { background: transparent; color: var(--text-muted); border: none; font-size: 2em; cursor: pointer; line-height: 1; transition: color 0.3s; }
+        .stat-modal-close:hover { color: var(--accent-main); }
+        .stat-modal-body { overflow-x: auto; overflow-y: auto; }
+        
+        #stat-modal-table { margin-bottom: 0; }
+
+        /* =========================================================
+           4. PANTALLA DE INICIO
            ========================================================= */
         #landing-screen {
             display: flex; flex-direction: column; align-items: center;
-            justify-content: center; min-height: 85vh; text-align: center;
+            justify-content: center; min-height: 75vh; text-align: center;
             animation: fadeIn 1s ease-out;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
         .landing-title {
             font-size: 3.2em; color: var(--accent-main); margin-bottom: 5px;
             text-shadow: 2px 2px 8px var(--shadow-color), 0 0 15px var(--glow-color); 
             letter-spacing: 4px; text-transform: uppercase; border-bottom: none;
         }
-
         .landing-subtitle { font-size: 1.3em; color: var(--text-muted); margin-bottom: 25px; font-style: italic; }
         .user-greeting { color: var(--text-main); font-size: 1.4em; margin-bottom: 40px; border-bottom: 1px solid var(--accent-main); padding-bottom: 5px;}
 
-        .landing-buttons, .action-buttons {
-            display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;
-            width: 100%; max-width: 900px;
-        }
-        
-        .action-buttons {
-            max-width: 600px; padding-top: 35px; margin-top: 25px;
-            border-top: 1px double var(--border-color); /* Toque clásico */
-        }
+        .landing-buttons, .action-buttons { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; width: 100%; max-width: 900px; }
+        .action-buttons { max-width: 600px; padding-top: 35px; margin-top: 25px; border-top: 1px double var(--border-color); }
 
-        /* Botones estilo Placas Grabadas */
         .btn-large {
-            background-color: var(--bg-panel);
-            color: var(--text-main);
-            border: 2px solid var(--border-color);
-            border-bottom: 4px solid var(--border-color); /* Efecto de peso / relieve grueso */
-            padding: 16px 25px;
-            font-size: 1.15em;
-            font-family: inherit;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-radius: var(--radius-btn);
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            box-shadow: 0 6px 15px var(--shadow-color);
-            flex: 1; min-width: 200px;
+            background-color: var(--bg-panel); color: var(--text-main);
+            border: 2px solid var(--border-color); border-bottom: 4px solid var(--border-color);
+            padding: 16px 25px; font-size: 1.15em; font-family: inherit; font-weight: bold;
+            text-transform: uppercase; letter-spacing: 2px; border-radius: var(--radius-btn);
+            cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 6px 15px var(--shadow-color); flex: 1; min-width: 200px;
         }
-        
         .btn-large:hover {
-            border-color: var(--accent-main);
-            background-color: var(--accent-hover);
-            color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px var(--glow-color);
+            border-color: var(--accent-main); background-color: var(--accent-hover);
+            color: #ffffff; transform: translateY(-2px); box-shadow: 0 8px 20px var(--glow-color);
         }
-
-        .btn-large:active {
-            transform: translateY(2px);
-            border-bottom-width: 2px;
-            margin-top: 2px;
-        }
+        .btn-large:active { transform: translateY(2px); border-bottom-width: 2px; margin-top: 2px; }
 
         /* =========================================================
-           4. CABECERAS Y PANELES (Controles de Búsqueda)
+           5. CABECERAS Y PANELES (Controles de Búsqueda)
            ========================================================= */
         #nwp-app, #skills-app, #am-app { display: none; animation: fadeIn 0.6s ease-out; max-width: 1200px; margin: 0 auto; }
 
@@ -375,14 +321,12 @@
         }
         .btn-theme:hover, .btn-theme:focus { border-color: var(--accent-main); background-color: var(--bg-panel); outline: none; }
 
-        /* Panel estilo Caja de Madera / Forjado */
         .controls-panel {
             background-color: var(--bg-panel); border: 1px solid var(--border-color);
             padding: 20px; margin-bottom: 30px; border-radius: var(--radius-panel);
             box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 8px 20px var(--shadow-color);
         }
 
-        /* Buscador estilo placa inscrita */
         .search-bar {
             width: 100%; padding: 14px 20px; font-size: 1.15em;
             background-color: var(--bg-input); color: var(--text-main);
@@ -433,7 +377,7 @@
         .btn-reset:hover { background-color: var(--accent-hover); color: #fff; border-color: var(--accent-hover); }
 
         /* =========================================================
-           5. TABLAS DE CATÁLOGO (Legibilidad y Temática)
+           6. TABLAS DE CATÁLOGO
            ========================================================= */
         table {
             width: 100%; border-collapse: collapse;
@@ -441,47 +385,39 @@
             overflow: hidden; border: 2px solid var(--border-color);
             box-shadow: 0 8px 25px var(--shadow-color); margin-bottom: 40px;
         }
-
         th {
             background-color: var(--table-th); color: var(--accent-main);
             padding: 16px 14px; text-align: left; font-weight: bold;
             font-size: 1.05em; text-transform: uppercase; letter-spacing: 1px;
             border-bottom: 2px solid var(--border-color); 
         }
-
         td {
             padding: 14px 14px; text-align: left; color: var(--text-main);
             border-bottom: 1px solid var(--border-color); font-size: 1.05em;
         }
-
         th:last-child, td:last-child { text-align: center; }
-
         tr.main-row { transition: background-color 0.2s ease; cursor: pointer; }
         tr.main-row:hover { background-color: var(--table-tr-hover); }
-        
         td strong { font-size: 1.1em; color: var(--text-main); font-weight: bold; letter-spacing: 0.5px; }
 
         .star-btn { font-size: 1.5em; cursor: pointer; user-select: none; transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); }
         .star-btn:hover { transform: scale(1.3); text-shadow: 0 0 10px var(--accent-main); }
 
-        /* Fila de Descripción Expandida (El Grimorio) */
         .desc-row td { padding: 0 !important; border: none !important; }
         
         .desc-content {
             max-height: 0; overflow: hidden; overflow-y: auto; 
             transition: max-height 0.4s ease-out, padding 0.4s ease-out;
             background-color: var(--table-desc); color: var(--text-main);
-            text-align: left; font-size: 1.1em; /* Texto grande para lectura cómoda */
+            text-align: left; font-size: 1.1em; 
         }
-
         .desc-row.show .desc-content {
             padding: 30px 40px; 
-            border-left: 4px solid var(--accent-main); /* Marca de libro lateral */
+            border-left: 4px solid var(--accent-main); 
             border-bottom: 2px solid var(--border-color);
             box-shadow: inset 0 10px 15px -10px rgba(0,0,0,0.6);
         }
-
-        .desc-content p { margin: 0 0 18px 0; line-height: 1.7; } /* Alto interlineado para descanso visual */
+        .desc-content p { margin: 0 0 18px 0; line-height: 1.7; } 
         .desc-content p:last-child { margin-bottom: 0; }
 
         .am-category-block {
@@ -489,42 +425,55 @@
             padding: 18px 25px; border-radius: var(--radius-btn);
             border: 1px solid var(--border-color); border-left: 2px solid var(--accent-main);
         }
-        
         .am-category-title {
             color: var(--text-main); text-transform: uppercase;
             font-size: 1.05em; font-weight: bold; letter-spacing: 1px;
             border-bottom: 1px dashed var(--border-color);
             padding-bottom: 8px; margin-bottom: 15px; 
         }
-        
         .am-maneuver-item { margin-bottom: 18px; font-size: 1em; line-height: 1.6; }
         .am-maneuver-item strong { color: var(--accent-main); }
         .am-maneuver-item em { color: var(--text-muted); }
 
         /* =========================================================
-           6. RESPONSIVIDAD (MÓVILES)
-           ========================================================= */
-        /* =========================================================
-           6. RESPONSIVIDAD (MÓVILES) - Sin Scroll Horizontal
+           7. RESPONSIVIDAD (MÓVILES)
            ========================================================= */
         @media screen and (max-width: 768px) {
-            body { padding: 10px; font-size: 15px; overflow-x: hidden; }
+            body { padding: 20px; font-size: 15px; overflow-x: hidden; }
             
-            /* Ajuste de Títulos y Botones para evitar desbordamiento */
+            /* UI de Stats Lateral para Móvil */
+            #mobile-stats-btn { display: block; }
+            #stats-bar {
+                flex-direction: column; justify-content: flex-start; align-items: stretch;
+                top: 0; right: -300px; left: auto; width: 280px; height: 100vh;
+                border-bottom: none; border-left: 3px solid var(--accent-main);
+                padding: 40px 15px 20px 15px; overflow-y: auto; overflow-x: hidden;
+            }
+            #stats-bar.open { right: 0; }
+            
+            .stat-item { margin-bottom: 12px; flex-wrap: wrap; justify-content: space-between; }
+            .stat-item input[type=text] { text-align: right; width: 80px; }
+            
+            .stat-tooltip {
+                position: static; opacity: 1; visibility: visible; transform: none;
+                width: 100%; box-shadow: none; border: none; border-top: 1px dashed var(--border-color);
+                padding: 10px 0 0 0; background: transparent; pointer-events: auto;
+                display: none; 
+            }
+            .stat-item.active .stat-tooltip { display: block; }
+            
+            .btn-lock { margin-bottom: 25px; }
+
+            /* Ajustes Generales Móvil */
             .landing-title { font-size: 2.2em; letter-spacing: 2px; }
             .landing-buttons, .action-buttons { flex-direction: column; width: 100%; align-items: stretch; }
             .btn-large { min-width: 100%; width: 100%; margin-bottom: 5px; }
-
-            /* Ajuste de Cabeceras */
             .header-container { flex-direction: column; text-align: center; border-bottom: none; }
             .header-controls { justify-content: center; width: 100%; flex-direction: column; gap: 8px; }
             .header-greeting { margin-right: 0; margin-bottom: 5px; width: 100%; }
             .btn-theme, .theme-selector { width: 100%; text-align: center; }
-
-            /* Filtros en una sola columna */
             .filters-grid { grid-template-columns: 1fr; }
             
-            /* Tablas Convertidas en Tarjetas Verticales */
             table, thead, tbody, th, td, tr { display: block; width: 100%; }
             thead tr { position: absolute; top: -9999px; left: -9999px; }
             table { background-color: transparent; box-shadow: none; border: none; margin-bottom: 20px; }
@@ -533,42 +482,31 @@
                 margin-bottom: 15px; border: 2px solid var(--border-color);
                 border-radius: var(--radius-panel); background-color: var(--table-tr);
                 box-shadow: 0 4px 10px var(--shadow-color); padding: 5px 0;
-                width: 100%; display: block;
             }
+            
+            /* Ajuste posicional del Hint en móvil */
+            .row-hint::after { top: 10px; right: 5px; font-size: 0.75em; padding: 2px 6px; }
 
             td {
                 border: none; border-bottom: 1px solid var(--border-color);
-                padding: 12px 15px; 
-                display: flex; flex-direction: column; /* Etiqueta arriba, valor abajo */
-                align-items: flex-start; text-align: left; 
-                min-height: auto; word-break: break-word; /* Evita que palabras corten la caja */
+                padding: 12px 15px; display: flex; flex-direction: column; 
+                align-items: flex-start; text-align: left; word-break: break-word; 
             }
-
             td::before {
                 content: attr(data-label); font-weight: bold;
                 font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px;
-                color: var(--accent-main); margin-bottom: 4px; margin-right: 0;
-                white-space: normal;
+                color: var(--accent-main); margin-bottom: 4px; white-space: normal;
             }
-
-            /* La última celda (La Estrella de Favoritos) */
-            td:last-child { 
-                border-bottom: 0; 
-                flex-direction: row; 
-                justify-content: space-between; 
-                align-items: center; 
-            }
+            td:last-child { border-bottom: 0; flex-direction: row; justify-content: space-between; align-items: center; }
             td:last-child::before { margin-bottom: 0; }
             
             .desc-row td { display: block; padding: 0 !important; border-bottom: none; }
-            
             .desc-row.show .desc-content {
                 border-bottom-left-radius: var(--radius-panel); border-bottom-right-radius: var(--radius-panel);
                 margin-bottom: 15px; border: 2px solid var(--border-color); border-top: none;
                 padding: 20px 15px; box-shadow: 0 4px 10px var(--shadow-color);
-                border-left: 4px solid var(--accent-main); /* Mantiene la estética de marca de libro */
+                border-left: 4px solid var(--accent-main);
             }
-
             .btn-toggle-filters { display: block; }
             .filters-collapsible { display: none; margin-top: 15px; }
             .filters-collapsible.show { display: block; }
@@ -577,6 +515,68 @@
 </head>
 <body>
 
+    <!-- ==========================================
+         MODAL TABLA DE STATS COMPLETA
+         ========================================== -->
+    <div id="stat-modal" onclick="closeStatModal(event)">
+        <div class="stat-modal-content" onclick="event.stopPropagation()">
+            <div class="stat-modal-header">
+                <h2 id="stat-modal-title" class="stat-modal-title"></h2>
+                <button class="stat-modal-close" onclick="closeStatModal(event)">&times;</button>
+            </div>
+            <div class="stat-modal-body">
+                <table id="stat-modal-table">
+                    <thead id="stat-modal-thead"></thead>
+                    <tbody id="stat-modal-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         CORONA DE ATRIBUTOS (STATS)
+         ========================================== -->
+    <button id="mobile-stats-btn" onclick="toggleMobileStats(event)">
+        <span class="drag-arrows">← STATS →</span>
+    </button>
+    <div id="stats-bar">
+        <button id="btn-lock-stats" class="btn-lock" onclick="toggleStatsLock()">🔓 Desbloqueado</button>
+        
+        <div class="stat-item" onclick="toggleMobileTooltip(this)">
+            <label for="stat-Str">STR <span class="stat-table-btn" title="Generar Tabla" onclick="openFullStat('Str', event)">🕮</span></label>
+            <input type="text" inputmode="text" id="stat-Str" onfocus="this.parentElement.classList.add('hide-tooltip')" onblur="this.parentElement.classList.remove('hide-tooltip'); updateStat('Str', this)" onclick="event.stopPropagation()">
+            <div class="stat-tooltip" id="tooltip-Str"></div>
+        </div>
+        <div class="stat-item" onclick="toggleMobileTooltip(this)">
+            <label for="stat-Dex">DEX <span class="stat-table-btn" title="Generar Tabla" onclick="openFullStat('Dex', event)">🕮</span></label>
+            <input type="text" inputmode="text" id="stat-Dex" onfocus="this.parentElement.classList.add('hide-tooltip')" onblur="this.parentElement.classList.remove('hide-tooltip'); updateStat('Dex', this)" onclick="event.stopPropagation()">
+            <div class="stat-tooltip" id="tooltip-Dex"></div>
+        </div>
+        <div class="stat-item" onclick="toggleMobileTooltip(this)">
+            <label for="stat-Con">CON <span class="stat-table-btn" title="Generar Tabla" onclick="openFullStat('Con', event)">🕮</span></label>
+            <input type="text" inputmode="text" id="stat-Con" onfocus="this.parentElement.classList.add('hide-tooltip')" onblur="this.parentElement.classList.remove('hide-tooltip'); updateStat('Con', this)" onclick="event.stopPropagation()">
+            <div class="stat-tooltip" id="tooltip-Con"></div>
+        </div>
+        <div class="stat-item" onclick="toggleMobileTooltip(this)">
+            <label for="stat-Int">INT <span class="stat-table-btn" title="Generar Tabla" onclick="openFullStat('Int', event)">🕮</span></label>
+            <input type="text" inputmode="text" id="stat-Int" onfocus="this.parentElement.classList.add('hide-tooltip')" onblur="this.parentElement.classList.remove('hide-tooltip'); updateStat('Int', this)" onclick="event.stopPropagation()">
+            <div class="stat-tooltip" id="tooltip-Int"></div>
+        </div>
+        <div class="stat-item" onclick="toggleMobileTooltip(this)">
+            <label for="stat-Wis">WIS <span class="stat-table-btn" title="Generar Tabla" onclick="openFullStat('Wis', event)">🕮</span></label>
+            <input type="text" inputmode="text" id="stat-Wis" onfocus="this.parentElement.classList.add('hide-tooltip')" onblur="this.parentElement.classList.remove('hide-tooltip'); updateStat('Wis', this)" onclick="event.stopPropagation()">
+            <div class="stat-tooltip" id="tooltip-Wis"></div>
+        </div>
+        <div class="stat-item" onclick="toggleMobileTooltip(this)">
+            <label for="stat-Cha">CHA <span class="stat-table-btn" title="Generar Tabla" onclick="openFullStat('Cha', event)">🕮</span></label>
+            <input type="text" inputmode="text" id="stat-Cha" onfocus="this.parentElement.classList.add('hide-tooltip')" onblur="this.parentElement.classList.remove('hide-tooltip'); updateStat('Cha', this)" onclick="event.stopPropagation()">
+            <div class="stat-tooltip" id="tooltip-Cha"></div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         PANTALLA DE INICIO
+         ========================================== -->
     <div id="landing-screen">
         <h1 class="landing-title">Archivos de AD&D 2e</h1>
         <p class="landing-subtitle">Elige el conocimiento que deseas develar...</p>
@@ -596,6 +596,9 @@
         </div>
     </div>
 
+    <!-- ==========================================
+         MÓDULO: PERICIAS EN NO ARMAS (NWP)
+         ========================================== -->
     <div id="nwp-app">
         <div class="header-container">
             <h1>Pericias en No Armas</h1>
@@ -673,6 +676,9 @@
         </table>
     </div>
 
+    <!-- ==========================================
+         MÓDULO: SKILLS ESPECIALES
+         ========================================== -->
     <div id="skills-app">
         <div class="header-container">
             <h1>Skills Especiales</h1>
@@ -734,6 +740,9 @@
         </table>
     </div>
 
+    <!-- ==========================================
+         MÓDULO: ARTEMARCIALISMOS
+         ========================================== -->
     <div id="am-app">
         <div class="header-container">
             <h1>Artemarcialismos</h1>
@@ -811,6 +820,10 @@
         </table>
     </div>
 
+    <!-- ==========================================
+         DEPOSITORIOS DE DATOS EN JAVASCRIPT
+         ========================================== -->
+    <script src="stats.js"></script>
     <script src="non-weapon-proficiencies.js"></script>
     <script src="skills.js"></script>
     <script src="artemarcialismos-lista.js"></script>
@@ -818,25 +831,21 @@
 
     <script>
         // ==========================================
-        // Estructura Central de Personaje (PWA / JSON)
+        // ESTRUCTURA DE PERSONAJE
         // ==========================================
         let characterProfile = {
             name: "Invitado",
             theme: "ravenloft",
-            favorites: {
-                nwp: [], // Guardará los ID (números)
-                sk: [],  // Guardará los nombres (strings)
-                am: []   // Guardará los nombres del estilo (strings)
-            }
+            statsLocked: false,
+            stats: { Str: "10", Dex: "10", Con: "10", Int: "10", Wis: "10", Cha: "10" },
+            favorites: { nwp: [], sk: [], am: [] }
         };
 
-        // Variables Globales de Datos y UI
         let nwpData = [], nwpFiltered = [], nwpExpandedId = null;
         let skData = [], skFiltered = [], skExpandedId = null;
         let amData = [], amFiltered = [], amExpandedKey = null;
         let dbManiobras = {};
 
-        // Actualizar UI con el Nombre del Personaje
         function updateGreetings() {
             document.getElementById('landing-greeting').textContent = `Bienvenido, ${characterProfile.name}`;
             document.querySelectorAll('.global-greeting-text').forEach(el => {
@@ -844,29 +853,245 @@
             });
         }
 
-        // Sistema de Favoritos OnClick
-        function toggleFavorite(type, id, event) {
-            event.stopPropagation(); // Evita que se abra el acordeón al dar clic en la estrella
-            
-            const favList = characterProfile.favorites[type];
-            const index = favList.indexOf(id);
-            
-            if (index > -1) {
-                favList.splice(index, 1); // Remover
-            } else {
-                favList.push(id); // Agregar
+        // ==========================================
+        // TABLAS COMPLETAS DE STATS (MODAL)
+        // ==========================================
+        function openFullStat(abbr, event) {
+            event.stopPropagation();
+            if (typeof statsData === 'undefined') {
+                alert("La base de datos de Stats no se ha cargado.");
+                return;
             }
             
-            // Re-renderizar la tabla específica para actualizar la estrella y aplicar el filtro si está activo
+            const data = statsData.filter(s => s.abbreviation === abbr);
+            if (data.length === 0) return;
+            
+            document.getElementById('stat-modal-title').textContent = data[0].name + " - Archivos Completos";
+            
+            const keys = Object.keys(data[0]).filter(k => k !== 'id' && k !== 'abbreviation' && k !== 'name');
+            
+            let thead = '<tr>';
+            keys.forEach(k => thead += `<th>${k}</th>`);
+            thead += '</tr>';
+            document.getElementById('stat-modal-thead').innerHTML = thead;
+            
+            let tbody = '';
+            data.forEach(row => {
+                tbody += '<tr class="main-row">';
+                keys.forEach(k => {
+                    tbody += `<td data-label="${k}">${row[k] !== undefined ? row[k] : '-'}</td>`;
+                });
+                tbody += '</tr>';
+            });
+            document.getElementById('stat-modal-tbody').innerHTML = tbody;
+            
+            document.getElementById('stat-modal').style.display = 'flex';
+        }
+        
+        function closeStatModal(event) {
+            if(event) event.stopPropagation();
+            document.getElementById('stat-modal').style.display = 'none';
+        }
+
+        // ==========================================
+        // TUTORIAL (HINT)
+        // ==========================================
+        function checkExpandHint(prefix) {
+            if (!localStorage.getItem('adnd_hint_seen')) {
+                document.querySelectorAll('.row-hint').forEach(el => el.classList.remove('row-hint'));
+                const firstRow = document.querySelector(`#${prefix}-table-body .main-row`);
+                if (firstRow) {
+                    firstRow.classList.add('row-hint');
+                }
+            }
+        }
+
+        // ==========================================
+        // SISTEMA DE STATS (CÁLCULOS Y RENDER)
+        // ==========================================
+        function getStatModifiers(abbreviation, scoreStr) {
+            if (typeof statsData === 'undefined') return null;
+            const scoreStrLower = String(scoreStr).toLowerCase().trim();
+            
+            return statsData.find(s => {
+                if (s.abbreviation !== abbreviation) return false;
+                const dbScore = String(s.score).toLowerCase().trim();
+                
+                // 1. Coincidencia Exacta (ej. "15" === "15" o "18" === "18" o "18/00" === "18/00")
+                if (dbScore === scoreStrLower) return true;
+
+                // 2. Coincidencia de Rango Normal (ej. "7-14", "2-8")
+                if (dbScore.includes('-') && !dbScore.includes('/')) {
+                    const parts = dbScore.split('-');
+                    const min = parseInt(parts[0], 10);
+                    const max = parseInt(parts[1], 10);
+                    const valInt = parseInt(scoreStrLower, 10);
+                    if (!isNaN(min) && !isNaN(max) && valInt >= min && valInt <= max) return true;
+                }
+
+                // 3. Coincidencia de Fuerza Excepcional (ej. Input: "18/34", DB: "18/01-50")
+                if (abbreviation === 'Str' && scoreStrLower.startsWith('18/') && dbScore.startsWith('18/')) {
+                    let userExStr = scoreStrLower.split('/')[1];
+                    // Unificar "00" o "100" como 100
+                    if (userExStr === "00" || userExStr === "100") userExStr = 100;
+                    else userExStr = parseInt(userExStr, 10);
+
+                    if (dbScore.includes('-')) {
+                        // Rango de porcentaje, ej. "18/01-50"
+                        const parts = dbScore.replace('18/', '').split('-');
+                        const min = parseInt(parts[0], 10);
+                        const max = parseInt(parts[1], 10);
+                        if (userExStr >= min && userExStr <= max) return true;
+                    } else if (dbScore === "18/00" && userExStr === 100) {
+                        return true;
+                    }
+                }
+                return false;
+            });
+        }
+
+        function renderStatsTooltips() {
+            const statsList = ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'];
+            statsList.forEach(stat => {
+                const val = characterProfile.stats[stat];
+                const inputElement = document.getElementById(`stat-${stat}`);
+                if(inputElement) inputElement.value = val;
+                
+                const modData = getStatModifiers(stat, val);
+                const tooltip = document.getElementById(`tooltip-${stat}`);
+                if (tooltip) {
+                    if (modData) {
+                        let html = '';
+                        for (const [key, value] of Object.entries(modData)) {
+                            if (['id', 'name', 'abbreviation', 'score'].includes(key)) continue;
+                            html += `<p><strong>${key}:</strong> ${value}</p>`;
+                        }
+                        tooltip.innerHTML = html;
+                    } else {
+                        tooltip.innerHTML = '<p><em>Sin modificadores definidos o valor no válido</em></p>';
+                    }
+                }
+            });
+            applyStatsLockState();
+        }
+
+        function updateStat(stat, inputElement) {
+            let val = inputElement.value.trim().toLowerCase();
+            
+            // Si es STR y comienza con 18/, mantenemos el texto para la Fuerza Excepcional
+            if (stat === 'Str' && val.startsWith('18/')) {
+                // Formato válido mantenido
+            } else {
+                let intVal = parseInt(val, 10);
+                if (isNaN(intVal)) intVal = 10;
+                if (intVal < 1) intVal = 1;
+                if (intVal > 25) intVal = 25;
+                val = intVal.toString();
+            }
+            
+            inputElement.value = val; 
+            characterProfile.stats[stat] = val;
+            renderStatsTooltips();
+        }
+
+        function toggleStatsLock() {
+            characterProfile.statsLocked = !characterProfile.statsLocked;
+            applyStatsLockState();
+        }
+
+        function applyStatsLockState() {
+            const btn = document.getElementById('btn-lock-stats');
+            const inputs = document.querySelectorAll('.stat-item input');
+            
+            if (!btn) return;
+
+            if (characterProfile.statsLocked) {
+                btn.innerHTML = '🔒 Bloqueado';
+                btn.classList.add('locked');
+                inputs.forEach(i => i.disabled = true);
+            } else {
+                btn.innerHTML = '🔓 Desbloqueado';
+                btn.classList.remove('locked');
+                inputs.forEach(i => i.disabled = false);
+            }
+        }
+
+        // ==========================================
+        // LÓGICA DE BOTÓN ARRASTRABLE (MÓVIL)
+        // ==========================================
+        const mobileBtn = document.getElementById('mobile-stats-btn');
+        let isDraggingStatsBtn = false;
+        let startY, startTop;
+
+        mobileBtn.addEventListener('touchstart', (e) => {
+            isDraggingStatsBtn = false;
+            startY = e.touches[0].clientY;
+            const rect = mobileBtn.getBoundingClientRect();
+            startTop = rect.top;
+            mobileBtn.style.transition = 'none'; // Quitar animación para fluidez en el arrastre
+        }, {passive: true});
+
+        mobileBtn.addEventListener('touchmove', (e) => {
+            const currentY = e.touches[0].clientY;
+            const diffY = currentY - startY;
+            if (Math.abs(diffY) > 8) { // Threshold para distinguir entre tap y drag
+                isDraggingStatsBtn = true;
+                let newTop = startTop + diffY;
+                
+                // Límites de la pantalla (evitar que se salga por arriba o abajo)
+                if (newTop < 0) newTop = 0;
+                if (newTop > window.innerHeight - mobileBtn.offsetHeight) newTop = window.innerHeight - mobileBtn.offsetHeight;
+                
+                mobileBtn.style.top = newTop + 'px';
+                mobileBtn.style.transform = 'none'; // Sobrescribir el translateY original
+            }
+        }, {passive: true});
+
+        mobileBtn.addEventListener('touchend', (e) => {
+            mobileBtn.style.transition = 'all 0.3s'; // Restaurar transición
+        });
+
+        // Cierre y apertura para móvil
+        function toggleMobileStats(event) {
+            if (isDraggingStatsBtn) return; // Si lo soltó después de arrastrar, que no se abra
+            if(event) event.stopPropagation();
+            document.getElementById('stats-bar').classList.toggle('open');
+        }
+
+        function toggleMobileTooltip(element) {
+            if (window.innerWidth <= 768) {
+                element.classList.toggle('active');
+            }
+        }
+
+        // Cierra panel móvil si se toca fuera
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                const statsBar = document.getElementById('stats-bar');
+                if (statsBar && statsBar.classList.contains('open') && !statsBar.contains(e.target) && !mobileBtn.contains(e.target)) {
+                    statsBar.classList.remove('open');
+                }
+            }
+        });
+
+        // ==========================================
+        // FAVORITOS Y GESTIÓN DE ARCHIVOS
+        // ==========================================
+        function toggleFavorite(type, id, event) {
+            event.stopPropagation(); 
+            const favList = characterProfile.favorites[type];
+            const index = favList.indexOf(id);
+            if (index > -1) favList.splice(index, 1);
+            else favList.push(id);
+            
             if (type === 'nwp') applyNwpFilters();
             else if (type === 'sk') applySkFilters();
             else if (type === 'am') applyAmFilters();
         }
 
-        // Exportar Personaje (Descargar JSON)
         async function exportCharacter() {
             const userName = prompt("Nombra a tu personaje para forjar su archivo:", characterProfile.name);
-            if (userName === null) return; // Si cancela el prompt
+            if (userName === null) return; 
             
             characterProfile.name = userName || "Invitado";
             updateGreetings();
@@ -874,28 +1099,22 @@
             const dataStr = JSON.stringify(characterProfile, null, 2);
             const defaultFileName = `Personaje_${characterProfile.name.replace(/\s+/g, '_')}_ADnD.json`;
             
-            // Intento con la API moderna de File System (Evita los duplicados (1), (2) permitiendo sobrescribir)
             if (window.showSaveFilePicker) {
                 try {
                     const fileHandle = await window.showSaveFilePicker({
                         suggestedName: defaultFileName,
-                        types: [{
-                            description: 'Grimorio de Personaje (JSON)',
-                            accept: { 'application/json': ['.json'] }
-                        }]
+                        types: [{ description: 'Grimorio de Personaje (JSON)', accept: { 'application/json': ['.json'] } }]
                     });
                     const writable = await fileHandle.createWritable();
                     await writable.write(dataStr);
                     await writable.close();
-                    return; // Éxito total
+                    return; 
                 } catch (err) {
-                    // Si el usuario cancela, simplemente detenemos el proceso sin fallback
                     if (err.name === 'AbortError') return;
                     console.warn("Fallo en File System API, usando método tradicional...", err);
                 }
             }
             
-            // Fallback tradicional si el navegador no soporta File System Access API (ej. móviles)
             const blob = new Blob([dataStr], { type: "application/json" });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -904,7 +1123,7 @@
             a.click();
             URL.revokeObjectURL(url);
         }
-// Importar Personaje (Cargar JSON)
+
         function importCharacter(event) {
             const file = event.target.files[0];
             if (!file) return;
@@ -916,20 +1135,19 @@
                     if (imported && imported.favorites) {
                         characterProfile = imported;
                         if (!characterProfile.name) characterProfile.name = "Viajero Anónimo";
+                        if (!characterProfile.stats) characterProfile.stats = { Str: "10", Dex: "10", Con: "10", Int: "10", Wis: "10", Cha: "10" };
+                        if (characterProfile.statsLocked === undefined) characterProfile.statsLocked = false;
                         
                         updateGreetings();
+                        changeTheme(characterProfile.theme || 'ravenloft');
+                        renderStatsTooltips(); // Actualiza visualmente los stats cargados
                         
-                        // Cargar el tema si el archivo lo posee, de lo contrario usar Ravenloft
-                        if (characterProfile.theme) {
-                            changeTheme(characterProfile.theme);
-                        } else {
-                            changeTheme('ravenloft');
-                        }
-                        
-                        // Refrescar todas las tablas para que pinten las nuevas estrellas
-                        applyNwpFilters();
-                        applySkFilters();
-                        applyAmFilters();
+                        // ACTIVAR FILTROS DE FAVORITOS POR DEFECTO AL IMPORTAR
+                        document.getElementById('nwp-filter-fav').checked = true;
+                        document.getElementById('sk-filter-fav').checked = true;
+                        document.getElementById('am-filter-fav').checked = true;
+
+                        applyNwpFilters(); applySkFilters(); applyAmFilters();
                         
                         alert(`Los archivos de ${characterProfile.name} se han restaurado con éxito desde la bruma.`);
                     } else {
@@ -940,16 +1158,17 @@
                 }
             };
             reader.readAsText(file);
-            event.target.value = ""; // Limpiar el input para permitir cargar el mismo archivo si es necesario
+            event.target.value = ""; 
         }
 
-        // Mostrar/ocultar filtros móvil
+        // ==========================================
+        // NAVEGACIÓN Y TEMAS
+        // ==========================================
         function toggleFilters(prefix) {
             const container = document.getElementById(`${prefix}-filters-container`);
             if (container) container.classList.toggle('show');
         }
 
-        // Enrutador de Aplicación
         function openApp(mode) {
             document.getElementById('landing-screen').style.display = 'none';
             if (mode === 'nwp') { document.getElementById('nwp-app').style.display = 'block'; renderNwpTable(); } 
@@ -964,55 +1183,36 @@
             document.getElementById('landing-screen').style.display = 'flex';
         }
 
-        // Interruptor Cromático (Actualizado)
         function changeTheme(themeName) {
             document.documentElement.setAttribute('data-theme', themeName);
             localStorage.setItem('adndTheme', themeName);
-            
-            // Vincular el tema al perfil actual para que se exporte con el JSON
             characterProfile.theme = themeName; 
 
-            // Sincronizar todos los selects de la interfaz para que muestren la opción correcta
-            document.querySelectorAll('.theme-selector').forEach(sel => {
-                sel.value = themeName;
-            });
+            document.querySelectorAll('.theme-selector').forEach(sel => sel.value = themeName);
 
-            // Ajustar el color meta de la barra de navegación en móviles
             const metaColors = {
-                'ravenloft': '#0a0a0c',
-                'light': '#E8DECE',
-                'ranger': '#0d0a07',     // Actualizado al color tronco/tierra
-                'barbaro': '#0d0907',
-                'bribon': '#060608',
-                'hechicero': '#060608',  // Actualizado a la base oscura del Bribón
-                'sacerdote': '#0d0b0a'
+                'ravenloft': '#0a0a0c', 'light': '#E8DECE', 'ranger': '#0d0a07',
+                'barbaro': '#0d0907', 'bribon': '#060608', 'hechicero': '#060608', 'sacerdote': '#0d0b0a'
             };
             document.getElementById('meta-theme-color').setAttribute('content', metaColors[themeName] || '#0c0a0a');
         }
 
-        // Inicialización del tema al cargar la página (Sustituye la función anónima autoejecutable que tenías)
         (function() { 
             const savedTheme = localStorage.getItem('adndTheme') || 'ravenloft';
             changeTheme(savedTheme);
         })();
 
-        // Inicializador DOM
         document.addEventListener("DOMContentLoaded", () => {
-            updateGreetings(); // Pintar el nombre base
+            updateGreetings(); 
+            renderStatsTooltips(); 
             
-            if (typeof periciasData !== 'undefined') {
-                nwpData = periciasData; nwpFiltered = periciasData; populateNwpCheckboxes();
-            }
-            if (typeof skillsData !== 'undefined') {
-                skData = skillsData; skFiltered = skillsData; populateSkCheckboxes();
-            }
+            if (typeof periciasData !== 'undefined') { nwpData = periciasData; nwpFiltered = periciasData; populateNwpCheckboxes(); }
+            if (typeof skillsData !== 'undefined') { skData = skillsData; skFiltered = skillsData; populateSkCheckboxes(); }
             if (typeof artemarcialismosData !== 'undefined') {
                 amData = Object.entries(artemarcialismosData).map(([key, value]) => ({ id: key, name: key, ...value }));
                 amFiltered = amData;
             }
-            if (typeof maniobrasData !== 'undefined') {
-                dbManiobras = maniobrasData;
-            }
+            if (typeof maniobrasData !== 'undefined') dbManiobras = maniobrasData;
             populateAmCheckboxes();
         });
 
@@ -1042,8 +1242,7 @@
                 if (p.ability) abilities.add(p.ability);
                 if (p.class) p.class.split(',').forEach(c => classes.add(c.trim()));
                 if (p.race) p.race.split(',').forEach(r => races.add(r.trim()));
-                if (p.source) p.source.split(',').forEach(p => sources.add(p.trim()));
-                // if (p.source) sources.add(p.source);
+                if (p.source) p.source.split(',').forEach(s => sources.add(s.trim()));
             });
             fillCheckboxGroup('nwp-filter-slots', Array.from(slots).sort((a,b)=>a-b), applyNwpFilters);
             fillCheckboxGroup('nwp-filter-ability', Array.from(abilities).sort(), applyNwpFilters);
@@ -1073,10 +1272,8 @@
                        (selClasses.length === 0 || (p.class && selClasses.some(c => p.class.includes(c)))) &&
                        (selRaces.length === 0 || (p.race && selRaces.some(r => p.race.includes(r)))) &&
                        (selSources.length === 0 || (p.source && selSources.some(s => p.source.includes(s))));
-                    //    (selSources.length === 0 || (p.source && selSources.includes(p.source)));
             });
-            nwpExpandedId = null;
-            renderNwpTable();
+            nwpExpandedId = null; renderNwpTable();
         }
 
         function resetNwpFilters() {
@@ -1111,6 +1308,7 @@
                 </tr>`;
             });
             tbody.innerHTML = html;
+            checkExpandHint('nwp');
         }
 
         // ==========================================
@@ -1142,8 +1340,7 @@
                        (selLevels.length === 0 || selLevels.includes(s.level.toString())) &&
                        (selClasses.length === 0 || (s.class && selClasses.some(c => s.class.includes(c))));
             });
-            skExpandedId = null;
-            renderSkTable();
+            skExpandedId = null; renderSkTable();
         }
 
         function resetSkFilters() {
@@ -1173,6 +1370,7 @@
                 </tr>`;
             });
             tbody.innerHTML = html;
+            checkExpandHint('sk');
         }
 
         // ==========================================
@@ -1180,7 +1378,6 @@
         // ==========================================
         function populateAmCheckboxes() {
             const miembros = new Set(), categorias = new Set(), acMods = new Set(), ataques = new Set(), danios = new Set();
-
             amData.forEach(a => {
                 if (a.ataquePrincipal) miembros.add(a.ataquePrincipal.trim());
                 if (a.armorClassMod) acMods.add(a.armorClassMod.trim());
@@ -1188,7 +1385,6 @@
                 if (a.daño) danios.add(a.daño.trim());
                 if (a.maniobras) Object.keys(a.maniobras).forEach(cat => categorias.add(cat.trim()));
             });
-            
             fillCheckboxGroup('am-filter-miembro', Array.from(miembros).sort(), applyAmFilters);
             fillCheckboxGroup('am-filter-categoria', Array.from(categorias).sort(), applyAmFilters);
             fillCheckboxGroup('am-filter-ac', Array.from(acMods).sort(), applyAmFilters);
@@ -1218,7 +1414,6 @@
                         });
                     });
                 }
-                
                 const matchesFav = !isFavFilter || characterProfile.favorites.am.includes(a.id);
                 const matchesGlobal = (Object.values(a).join(' ') + stringManeuvers).toLowerCase().includes(gSearch);
                 const matchesName = a.name.toLowerCase().includes(fName);
@@ -1231,8 +1426,7 @@
                 
                 return matchesFav && matchesGlobal && matchesName && matchesMiembro && matchesCategoria && matchesAc && matchesAtaques && matchesDanio;
             });
-            amExpandedKey = null;
-            renderAmTable();
+            amExpandedKey = null; renderAmTable();
         }
 
         function resetAmFilters() {
@@ -1252,12 +1446,9 @@
                 if (item.maniobras && Object.keys(item.maniobras).length > 0) {
                     maneuversSummary = Object.entries(item.maniobras)
                         .map(([category, numbers]) => {
-                            let displayCat = category;
-                            if (displayCat === 'Mental and Physical Training') displayCat = 'Mental';
-                            else if (displayCat === 'Vital Area') displayCat = 'Vital';
+                            let displayCat = category === 'Mental and Physical Training' ? 'Mental' : (category === 'Vital Area' ? 'Vital' : category);
                             return `${displayCat}: ${numbers.join(', ')}`;
-                        })
-                        .join('<br>');
+                        }).join('<br>');
                 }
 
                 const isFav = characterProfile.favorites.am.includes(item.id);
@@ -1275,51 +1466,34 @@
                     <td data-label="Fav" class="star-btn" style="color: ${starColor};" onclick="toggleFavorite('am', '${item.id}', event)">${star}</td>
                 </tr>`;
                 
-                let subContentHtml = `<div class="desc-content">
-                    <p><strong>Descripción del Estilo:</strong> <em>${item.description || 'Sin descripción.'}</em></p>`;
-                
+                let subContentHtml = `<div class="desc-content"><p><strong>Descripción del Estilo:</strong> <em>${item.description || 'Sin descripción.'}</em></p>`;
                 if (item.maniobras && Object.keys(item.maniobras).length > 0) {
                     Object.keys(item.maniobras).forEach(category => {
-                        subContentHtml += `<div class="am-category-block">
-                            <div class="am-category-title">${category}</div>`; 
-                        
+                        subContentHtml += `<div class="am-category-block"><div class="am-category-title">${category}</div>`; 
                         item.maniobras[category].forEach(num => {
-                            const maneuverData = (dbManiobras[category] && dbManiobras[category][num]) 
-                                                ? dbManiobras[category][num] 
-                                                : { "nombre": `Maneuver ${num}`, "descripcionCorta": "Detalles perdidos.", "descripcionLarga": "" };
-                            
-                            const descCorta = maneuverData.descripcionCorta || "";
-                            const descLarga = maneuverData.descripcionLarga || maneuverData.descripcionCorta || "";
-
-                            subContentHtml += `<div class="am-maneuver-item">
-                                <strong>[${num}] ${maneuverData.nombre}</strong> - <em>${descCorta}</em>
-                                <div style="margin-top: 4px; color: var(--text-muted);">${descLarga}</div>
-                            </div>`;
+                            const maneuverData = (dbManiobras[category] && dbManiobras[category][num]) ? dbManiobras[category][num] : { "nombre": `Maneuver ${num}`, "descripcionCorta": "Detalles perdidos.", "descripcionLarga": "" };
+                            subContentHtml += `<div class="am-maneuver-item"><strong>[${num}] ${maneuverData.nombre}</strong> - <em>${maneuverData.descripcionCorta || ""}</em><div style="margin-top: 4px; color: var(--text-muted);">${maneuverData.descripcionLarga || maneuverData.descripcionCorta || ""}</div></div>`;
                         });
-                        
                         subContentHtml += `</div>`;
                     });
                 }
-                
                 subContentHtml += `</div>`;
-                
-                html += `<tr class="desc-row" id="am-desc-${item.id}">
-                    <td colspan="8">${subContentHtml}</td>
-                </tr>`;
+                html += `<tr class="desc-row" id="am-desc-${item.id}"><td colspan="8">${subContentHtml}</td></tr>`;
             });
-            
             tbody.innerHTML = html;
+            checkExpandHint('am');
         }
 
         // ==========================================
-        // Controlador Único de Acordeones
+        // ACORDEONES
         // ==========================================
         function toggleRow(prefix, id) {
-            let currentExpanded = null;
-            if (prefix === 'nwp') currentExpanded = nwpExpandedId;
-            else if (prefix === 'sk') currentExpanded = skExpandedId;
-            else if (prefix === 'am') currentExpanded = amExpandedKey;
-            
+            if (!localStorage.getItem('adnd_hint_seen')) {
+                localStorage.setItem('adnd_hint_seen', 'true');
+                document.querySelectorAll('.row-hint').forEach(el => el.classList.remove('row-hint'));
+            }
+
+            let currentExpanded = prefix === 'nwp' ? nwpExpandedId : (prefix === 'sk' ? skExpandedId : amExpandedKey);
             if (currentExpanded !== null && currentExpanded !== id) {
                 const oldRow = document.getElementById(`${prefix}-desc-${currentExpanded}`);
                 if (oldRow) {
@@ -1328,7 +1502,6 @@
                     if (oldContent) oldContent.style.maxHeight = null;
                 }
             }
-            
             if (currentExpanded !== id) {
                 const targetRow = document.getElementById(`${prefix}-desc-${id}`);
                 if (targetRow) {
@@ -1339,10 +1512,7 @@
                         let maxAllowedHeight = window.innerHeight * 0.55; 
                         targetContent.style.maxHeight = (calculatedHeight > maxAllowedHeight ? maxAllowedHeight : calculatedHeight) + "px";
                     }
-                    
-                    if (prefix === 'nwp') nwpExpandedId = id;
-                    else if (prefix === 'sk') skExpandedId = id;
-                    else amExpandedKey = id;
+                    if (prefix === 'nwp') nwpExpandedId = id; else if (prefix === 'sk') skExpandedId = id; else amExpandedKey = id;
                 }
             } else {
                 const targetRow = document.getElementById(`${prefix}-desc-${id}`);
@@ -1351,9 +1521,7 @@
                     if (targetContent) targetContent.style.maxHeight = null;
                     setTimeout(() => targetRow.classList.remove('show'), 400);
                 }
-                if (prefix === 'nwp') nwpExpandedId = null;
-                else if (prefix === 'sk') skExpandedId = null;
-                else amExpandedKey = null;
+                if (prefix === 'nwp') nwpExpandedId = null; else if (prefix === 'sk') skExpandedId = null; else amExpandedKey = null;
             }
         }
     </script>
